@@ -85,3 +85,5 @@ export const COLORS = {
   },
   'dark-background': 'hsl(0, 0%, 11%)'
 };
+
+export const HEADER_HEIGHT = 76;

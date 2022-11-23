@@ -814,5 +814,8 @@
         "failed": 59,
         "skipped": 35,
         "time": "4320"
+    },
+    "meta": {
+        "timestamp": 1301090400
     }
 }

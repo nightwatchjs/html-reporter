@@ -163,6 +163,7 @@ const GlobalStyles = createGlobalStyle`
     --color-orange-100: ${COLORS.orange[100]};
 
     --color-dark-background: ${COLORS['dark-background']};
+    --color-dark-background-text: var(--color-neutrals-10);
     /* Font Weight */
     --font-weight-light: 300;
     --font-weight-semi-light: 400;
