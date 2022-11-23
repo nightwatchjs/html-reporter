@@ -1,4 +1,3 @@
-import { ViteIcon } from "./ViteIcon";
-import { ReactIcon } from "./ReactIcon";
+import { NightwatchIcon } from "./NightwatchIcon";
 
-export {ViteIcon, ReactIcon}
+export {NightwatchIcon}
