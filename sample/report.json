@@ -159,7 +159,7 @@
             "startTimestamp": "",
             "endTimestamp": "",
             "projectName": "",
-            "buidlName": ""
+            "buildName": ""
         },
         "google": {
             "reportPrefix": "CHROME_107.0.5304.110__",
@@ -283,7 +283,7 @@
             "startTimestamp": "",
             "endTimestamp": "",
             "projectName": "",
-            "buidlName": ""
+            "buildName": ""
         }
     },
     "envs": {
