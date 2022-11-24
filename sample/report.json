@@ -97,14 +97,14 @@
                             "stackTrace": "",
                             "timeMs": 4091,
                             "status": "pass",
-                            "startTimestamp": "",
-                            "endTimestamp": ""
+                            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                         }
                     },
                     "timeMs": 4091,
                     "status": "pass",
-                    "startTimestamp": "",
-                    "endTimestamp": ""
+                    "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                    "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                 }
             },
             "errmessages": [],
@@ -156,10 +156,10 @@
             ],
             "sessionId": "",
             "driverCapabilities": {},
-            "startTimestamp": "",
-            "endTimestamp": "",
-            "projectName": "",
-            "buildName": ""
+            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "projectName": "test",
+            "buildName": "test"
         },
         "google": {
             "reportPrefix": "CHROME_107.0.5304.110__",
@@ -215,14 +215,14 @@
                             "stackTrace": "",
                             "timeMs": 12009,
                             "status": "pass",
-                            "startTimestamp": "",
-                            "endTimestamp": ""
+                            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                         }
                     },
                     "timeMs": 12009,
                     "status": "pass",
-                    "startTimestamp": "",
-                    "endTimestamp": ""
+                    "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                    "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                 }
             },
             "errmessages": [],
@@ -280,10 +280,10 @@
             ],
             "sessionId": "",
             "driverCapabilities": {},
-            "startTimestamp": "",
-            "endTimestamp": "",
-            "projectName": "",
-            "buildName": ""
+            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "projectName": "test",
+            "buildName": "test"
         }
     },
     "envs": {
