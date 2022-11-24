@@ -95,10 +95,16 @@
                             "skipped": 0,
                             "steps": [],
                             "stackTrace": "",
-                            "timeMs": 4091
+                            "timeMs": 4091,
+                            "status": "pass",
+                            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                         }
                     },
-                    "timeMs": 4091
+                    "timeMs": 4091,
+                    "status": "pass",
+                    "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                    "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                 }
             },
             "errmessages": [],
@@ -147,7 +153,39 @@
                 ["2022-11-18T08:50:49.705Z", "  Response 200 GET /session/4e6c7f96-1d7c-4abe-8d0f-06e781758ca4/element/79376223-34f8-45b3-9ade-8b412d316aad/text (341ms)", "{\n     value: <span style=\"color:#0A0\">&#39;Search\\n&#39;<span style=\"color:#FFF\"> +\n       <span style=\"color:#0A0\">&#39;Ad\\n&#39;<span style=\"color:#FFF\"> +\n       <span style=\"color:#0A0\">&#39;in.jobrapido.com › Jobs Nightwatch › India\\n&#39;<span style=\"color:#FFF\"> +\n       <span style=\"color:#0A0\">&#39;14 openings for your search - Urgent openings i...&#39;<span style=\"color:#FFF\">,\n     suppressBase64Data: <span style=\"color:#A50\">true<span style=\"color:#FFF\">\n  }</span></span></span></span></span></span></span></span></span></span>"],
                 ["2022-11-18T08:50:49.713Z", "  Request <b><span style=\"color:#0AA\">DELETE /session/4e6c7f96-1d7c-4abe-8d0f-06e781758ca4  </span></b>", "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"],
                 ["2022-11-18T08:50:51.060Z", "  Response 200 DELETE /session/4e6c7f96-1d7c-4abe-8d0f-06e781758ca4 (1347ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"]
-            ]
+            ],
+            "sessionId": "c67265633818184dd52d9f566afdc5bf",
+            "driverCapabilities": {
+                "acceptInsecureCerts": false,
+                "browserName": "chrome",
+                "browserVersion": "107.0.5304.110",
+                "chrome": {
+                    "chromedriverVersion": "107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})",
+                    "userDataDir": "/var/folders/d6/5mxljy_s17xfxndvfp99js9h0000gp/T/.com.google.Chrome.lUctxX"
+                },
+                "goog:chromeOptions": {
+                    "debuggerAddress": "localhost:50153"
+                },
+                "networkConnectionEnabled": false,
+                "pageLoadStrategy": "normal",
+                "platformName": "mac os x",
+                "proxy": {},
+                "setWindowRect": true,
+                "strictFileInteractability": false,
+                "timeouts": {
+                    "implicit": 0,
+                    "pageLoad": 300000,
+                    "script": 30000
+                },
+                "unhandledPromptBehavior": "dismiss and notify",
+                "webauthn:extension:credBlob": true,
+                "webauthn:extension:largeBlob": true,
+                "webauthn:virtualAuthenticators": true
+            },
+            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "projectName": "test",
+            "buildName": "test"
         },
         "google": {
             "reportPrefix": "CHROME_107.0.5304.110__",
@@ -201,10 +239,16 @@
                             "skipped": 0,
                             "steps": [],
                             "stackTrace": "",
-                            "timeMs": 12009
+                            "timeMs": 12009,
+                            "status": "pass",
+                            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                         }
                     },
-                    "timeMs": 12009
+                    "timeMs": 12009,
+                    "status": "pass",
+                    "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+                    "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT"
                 }
             },
             "errmessages": [],
@@ -259,7 +303,39 @@
                 ["2022-11-18T08:51:02.490Z", "  Response 200 GET /session/7978441b804b91708ee0b151c0ef4a39/element/3ee0e2be-99ac-47fd-bfcc-87fda78f5595/text (31ms)", "{\n     value: <span style=\"color:#0A0\">&#39;Web result with site links\\n&#39;<span style=\"color:#FFF\"> +\n       <span style=\"color:#0A0\">&#39;\\n&#39;<span style=\"color:#FFF\"> +\n       <span style=\"color:#0A0\">&#39;Nightwatch.js | Node.js powered End-to-End testing framework\\n&#39;<span style=\"color:#FFF\"> +\n       <span style=\"color:#0A0\">&#39;https://nig...&#39;<span style=\"color:#FFF\">,\n     suppressBase64Data: <span style=\"color:#A50\">true<span style=\"color:#FFF\">\n  }</span></span></span></span></span></span></span></span></span></span>"],
                 ["2022-11-18T08:51:02.497Z", "  Request <b><span style=\"color:#0AA\">DELETE /session/7978441b804b91708ee0b151c0ef4a39  </span></b>", "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"],
                 ["2022-11-18T08:51:02.552Z", "  Response 200 DELETE /session/7978441b804b91708ee0b151c0ef4a39 (55ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"]
-            ]
+            ],
+            "sessionId": "c67265633818184dd52d9f566afdc5bf",
+            "driverCapabilities": {
+                "acceptInsecureCerts": false,
+                "browserName": "chrome",
+                "browserVersion": "107.0.5304.110",
+                "chrome": {
+                    "chromedriverVersion": "107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})",
+                    "userDataDir": "/var/folders/d6/5mxljy_s17xfxndvfp99js9h0000gp/T/.com.google.Chrome.lUctxX"
+                },
+                "goog:chromeOptions": {
+                    "debuggerAddress": "localhost:50153"
+                },
+                "networkConnectionEnabled": false,
+                "pageLoadStrategy": "normal",
+                "platformName": "mac os x",
+                "proxy": {},
+                "setWindowRect": true,
+                "strictFileInteractability": false,
+                "timeouts": {
+                    "implicit": 0,
+                    "pageLoad": 300000,
+                    "script": 30000
+                },
+                "unhandledPromptBehavior": "dismiss and notify",
+                "webauthn:extension:credBlob": true,
+                "webauthn:extension:largeBlob": true,
+                "webauthn:virtualAuthenticators": true
+            },
+            "startTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "endTimestamp": "Thu, 24 Nov 2022 18:08:22 GMT",
+            "projectName": "test",
+            "buildName": "test"
         }
     },
     "envs": {
