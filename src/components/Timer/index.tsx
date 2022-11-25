@@ -10,7 +10,7 @@ type Props = {
   color: string;
 };
 
-const Timer:React.FC<Props> = ({ time: { hour, min }, color }) => {
+const Timer: React.FC<Props> = ({ time: { hour, min }, color }) => {
   return (
     <Wrapper>
       <TimerIconWrapper>

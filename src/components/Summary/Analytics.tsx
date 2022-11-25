@@ -22,7 +22,10 @@ const Analytics: React.FC<Props> = ({ totalTests, passed, failed, skipped }) => 
       <Header>Overall Performance</Header>
       <TestStatusWrapper>
         <Status>
-          <PercentageText>{`${getPassedTestPercentage(totalTests, passed + skipped)}%`}</PercentageText>
+          <PercentageText>{`${getPassedTestPercentage(
+            totalTests,
+            passed + skipped
+          )}%`}</PercentageText>
           <PassedText>Passed</PassedText>
         </Status>
         <StatisticsWrapper>
@@ -40,16 +43,16 @@ const Analytics: React.FC<Props> = ({ totalTests, passed, failed, skipped }) => 
             visualPartition={[
               {
                 percentage: 91,
-                color: '--color-green-60',
+                color: '--color-green-60'
               },
               {
                 percentage: 5,
-                color: '--color-red-50',
+                color: '--color-red-50'
               },
               {
                 percentage: 4,
-                color: '--color-orange-50',
-              },
+                color: '--color-orange-50'
+              }
             ]}
           />
           <Statistics>

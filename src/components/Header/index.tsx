@@ -58,7 +58,7 @@ const Date = styled.div`
 
 const Time = styled.div`
   font-size: calc(12 / 16 * 1rem);
-  line-height:  var(--line-height-20);
+  line-height: var(--line-height-20);
   opacity: 0.75;
 `;
 

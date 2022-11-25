@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Analytics from './Analytics';
 import EnvironmentReport from './EnvironmentReport';
 
-const Summary:React.FC = () => {
+const Summary: React.FC = () => {
   return (
     <Wrapper>
       <Header>
@@ -31,6 +31,8 @@ const Wrapper = styled.article`
   margin: 0 20px;
   flex-direction: row;
   flex-wrap: wrap;
+  background: var(--color-grey-10);
+  max-width: 1240px;
 `;
 
 const AnalyticsWrapper = styled.div`

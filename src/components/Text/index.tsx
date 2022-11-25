@@ -7,7 +7,7 @@ interface TextProps {
 
 export const Text = styled.p<TextProps>`
   font-weight: var(--font-weight-semi-light);
-  font-size: var(${props => props.fontSize});
-  line-height:  var(${props => props.lineHight});
+  font-size: var(${(props) => props.fontSize});
+  line-height: var(${(props) => props.lineHight});
   color: var(--color-grey-90);
 `;
