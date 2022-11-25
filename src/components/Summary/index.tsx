@@ -1,60 +1,70 @@
-import React from 'react'
-import styled from 'styled-components'
-import Analytics from './Analytics'
-import EnvironmentReport from './EnvironmentReport'
+import React from 'react';
+import styled from 'styled-components';
+import Analytics from './Analytics';
+import EnvironmentReport from './EnvironmentReport';
 
-const Summary = () => {
+const Summary:React.FC = () => {
   return (
     <Wrapper>
       <Header>
-        <Title>
-          Summary
-          <SubTitle>(Executed 216 tests in 5 environments)</SubTitle>
-        </Title>
-        
-        <Link href='#!'>Hide summary</Link>
+        <Title>Summary</Title>
+        <SubTitle>(Executed 216 tests in 5 environments)</SubTitle>
+        <Link href="#!">Hide summary</Link>
       </Header>
-      <Analytics passed={20} failed={10} skipped={10} />
-      <EnvironmentReport />
+      <AnalyticsWrapper>
+        <Analytics totalTests={1080} passed={986} failed={59} skipped={35} />
+      </AnalyticsWrapper>
+      <EnvironmentReportWrapper>
+        <EnvironmentReport />
+      </EnvironmentReportWrapper>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.article`
   display: flex;
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: var(--color-neutrals-50);
+  border-color: var(--color-grey-50);
   border-radius: 0 0 8px 8px;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 12px 20px;
-  flex: 1;
   margin: 0 20px;
-`
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+const AnalyticsWrapper = styled.div`
+  flex: 1 1 0%;
+  margin-right: 20px;
+`;
+const EnvironmentReportWrapper = styled.div`
+  flex: 1 1 0%;
+`;
 
 const Header = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   width: 100%;
-`
+  line-height: var(--line-height-32);
+  margin-bottom: 12px;
+`;
 
 const Title = styled.h1`
-  display: flex;
   font-size: calc(20 / 16 * 1rem);
-  line-height: calc(32 / 16 * 1rem);
   font-weight: var(--font-weight-bold);
-  color: var(--color-neutrals-100);
-`
+  color: var(--color-grey-100);
+  align-self: baseline;
+`;
 
 const SubTitle = styled.p`
   font-size: 10px;
-`
+  margin-right: auto;
+  align-self: baseline;
+  font-size: calc(12 / 16 * 1rem);
+  font-weight: 400;
+`;
 
 const Link = styled.a`
   color: var(--color-blue-60);
-`
+`;
 
-
-export default Summary
+export default Summary;

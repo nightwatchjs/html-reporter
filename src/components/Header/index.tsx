@@ -9,7 +9,7 @@ const Header = () => {
       <Left>
         <NightwatchIcon />
       </Left>
-      <Center aria-label='Test Reporter'>Test Reporter</Center>
+      <Center aria-label="Test Reporter">Test Reporter</Center>
       <Right>
         <Date>Sat, Jan 09 2022</Date>
         <Time>08:45:25 IST</Time>
@@ -40,7 +40,7 @@ const Center = styled.div`
   justify-content: center;
   font-weight: var(--font-weight-bold);
   font-size: calc(24 / 16 * 1rem);
-  line-height: calc(36 / 16 * 1rem);
+  line-height: var(--line-height-36);
 `;
 
 const Right = styled.div`
@@ -53,12 +53,12 @@ const Right = styled.div`
 
 const Date = styled.div`
   font-size: 1rem;
-  line-height: calc(24 / 16 * 1rem);
+  line-height: var(--line-height-24);
 `;
 
 const Time = styled.div`
   font-size: calc(12 / 16 * 1rem);
-  line-height: calc(20 / 16 * 1rem);
+  line-height:  var(--line-height-20);
   opacity: 0.75;
 `;
 

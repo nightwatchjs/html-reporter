@@ -1,4 +1,6 @@
-export const NightwatchIcon = () => {
+import React from 'react';
+
+export const NightwatchIcon: React.FC = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="162" height="40" fill="none">
       <path fill="#fff" d="m3.54 40-.779-.778 4.264-4.264L0 27.938l.783-.778 7.804 7.798L3.54 40Z" />

@@ -1,3 +1,4 @@
-import { NightwatchIcon } from "./NightwatchIcon";
+import { NightwatchIcon } from './NightwatchIcon';
+import { TimerIcon } from './TimerIcon';
 
-export {NightwatchIcon}
+export { NightwatchIcon, TimerIcon };

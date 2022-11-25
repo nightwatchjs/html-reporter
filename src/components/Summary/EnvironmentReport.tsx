@@ -1,13 +1,14 @@
+import React from 'react';
 import styled from 'styled-components';
 
-const EnvironmentReport = () => {
+const EnvironmentReport:React.FC = () => {
   return (
     <Wrapper>EnvironmentReport</Wrapper>
   )
 }
 
+// TODO: remove fix width and height
 const Wrapper = styled.article`
-  display: flex;
   width: 696px;
   height: 152px;
 `
