@@ -38,7 +38,6 @@ const TestResultCount: React.FC<Props> = ({ passed, failed, skipped }) => {
 
 const Wrapper = styled.article`
   display: flex;
-  /* gap: 9px; */
   padding: 4px;
   background-color: var(--color-grey-10);
   border: 1px solid var(--color-grey-50);
