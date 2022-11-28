@@ -21,6 +21,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 1200px;
 `;
 
 const TestDetailsWrapper = styled.div`
@@ -28,10 +29,11 @@ const TestDetailsWrapper = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
+  flex: 1 1 335px;
+  background: var(--color-grey-10);
 `;
 const Right = styled.div`
-  flex: 3;
+  flex: 1 2 945px;
 `;
 
 export default TestData;

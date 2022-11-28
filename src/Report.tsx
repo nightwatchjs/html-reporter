@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Summary from './components/Summary';
 import TestData from './components/TestData';
@@ -12,6 +13,7 @@ const Report: React.FC = () => {
         <Summary />
         <TestData />
       </Wrapper>
+      <Footer />
     </Fragment>
   );
 };

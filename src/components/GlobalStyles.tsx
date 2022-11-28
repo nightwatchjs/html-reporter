@@ -82,6 +82,7 @@ const GlobalStyles = createGlobalStyle`
     body, input, button, select, option {
       font-family: var(--font-family);
       font-weight: var(--font-weight-light);
+      min-width: 1280px;
     }
     h1, h2, h3, h4, h5, h6, strong {
       font-weight: var(--font-weight-bold);

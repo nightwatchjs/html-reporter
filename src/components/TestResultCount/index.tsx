@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FailedIcon } from '../../icons/FailedIcon';
-import { PassedIcon } from '../../icons/PassedIcon';
-import { SkippedIcon } from '../../icons/SkippedIcon';
+import { FailedIcon } from '../../icons';
+import { PassedIcon } from '../../icons';
+import { SkippedIcon } from '../../icons';
 import { Text } from '../Text';
 
 type Props = {
