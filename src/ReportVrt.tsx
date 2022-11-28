@@ -1,24 +1,19 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
 import ApproveAll from './components/ApproveAll';
 import Header from './components/Header';
-import Summary from './components/Summary';
+import TestDetailsVrt from './components/TestDetailsVrt';
+import Footer from './components/Footer';
 
+const image_path = '../src/images/sample.svg'
 const ReportVrt: React.FC = () => {
   return (
     <Fragment>
       <Header />
       <ApproveAll />
-      <Wrapper>
-        <Summary />
-      </Wrapper>
+      <TestDetailsVrt baseline_img = {image_path} diff_img = {image_path}/>
+      <Footer />
     </Fragment>
   );
 };
-
-const Wrapper = styled.section`
-  display: flex;
-  justify-content: center;
-`;
 
 export default ReportVrt;
