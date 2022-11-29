@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { TimerIcon } from '../../icons';
+import { Time, TimerIconWrapper, Wrapper } from './style';
 
 type Props = {
   time: {
@@ -20,22 +20,5 @@ const Timer: React.FC<Props> = ({ time: { hour, min }, color }) => {
     </Wrapper>
   );
 };
-
-const Wrapper = styled.article`
-  display: flex;
-  gap: 6px;
-  align-items: center;
-`;
-
-const TimerIconWrapper = styled.div`
-  display: inline;
-`;
-
-const Time = styled.time`
-  font-weight: var(--font-weight-semi-light);
-  font-size: var(--font-size-14);
-  line-height: var(--line-height-20);
-  color: var(${(props) => props.color});
-`;
 
 export default Timer;
