@@ -15,40 +15,38 @@ const TestFileView: React.FC = () => {
   const [failed, setFailed] = useState(['item-1', 'item-2']);
 
   return (
-    <Wrapper>
-      <AccordionRoot type="multiple" value={failed} onValueChange={(data) => setFailed(data)}>
-        <AccordionItem value="item-1">
-          <AccordionTrigger failed={failed} value="item-1">
-            Is it accessible?
-          </AccordionTrigger>
-          <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger failed={failed} value="item-2">
-            Is it accessible?
-          </AccordionTrigger>
-          <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger failed={failed} value="item-3">
-            Is it accessible?
-          </AccordionTrigger>
-          <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-4">
-          <AccordionTrigger failed={failed} value="item-4">
-            Is it accessible?
-          </AccordionTrigger>
-          <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-5">
-          <AccordionTrigger failed={failed} value="item-5">
-            Is it accessible?
-          </AccordionTrigger>
-          <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-        </AccordionItem>
-      </AccordionRoot>
-    </Wrapper>
+    <AccordionRoot type="multiple" value={failed} onValueChange={(data) => setFailed(data)}>
+      <AccordionItem value="item-1">
+        <AccordionTrigger failed={failed} value="item-1">
+          DuckDuckGo
+        </AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger failed={failed} value="item-2">
+          Is it accessible?
+        </AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger failed={failed} value="item-3">
+          Is it accessible?
+        </AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-4">
+        <AccordionTrigger failed={failed} value="item-4">
+          Is it accessible?
+        </AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-5">
+        <AccordionTrigger failed={failed} value="item-5">
+          Is it accessible?
+        </AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+      </AccordionItem>
+    </AccordionRoot>
   );
 };
 
@@ -81,10 +79,6 @@ const AccordionContent = React.forwardRef<HTMLDivElement, Props>(
 AccordionContent.displayName = 'AccordionContent';
 AccordionTrigger.displayName = 'AccordionTrigger';
 
-const Wrapper = styled.article`
-  padding: 12px 20px;
-`;
-
 const AccordionRoot = styled(Accordion.Root)`
   background: var(--color-grey-20);
   display: flex;
@@ -106,7 +100,11 @@ const AccordionItem = styled(Accordion.Item)`
 const AccordionHeader = styled(Accordion.Header)`
   display: flex;
   padding: 8px;
-  background: var(--color-grey-50);
+  background: var(--color-grey-20);
+  border-bottom: 1px solid var(--color-grey-50);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-20);
 `;
 
 const StyledAccordionTrigger = styled(Accordion.Trigger)`

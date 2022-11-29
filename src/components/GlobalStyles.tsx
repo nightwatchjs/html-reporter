@@ -63,6 +63,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
       line-height: 1;
+      min-width: 1280px;
     }
     ol, ul {
       list-style: none;
@@ -82,7 +83,6 @@ const GlobalStyles = createGlobalStyle`
     body, input, button, select, option {
       font-family: var(--font-family);
       font-weight: var(--font-weight-light);
-      min-width: 1280px;
     }
     h1, h2, h3, h4, h5, h6, strong {
       font-weight: var(--font-weight-bold);
@@ -120,6 +120,7 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-50: ${COLORS.neutrals[50]};
     --color-grey-60: ${COLORS.neutrals[60]};
     --color-grey-70: ${COLORS.neutrals[70]};
+    --color-grey-80: ${COLORS.neutrals[80]};
     --color-grey-90: ${COLORS.neutrals[90]};
     --color-grey-100: ${COLORS.neutrals[100]};
     /* Blue */

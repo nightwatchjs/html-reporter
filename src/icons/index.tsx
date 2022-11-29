@@ -6,6 +6,8 @@ import { PassedIcon } from './PassedIcon';
 import { SkippedIcon } from './SkippedIcon';
 import { TestStatusIcon } from './TestStatusIcon';
 import { TimerIcon } from './TimerIcon';
+import { SearchIcon } from './SearchIcon';
+import { Arrow } from './Arrow';
 
 export {
   NightwatchIcon,
@@ -15,5 +17,7 @@ export {
   SkippedIcon,
   TestStatusIcon,
   AccordionIcon,
-  Logo
+  Logo,
+  SearchIcon,
+  Arrow
 };

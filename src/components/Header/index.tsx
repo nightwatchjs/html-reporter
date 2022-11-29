@@ -9,7 +9,7 @@ const Header = () => {
       <Left>
         <NightwatchIcon />
       </Left>
-      <Center aria-label="Test Reporter">Test Reporter</Center>
+      <Center>Test Reporter</Center>
       <Right>
         <Date>Sat, Jan 09 2022</Date>
         <Time>08:45:25 IST</Time>
