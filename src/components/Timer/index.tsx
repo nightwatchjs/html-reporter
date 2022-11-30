@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import { TimerIcon } from '../../icons';
+import { TimerOutlined } from '@mui/icons-material';
+import { Time, TimerIconWrapper, Wrapper } from './style';
 
 type Props = {
   time: {
@@ -19,7 +19,7 @@ const Timer: React.FC<Props> = ({ time: { hour, min, sec }, color }) => {
   return (
     <Wrapper>
       <TimerIconWrapper>
-        <TimerIcon />
+        <TimerOutlined fontSize="inherit" />
       </TimerIconWrapper>
       <Time dateTime={`PT${hour ?? 0}H${min}M${sec ?? 0}S`} color={color}>
         {getTime(hour, min, sec)}
@@ -27,22 +27,5 @@ const Timer: React.FC<Props> = ({ time: { hour, min, sec }, color }) => {
     </Wrapper>
   );
 };
-
-const Wrapper = styled.article`
-  display: flex;
-  gap: 6px;
-  align-items: center;
-`;
-
-const TimerIconWrapper = styled.div`
-  display: flex;
-`;
-
-const Time = styled.time`
-  font-weight: var(--font-weight-semi-light);
-  font-size: var(--font-size-14);
-  line-height: var(--line-height-20);
-  color: var(${(props) => props.color});
-`;
 
 export default Timer;
