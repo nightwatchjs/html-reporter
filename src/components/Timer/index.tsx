@@ -19,7 +19,7 @@ const Timer: React.FC<Props> = ({ time: { hour, min, sec }, color }) => {
   return (
     <Wrapper>
       <TimerIconWrapper>
-        <TimerOutlined fontSize="inherit" />
+        <TimerOutlined />
       </TimerIconWrapper>
       <Time dateTime={`PT${hour ?? 0}H${min}M${sec ?? 0}S`} color={color}>
         {getTime(hour, min, sec)}

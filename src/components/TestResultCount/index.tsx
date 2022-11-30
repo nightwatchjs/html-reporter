@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FailedIcon } from '../../icons';
-import { PassedIcon } from '../../icons';
-import { SkippedIcon } from '../../icons';
+import { CheckCircle, Cancel, RemoveCircle } from '@mui/icons-material';
 import { Text } from '../Text';
 
 type Props = {
@@ -15,19 +13,25 @@ const TestResultCount: React.FC<Props> = ({ passed, failed, skipped }) => {
   return (
     <Wrapper>
       <IconWithText>
-        <PassedIcon />
+        <IconWrapper>
+          <PassedIcon />
+        </IconWrapper>
         <Text fontSize="--font-size-14" lineHight="--line-height-20" color="--color-grey-100">
           {passed}
         </Text>
       </IconWithText>
       <IconWithText>
-        <FailedIcon />
+        <IconWrapper>
+          <FailedIcon />
+        </IconWrapper>
         <Text fontSize="--font-size-14" lineHight="--line-height-20" color="--color-grey-100">
           {failed}
         </Text>
       </IconWithText>
       <IconWithText>
-        <SkippedIcon />
+        <IconWrapper>
+          <SkippedIcon />
+        </IconWrapper>
         <Text fontSize="--font-size-14" lineHight="--line-height-20" color="--color-grey-100">
           {skipped}
         </Text>
@@ -35,6 +39,24 @@ const TestResultCount: React.FC<Props> = ({ passed, failed, skipped }) => {
     </Wrapper>
   );
 };
+
+const IconWrapper = styled.div`
+  font-size: var(--font-size-12);
+  display: flex;
+  align-self: center;
+`;
+
+const PassedIcon = styled(CheckCircle)`
+  color: var(--color-green-50);
+`;
+
+const FailedIcon = styled(Cancel)`
+  color: var(--color-red-50);
+`;
+
+const SkippedIcon = styled(RemoveCircle)`
+  color: var(--color-orange-50);
+`;
 
 const Wrapper = styled.article`
   display: flex;

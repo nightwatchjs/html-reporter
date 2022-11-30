@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SearchIcon } from '../../icons';
+import { Search as SearchIcon } from '@mui/icons-material';
 
 interface SearchProps {
   placeholder: string;
@@ -32,6 +32,8 @@ const SearchIconWrapper = styled.div`
   align-items: center;
   pointer-events: none;
   z-index: 1;
+  font-size: var(--font-size-12);
+  color: var(--color-grey-80);
 `;
 
 const Input = styled.input`

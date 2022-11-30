@@ -1,8 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import styled from 'styled-components';
 import * as Accordion from '@radix-ui/react-accordion';
-import { AccordionIcon } from '../../icons';
-import { FailedIcon } from '../../icons';
+import { Cancel, Remove, Add } from '@mui/icons-material';
 
 interface Props {
   children: ReactNode;
@@ -55,14 +54,10 @@ const AccordionTrigger = React.forwardRef<HTMLButtonElement, Props>(
     <AccordionHeader>
       <StyledAccordionTrigger {...props} ref={forwardedRef}>
         <AccordionHeaderContent>
-          <FailedIcon />
+          <Cancel />
           {children}
         </AccordionHeaderContent>
-        {props.failed!.includes(props.value!) ? (
-          <AccordionIcon state="open" />
-        ) : (
-          <AccordionIcon state="close" />
-        )}
+        {props.failed!.includes(props.value!) ? <Remove /> : <Add />}
       </StyledAccordionTrigger>
     </AccordionHeader>
   )
