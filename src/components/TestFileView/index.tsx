@@ -1,7 +1,16 @@
 import React, { ReactNode, useState } from 'react';
-import styled from 'styled-components';
-import * as Accordion from '@radix-ui/react-accordion';
-import { Cancel, Remove, Add } from '@mui/icons-material';
+import {
+  AccordionHeader,
+  AccordionHeaderContent,
+  AccordionItem,
+  AccordionRoot,
+  AddIcon,
+  CancelIcon,
+  CheckCircleIcon,
+  RemoveIcon,
+  StyledAccordionContent,
+  StyledAccordionTrigger
+} from './style';
 
 interface Props {
   children: ReactNode;
@@ -54,10 +63,10 @@ const AccordionTrigger = React.forwardRef<HTMLButtonElement, Props>(
     <AccordionHeader>
       <StyledAccordionTrigger {...props} ref={forwardedRef}>
         <AccordionHeaderContent>
-          <Cancel />
+          {props.value === 'item-5' ? <CheckCircleIcon /> : <CancelIcon />}
           {children}
         </AccordionHeaderContent>
-        {props.failed!.includes(props.value!) ? <Remove /> : <Add />}
+        {props.failed!.includes(props.value!) ? <RemoveIcon /> : <AddIcon />}
       </StyledAccordionTrigger>
     </AccordionHeader>
   )
@@ -73,53 +82,5 @@ const AccordionContent = React.forwardRef<HTMLDivElement, Props>(
 
 AccordionContent.displayName = 'AccordionContent';
 AccordionTrigger.displayName = 'AccordionTrigger';
-
-const AccordionRoot = styled(Accordion.Root)`
-  background: var(--color-grey-20);
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  gap: 8px;
-`;
-
-const AccordionItem = styled(Accordion.Item)`
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--color-grey-50);
-  &:focus-within {
-    position: relative;
-    box-shadow: 0 0 0 2px var(--color-primary-50);
-  }
-`;
-
-const AccordionHeader = styled(Accordion.Header)`
-  display: flex;
-  padding: 8px;
-  background: var(--color-grey-20);
-  border-bottom: 1px solid var(--color-grey-50);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-14);
-  line-height: var(--line-height-20);
-`;
-
-const StyledAccordionTrigger = styled(Accordion.Trigger)`
-  all: unset;
-  display: flex;
-  align-items: center;
-  flex: 0 0 100%;
-  font-family: inherit;
-  background-color: transparent;
-`;
-
-const AccordionHeaderContent = styled.div`
-  display: flex;
-  gap: 5px;
-  margin-right: auto;
-  align-items: center;
-`;
-
-const StyledAccordionContent = styled(Accordion.Content)`
-  background: var(--color-grey-10);
-`;
 
 export default TestFileView;

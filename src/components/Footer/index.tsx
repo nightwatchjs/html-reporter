@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Logo } from '../../icons';
 import Separator from '../Separator';
 import { Text } from '../Text';
+import { TextWrapper, Wrapper } from './style';
 
 const Footer: React.FC = () => {
   return (
@@ -18,18 +18,5 @@ const Footer: React.FC = () => {
     </Wrapper>
   );
 };
-
-const Wrapper = styled.footer`
-  display: flex;
-  padding: 20px 40px;
-  background: var(--color-dark-background);
-  color: var(--color-dark-background-text);
-  justify-content: center;
-  align-items: center;
-`;
-
-const TextWrapper = styled.div`
-  margin-left: 40px;
-`;
 
 export default Footer;
