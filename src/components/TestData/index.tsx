@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from '../Dropdown';
 import Search from '../Search';
-import TestFileView from '../TestFileView';
+import Accordion from '../Accordion';
 import TestStatusBar from '../TestStatusBar';
 import { Actions, ExpandAll, Left, Right, TestDetailsWrapper, Wrapper } from './style';
 
@@ -16,7 +16,7 @@ const TestData: React.FC = () => {
             <ExpandAll type="button">Expand all</ExpandAll>
             <Dropdown />
           </Actions>
-          <TestFileView />
+          <Accordion />
         </Left>
         <Right>Right</Right>
       </TestDetailsWrapper>

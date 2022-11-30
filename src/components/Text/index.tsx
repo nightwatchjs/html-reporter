@@ -10,5 +10,5 @@ export const Text = styled.p<TextProps>`
   font-weight: var(--font-weight-semi-light);
   font-size: var(${(props) => props.fontSize});
   line-height: var(${(props) => props.lineHight});
-  color: ${(props) => (props.color ? props.color : `var(--color-grey-90)`)};
+  color: ${(props) => (props.color ? `var(${props.color})` : `var(--color-grey-90)`)};
 `;

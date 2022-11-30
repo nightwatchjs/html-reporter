@@ -1,4 +1,5 @@
 import React, { ReactNode, useState } from 'react';
+import TestBlock from '../TestBlock';
 import {
   AccordionHeader,
   AccordionHeaderContent,
@@ -28,13 +29,17 @@ const TestFileView: React.FC = () => {
         <AccordionTrigger failed={failed} value="item-1">
           DuckDuckGo
         </AccordionTrigger>
-        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+        <AccordionContent>
+          <TestBlock>Test title with lengthy text will be wrapped in second line</TestBlock>
+        </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger failed={failed} value="item-2">
           Is it accessible?
         </AccordionTrigger>
-        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+        <AccordionContent>
+          <TestBlock>Find Nightwatch JS in duckDuckgo</TestBlock>
+        </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
         <AccordionTrigger failed={failed} value="item-3">
