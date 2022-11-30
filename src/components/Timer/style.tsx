@@ -7,7 +7,10 @@ export const Wrapper = styled.article`
 `;
 
 export const TimerIconWrapper = styled.div`
-  display: inline;
+  display: flex;
+  align-items: baseline;
+  font-size: var(--font-size-16);
+  color: var(--color-grey-90);
 `;
 
 export const Time = styled.time`
