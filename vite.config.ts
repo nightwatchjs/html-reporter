@@ -1,8 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { viteSingleFile } from "vite-plugin-singlefile";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { viteSingleFile } from 'vite-plugin-singlefile';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), viteSingleFile()]
-})
+  plugins: [
+    react({
+      babel: {
+        plugins: [['babel-plugin-styled-components']]
+      }
+    }),
+    viteSingleFile()
+  ]
+});

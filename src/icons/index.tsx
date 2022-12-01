@@ -1,3 +1,3 @@
-import { NightwatchIcon } from "./NightwatchIcon";
+import { NightwatchIcon } from './NightwatchIcon';
 
-export {NightwatchIcon}
+export { NightwatchIcon };

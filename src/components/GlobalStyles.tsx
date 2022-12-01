@@ -63,6 +63,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
       line-height: 1;
+      background: var(--color-grey-20);
     }
     ol, ul {
       list-style: none;
@@ -112,15 +113,15 @@ const GlobalStyles = createGlobalStyle`
     --color-secondary-90: ${COLORS.secondary[90]};
     --color-secondary-100: ${COLORS.secondary[100]};
     /* Neutrals */
-    --color-neutrals-10: ${COLORS.neutrals[10]};
-    --color-neutrals-20: ${COLORS.neutrals[20]};
-    --color-neutrals-30: ${COLORS.neutrals[30]};
-    --color-neutrals-40: ${COLORS.neutrals[40]};
-    --color-neutrals-50: ${COLORS.neutrals[50]};
-    --color-neutrals-60: ${COLORS.neutrals[60]};
-    --color-neutrals-70: ${COLORS.neutrals[70]};
-    --color-neutrals-90: ${COLORS.neutrals[90]};
-    --color-neutrals-100: ${COLORS.neutrals[100]};
+    --color-grey-10: ${COLORS.neutrals[10]};
+    --color-grey-20: ${COLORS.neutrals[20]};
+    --color-grey-30: ${COLORS.neutrals[30]};
+    --color-grey-40: ${COLORS.neutrals[40]};
+    --color-grey-50: ${COLORS.neutrals[50]};
+    --color-grey-60: ${COLORS.neutrals[60]};
+    --color-grey-70: ${COLORS.neutrals[70]};
+    --color-grey-90: ${COLORS.neutrals[90]};
+    --color-grey-100: ${COLORS.neutrals[100]};
     /* Blue */
     --color-blue-10: ${COLORS.blue[10]};
     --color-blue-20: ${COLORS.blue[20]};
@@ -163,11 +164,35 @@ const GlobalStyles = createGlobalStyle`
     --color-orange-100: ${COLORS.orange[100]};
 
     --color-dark-background: ${COLORS['dark-background']};
+    --color-dark-background-text: var(--color-grey-10);
     /* Font Weight */
     --font-weight-light: 300;
     --font-weight-semi-light: 400;
     --font-weight-regular: 500;
     --font-weight-bold: 600;
+    /* Font Size */
+    --font-size-10: calc(10 / 16 * 1rem);
+    --font-size-12: calc(12 / 16 * 1rem);
+    --font-size-14: calc(14 / 16 * 1rem);
+    --font-size-16: calc(16 / 16 * 1rem);
+    --font-size-18: calc(18 / 16 * 1rem);
+    --font-size-20: calc(20 / 16 * 1rem);
+    --font-size-24: calc(24 / 16 * 1rem);
+    --font-size-26: calc(26 / 16 * 1rem);
+    --font-size-32: calc(32 / 16 * 1rem);
+    --font-size-36: calc(36 / 16 * 1rem);
+    --font-size-42: calc(42 / 16 * 1rem);
+    /* Line Height */
+    --line-height-16: calc(16 / 16 * 1rem);
+    --line-height-20: calc(20 / 16 * 1rem);
+    --line-height-24: calc(24 / 16 * 1rem);
+    --line-height-28: calc(28 / 16 * 1rem);
+    --line-height-32: calc(32 / 16 * 1rem);
+    --line-height-36: calc(36 / 16 * 1rem);
+    --line-height-40: calc(40 / 16 * 1rem);
+    --line-height-48: calc(48 / 16 * 1rem);
+    --line-height-56: calc(56 / 16 * 1rem);
+    --line-height-64: calc(64 / 16 * 1rem);
     /* Font family */
     --font-family: 'Source Sans Pro', -apple-system, sans-serif;
   }
