@@ -3,19 +3,18 @@ import { Check, Close, RemoveCircleOutline } from '@mui/icons-material';
 
 export const Wrapper = styled.article`
   display: flex;
-  align-items: center;
+  gap: 8px;
   background: var(--color-grey-10);
   border-top: 1px solid var(--color-grey-50);
   padding: 8px;
-  gap: 8px;
 `;
 
 export const Left = styled.div`
-  display: flex;
   font-size: var(--font-size-16);
-  justify-content: center;
-  align-items: center;
-  align-self: flex-start;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: baseline;
+  margin-top: 2px;
 `;
 
 export const PassedIcon = styled(Check)`
