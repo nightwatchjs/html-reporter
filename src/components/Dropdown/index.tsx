@@ -1,6 +1,6 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import React, { useState } from 'react';
-import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
+import { ArrowDropDown, ArrowDropUp } from '../../icons/index';
 import {
   ArrowWrapper,
   DropdownMenuArrow,

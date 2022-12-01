@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import styled from 'styled-components';
 import GlobalStyles from './components/GlobalStyles';
 import Report from './Report';
+import { StyledEngineProvider } from '@mui/material/styles';
 
 const Wrapper = styled.section`
   max-width: 1280px;
@@ -23,11 +24,13 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <ThemeProvider theme={theme}>
-    <React.StrictMode>
-      <GlobalStyles />
-      <Wrapper>
-        <Report />
-      </Wrapper>
-    </React.StrictMode>
+    <StyledEngineProvider injectFirst>
+      <React.StrictMode>
+        <GlobalStyles />
+        <Wrapper>
+          <Report />
+        </Wrapper>
+      </React.StrictMode>
+    </StyledEngineProvider>
   </ThemeProvider>
 );

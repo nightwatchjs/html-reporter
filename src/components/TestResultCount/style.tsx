@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CheckCircle, Cancel, RemoveCircle } from '@mui/icons-material';
+import { CheckCircle, Cancel, RemoveCircle } from '../../icons/index';
 
 export const IconWrapper = styled.div`
   font-size: var(--font-size-12);

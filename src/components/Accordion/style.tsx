@@ -1,6 +1,6 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import styled from 'styled-components';
-import { Add, Cancel, Remove, CheckCircle } from '@mui/icons-material';
+import { Add, Cancel, Remove, CheckCircle } from '../../icons/index';
 
 export const AccordionRoot = styled(Accordion.Root)`
   background: var(--color-grey-20);

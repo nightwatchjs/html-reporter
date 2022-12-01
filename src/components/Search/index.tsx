@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search as SearchIcon } from '@mui/icons-material';
+import { SearchIcon } from '../../icons/index';
 import { Input, SearchIconWrapper, Wrapper } from './style';
 
 interface SearchProps {

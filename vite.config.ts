@@ -7,7 +7,16 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: [['babel-plugin-styled-components']]
+        plugins: [
+          [
+            'babel-plugin-styled-components',
+            {
+              fileName: true,
+              meaninglessFileNames: ['index', 'styles', 'style'],
+              pure: true
+            }
+          ]
+        ]
       }
     }),
     viteSingleFile()

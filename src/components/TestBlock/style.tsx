@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Check, Close, RemoveCircleOutline } from '@mui/icons-material';
+import { Check, Close, RemoveCircleOutline } from '../../icons/index';
 
 export const Wrapper = styled.article`
   display: flex;
