@@ -63,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
       line-height: 1;
-      background: var(--color-grey-20);
+      min-width: 1280px;
     }
     ol, ul {
       list-style: none;
@@ -120,6 +120,7 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-50: ${COLORS.neutrals[50]};
     --color-grey-60: ${COLORS.neutrals[60]};
     --color-grey-70: ${COLORS.neutrals[70]};
+    --color-grey-80: ${COLORS.neutrals[80]};
     --color-grey-90: ${COLORS.neutrals[90]};
     --color-grey-100: ${COLORS.neutrals[100]};
     /* Blue */
@@ -195,6 +196,11 @@ const GlobalStyles = createGlobalStyle`
     --line-height-64: calc(64 / 16 * 1rem);
     /* Font family */
     --font-family: 'Source Sans Pro', -apple-system, sans-serif;
+
+    --border-radius-3: calc(3 / 16 * 1rem);
+    --border-radius-4: calc(4 / 16 * 1rem);
+    --border-radius-5: calc(5 / 16 * 1rem);
+    --border-radius-8: calc(8 / 16 * 1rem);
   }
 `;
 const GlobalStylesWrapper = () => {
