@@ -28,6 +28,10 @@ export const TestFilterButton = styled.button`
   font-size: var(--font-size-12);
   line-height: var(--line-height-20);
   min-width: 104px;
+
+  &:focus {
+    box-shadow: 0 0 0 1px var(--color-primary-60);
+  }
 `;
 
 export const DropdownMenuContent = styled(DropdownMenu.Content)`

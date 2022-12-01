@@ -4,11 +4,13 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 1200px;
+  margin-bottom: 20px;
 `;
 
 export const TestDetailsWrapper = styled.div`
   display: flex;
+  /* TODO: Should be removed */
+  min-height: 1080px;
 `;
 
 export const Left = styled.div`
@@ -21,7 +23,10 @@ export const Left = styled.div`
 `;
 
 export const Right = styled.div`
+  border-left: 1px solid var(--color-grey-40);
   flex: 1 2 945px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Actions = styled.div`
@@ -38,4 +43,8 @@ export const ExpandAll = styled.button`
   border-radius: var(--border-radius-4);
   background: var(--color-grey-10);
   cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 0 1px var(--color-primary-60);
+  }
 `;

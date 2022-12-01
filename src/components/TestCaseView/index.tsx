@@ -1,11 +1,15 @@
 import React from 'react';
+import TestStepsView from '../TestStepsView';
 import Header from './Header';
-import { Wrapper } from './style';
+import { TestBody, Wrapper } from './style';
 
 const TestDetails: React.FC = () => {
   return (
     <Wrapper>
       <Header />
+      <TestBody>
+        <TestStepsView />
+      </TestBody>
     </Wrapper>
   );
 };
