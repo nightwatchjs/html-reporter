@@ -165,6 +165,7 @@ const GlobalStyles = createGlobalStyle`
     --color-orange-100: ${COLORS.orange[100]};
 
     --color-dark-background: ${COLORS['dark-background']};
+    --light-primary-background-10: hsla(25, 35%, 93%, 0.5);
     --color-dark-background-text: var(--color-grey-10);
     /* Font Weight */
     --font-weight-light: 300;
@@ -201,6 +202,8 @@ const GlobalStyles = createGlobalStyle`
     --border-radius-4: calc(4 / 16 * 1rem);
     --border-radius-5: calc(5 / 16 * 1rem);
     --border-radius-8: calc(8 / 16 * 1rem);
+
+    --padding-12: calc(12 / 16 * 1rem);
   }
 `;
 const GlobalStylesWrapper = () => {

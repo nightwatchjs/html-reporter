@@ -4,6 +4,7 @@ import Search from '../Search';
 import Accordion from '../Accordion';
 import TestStatusBar from '../TestStatusBar';
 import { Actions, ExpandAll, Left, Right, TestDetailsWrapper, Wrapper } from './style';
+import TestCaseView from '../TestCaseView';
 
 const TestData: React.FC = () => {
   return (
@@ -18,7 +19,9 @@ const TestData: React.FC = () => {
           </Actions>
           <Accordion />
         </Left>
-        <Right>Right</Right>
+        <Right>
+          <TestCaseView />
+        </Right>
       </TestDetailsWrapper>
     </Wrapper>
   );

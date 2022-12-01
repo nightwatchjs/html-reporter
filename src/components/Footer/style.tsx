@@ -9,6 +9,12 @@ export const Wrapper = styled.footer`
   align-items: center;
 `;
 
+export const LogoWrapper = styled.div`
+  display: flex;
+  gap: 12px;
+  align-items: center;
+`;
+
 export const TextWrapper = styled.div`
   margin-left: 40px;
 `;

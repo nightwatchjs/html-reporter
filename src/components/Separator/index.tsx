@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
-export default styled.div`
+type SeparatorProps = {
+  borderColor?: string;
+  height?: number;
+};
+
+export default styled.div<SeparatorProps>`
+  user-select: none;
   width: 0;
-  height: 20px;
-  margin: 12px;
-  border: 1px solid var(--color-grey-80);
+  height: ${(props) => props.height ?? 20}px;
+  border-right: 1px solid var(${(props) => props.borderColor ?? '--color-grey-80'});
 `;
