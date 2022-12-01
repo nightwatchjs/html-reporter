@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.article`
   position: relative;
-  border-radius: calc(5 / 16 * 1rem);
+  border-radius: var(--border-radius-5);
 `;
 
 export const SearchIconWrapper = styled.div`
@@ -27,7 +27,7 @@ export const Input = styled.input`
   line-height: var(--line-height-20);
   width: 100%;
   border: 1px solid var(--color-grey-50);
-  border-radius: calc(5 / 16 * 1rem);
+  border-radius: var(--border-radius-5);
   padding: 4px 4px 4px 24px;
 
   &:focus {

@@ -196,6 +196,11 @@ const GlobalStyles = createGlobalStyle`
     --line-height-64: calc(64 / 16 * 1rem);
     /* Font family */
     --font-family: 'Source Sans Pro', -apple-system, sans-serif;
+
+    --border-radius-3: calc(3 / 16 * 1rem);
+    --border-radius-4: calc(4 / 16 * 1rem);
+    --border-radius-5: calc(5 / 16 * 1rem);
+    --border-radius-8: calc(8 / 16 * 1rem);
   }
 `;
 const GlobalStylesWrapper = () => {

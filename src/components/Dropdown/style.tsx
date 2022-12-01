@@ -21,7 +21,7 @@ export const TestFilterButton = styled.button`
   color: var(--color-grey-90);
   padding: 4px 40px 4px 8px;
   border: 1px solid var(--color-grey-50);
-  border-radius: 4px;
+  border-radius: var(--border-radius-4);
   display: flex;
   justify-content: flex-start;
   background: var(--color-grey-10);
@@ -33,7 +33,7 @@ export const TestFilterButton = styled.button`
 export const DropdownMenuContent = styled(DropdownMenu.Content)`
   min-width: 110px;
   background-color: var(--color-grey-10);
-  border-radius: 3px;
+  border-radius: var(--border-radius-3);
   font-size: var(--font-size-14);
   line-height: var(--line-height-20);
   color: var(--color-grey-100);

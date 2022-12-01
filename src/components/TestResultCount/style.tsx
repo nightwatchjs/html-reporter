@@ -24,7 +24,7 @@ export const Wrapper = styled.article`
   padding: 4px;
   background-color: var(--color-grey-10);
   border: 1px solid var(--color-grey-50);
-  border-radius: 3px;
+  border-radius: var(--border-radius-3);
 `;
 
 export const IconWithText = styled.div`

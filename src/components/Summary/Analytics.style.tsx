@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.article`
   padding: 12px 20px;
   border: 1px solid var(--color-grey-50);
-  border-radius: 8px;
+  border-radius: var(--border-radius-8);
   display: flex;
   flex-direction: column;
 `;
@@ -60,7 +60,7 @@ export const Statistics = styled.div`
   justify-content: space-between;
   background: var(--color-grey-20);
   border: 1px solid var(--color-grey-40);
-  border-radius: 4px;
+  border-radius: var(--border-radius-4);
   min-height: 40px;
   padding: 7px;
 `;

@@ -35,7 +35,7 @@ export const ExpandAll = styled.button`
   line-height: var(--line-height-20);
   color: var(--color-grey-90);
   border: 1px solid var(--color-grey-50);
-  border-radius: 4px;
+  border-radius: var(--border-radius-4);
   background: var(--color-grey-10);
   cursor: pointer;
 `;

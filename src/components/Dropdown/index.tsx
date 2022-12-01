@@ -13,7 +13,7 @@ import {
 } from './style';
 
 const Dropdown: React.FC = () => {
-  const [context, SetContext] = React.useState('All Tests');
+  const [context, setContext] = useState('All Tests');
   const [open, setOpen] = useState(false);
 
   return (
@@ -27,7 +27,7 @@ const Dropdown: React.FC = () => {
 
       <DropdownMenu.Portal>
         <DropdownMenuContent sideOffset={5}>
-          <DropdownMenuRadioGroup value={context} onValueChange={SetContext}>
+          <DropdownMenuRadioGroup value={context} onValueChange={setContext}>
             <DropdownRadioItem value="All Tests">All Tests</DropdownRadioItem>
             <DropdownMenuSeparator />
             <DropdownRadioItem value="Passed">Passed</DropdownRadioItem>
