@@ -1,21 +1,23 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/github';
-import { Pre, Line, LineNo, LineContent, Wrapper, CodeWrapper, Filename } from './style';
+import { Pre, Line, LineNo, LineContent, Wrapper, CodeWrapper, Filename, Link } from './style';
 import { Segment } from '@mui/icons-material';
 
 type CodeBlockProps = {
   filename: string;
   line_number: number;
   codeSnippet: string[];
+  file_path: string;
 };
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippet }) => {
+const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippet, file_path }) => {
   return (
     <Wrapper>
       <Filename>
         <Segment />
-        {`${filename} : ${line_number}`}
+        <Link
+          href={`vscode://file/${file_path}:${line_number}:1`}>{`${filename} : ${line_number}`}</Link>
       </Filename>
       <CodeWrapper>
         <Highlight {...defaultProps} theme={theme} code={codeSnippet.join('\n')} language="jsx">

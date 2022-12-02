@@ -39,7 +39,12 @@ const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
         />
         <ErrorMessageText>{shortMessage[1]}</ErrorMessageText>
       </ErrorMessageWrapper>
-      <CodeBlock filename={filename} line_number={line_number} codeSnippet={codeSnippet} />
+      <CodeBlock
+        filename={filename}
+        line_number={line_number}
+        codeSnippet={codeSnippet}
+        file_path="/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js"
+      />
     </Wrapper>
   );
 };

@@ -35,7 +35,6 @@ export const Pre = styled.pre`
   text-align: left;
   padding: 0 12px;
   overflow: scroll;
-  /* background-color: var(--color-grey-20); */
 
   & .token-line {
     line-height: 1.3em;
@@ -64,4 +63,8 @@ export const LineNo = styled.span`
 
 export const LineContent = styled.span`
   display: table-cell;
+`;
+
+export const Link = styled.a`
+  color: var(--color-blue-60);
 `;
