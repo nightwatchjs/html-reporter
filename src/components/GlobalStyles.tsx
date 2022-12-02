@@ -171,6 +171,7 @@ const GlobalStyles = createGlobalStyle`
     --color-dark-background: ${COLORS['dark-background']};
     --light-primary-background-10: hsla(25, 35%, 93%, 0.5);
     --light-color-red-background-10: hsla(0, 55%, 94%, 0.5);
+    --list-color-secondary-background-10: hsla(180, 17%, 92%, 0.5);
     --color-dark-background-text: var(--color-grey-10);
     /* Font Weight */
     --font-weight-light: 300;

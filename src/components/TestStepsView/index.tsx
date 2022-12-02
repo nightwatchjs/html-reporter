@@ -2,6 +2,7 @@ import React from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
 import { TabsList, TabsRoot, TabsTrigger } from './style';
 import TestDetailsView from '../TestDetailsView';
+import LogView from '../LogView';
 
 const TestStepsView: React.FC = () => {
   return (
@@ -15,10 +16,10 @@ const TestStepsView: React.FC = () => {
         <TestDetailsView />
       </Tabs.Content>
       <Tabs.Content className="TabsContent" value="tab2">
-        <p className="Text">Tab 2</p>
+        <LogView />
       </Tabs.Content>
       <Tabs.Content className="TabsContent" value="tab3">
-        <p className="Text">Tab 3</p>
+        <LogView />
       </Tabs.Content>
     </TabsRoot>
   );
