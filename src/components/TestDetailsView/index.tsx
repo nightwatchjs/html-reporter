@@ -1,5 +1,6 @@
 import React from 'react';
-import PassedTestStep from '../PassedTestStep';
+import ErrorTestStep from '../ErrorTestStep';
+import PassTestStep from '../PassTestStep';
 import Search from '../Search';
 import { SearchWrapper, TestStepWrapper, Wrapper } from './style';
 
@@ -43,11 +44,13 @@ const TestDetailsView: React.FC = () => {
       <TestStepWrapper>
         {testStepData.map((data, index) => {
           return (
-            <PassedTestStep key={index} time={data.time}>
+            <PassTestStep key={index} time={data.time}>
               {data.stepName}
-            </PassedTestStep>
+            </PassTestStep>
           );
         })}
+        <ErrorTestStep time={24}>{`textContains('.layout__content', 'asdr.js');`}</ErrorTestStep>
+        <PassTestStep time={6}>After Hooks</PassTestStep>
       </TestStepWrapper>
     </Wrapper>
   );

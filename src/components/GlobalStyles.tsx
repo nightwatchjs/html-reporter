@@ -85,7 +85,7 @@ const GlobalStyles = createGlobalStyle`
       border-spacing: 0;
     }
     body, input, button, select, option {
-      font-family: var(--font-family);
+      font-family: var(--font-family-source-sans-pro);
       font-weight: var(--font-weight-light);
     }
     h1, h2, h3, h4, h5, h6, strong {
@@ -170,6 +170,7 @@ const GlobalStyles = createGlobalStyle`
 
     --color-dark-background: ${COLORS['dark-background']};
     --light-primary-background-10: hsla(25, 35%, 93%, 0.5);
+    --light-color-red-background-10: hsla(0, 55%, 94%, 0.5);
     --color-dark-background-text: var(--color-grey-10);
     /* Font Weight */
     --font-weight-light: 300;
@@ -200,7 +201,8 @@ const GlobalStyles = createGlobalStyle`
     --line-height-56: calc(56 / 16 * 1rem);
     --line-height-64: calc(64 / 16 * 1rem);
     /* Font family */
-    --font-family: 'Source Sans Pro', -apple-system, sans-serif;
+    --font-family-source-sans-pro: 'Source Sans Pro', -apple-system, sans-serif;
+    --font-family-menlo: 'Menlo', -apple-system, sans-serif;
 
     --border-radius-3: calc(3 / 16 * 1rem);
     --border-radius-4: calc(4 / 16 * 1rem);
@@ -208,6 +210,18 @@ const GlobalStyles = createGlobalStyle`
     --border-radius-8: calc(8 / 16 * 1rem);
 
     --padding-12: calc(12 / 16 * 1rem);
+
+    .blue-text-color {
+      color: var(--color-blue-60);
+    }
+
+    .red-text-color {
+      color: var(--color-red-60);
+    }
+
+    .green-text-color {
+      color: var(--color-green-60);
+    }
   }
 `;
 const GlobalStylesWrapper = () => {

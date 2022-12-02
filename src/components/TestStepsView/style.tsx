@@ -11,11 +11,9 @@ export const TabsList = styled(Tabs.List)`
   flex-shrink: 0;
   display: flex;
   border-bottom: 1px solid var(--color-grey-50);
-  background-color: var(--color-grey-10);
 `;
 
 export const TabsTrigger = styled(Tabs.Trigger)`
-  background-color: var(--color-grey-10);
   padding: 12px 16px;
   display: flex;
   align-items: center;

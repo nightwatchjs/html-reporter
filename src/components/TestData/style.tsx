@@ -27,6 +27,7 @@ export const Right = styled.div`
   flex: 1 2 945px;
   display: flex;
   flex-direction: column;
+  background: var(--color-grey-10);
 `;
 
 export const Actions = styled.div`

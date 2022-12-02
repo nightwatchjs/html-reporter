@@ -6,7 +6,7 @@ type TestStepProps = {
   children: React.ReactNode;
 };
 
-const PassedTestStep: React.FC<TestStepProps> = ({ time, children }) => {
+const PassTestStep: React.FC<TestStepProps> = ({ time, children }) => {
   return (
     <Wrapper>
       <PassedIcon />
@@ -16,4 +16,4 @@ const PassedTestStep: React.FC<TestStepProps> = ({ time, children }) => {
   );
 };
 
-export default PassedTestStep;
+export default PassTestStep;
