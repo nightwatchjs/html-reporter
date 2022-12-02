@@ -1,8 +1,13 @@
 import React from 'react';
-import { Wrapper } from './EnvironmentReport.style';
+import { Title, SubTitle, Wrapper } from './EnvironmentReport.style';
 
 const EnvironmentReport: React.FC = () => {
-  return <Wrapper>EnvironmentReport</Wrapper>;
+  return (
+    <Wrapper>
+      <Title>Environment wise reports</Title>
+      <SubTitle>Select an environment to view the report</SubTitle>
+    </Wrapper>
+  );
 };
 
 export default EnvironmentReport;

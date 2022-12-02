@@ -27,7 +27,7 @@ export const TestFilterButton = styled.button`
   background: var(--color-grey-10);
   font-size: var(--font-size-12);
   line-height: var(--line-height-20);
-  min-width: 104px;
+  /* min-width: 104px; */
 
   &:focus {
     box-shadow: 0 0 0 1px var(--color-primary-60);
