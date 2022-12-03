@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Wrapper = styled.article`
+export const Wrapper = styled(motion.article)`
   display: flex;
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -11,14 +12,15 @@ export const Wrapper = styled.article`
   flex-direction: row;
   flex-wrap: wrap;
   background: var(--color-grey-10);
+  width: 100%;
   max-width: 1240px;
 `;
 
-export const AnalyticsWrapper = styled.div`
+export const AnalyticsWrapper = styled(motion.div)`
   flex: 1 1 0%;
   margin-right: 20px;
 `;
-export const EnvironmentReportWrapper = styled.div`
+export const EnvironmentReportWrapper = styled(motion.div)`
   flex: 1 1 0%;
 `;
 
@@ -44,6 +46,6 @@ export const SubTitle = styled.p`
   font-weight: 400;
 `;
 
-export const Link = styled.a`
+export const Link = styled(motion.a)`
   color: var(--color-blue-60);
 `;

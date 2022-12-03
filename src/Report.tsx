@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import styled from 'styled-components';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -6,6 +6,17 @@ import Summary from './components/Summary';
 import TestData from './components/TestData';
 
 const Report: React.FC = () => {
+  const [data, setData] = useState({});
+
+  fetch('./data.json', {
+    mode: 'no-cors'
+  }).then(async (res) => {
+    const data = await res.json();
+    setData(data);
+  });
+
+  console.log(data);
+
   return (
     <Fragment>
       <Header />
