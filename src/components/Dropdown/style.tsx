@@ -48,6 +48,7 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.16));
 `;
 
 export const DropdownMenuRadioGroup = styled(DropdownMenu.RadioGroup)`

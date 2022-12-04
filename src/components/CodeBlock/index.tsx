@@ -3,6 +3,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/github';
 import { Pre, Line, LineNo, LineContent, Wrapper, CodeWrapper, Filename, Link } from './style';
 import { Segment } from '@mui/icons-material';
+import Tooltip from '../Tooltip';
 
 type CodeBlockProps = {
   filename: string;
@@ -16,8 +17,10 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippe
     <Wrapper>
       <Filename>
         <Segment />
-        <Link
-          href={`vscode://file/${file_path}:${line_number}:1`}>{`${filename} : ${line_number}`}</Link>
+        <Tooltip content="Open in IDE">
+          <Link
+            href={`vscode://file/${file_path}:${line_number}:1`}>{`${filename} : ${line_number}`}</Link>
+        </Tooltip>
       </Filename>
       <CodeWrapper>
         <Highlight {...defaultProps} theme={theme} code={codeSnippet.join('\n')} language="jsx">

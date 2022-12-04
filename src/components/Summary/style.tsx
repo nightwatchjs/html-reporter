@@ -21,7 +21,7 @@ export const AnalyticsWrapper = styled(motion.div)`
   margin-right: 20px;
 `;
 export const EnvironmentReportWrapper = styled(motion.div)`
-  flex: 1 1 0%;
+  flex: 1.4 1 0%;
 `;
 
 export const Header = styled.div`
