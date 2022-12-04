@@ -12,7 +12,7 @@ import {
   TestFilterWrapper
 } from './style';
 
-const Dropdown: React.FC = () => {
+const FilterDropdown: React.FC = () => {
   const [context, setContext] = useState('All Tests');
   const [open, setOpen] = useState(false);
 
@@ -43,4 +43,4 @@ const Dropdown: React.FC = () => {
   );
 };
 
-export default Dropdown;
+export default FilterDropdown;

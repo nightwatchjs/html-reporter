@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../Dropdown';
+import FilterDropdown from '../FilterDropdown';
 import Search from '../Search';
 import Accordion from '../Accordion';
 import TestStatusBar from '../TestStatusBar';
@@ -15,7 +15,7 @@ const TestData: React.FC = () => {
           <Search placeholder="Spec, test, tag" />
           <Actions>
             <ExpandAll type="button">Expand all</ExpandAll>
-            <Dropdown />
+            <FilterDropdown />
           </Actions>
           <Accordion />
         </Left>
