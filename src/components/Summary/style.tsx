@@ -19,6 +19,9 @@ export const Wrapper = styled(motion.article)`
 export const AnalyticsWrapper = styled(motion.div)`
   flex: 1 1 0%;
   margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 `;
 export const EnvironmentReportWrapper = styled(motion.div)`
   flex: 1.4 1 0%;

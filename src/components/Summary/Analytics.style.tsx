@@ -6,6 +6,7 @@ export const Wrapper = styled.article`
   border-radius: var(--border-radius-8);
   display: flex;
   flex-direction: column;
+  flex: 1;
 `;
 
 export const Header = styled.h2`
