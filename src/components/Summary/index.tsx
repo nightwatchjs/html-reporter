@@ -18,7 +18,8 @@ const Summary: React.FC = () => {
   return (
     <Wrapper
       animate={{ height: isOpen ? 54 : 230 }}
-      transition={{ ease: 'easeOut', duration: 0.5 }}>
+      transition={{ ease: 'easeOut', duration: 0.5 }}
+    >
       <Header>
         <Title>Summary</Title>
         <SubTitle>(Executed 216 tests in 5 environments)</SubTitle>
@@ -37,7 +38,8 @@ const Summary: React.FC = () => {
             opacity: 1,
             visibility: isOpen ? 'hidden' : 'revert'
           }}
-          transition={{ ease: 'easeOut', duration: 0.5 }}>
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
           <Analytics totalTests={1080} passed={986} failed={59} skipped={35} />
         </AnalyticsWrapper>
         <EnvironmentReportWrapper
@@ -48,7 +50,8 @@ const Summary: React.FC = () => {
             opacity: 1,
             visibility: isOpen ? 'hidden' : 'revert'
           }}
-          transition={{ ease: 'easeOut', duration: 0.5 }}>
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
           <EnvironmentReport />
         </EnvironmentReportWrapper>
       </AnimatePresence>

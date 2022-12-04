@@ -1,8 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.article`
+type WrapperProps = {
+  width?: number;
+};
+
+export const Wrapper = styled.article<WrapperProps>`
   position: relative;
   border-radius: var(--border-radius-5);
+  ${(props) =>
+    props.width &&
+    css`
+      width: ${props.width}%;
+    `}
 `;
 
 export const SearchIconWrapper = styled.div`

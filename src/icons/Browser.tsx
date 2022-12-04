@@ -1,6 +1,6 @@
 import React from 'react';
 
-type BrowserProps = {
+export type BrowserProps = {
   name: 'chrome' | 'firefox' | 'safari' | 'edge';
 };
 
@@ -10,7 +10,8 @@ const Firefox = () => (
     width="77.42"
     height="79.97"
     viewBox="0 0 77.42 79.97"
-    style={{ height: 12, width: 12 }}>
+    style={{ height: 12, width: 12 }}
+  >
     <defs>
       <radialGradient
         id="b"
@@ -18,7 +19,8 @@ const Firefox = () => (
         cy="-8515"
         r="80.8"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".13" stopColor="#ffbd4f" />
         <stop offset=".19" stopColor="#ffac31" />
         <stop offset=".25" stopColor="#ff9d17" />
@@ -35,7 +37,8 @@ const Firefox = () => (
         cy="-8482"
         r="80.8"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".3" stopColor="#960e18" />
         <stop offset=".35" stopColor="#b11927" stopOpacity=".74" />
         <stop offset=".43" stopColor="#db293d" stopOpacity=".34" />
@@ -48,7 +51,8 @@ const Firefox = () => (
         cy="-8533"
         r="58.53"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".13" stopColor="#fff44f" />
         <stop offset=".25" stopColor="#ffdc3e" />
         <stop offset=".51" stopColor="#ff9d12" />
@@ -60,7 +64,8 @@ const Firefox = () => (
         cy="-8461"
         r="38.47"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".35" stopColor="#3a8ee6" />
         <stop offset=".47" stopColor="#5c79f0" />
         <stop offset=".67" stopColor="#9059ff" />
@@ -72,7 +77,8 @@ const Firefox = () => (
         cy="-8492"
         r="20.4"
         gradientTransform="matrix(.972 -.235 .275 1.138 10090 7834)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".21" stopColor="#9059ff" stopOpacity="0" />
         <stop offset=".28" stopColor="#8c4ff3" stopOpacity=".06" />
         <stop offset=".75" stopColor="#7716a8" stopOpacity=".45" />
@@ -84,7 +90,8 @@ const Firefox = () => (
         cy="-8518"
         r="27.68"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#ffe226" />
         <stop offset=".12" stopColor="#ffdb27" />
         <stop offset=".29" stopColor="#ffc82a" />
@@ -98,7 +105,8 @@ const Firefox = () => (
         cy="-8536"
         r="118.1"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".11" stopColor="#fff44f" />
         <stop offset=".46" stopColor="#ff980e" />
         <stop offset=".62" stopColor="#ff5634" />
@@ -111,7 +119,8 @@ const Firefox = () => (
         cy="-8523"
         r="86.5"
         gradientTransform="matrix(.105 .995 -.653 .069 -4685 8470)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#fff44f" />
         <stop offset=".06" stopColor="#ffe847" />
         <stop offset=".17" stopColor="#ffc830" />
@@ -127,7 +136,8 @@ const Firefox = () => (
         cy="-8508"
         r="73.72"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".14" stopColor="#fff44f" />
         <stop offset=".48" stopColor="#ff980e" />
         <stop offset=".59" stopColor="#ff5634" />
@@ -140,7 +150,8 @@ const Firefox = () => (
         cy="-8504"
         r="80.69"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".09" stopColor="#fff44f" />
         <stop offset=".23" stopColor="#ffe141" />
         <stop offset=".51" stopColor="#ffaf1e" />
@@ -153,7 +164,8 @@ const Firefox = () => (
         y1="12.39"
         y2="74.47"
         gradientTransform="translate(-1.3)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".05" stopColor="#fff44f" />
         <stop offset=".11" stopColor="#ffe847" />
         <stop offset=".23" stopColor="#ffc830" />
@@ -170,7 +182,8 @@ const Firefox = () => (
         y1="12.06"
         y2="66.81"
         gradientTransform="translate(-1.3)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".17" stopColor="#fff44f" stopOpacity=".8" />
         <stop offset=".27" stopColor="#fff44f" stopOpacity=".63" />
         <stop offset=".49" stopColor="#fff44f" stopOpacity=".22" />
@@ -246,7 +259,8 @@ const Chrome = () => (
     width="48"
     height="48"
     viewBox="0 0 48 48"
-    style={{ height: 12, width: 12 }}>
+    style={{ height: 12, width: 12 }}
+  >
     <defs>
       <linearGradient
         id="chrome_a"
@@ -254,7 +268,8 @@ const Chrome = () => (
         x2="44.78"
         y1="15"
         y2="15"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#d93025" />
         <stop offset="1" stopColor="#ea4335" />
       </linearGradient>
@@ -264,7 +279,8 @@ const Chrome = () => (
         x2="41.5"
         y1="47.68"
         y2="11.68"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#fcc934" />
         <stop offset="1" stopColor="#fbbc04" />
       </linearGradient>
@@ -274,7 +290,8 @@ const Chrome = () => (
         x2="5.82"
         y1="46.5"
         y2="10.51"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#1e8e3e" />
         <stop offset="1" stopColor="#34a853" />
       </linearGradient>
@@ -306,7 +323,8 @@ const Safari = () => (
     width="250.08"
     height="248.71"
     viewBox="0 0 66.17 65.8"
-    style={{ height: 12, width: 12 }}>
+    style={{ height: 12, width: 12 }}
+  >
     <defs>
       <linearGradient id="safari_b">
         <stop offset="0" stopColor="#06c2e7" />
@@ -335,7 +353,8 @@ const Safari = () => (
         height="1.04"
         x="-.02"
         y="-.02"
-        colorInterpolationFilters="sRGB">
+        colorInterpolationFilters="sRGB"
+      >
         <feGaussianBlur stdDeviation=".96" />
       </filter>
       <filter
@@ -344,7 +363,8 @@ const Safari = () => (
         height="1.1"
         x="-.05"
         y="-.05"
-        colorInterpolationFilters="sRGB">
+        colorInterpolationFilters="sRGB"
+      >
         <feGaussianBlur stdDeviation="3.56" />
       </filter>
       <radialGradient
@@ -409,7 +429,8 @@ const Edge = () => (
         cy="68.9"
         r="95.4"
         gradientTransform="matrix(1 0 0 -.95 0 248.8)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".7" stopOpacity="0" />
         <stop offset=".9" stopOpacity=".5" />
         <stop offset="1" />
@@ -420,7 +441,8 @@ const Edge = () => (
         cy="63"
         r="143.2"
         gradientTransform="matrix(.15 -.99 -.8 -.12 176.6 -125.4)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset=".8" stopOpacity="0" />
         <stop offset=".9" stopOpacity=".5" />
         <stop offset="1" />
@@ -431,7 +453,8 @@ const Edge = () => (
         cy="570.2"
         r="202.4"
         gradientTransform="matrix(-.04 1 2.13 .08 -1179.5 -106.7)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#35c1f1" />
         <stop offset=".1" stopColor="#34c1ed" />
         <stop offset=".2" stopColor="#2fc2df" />
@@ -444,7 +467,8 @@ const Edge = () => (
         cy="568"
         r="97.3"
         gradientTransform="matrix(.28 .96 .78 -.23 -303.8 -148.5)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#66eb6e" />
         <stop offset="1" stopColor="#66eb6e" stopOpacity="0" />
       </radialGradient>
@@ -455,7 +479,8 @@ const Edge = () => (
         y1="84"
         y2="84"
         gradientTransform="matrix(1 0 0 -1 0 266)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#0c59a4" />
         <stop offset="1" stopColor="#114a8b" />
       </linearGradient>
@@ -466,7 +491,8 @@ const Edge = () => (
         y1="161.4"
         y2="40.1"
         gradientTransform="matrix(1 0 0 -1 0 266)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="0" stopColor="#1b9de2" />
         <stop offset=".2" stopColor="#1595df" />
         <stop offset=".7" stopColor="#0680d7" />

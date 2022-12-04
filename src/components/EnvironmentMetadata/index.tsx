@@ -7,12 +7,12 @@ import ChipWithIcon from '../ChipWithIcon';
 import Browser from '../../icons/Browser';
 import OperatingSystem from '../../icons/OperatingSystem';
 
-type MetaDataProps = {
+export type MetaDataProps = {
   meta: {
     device: 'desktop' | 'mobile';
-    browserName: string;
+    browserName: 'chrome' | 'firefox' | 'safari' | 'edge';
     browserVersion: number;
-    operatingSystemName: string;
+    operatingSystemName: 'windows' | 'linux' | 'macos';
     tags: string[];
     time: {
       hour?: number;
@@ -29,9 +29,11 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
     <Wrapper>
       <ChipWithIcon icon={<DesktopWindowsOutlined />}>{device}</ChipWithIcon>
       <ChipWithIcon
-        icon={<Browser name="firefox" />}>{`${browserName} ${browserVersion}`}</ChipWithIcon>
+        icon={<Browser name={browserName} />}
+      >{`${browserName} ${browserVersion}`}</ChipWithIcon>
       <ChipWithIcon
-        icon={<OperatingSystem name="windows" />}>{`${operatingSystemName}`}</ChipWithIcon>
+        icon={<OperatingSystem name={operatingSystemName} />}
+      >{`${operatingSystemName}`}</ChipWithIcon>
       {tags.map((label, index) => {
         return <Tags key={index}>{label}</Tags>;
       })}

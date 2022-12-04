@@ -284,7 +284,8 @@ const Linux = () => (
         x="2.808"
         y="4.407"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".64" />
@@ -296,7 +297,8 @@ const Linux = () => (
         x="4.437"
         y="3.632"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".98" />
@@ -308,7 +310,8 @@ const Linux = () => (
         x="4.118"
         y="4.388"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".68" />
@@ -320,7 +323,8 @@ const Linux = () => (
         x="3.025"
         y="4.486"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="1.25" />
@@ -332,7 +336,8 @@ const Linux = () => (
         x="5.538"
         y="3.176"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="1.78" />
@@ -344,7 +349,8 @@ const Linux = () => (
         x="3.695"
         y="-1.797"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="1.73" />
@@ -356,7 +362,8 @@ const Linux = () => (
         x="6.523"
         y="2.859"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".78" />
@@ -368,7 +375,8 @@ const Linux = () => (
         x="1.226"
         y="4.483"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".98" />
@@ -380,7 +388,8 @@ const Linux = () => (
         x="6.341"
         y="3.84"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="1.19" />
@@ -392,7 +401,8 @@ const Linux = () => (
         x="-5.396"
         y="1.918"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="3.38" />
@@ -404,7 +414,8 @@ const Linux = () => (
         x="-2.705"
         y="4.34"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="2.1" />
@@ -416,7 +427,8 @@ const Linux = () => (
         x="3.12"
         y="8.5"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".32" />
@@ -428,7 +440,8 @@ const Linux = () => (
         x="4.162"
         y="5.25"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="1.95" />
@@ -440,7 +453,8 @@ const Linux = () => (
         x=".225"
         y=".571"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="4.12" />
@@ -452,7 +466,8 @@ const Linux = () => (
         x="2.364"
         y="2.352"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="3.12" />
@@ -464,7 +479,8 @@ const Linux = () => (
         x="7.746"
         y="7.956"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".41" />
@@ -476,7 +492,8 @@ const Linux = () => (
         x="4.131"
         y="4.05"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="2.45" />
@@ -488,7 +505,8 @@ const Linux = () => (
         x="6.791"
         y="6.641"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="1.12" />
@@ -500,7 +518,8 @@ const Linux = () => (
         x="7.378"
         y="6.656"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".88" />
@@ -512,7 +531,8 @@ const Linux = () => (
         x="7.378"
         y="6.656"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".88" />
@@ -524,7 +544,8 @@ const Linux = () => (
         x="4.558"
         y="2.358"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".44" />
@@ -536,7 +557,8 @@ const Linux = () => (
         x="5.137"
         y="2.347"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".12" />
@@ -548,7 +570,8 @@ const Linux = () => (
         x="6.15"
         y="2.304"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".45" />
@@ -560,7 +583,8 @@ const Linux = () => (
         x="6.883"
         y="2.255"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".13" />
@@ -572,7 +596,8 @@ const Linux = () => (
         x="1.574"
         y=".685"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation="1.75" />
@@ -584,7 +609,8 @@ const Linux = () => (
         x="3.45"
         y="2.484"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".8" />
@@ -596,7 +622,8 @@ const Linux = () => (
         x="4.147"
         y="2.902"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".77" />
@@ -608,7 +635,8 @@ const Linux = () => (
         x="3.852"
         y="2.572"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".65" />
@@ -620,7 +648,8 @@ const Linux = () => (
         x="4.685"
         y="2.447"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".73" />
@@ -632,7 +661,8 @@ const Linux = () => (
         x="5.551"
         y="3.49"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".1" />
@@ -644,7 +674,8 @@ const Linux = () => (
         x="6.128"
         y="3.471"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".1" />
@@ -656,7 +687,8 @@ const Linux = () => (
         x="6.956"
         y="3.529"
         colorInterpolationFilters="sRGB"
-        filterUnits="userSpaceOnUse">
+        filterUnits="userSpaceOnUse"
+      >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur result="effect1_foregroundBlur_1796_33026" stdDeviation=".23" />
@@ -667,7 +699,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.95 0 0 .75938 4.26 6.313)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop />
         <stop offset="1" stopOpacity=".25" />
       </radialGradient>
@@ -677,7 +710,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(1.18 0 0 .75938 7.487 6.752)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop />
         <stop offset="1" stopOpacity=".25" />
       </radialGradient>
@@ -687,7 +721,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.4675 0 0 .42188 5.911 6.578)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop />
         <stop offset="1" stopOpacity=".25" />
       </radialGradient>
@@ -697,7 +732,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.9495 .21467 -.1939 .85763 9.686 9.407)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#110800" />
         <stop offset=".59" stopColor="#A65A00" stopOpacity=".8" />
         <stop offset="1" stopColor="#FF921E" stopOpacity="0" />
@@ -708,7 +744,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.98612 -.03516 .02235 .62667 9.686 9.211)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#110800" />
         <stop offset=".59" stopColor="#A65A00" stopOpacity=".8" />
         <stop offset="1" stopColor="#FF921E" stopOpacity="0" />
@@ -719,7 +756,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.31868 .11691 -.04775 .13015 10.432 8.651)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#7C7C7C" />
         <stop offset="1" stopColor="#7C7C7C" stopOpacity=".33" />
       </radialGradient>
@@ -729,7 +767,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.51197 -.00452 .00584 .66148 5.525 3.369)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#FEFEFC" />
         <stop offset=".75" stopColor="#FEFEFC" />
         <stop offset="1" stopColor="#D4D4D4" />
@@ -740,7 +779,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.30835 -.04284 .03362 .24203 5.445 3.045)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#C8C8C8" />
         <stop offset="1" stopColor="#797978" />
       </radialGradient>
@@ -750,7 +790,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.68166 -.01807 .01754 .66136 7.103 3.369)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#FEFEFC" />
         <stop offset=".75" stopColor="#FEFEFC" />
         <stop offset="1" stopColor="#D4D4D4" />
@@ -761,7 +802,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.46276 -.28368 .24118 .39343 6.082 3.736)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#020204" />
         <stop offset=".73" stopColor="#020204" />
         <stop offset="1" stopColor="#5C5C5C" />
@@ -772,7 +814,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(1.25507 -.43647 .26997 .77629 6.689 4.179)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#D2940A" />
         <stop offset=".75" stopColor="#D89C08" />
         <stop offset=".87" stopColor="#B67E07" />
@@ -784,7 +827,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.066 0 0 .0599 5.806 3.726)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#3A2903" />
         <stop offset=".55" stopColor="#735208" />
         <stop offset="1" stopColor="#AC8C04" />
@@ -795,7 +839,8 @@ const Linux = () => (
         cy="0"
         r="1"
         gradientTransform="matrix(.139 0 0 .06834 6.433 3.719)"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#3A2903" />
         <stop offset=".55" stopColor="#735208" />
         <stop offset="1" stopColor="#AC8C04" />
@@ -806,7 +851,8 @@ const Linux = () => (
         x2="3.943"
         y1="9.343"
         y2="12.492"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#B98309" />
         <stop offset="1" stopColor="#382605" />
       </linearGradient>
@@ -816,7 +862,8 @@ const Linux = () => (
         x2="4.915"
         y1="10.094"
         y2="11.193"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#EBC40C" />
         <stop offset="1" stopColor="#EBC40C" stopOpacity="0" />
       </linearGradient>
@@ -826,7 +873,8 @@ const Linux = () => (
         x2="8.664"
         y1="10.142"
         y2="11.15"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop />
         <stop offset="1" stopOpacity="0" />
       </linearGradient>
@@ -836,7 +884,8 @@ const Linux = () => (
         x2="10.378"
         y1="11.874"
         y2="8.796"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#3E2A06" />
         <stop offset="1" stopColor="#AD780A" />
       </linearGradient>
@@ -846,7 +895,8 @@ const Linux = () => (
         x2="9.297"
         y1="8.822"
         y2="9.286"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#F3CD0C" />
         <stop offset="1" stopColor="#F3CD0C" stopOpacity="0" />
       </linearGradient>
@@ -856,7 +906,8 @@ const Linux = () => (
         x2="9.613"
         y1="8.523"
         y2="8.516"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#7C7C7C" />
         <stop offset="1" stopColor="#7C7C7C" stopOpacity=".33" />
       </linearGradient>
@@ -866,7 +917,8 @@ const Linux = () => (
         x2="5.607"
         y1="3.168"
         y2="3.575"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#757574" stopOpacity="0" />
         <stop offset=".25" stopColor="#757574" />
         <stop offset=".5" stopColor="#757574" />
@@ -878,7 +930,8 @@ const Linux = () => (
         x2="5.831"
         y1="2.572"
         y2="3.118"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#646464" stopOpacity="0" />
         <stop offset=".31" stopColor="#646464" stopOpacity=".58" />
         <stop offset=".47" stopColor="#646464" />
@@ -891,7 +944,8 @@ const Linux = () => (
         x2="7.328"
         y1="3.193"
         y2="3.522"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#949494" stopOpacity=".39" />
         <stop offset=".5" stopColor="#949494" />
         <stop offset="1" stopColor="#949494" stopOpacity=".39" />
@@ -902,7 +956,8 @@ const Linux = () => (
         x2="7.68"
         y1="2.728"
         y2="3.307"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#747474" />
         <stop offset=".13" stopColor="#8C8C8C" />
         <stop offset=".25" stopColor="#A4A4A4" />
@@ -916,7 +971,8 @@ const Linux = () => (
         x2="7.673"
         y1="2.531"
         y2="3.108"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#646464" stopOpacity="0" />
         <stop offset=".31" stopColor="#646464" stopOpacity=".58" />
         <stop offset=".47" stopColor="#646464" />
@@ -929,7 +985,8 @@ const Linux = () => (
         x2="7.539"
         y1="4.122"
         y2="4.099"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#AD780A" />
         <stop offset=".12" stopColor="#D89E08" />
         <stop offset=".25" stopColor="#EDB80B" />
@@ -944,7 +1001,8 @@ const Linux = () => (
         x2="7.537"
         y1="4.047"
         y2="4.199"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#F5CE2D" />
         <stop offset="1" stopColor="#D79B08" />
       </linearGradient>
@@ -986,7 +1044,8 @@ const MacOS = () => (
         x2="19.996"
         y1="21.005"
         y2="1.004"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#F2F2F2" />
         <stop offset=".596" stopColor="#F7F7F7" />
         <stop offset="1" stopColor="#FEFEFE" />
@@ -997,7 +1056,8 @@ const MacOS = () => (
         x2="19.996"
         y1="21.005"
         y2="1.004"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#F2F2F2" />
         <stop offset=".596" stopColor="#F7F7F7" />
         <stop offset="1" stopColor="#FEFEFE" />

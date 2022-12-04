@@ -19,7 +19,8 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippe
         <Segment />
         <Tooltip content="Open in IDE">
           <Link
-            href={`vscode://file/${file_path}:${line_number}:1`}>{`${filename} : ${line_number}`}</Link>
+            href={`vscode://file/${file_path}:${line_number}:1`}
+          >{`${filename} : ${line_number}`}</Link>
         </Tooltip>
       </Filename>
       <CodeWrapper>

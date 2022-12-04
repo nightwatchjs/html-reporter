@@ -4,11 +4,12 @@ import { Input, SearchIconWrapper, Wrapper } from './style';
 
 interface SearchProps {
   placeholder: string;
+  width?: number;
 }
 
-const Search: React.FC<SearchProps> = ({ placeholder }) => {
+const Search: React.FC<SearchProps> = ({ placeholder, width }) => {
   return (
-    <Wrapper>
+    <Wrapper width={width}>
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
