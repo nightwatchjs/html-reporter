@@ -12,12 +12,11 @@ const sampleReportPath = join(__dirname, 'sample', 'report.json')
 export function bundle() {
   return {
     name: 'nightwatch-bundle',
+    apply: 'serve',
     transformIndexHtml: {
-      transform(html, ctx) {
-        if (ctx && ctx.server) {
-          const reportData = readFileSync(sampleReportPath,{ encoding: 'utf8' })
-          return  html + `<script>window.nightwatchReport = ${reportData}</script>`
-        }
+      transform(html, _ctx) {
+        const reportData = readFileSync(sampleReportPath,{ encoding: 'utf8' })
+        return  html + `<script>window.nightwatchReport = ${reportData}</script>`
       }
     }
   };
