@@ -2067,11 +2067,14 @@
     }
   },
   "stats": {
-    "total": 1080,
-    "passed": 986,
-    "failed": 59,
-    "skipped": 35,
-    "time": "4320"
+    "total": 8,
+    "passed": 5,
+    "failed": 2,
+    "skipped": 1,
+    "time": {
+      "min": 1,
+      "sec": 40
+    }
   },
   "metadata": {
     "timestamp": 1301090400

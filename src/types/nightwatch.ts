@@ -111,7 +111,11 @@ export interface Stats {
   passed: number;
   failed: number;
   skipped: number;
-  time: string;
+  time: {
+    hour?: number;
+    min?: number;
+    sec?: number;
+  };
 }
 
 export interface Metadata {
