@@ -21,15 +21,15 @@ export const SkippedIcon = styled(RemoveCircle)`
 
 export const Wrapper = styled.article`
   display: flex;
-  padding: 4px;
+  padding: var(--padding-4);
   background-color: var(--color-grey-10);
-  border: 1px solid var(--color-grey-50);
+  border: var(--border-1) solid var(--color-grey-50);
   border-radius: var(--border-radius-3);
 `;
 
 export const IconWithText = styled.div`
   display: flex;
-  gap: 5px;
+  gap: var(--gap-5);
   align-items: center;
-  padding: 0 8px;
+  padding: 0 var(--padding-8);
 `;

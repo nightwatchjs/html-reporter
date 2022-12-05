@@ -32,7 +32,7 @@ const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
   const [envData, setEnvData] = useState<Partial<EnvironmentData>>({});
 
   useEffect(() => {
-    data.find((data) => {
+    data.forEach((data) => {
       if (data.name == context) {
         setEnvData(data);
       }

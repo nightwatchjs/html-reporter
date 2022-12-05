@@ -4,15 +4,15 @@ export const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   background-color: var(--color-grey-10);
-  padding: 12px;
-  gap: 12px;
-  border: 1px solid var(--color-grey-50);
-  margin: 12px 12px 10px 12px;
+  padding: var(--padding-12);
+  gap: var(--gap-12);
+  border: var(--border-1) solid var(--color-grey-50);
+  margin: var(--margin-12) var(--margin-12) var(--margin-10) var(--margin-12);
 `;
 
 export const ErrorMessageWrapper = styled.div`
   background-color: var(--color-grey-20);
-  padding: 8px;
+  padding: var(--padding-8);
 `;
 
 export const ErrorMessageText = styled.div`

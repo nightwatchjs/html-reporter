@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface TextProps {
   fontSize: number;
@@ -12,5 +12,13 @@ export const Text = styled.p<TextProps>`
   font-size: var(--font-size-${(props) => props.fontSize});
   line-height: var(--line-height-${(props) => props.lineHight});
   color: var(--color-${(props) => props.color ?? 'grey-90'});
-  ${(props) => (props.transformText ? 'text-transform: capitalize;' : '')}
+  ${(props) =>
+    props.transformText &&
+    css`
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    `}
 `;

@@ -3,7 +3,7 @@ import { Cancel, CheckCircle } from '../../icons';
 
 export const Wrapper = styled.div`
   display: flex;
-  gap: 8px;
+  gap: var(--gap-8);
   font-size: var(--font-size-20);
   font-weight: var(--font-weight-semi-light);
   line-height: var(--line-height-32);

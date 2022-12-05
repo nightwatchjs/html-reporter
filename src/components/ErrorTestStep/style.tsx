@@ -15,8 +15,8 @@ export const Wrapper = styled.article`
 export const FailedStepWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 8px;
-  gap: 8px;
+  padding: var(--padding-8);
+  gap: var(--gap-8);
 `;
 
 export const FailedIcon = styled(Close)`

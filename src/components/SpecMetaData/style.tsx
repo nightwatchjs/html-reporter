@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--gap-8);
   padding: var(--padding-12);
   flex: 1;
 `;
@@ -19,13 +19,13 @@ export const TestBlockDetails = styled.div`
 export const EnvironmentAndSpecName = styled.div`
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: var(--gap-5);
   margin-right: auto;
 `;
 
 export const TagGroup = styled.div`
   display: flex;
-  gap: 4px;
+  gap: var(--gap-4);
   margin-left: auto;
   align-items: center;
 `;

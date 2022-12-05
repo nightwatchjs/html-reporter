@@ -3,10 +3,10 @@ import { Check, Close, RemoveCircleOutline } from '../../icons/index';
 
 export const Wrapper = styled.article`
   display: flex;
-  gap: 8px;
+  gap: var(--gap-8);
   background: var(--color-grey-10);
-  border-top: 1px solid var(--color-grey-50);
-  padding: 8px;
+  border-top: var(--border-1) solid var(--color-grey-50);
+  padding: var(--padding-8);
 `;
 
 export const Left = styled.div`
@@ -14,7 +14,7 @@ export const Left = styled.div`
   display: inline-flex;
   flex-shrink: 0;
   align-items: baseline;
-  margin-top: 2px;
+  margin-top: var(--margin-2);
 `;
 
 export const PassedIcon = styled(Check)`

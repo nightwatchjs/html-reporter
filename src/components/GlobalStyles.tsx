@@ -205,12 +205,44 @@ const GlobalStyles = createGlobalStyle`
     --font-family-source-sans-pro: 'Source Sans Pro', -apple-system, sans-serif;
     --font-family-menlo: 'Menlo', -apple-system, sans-serif;
 
+    /* Border Radius */
     --border-radius-3: calc(3 / 16 * 1rem);
     --border-radius-4: calc(4 / 16 * 1rem);
     --border-radius-5: calc(5 / 16 * 1rem);
     --border-radius-8: calc(8 / 16 * 1rem);
 
+    /* Padding */
+    --padding-4: calc(4 / 16 * 1rem);
+    --padding-8: calc(8 / 16 * 1rem);
+    --padding-9: calc(9 / 16 * 1rem);
     --padding-12: calc(12 / 16 * 1rem);
+    --padding-16: calc(16 / 16 * 1rem);
+    --padding-18: calc(18 / 16 * 1rem);
+    --padding-20: calc(20 / 16 * 1rem);
+    --padding-24: calc(24 / 16 * 1rem);
+    --padding-40: calc(40 / 16 * 1rem);
+
+    /* Gap */
+    --gap-4: calc(4 / 16 * 1rem);
+    --gap-5: calc(5 / 16 * 1rem);
+    --gap-6: calc(6 / 16 * 1rem);
+    --gap-8: calc(8 / 16 * 1rem);
+    --gap-12: calc(12 / 16 * 1rem);
+    --gap-16: calc(16 / 16 * 1rem);
+    --gap-20: calc(20 / 16 * 1rem);
+
+    /* Margin */
+    --margin-2: calc(2 / 16 * 1rem);
+    --margin-4: calc(4 / 16 * 1rem);
+    --margin-8: calc(8 / 16 * 1rem);
+    --margin-10: calc(10 / 16 * 1rem);
+    --margin-12: calc(12 / 16 * 1rem);
+    --margin-20: calc(20 / 16 * 1rem);
+    --margin-40: calc(40 / 16 * 1rem);
+
+    /* Border */
+    --border-1: calc(1 / 16 * 1rem);
+    --border-2: calc(2 / 16 * 1rem);
 
     .blue-text-color {
       color: var(--color-blue-60);

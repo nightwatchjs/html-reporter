@@ -3,9 +3,9 @@ import { Check } from '../../icons';
 
 export const Wrapper = styled.div`
   display: flex;
-  padding: 8px;
-  gap: 8px;
-  border-bottom: 1px solid var(--color-grey-40);
+  padding: var(--padding-8);
+  gap: var(--gap-8);
+  border-bottom: var(--border-1) solid var(--color-grey-40);
   align-items: center;
 
   &:hover {

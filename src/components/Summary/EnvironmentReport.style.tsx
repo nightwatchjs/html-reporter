@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
-  padding: 12px 20px;
-  border: 1px solid var(--color-grey-50);
+  padding: var(--padding-12) var(--padding-20);
+  border: var(--border-1) solid var(--color-grey-50);
   border-radius: var(--border-radius-8);
 `;
 
@@ -15,7 +15,7 @@ export const Title = styled.h2`
   color: var(--color-grey-100);
   opacity: 0.75;
   text-transform: lowercase;
-  margin-bottom: 12px;
+  margin-bottom: var(--margin-12);
 
   &::first-letter {
     text-transform: uppercase;
@@ -27,7 +27,7 @@ export const SubTitle = styled.p`
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   color: var(--color-grey-90);
-  margin-bottom: 8px;
+  margin-bottom: var(--margin-8);
   text-transform: lowercase;
 
   &::first-letter {

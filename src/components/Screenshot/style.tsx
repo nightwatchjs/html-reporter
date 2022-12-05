@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.article`
-  margin-left: 12px;
-  margin-bottom: 10px;
+  margin-left: var(--margin-12);
+  margin-bottom: var(--margin-10);
 `;

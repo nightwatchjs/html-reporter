@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-20);
 `;
 
 export const TestDetailsWrapper = styled.div`
@@ -18,12 +18,12 @@ export const Left = styled.div`
   background: var(--color-grey-10);
   display: flex;
   flex-direction: column;
-  padding: 12px 20px;
-  gap: 12px;
+  padding: var(--padding-12) var(--padding-20);
+  gap: var(--gap-12);
 `;
 
 export const Right = styled.div`
-  border-left: 1px solid var(--color-grey-40);
+  border-left: var(--border-1) solid var(--color-grey-40);
   flex: 1 2 945px;
   display: flex;
   flex-direction: column;
@@ -32,11 +32,11 @@ export const Right = styled.div`
 
 export const Actions = styled.div`
   display: flex;
-  gap: 12px;
+  gap: var(--gap-12);
 `;
 
 export const ExpandAll = styled.button`
-  padding: 4px 8px;
+  padding: var(--padding-4) var(--padding-8);
   font-size: var(--font-size-12);
   line-height: var(--line-height-20);
   color: var(--color-grey-90);

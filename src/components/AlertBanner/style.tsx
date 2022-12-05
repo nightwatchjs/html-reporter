@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  padding: 8px;
-  gap: 8px;
+  padding: var(--padding-8);
+  gap: var(--gap-8);
   background-color: var(--color-red-10);
   border-radius: var(--border-radius-3);
   font-size: var(--font-size-14);
