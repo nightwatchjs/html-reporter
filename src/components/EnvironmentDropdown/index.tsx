@@ -1,5 +1,9 @@
-import React, { ReactNode, useEffect, useState } from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import React, { ReactNode, useEffect, useState } from 'react';
+import { ArrowDropDown, ArrowDropUp } from '../../icons';
+import { MetaDataProps } from '../EnvironmentMetadata';
+import Search from '../Search';
+import EnvironmentContent from './EnvironmentContent';
 import {
   DropdownMenuContent,
   DropdownMenuTrigger,
@@ -7,10 +11,6 @@ import {
   EnvironmentSelectorWrapper,
   FilterWrapper
 } from './style';
-import { ArrowDropDown, ArrowDropUp } from '../../icons';
-import { MetaDataProps } from '../EnvironmentMetadata';
-import EnvironmentContent from './EnvironmentContent';
-import Search from '../Search';
 
 type EnvironmentData = {
   name: string;
@@ -32,7 +32,7 @@ const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
   const [envData, setEnvData] = useState<Partial<EnvironmentData>>({});
 
   useEffect(() => {
-    data.find((data) => {
+    data.forEach((data) => {
       if (data.name == context) {
         setEnvData(data);
       }

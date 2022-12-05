@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Close } from '@mui/icons-material';
+import { Close } from '../../icons';
 
 export const Wrapper = styled.article`
   display: flex;
@@ -15,8 +15,8 @@ export const Wrapper = styled.article`
 export const FailedStepWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 8px;
-  gap: 8px;
+  padding: var(--padding-8);
+  gap: var(--gap-8);
 `;
 
 export const FailedIcon = styled(Close)`

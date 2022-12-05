@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.article`
-  margin: 12px;
+  margin: var(--margin-12);
 `;
 
 export const Log = styled.pre`
   background-color: var(--list-color-secondary-background-10);
   white-space: pre-wrap;
-  padding: 12px;
+  padding: var(--padding-12);
   font-size: var(--font-size-12);
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);

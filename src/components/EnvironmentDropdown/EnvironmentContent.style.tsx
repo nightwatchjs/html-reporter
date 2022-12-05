@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Content = styled.div`
   display: flex;
-  gap: 16px;
+  gap: var(--gap-16);
   align-items: center;
   flex: 4;
 `;
@@ -10,7 +10,7 @@ export const Content = styled.div`
 export const EnvironmentDetails = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--gap-8);
   flex: 4;
 `;
 

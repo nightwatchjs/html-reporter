@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
 export const Filename = styled.div`
   background-color: var(--color-grey-40);
-  padding: 4px 8px;
+  padding: var(--padding-4) var(--padding-8);
   color: var(--color-blue-60);
   display: flex;
   align-items: center;
@@ -27,13 +27,13 @@ export const CodeWrapper = styled.div`
   text-align: center;
   text-align: center;
   color: var(--color-grey-100);
-  margin: 12px 8px 20px 8px;
+  margin: var(--margin-12) var(--margin-8) var(--margin-20) var(--margin-8);
   width: 100%;
 `;
 
 export const Pre = styled.pre`
   text-align: left;
-  padding: 0 12px;
+  padding: 0 var(--padding-12);
   overflow: scroll;
 
   & .token-line {

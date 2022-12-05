@@ -11,7 +11,7 @@ type WrapperProps = {
 
 export const Wrapper = styled.article<WrapperProps>`
   display: flex;
-  gap: ${(props) => props.gap ?? 6}px;
+  gap: var(--gap-${(props) => props.gap ?? 6});
   align-items: center;
 `;
 

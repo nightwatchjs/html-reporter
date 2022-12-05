@@ -6,6 +6,6 @@ export const Wrapper = styled.article`
   line-height: var(--line-height-20);
   color: var(--color-grey-100);
   border-radius: var(--border-radius-4);
-  padding: 4px;
+  padding: var(--padding-4);
   background: var(--color-primary-10);
 `;

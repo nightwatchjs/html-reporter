@@ -1,8 +1,8 @@
 import React from 'react';
 import Zoom from 'react-medium-image-zoom';
+import { ZoomInMap, ZoomOutMap } from '../../icons';
 import './react-medium-image-zoom.css';
 import { Wrapper } from './style';
-import { ZoomInMap, ZoomOutMap } from '@mui/icons-material';
 
 type ScreenshotProps = {
   src: string;

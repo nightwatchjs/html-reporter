@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.article`
-  padding: 12px 20px;
-  border: 1px solid var(--color-grey-50);
+  padding: var(--padding-12) var(--padding-20);
+  border: var(--border-1) solid var(--color-grey-50);
   border-radius: var(--border-radius-8);
   display: flex;
   flex-direction: column;
@@ -18,12 +18,12 @@ export const Header = styled.h2`
 `;
 
 export const Status = styled.div`
-  width: 92px;
-  height: 92px;
-  border: 2px solid var(--color-blue-40);
+  width: calc(92 / 16 * 1rem);
+  height: calc(92 / 16 * 1rem);
+  border: var(--border-2) solid var(--color-blue-40);
   background: var(--color-blue-10);
   border-radius: 50%;
-  margin-top: 12px;
+  margin-top: var(--margin-12);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,14 +45,14 @@ export const PassedText = styled.p`
 
 export const TestStatusWrapper = styled.div`
   display: flex;
-  gap: 20px;
+  gap: var(--gap-20);
 `;
 
 export const StatisticsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 1 0%;
-  gap: 8px;
+  gap: var(--gap-8);
   justify-content: flex-end;
 `;
 
@@ -60,10 +60,10 @@ export const Statistics = styled.div`
   display: flex;
   justify-content: space-between;
   background: var(--color-grey-20);
-  border: 1px solid var(--color-grey-40);
+  border: var(--border-1) solid var(--color-grey-40);
   border-radius: var(--border-radius-4);
-  min-height: 40px;
-  padding: 7px;
+  min-height: calc(40 / 16 * 1rem);
+  padding: var(--padding-8);
 `;
 
 export const MetricWrapper = styled.div`

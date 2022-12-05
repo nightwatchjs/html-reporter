@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type SeparatorProps = {
   borderColor?: string;
@@ -8,6 +8,6 @@ type SeparatorProps = {
 export default styled.div<SeparatorProps>`
   user-select: none;
   width: 0;
-  height: ${(props) => props.height ?? 20}px;
-  border-right: 1px solid var(${(props) => props.borderColor ?? '--color-grey-80'});
+  height: calc(${(props) => props.height ?? 20} / 16 * 1rem);
+  border-right: var(--border-1) solid var(${(props) => props.borderColor ?? '--color-grey-80'});
 `;

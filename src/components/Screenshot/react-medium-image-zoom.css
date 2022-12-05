@@ -12,12 +12,12 @@
   border: none;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   color: #fff;
-  height: 40px;
+  height: calc(40 / 16 * 1rem);
   margin: 0;
   outline-offset: 2px;
-  padding: 9px;
+  padding: var(--padding-9);
   touch-action: manipulation;
-  width: 40px;
+  width: calc(40 / 16 * 1rem);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

@@ -12,15 +12,15 @@ export const ArrowWrapper = styled.div`
   bottom: 0;
   right: 0;
   align-items: center;
-  padding-right: 12px;
+  padding-right: var(--padding-12);
   font-size: var(--font-size-12);
   color: var(--color-grey-80);
 `;
 
 export const TestFilterButton = styled.button`
   color: var(--color-grey-90);
-  padding: 4px 40px 4px 8px;
-  border: 1px solid var(--color-grey-50);
+  padding: var(--padding-4) var(--padding-40) var(--padding-4) var(--margin-8);
+  border: var(--border-1) solid var(--color-grey-50);
   border-radius: var(--border-radius-4);
   display: flex;
   justify-content: flex-start;
@@ -42,7 +42,7 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
   line-height: var(--line-height-20);
   color: var(--color-grey-100);
   display: flex;
-  gap: 8px;
+  gap: var(--gap-8);
 
   box-shadow: 0px 1px 4px var(--color-grey-50);
   animation-duration: 400ms;
@@ -56,12 +56,12 @@ export const DropdownMenuRadioGroup = styled(DropdownMenu.RadioGroup)`
 `;
 
 export const DropdownMenuSeparator = styled(DropdownMenu.Separator)`
-  height: 1px;
-  border: 1px solid var(--color-grey-50);
+  height: calc(1 / 16 * 1rem);
+  border: var(--border-1) solid var(--color-grey-50);
 `;
 
 export const DropdownRadioItem = styled(DropdownMenu.RadioItem)`
-  padding: 8px 12px;
+  padding: var(--padding-8) var(--padding-12);
   font-weight: var(--font-weight-semi-light);
   user-select: none;
   outline: none;

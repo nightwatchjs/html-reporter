@@ -8,7 +8,11 @@ const regexHash: Record<string, RegExp> = {
   single_quote: /('.*')/g
 };
 
-export const wrapTextWithSpan = (text: string, colorClass: string[], regexToApply: string[]) => {
+export const wrapTextWithSpan = (
+  text: string,
+  colorClass: string[],
+  regexToApply: string[]
+): string => {
   const resultedString = regexToApply.reduce((text, regex, index) => {
     return text.replace(regexHash[regex], `<span class="${colorClass[index]}">$1</span>`);
   }, text);

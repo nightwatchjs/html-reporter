@@ -10,11 +10,11 @@ export const TabsRoot = styled(Tabs.Root)`
 export const TabsList = styled(Tabs.List)`
   flex-shrink: 0;
   display: flex;
-  border-bottom: 1px solid var(--color-grey-50);
+  border-bottom: var(--border-1) solid var(--color-grey-50);
 `;
 
 export const TabsTrigger = styled(Tabs.Trigger)`
-  padding: 12px 16px;
+  padding: var(--padding-12) var(--padding-16);
   display: flex;
   align-items: center;
   justify-content: center;
