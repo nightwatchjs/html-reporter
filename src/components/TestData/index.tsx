@@ -1,10 +1,10 @@
 import React from 'react';
+import Accordion from '../Accordion';
 import FilterDropdown from '../FilterDropdown';
 import Search from '../Search';
-import Accordion from '../Accordion';
+import TestCaseView from '../TestCaseView';
 import TestStatusBar from '../TestStatusBar';
 import { Actions, ExpandAll, Left, Right, TestDetailsWrapper, Wrapper } from './style';
-import TestCaseView from '../TestCaseView';
 
 const TestData: React.FC = () => {
   return (

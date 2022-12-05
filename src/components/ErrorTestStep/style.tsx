@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Close } from '@mui/icons-material';
+import { Close } from '../../icons';
 
 export const Wrapper = styled.article`
   display: flex;

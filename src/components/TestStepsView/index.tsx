@@ -1,8 +1,8 @@
-import React from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
-import { TabsList, TabsRoot, TabsTrigger } from './style';
-import TestDetailsView from '../TestDetailsView';
+import React from 'react';
 import LogView from '../LogView';
+import TestDetailsView from '../TestDetailsView';
+import { TabsList, TabsRoot, TabsTrigger } from './style';
 
 const TestStepsView: React.FC = () => {
   return (

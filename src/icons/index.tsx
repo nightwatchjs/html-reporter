@@ -6,28 +6,38 @@ import {
   Check,
   CheckCircle,
   Close,
+  DesktopWindowsOutlined,
+  Error,
   Remove,
   RemoveCircle,
   RemoveCircleOutline,
   Search as SearchIcon,
-  TimerOutlined
+  Segment,
+  TimerOutlined,
+  ZoomInMap,
+  ZoomOutMap
 } from '@mui/icons-material';
 import { Logo } from './Logo';
 import { NightwatchIcon } from './NightwatchIcon';
 
 export {
-  NightwatchIcon,
-  Logo,
-  TimerOutlined,
-  CheckCircle,
-  Cancel,
-  RemoveCircle,
-  Check,
-  Close,
-  RemoveCircleOutline,
-  SearchIcon,
+  Add,
   ArrowDropDown,
   ArrowDropUp,
-  Add,
-  Remove
+  Cancel,
+  Check,
+  CheckCircle,
+  Close,
+  DesktopWindowsOutlined,
+  Error,
+  Logo,
+  NightwatchIcon,
+  Remove,
+  RemoveCircle,
+  RemoveCircleOutline,
+  SearchIcon,
+  Segment,
+  TimerOutlined,
+  ZoomInMap,
+  ZoomOutMap
 };

@@ -1,11 +1,11 @@
 import React from 'react';
+import { DesktopWindowsOutlined } from '../../icons';
+import Browser from '../../icons/Browser';
+import OperatingSystem from '../../icons/OperatingSystem';
+import ChipWithIcon from '../ChipWithIcon';
 import Tags from '../Tags';
 import Timer from '../Timer';
 import { Wrapper } from './style';
-import { DesktopWindowsOutlined } from '@mui/icons-material';
-import ChipWithIcon from '../ChipWithIcon';
-import Browser from '../../icons/Browser';
-import OperatingSystem from '../../icons/OperatingSystem';
 
 export type MetaDataProps = {
   meta: {
@@ -29,11 +29,11 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
     <Wrapper>
       <ChipWithIcon icon={<DesktopWindowsOutlined />}>{device}</ChipWithIcon>
       <ChipWithIcon
-        icon={<Browser name={browserName} />}
-      >{`${browserName} ${browserVersion}`}</ChipWithIcon>
+        icon={<Browser name={browserName} />}>{`${browserName} ${browserVersion}`}</ChipWithIcon>
       <ChipWithIcon
-        icon={<OperatingSystem name={operatingSystemName} />}
-      >{`${operatingSystemName}`}</ChipWithIcon>
+        icon={
+          <OperatingSystem name={operatingSystemName} />
+        }>{`${operatingSystemName}`}</ChipWithIcon>
       {tags.map((label, index) => {
         return <Tags key={index}>{label}</Tags>;
       })}

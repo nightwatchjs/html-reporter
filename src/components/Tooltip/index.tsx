@@ -1,5 +1,5 @@
-import React from 'react';
 import * as RadixTooltip from '@radix-ui/react-tooltip';
+import React from 'react';
 import { TooltipArrow, TooltipContent } from './style';
 
 type TooltipProps = {

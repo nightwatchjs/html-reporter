@@ -1,9 +1,9 @@
 import React from 'react';
-import AlertBanner from '../AlertBanner';
-import { ErrorMessageText, ErrorMessageWrapper, Wrapper } from './style';
-import { Error } from '@mui/icons-material';
+import { Error } from '../../icons';
 import { wrapTextWithSpan } from '../../utils';
+import AlertBanner from '../AlertBanner';
 import CodeBlock from '../CodeBlock';
+import { ErrorMessageText, ErrorMessageWrapper, Wrapper } from './style';
 
 type ErrorStepDetailsProps = {
   errorDetails: {

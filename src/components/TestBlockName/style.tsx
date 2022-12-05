@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-import { Cancel, CheckCircle } from '@mui/icons-material';
+import { Cancel, CheckCircle } from '../../icons';
 
 export const Wrapper = styled.div`
   display: flex;
