@@ -20,8 +20,7 @@ export default defineConfig({
         vrt: resolve(__dirname, 'index_vrt.html'),
       },
       output: {
-          name: "vrt",
-          dir: "dist_vrt",
+          name: "vrt"
         }
     },
   },
