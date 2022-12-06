@@ -6,6 +6,7 @@ export const Wrapper = styled.article`
   padding: var(--padding-12) var(--padding-20);
   border: var(--border-1) solid var(--color-grey-50);
   border-radius: var(--border-radius-8);
+  height: calc(158 / 16 * 1rem);
 `;
 
 export const Title = styled.h2`
