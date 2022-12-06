@@ -1,4 +1,5 @@
-import React from 'react';
+import { AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
 import Analytics from './Analytics';
 import EnvironmentReport from './EnvironmentReport';
 import {
@@ -12,19 +13,48 @@ import {
 } from './style';
 
 const Summary: React.FC = () => {
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <Wrapper>
+    <Wrapper
+      animate={{ height: isOpen ? 54 : 230 }}
+      transition={{ ease: 'easeOut', duration: 0.5 }}
+    >
       <Header>
         <Title>Summary</Title>
         <SubTitle>(Executed 216 tests in 5 environments)</SubTitle>
-        <Link href="#!">Hide summary</Link>
+        <AnimatePresence>
+          <Link whileTap={{ opacity: 0, translateX: 2 }} href="#!" onClick={() => setOpen(!isOpen)}>
+            {isOpen ? 'Show summary' : 'Hide summary'}
+          </Link>
+        </AnimatePresence>
       </Header>
-      <AnalyticsWrapper>
-        <Analytics totalTests={1080} passed={986} failed={59} skipped={35} />
-      </AnalyticsWrapper>
-      <EnvironmentReportWrapper>
-        <EnvironmentReport />
-      </EnvironmentReportWrapper>
+      <AnimatePresence>
+        <AnalyticsWrapper
+          key={'Analytics'}
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            visibility: isOpen ? 'hidden' : 'revert'
+          }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
+          <Analytics totalTests={1080} passed={986} failed={59} skipped={35} />
+        </AnalyticsWrapper>
+        <EnvironmentReportWrapper
+          key={'Environment'}
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            visibility: isOpen ? 'hidden' : 'revert'
+          }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
+          <EnvironmentReport />
+        </EnvironmentReportWrapper>
+      </AnimatePresence>
     </Wrapper>
   );
 };

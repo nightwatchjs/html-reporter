@@ -1,14 +1,24 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface TextProps {
-  fontSize: string;
-  lineHight: string;
+  fontSize: number;
+  lineHight: number;
   color?: string;
+  transformText?: boolean;
 }
 
 export const Text = styled.p<TextProps>`
   font-weight: var(--font-weight-semi-light);
-  font-size: var(${(props) => props.fontSize});
-  line-height: var(${(props) => props.lineHight});
-  color: ${(props) => (props.color ? `var(${props.color})` : `var(--color-grey-90)`)};
+  font-size: var(--font-size-${(props) => props.fontSize});
+  line-height: var(--line-height-${(props) => props.lineHight});
+  color: var(--color-${(props) => props.color ?? 'grey-90'});
+  ${(props) =>
+    props.transformText &&
+    css`
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    `}
 `;

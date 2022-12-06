@@ -12,7 +12,7 @@ import {
   TestFilterWrapper
 } from './style';
 
-const Dropdown: React.FC = () => {
+const FilterDropdown: React.FC = () => {
   const [context, setContext] = useState('All Tests');
   const [open, setOpen] = useState(false);
 
@@ -21,12 +21,12 @@ const Dropdown: React.FC = () => {
       <DropdownMenu.Trigger asChild>
         <TestFilterWrapper>
           <ArrowWrapper>{open ? <ArrowDropUp /> : <ArrowDropDown />}</ArrowWrapper>
-          <TestFilterButton aria-label="Customise options">{context}</TestFilterButton>
+          <TestFilterButton aria-label="Customize options">{context}</TestFilterButton>
         </TestFilterWrapper>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
-        <DropdownMenuContent sideOffset={5}>
+        <DropdownMenuContent>
           <DropdownMenuRadioGroup value={context} onValueChange={setContext}>
             <DropdownRadioItem value="All Tests">All Tests</DropdownRadioItem>
             <DropdownMenuSeparator />
@@ -43,4 +43,4 @@ const Dropdown: React.FC = () => {
   );
 };
 
-export default Dropdown;
+export default FilterDropdown;

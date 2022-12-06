@@ -12,7 +12,7 @@ const TestBlock: React.FC<TestBlockProps> = ({ children }) => {
       <Left>
         <FailedIcon />
       </Left>
-      <Text fontSize="--font-size-14" lineHight="--line-height-20" color="--color-grey-100">
+      <Text fontSize={14} lineHight={20} color="grey-100">
         {children}
       </Text>
     </Wrapper>

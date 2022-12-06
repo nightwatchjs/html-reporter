@@ -15,7 +15,7 @@ const TestResultCount: React.FC<Props> = ({ passed, failed, skipped }) => {
         <IconWrapper>
           <PassedIcon />
         </IconWrapper>
-        <Text fontSize="--font-size-14" lineHight="--line-height-20" color="--color-grey-100">
+        <Text fontSize={14} lineHight={20} color="grey-100">
           {passed}
         </Text>
       </IconWithText>
@@ -23,7 +23,7 @@ const TestResultCount: React.FC<Props> = ({ passed, failed, skipped }) => {
         <IconWrapper>
           <FailedIcon />
         </IconWrapper>
-        <Text fontSize="--font-size-14" lineHight="--line-height-20" color="--color-grey-100">
+        <Text fontSize={14} lineHight={20} color="grey-100">
           {failed}
         </Text>
       </IconWithText>
@@ -31,7 +31,7 @@ const TestResultCount: React.FC<Props> = ({ passed, failed, skipped }) => {
         <IconWrapper>
           <SkippedIcon />
         </IconWrapper>
-        <Text fontSize="--font-size-14" lineHight="--line-height-20" color="--color-grey-100">
+        <Text fontSize={14} lineHight={20} color="grey-100">
           {skipped}
         </Text>
       </IconWithText>

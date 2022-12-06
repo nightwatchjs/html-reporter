@@ -23,6 +23,8 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  border-left: 1px solid var(--color-grey-50);
+  border-right: 1px solid var(--color-grey-50);
 `;
 
 export default Report;

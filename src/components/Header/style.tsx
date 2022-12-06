@@ -6,7 +6,7 @@ export const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 20px;
+  padding: var(--padding-18) var(--padding-20);
   background: var(--color-dark-background);
   color: var(--color-dark-background-text);
 `;
@@ -22,7 +22,7 @@ export const Center = styled.div`
   display: flex;
   justify-content: center;
   font-weight: var(--font-weight-bold);
-  font-size: calc(24 / 16 * 1rem);
+  font-size: var(--font-size-24);
   line-height: var(--line-height-36);
 `;
 
@@ -35,12 +35,12 @@ export const Right = styled.div`
 `;
 
 export const Date = styled.div`
-  font-size: 1rem;
+  font-size: var(--font-size-16);
   line-height: var(--line-height-24);
 `;
 
 export const Time = styled.div`
-  font-size: calc(12 / 16 * 1rem);
+  font-size: var(--font-size-12);
   line-height: var(--line-height-20);
   opacity: 0.75;
 `;

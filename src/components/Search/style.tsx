@@ -1,8 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.article`
+type WrapperProps = {
+  width?: number;
+};
+
+export const Wrapper = styled.article<WrapperProps>`
   position: relative;
   border-radius: var(--border-radius-5);
+  ${(props) =>
+    props.width &&
+    css`
+      width: ${props.width}%;
+    `}
 `;
 
 export const SearchIconWrapper = styled.div`
@@ -11,7 +20,7 @@ export const SearchIconWrapper = styled.div`
   top: 0;
   bottom: 0;
   left: 0;
-  padding-left: 9px;
+  padding-left: var(--padding-9);
   align-items: center;
   pointer-events: none;
   z-index: 1;
@@ -26,9 +35,9 @@ export const Input = styled.input`
   font-size: var(--font-size-12);
   line-height: var(--line-height-20);
   width: 100%;
-  border: 1px solid var(--color-grey-50);
+  border: var(--border-1) solid var(--color-grey-50);
   border-radius: var(--border-radius-5);
-  padding: 4px 4px 4px 24px;
+  padding: var(--padding-4) var(--padding-4) var(--padding-4) var(--padding-24);
 
   &:focus {
     outline: 1px solid transparent;

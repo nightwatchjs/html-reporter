@@ -10,7 +10,7 @@ interface GraphProps extends WrapperProps {
 
 export const Wrapper = styled.div<WrapperProps>`
   display: flex;
-  height: 4px;
+  height: calc(4 / 16 * 1rem);
   background-color: var(${(props) => props.backgroundColor});
 `;
 export const Graph = styled.div<GraphProps>`
@@ -19,9 +19,9 @@ export const Graph = styled.div<GraphProps>`
   background-color: var(${(props) => props.backgroundColor});
 
   &:first-of-type {
-    border-radius: 3px 0 0 3px;
+    border-radius: var(--border-radius-3) 0 0 var(--border-radius-3);
   }
   &:last-of-type {
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 var(--border-radius-3) var(--border-radius-3) 0;
   }
 `;

@@ -2,16 +2,18 @@ import React from 'react';
 import { Logo } from '../../icons';
 import Separator from '../Separator';
 import { Text } from '../Text';
-import { TextWrapper, Wrapper } from './style';
+import { LogoWrapper, TextWrapper, Wrapper } from './style';
 
 const Footer: React.FC = () => {
   return (
     <Wrapper>
-      <Logo brand="nightwatch" />
-      <Separator />
-      <Logo brand="browserstack" />
+      <LogoWrapper>
+        <Logo brand="nightwatch" />
+        <Separator />
+        <Logo brand="browserstack" />
+      </LogoWrapper>
       <TextWrapper>
-        <Text fontSize="--font-size-14" lineHight="--line-height-16" color="--color-grey-30">
+        <Text fontSize={14} lineHight={16} color="grey-30">
           &copy; {`${new Date().getFullYear()} BrowserStack Limited. All rights reserved.`}
         </Text>
       </TextWrapper>

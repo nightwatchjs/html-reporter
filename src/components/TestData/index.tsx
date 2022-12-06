@@ -1,7 +1,8 @@
 import React from 'react';
-import Dropdown from '../Dropdown';
-import Search from '../Search';
 import Accordion from '../Accordion';
+import FilterDropdown from '../FilterDropdown';
+import Search from '../Search';
+import TestCaseView from '../TestCaseView';
 import TestStatusBar from '../TestStatusBar';
 import { Actions, ExpandAll, Left, Right, TestDetailsWrapper, Wrapper } from './style';
 
@@ -14,11 +15,13 @@ const TestData: React.FC = () => {
           <Search placeholder="Spec, test, tag" />
           <Actions>
             <ExpandAll type="button">Expand all</ExpandAll>
-            <Dropdown />
+            <FilterDropdown />
           </Actions>
           <Accordion />
         </Left>
-        <Right>Right</Right>
+        <Right>
+          <TestCaseView />
+        </Right>
       </TestDetailsWrapper>
     </Wrapper>
   );

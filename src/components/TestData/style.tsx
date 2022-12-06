@@ -4,11 +4,13 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 1200px;
+  margin-bottom: var(--margin-20);
 `;
 
 export const TestDetailsWrapper = styled.div`
   display: flex;
+  /* TODO: Should be removed */
+  min-height: 1080px;
 `;
 
 export const Left = styled.div`
@@ -16,21 +18,25 @@ export const Left = styled.div`
   background: var(--color-grey-10);
   display: flex;
   flex-direction: column;
-  padding: 12px 20px;
-  gap: 12px;
+  padding: var(--padding-12) var(--padding-20);
+  gap: var(--gap-12);
 `;
 
 export const Right = styled.div`
+  border-left: var(--border-1) solid var(--color-grey-40);
   flex: 1 2 945px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-grey-10);
 `;
 
 export const Actions = styled.div`
   display: flex;
-  gap: 12px;
+  gap: var(--gap-12);
 `;
 
 export const ExpandAll = styled.button`
-  padding: 4px 8px;
+  padding: var(--padding-4) var(--padding-8);
   font-size: var(--font-size-12);
   line-height: var(--line-height-20);
   color: var(--color-grey-90);
@@ -38,4 +44,8 @@ export const ExpandAll = styled.button`
   border-radius: var(--border-radius-4);
   background: var(--color-grey-10);
   cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 0 1px var(--color-primary-60);
+  }
 `;
