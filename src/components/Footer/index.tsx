@@ -1,38 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
-import { HEADER_HEIGHT } from '../../constants';
-import { NightwatchBrowserstackIcon } from '../../icons';
+import { Logo } from '../../icons';
+import Separator from '../Separator';
+import { Text } from '../Text';
+import { LogoWrapper, TextWrapper, Wrapper } from './style';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <Wrapper>
-      <Copyright>
-        <NightwatchBrowserstackIcon />
-        <span>
-        © 2022 BrowserStack Limited. All rights reserved.
-        </span>
-      </Copyright>
+      <LogoWrapper>
+        <Logo brand="nightwatch" />
+        <Separator />
+        <Logo brand="browserstack" />
+      </LogoWrapper>
+      <TextWrapper>
+        <Text fontSize={14} lineHight={16} color="grey-30">
+          &copy; {`${new Date().getFullYear()} BrowserStack Limited. All rights reserved.`}
+        </Text>
+      </TextWrapper>
     </Wrapper>
   );
 };
-const Copyright = styled.footer `
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 40px;
-    height: 25.07px;
-`;
-const Wrapper = styled.header`
-    height: ${HEADER_HEIGHT}px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 40px;
-    background: var(--color-dark-background);
-    color: var(--color-dark-background-text);
-`;
-
 
 export default Footer;
