@@ -657,8 +657,8 @@
       "metadata": {
         "platformName": "windows",
         "device": "desktop",
-        "browserName": "firefox",
-        "browserVersion": "83",
+        "browserName": "chrome",
+        "browserVersion": "107",
         "executionMode": "local",
         "time": 7955
       },
@@ -1422,14 +1422,14 @@
       "metadata": {
         "platformName": "linux",
         "device": "desktop",
-        "browserName": "chrome",
-        "browserVersion": "107",
+        "browserName": "firefox",
+        "browserVersion": "83",
         "executionMode": "local",
         "time": 13810
       },
       "stats": {
         "passed": 6,
-        "failed": 1,
+        "failed": 2,
         "skipped": 0,
         "time": 3530
       },
