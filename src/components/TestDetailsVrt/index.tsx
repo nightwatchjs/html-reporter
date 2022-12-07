@@ -1,7 +1,10 @@
 import React from 'react';
 import BaselineVrt from '../BaselineVrt'
-import { Error, Wrapper, Details} from './style';
+import { Error, Details} from './style';
 import Header from '../TestCaseView/Header';
+import { Actions, ExpandAll, Left, Right, Wrapper } from '../TestData/style';
+import Search from '../Search';
+import Accordion from '../Accordion';
 
 type Props = {
     baseline_img: string;
@@ -10,6 +13,14 @@ type Props = {
 const TestDetailsVrt: React.FC<Props> = ({ baseline_img, diff_img }) => {
   return (
     <Wrapper>
+        <Left>
+          <Search placeholder="Spec, test, tag" />
+          <Actions>
+            <ExpandAll type="button">Expand all</ExpandAll>
+          </Actions>
+          <Accordion />
+        </Left>
+        <Right>
         <Header />
         <Details>
             <Error>
@@ -17,6 +28,7 @@ const TestDetailsVrt: React.FC<Props> = ({ baseline_img, diff_img }) => {
                 <BaselineVrt imageType = 'diff' imgPath = {diff_img}/>
             </Error>
         </Details>
+        </Right>
     </Wrapper>
   );
 };
