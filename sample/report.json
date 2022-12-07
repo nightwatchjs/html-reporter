@@ -655,12 +655,12 @@
   "environments": {
     "chrome": {
       "metadata": {
-        "platformName": "mac os",
-        "device": "desktop|mobile",
-        "browserName": "chrome",
-        "browserVersion": "107",
-        "time": 492,
-        "executionMode": "local|remote"
+        "platformName": "windows",
+        "device": "desktop",
+        "browserName": "firefox",
+        "browserVersion": "83",
+        "executionMode": "local",
+        "time": 7955
       },
       "stats": {
         "passed": 986,
@@ -673,6 +673,7 @@
         "ecosia": {
           "reportPrefix": "CHROME_108.0.5359.94__",
           "assertionsCount": 5,
+          "status": "fail",
           "lastError": {
             "name": "NightwatchAssertError",
             "message": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'lorem ipsum'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'lorem ipsum'\"\u001b[0m but got: \u001b[0;31m\"does not contain 'lorem ipsum'\"\u001b[0m \u001b[0;90m(5327ms)\u001b[0m",
@@ -816,6 +817,7 @@
           "passedCount": 4,
           "group": "",
           "modulePath": "/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js",
+          "fileName": "ecosia.js",
           "startTimestamp": "Mon, 05 Dec 2022 14:54:34 GMT",
           "endTimestamp": "Mon, 05 Dec 2022 14:54:45 GMT",
           "sessionCapabilities": {
@@ -1210,6 +1212,7 @@
         "google": {
           "reportPrefix": "CHROME_108.0.5359.94__",
           "assertionsCount": 2,
+          "status": "pass",
           "lastError": null,
           "skipped": [],
           "time": "8.307",
@@ -1285,6 +1288,7 @@
           "passedCount": 2,
           "group": "",
           "modulePath": "/Users/vaibhavsingh/Dev/nightwatch/examples/tests/google.js",
+          "fileName": "google.js",
           "startTimestamp": "Wed, 07 Dec 2022 11:08:17 GMT",
           "endTimestamp": "Wed, 07 Dec 2022 11:08:27 GMT",
           "sessionCapabilities": {
@@ -1416,16 +1420,26 @@
       }
     },
     "firefox": {
-      "capabilities": {},
-      "passed": 7,
-      "failed": 0,
-      "errors": 0,
-      "skipped": 0,
-      "tests": 0,
+      "metadata": {
+        "platformName": "linux",
+        "device": "desktop",
+        "browserName": "chrome",
+        "browserVersion": "107",
+        "executionMode": "local",
+        "time": 13810
+      },
+      "stats": {
+        "passed": 986,
+        "failed": 59,
+        "skipped": 35,
+        "tests": 0,
+        "time": 492000
+      },
       "modules": {
         "ecosia": {
           "reportPrefix": "FIREFOX_106.0.2__",
           "assertionsCount": 5,
+          "status": "pass",
           "lastError": null,
           "skipped": [],
           "time": "3.530",
@@ -1543,6 +1557,7 @@
           "passedCount": 5,
           "group": "",
           "modulePath": "/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js",
+          "fileName": "ecosia.js",
           "startTimestamp": "Wed, 07 Dec 2022 11:10:24 GMT",
           "endTimestamp": "Wed, 07 Dec 2022 11:10:33 GMT",
           "sessionCapabilities": {
@@ -1754,6 +1769,7 @@
         "google": {
           "reportPrefix": "FIREFOX_106.0.2__",
           "assertionsCount": 2,
+          "status": "fail",
           "lastError": {
             "name": "NightwatchAssertError",
             "message": "Testing if element \u001b[0;33m<#rso>:first-child>\u001b[0m contains text \u001b[0;33m'notfoundjs'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'notfoundjs'\"\u001b[0m but got: \u001b[0;31m\"does not contain 'notfoundjs'\"\u001b[0m \u001b[0;90m(5469ms)\u001b[0m",
@@ -1849,6 +1865,7 @@
           "passedCount": 1,
           "group": "",
           "modulePath": "/Users/vaibhavsingh/Dev/nightwatch/examples/tests/google.js",
+          "fileName": "google.js",
           "startTimestamp": "Wed, 07 Dec 2022 11:11:59 GMT",
           "endTimestamp": "Wed, 07 Dec 2022 11:12:14 GMT",
           "sessionCapabilities": {

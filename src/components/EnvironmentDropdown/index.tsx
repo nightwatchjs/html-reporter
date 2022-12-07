@@ -28,7 +28,7 @@ type EnvironmentDropdownProps = {
 
 const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
   const [isDropDownOpen, setDropdownOpen] = useState(false);
-  const [context, setContext] = useState('Environment1');
+  const [context, setContext] = useState('Environment 2');
   const [envData, setEnvData] = useState<Partial<EnvironmentData>>({});
 
   useEffect(() => {

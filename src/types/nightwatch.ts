@@ -10,7 +10,7 @@ export interface NightwatchHTMLReport {
   errmessages: any[];
   // TODO: Replace any with it's types
   modules: any;
-  envs: Environments;
+  environments: Environments;
   stats: Stats;
   metadata: Metadata;
 }
@@ -20,7 +20,7 @@ export type Environments = Record<
   {
     metadata: TestMetadata;
     stats: TestStats;
-    modules: Record<string, TestModule>;
+    modules: Record<string, TestFile>;
   }
 >;
 
@@ -41,14 +41,15 @@ export interface TestStats {
   time: string;
 }
 
-export interface TestModule {
+export interface TestFile {
   reportPrefix: string;
   assertionsCount: number;
+  status: 'pass' | 'fail' | 'skip';
   lastError: LastError;
   skipped: string[];
   time: string;
   // TODO: replace any with it's types
-  completed: any;
+  completed: Record<string, TestObject>;
   errmessages: any[];
   testsCount: number;
   skippedCount: number;
@@ -57,6 +58,7 @@ export interface TestModule {
   passedCount: number;
   group: string;
   modulePath: string;
+  fileName: string;
   startTimestamp: string;
   endTimestamp: string;
   sessionCapabilities: SessionCapabilities;
@@ -68,6 +70,42 @@ export interface TestModule {
   errors: number;
   httpOutput: string[][];
   globalErrorRegister: string[];
+}
+
+export interface TestObject {
+  time: string;
+  assertions: Assertion[];
+  passed: number;
+  errors: number;
+  failed: number;
+  skipped: number;
+  tests: number;
+  steps: string[];
+  stackTrace: string;
+  testcases: Testcases;
+  lastError: LastError;
+  timeMs: number;
+  startTimestamp: string;
+  endTimestamp: string;
+  status: string;
+}
+
+export interface LastError {
+  name: string;
+  message: string;
+  showDiff: boolean;
+  abortOnFailure: boolean;
+  stack: string;
+}
+
+export type Testcases = Record<string, TestObject>;
+
+export interface Assertion {
+  name: string;
+  message: string;
+  stackTrace: string;
+  fullMsg: string;
+  failure: any;
 }
 
 export interface SessionCapabilities {
