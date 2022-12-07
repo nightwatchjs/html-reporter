@@ -5,6 +5,12 @@ export const transformNightwatchReport = () => {
   };
 };
 
+export const transformNightwatchVrtReport = () => {
+  return {
+    data: {}
+  };
+};
+
 const getSuiteStats = () => {
   return window.nightwatchReport.stats;
 };
