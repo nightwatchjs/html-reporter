@@ -1,10 +1,16 @@
-import { appendFileSync } from 'fs';
+import { appendFileSync, copyFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-export const writeNightwatchHTMLReport = (reportPath: string, jsonReport: string): void => {
-  // TODO: copy report to destination folder
+export const writeNightwatchHTMLReport = (destFolder: string, jsonReportObject: string): void => {
+  // Create Destination Folder
+  mkdirSync(destFolder, { recursive: true });
+
+  const indexFile = join(__dirname, 'dist', 'index.html');
+  const destinationReportFile = join(destFolder, 'index.html');
+  copyFileSync(indexFile, destinationReportFile);
+
   appendFileSync(
-    join(__dirname, 'dist', 'index.html'),
-    `<script>window.nightwatchReport = ${jsonReport}</script>`
+    destinationReportFile,
+    `<script>window.nightwatchReport = ${jsonReportObject}</script>`
   );
 };
