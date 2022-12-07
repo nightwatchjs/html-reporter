@@ -28,14 +28,14 @@ const getEnvironmentReport = () => {
   const report = window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {
-      files: {},
-      metadata: {}
+      files: {}
     };
 
     const environmentData = window.nightwatchReport.environments[envName];
     const environmentDataFiles = environmentData.modules;
 
-    envData[envName].metadata = environmentData.metadata;
+    envData[envName]['metadata'] = environmentData.metadata;
+    envData[envName]['stats'] = environmentData.stats;
 
     Object.keys(environmentDataFiles).forEach((fileName) => {
       const fileData = {} as IFileStats;

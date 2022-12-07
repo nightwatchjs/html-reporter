@@ -663,11 +663,10 @@
         "time": 7955
       },
       "stats": {
-        "passed": 986,
-        "failed": 59,
-        "skipped": 35,
-        "tests": 0,
-        "time": 492000
+        "passed": 6,
+        "failed": 1,
+        "skipped": 1,
+        "time": 7955
       },
       "modules": {
         "ecosia": {
@@ -1429,11 +1428,10 @@
         "time": 13810
       },
       "stats": {
-        "passed": 986,
-        "failed": 59,
-        "skipped": 35,
-        "tests": 0,
-        "time": 492000
+        "passed": 6,
+        "failed": 1,
+        "skipped": 0,
+        "time": 3530
       },
       "modules": {
         "ecosia": {
