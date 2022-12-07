@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": false,
+  },
+  "files": [
+    "index.ts"
+  ],
+  "lib": [
+    "es2015"
+  ]
+}

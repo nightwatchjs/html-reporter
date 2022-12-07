@@ -22,6 +22,7 @@ export const AnalyticsWrapper = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  height: calc(158 / 16 * 1rem);
 `;
 export const EnvironmentReportWrapper = styled(motion.div)`
   flex: 1.4 1 0%;

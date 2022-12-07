@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../globalContext';
 import { NightwatchIcon } from '../../icons';
+import { IGlobalContext } from '../../types/globalContext';
+import { convertMsToTime } from '../../utils';
 import { Center, Date, Left, Right, Time, Wrapper } from './style';
+import { getDateFromMillisecond } from './util';
 
 const Header = () => {
+  const {
+    metadata: { timestamp, date }
+  } = useContext<IGlobalContext>(GlobalContext);
+
   return (
     <Wrapper>
       <Left>
@@ -10,8 +18,8 @@ const Header = () => {
       </Left>
       <Center>Test Reporter</Center>
       <Right>
-        <Date>Sat, Jan 09 2022</Date>
-        <Time>08:45:25 IST</Time>
+        <Date>{getDateFromMillisecond(date)}</Date>
+        <Time>{convertMsToTime(timestamp).paddedTime}</Time>
       </Right>
     </Wrapper>
   );
