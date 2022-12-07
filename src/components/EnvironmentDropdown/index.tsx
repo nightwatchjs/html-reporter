@@ -33,9 +33,9 @@ const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
       <DropdownMenuTrigger asChild>
         <EnvironmentSelectorWrapper>
           <EnvironmentContent
-            name={envData.name || data[0]['name']}
-            meta={envData.meta || data[0]['meta']}
-            testResult={envData.testResult || data[0]['testResult']}
+            name={envData.name || filteredData[0]['name']}
+            meta={envData.meta || filteredData[0]['meta']}
+            testResult={envData.testResult || filteredData[0]['testResult']}
           />
           {isDropDownOpen ? <ArrowDropUp /> : <ArrowDropDown />}
         </EnvironmentSelectorWrapper>
