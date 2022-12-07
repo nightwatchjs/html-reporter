@@ -38,7 +38,7 @@ const getEnvironmentReport = () => {
     envData[envName].metadata = environmentData.metadata;
 
     Object.keys(environmentDataFiles).forEach((fileName) => {
-      const fileData = <IFileStats>{};
+      const fileData = {} as IFileStats;
       const fileReport = environmentDataFiles[fileName];
       const metadata = envData[envName].metadata;
 
@@ -107,14 +107,14 @@ const getTestsStats = (
 
   Object.keys(testReport).forEach((testName) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const testData = <ITestStats>{};
+    const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
 
     // Add testName
     testData['testName'] = testName;
 
     // Add Results
-    testData['results'] = <ITestStats['results']>{};
+    testData['results'] = {} as ITestStats['results'];
     testData['results']['steps'] = singleTestReport.assertions;
     // TODO: Verify httpOutput is string
     testData['results']['httpLog'] = fileReport.httpOutput.join(' ');
