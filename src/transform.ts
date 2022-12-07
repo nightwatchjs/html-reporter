@@ -22,6 +22,20 @@ interface IFileStats {
   status: string;
 }
 
+export type Environment = Record<string, IEnvironmentData>;
+
+// TODO: Files can have only pass or fail or skip. Rn, types expect all three needed to be there
+interface IEnvironmentData {
+  files: Record<'pass' | 'fail' | 'skip', IFileStats[]>;
+  metadata: ITestStats['metadata'];
+  stats: {
+    passed: number;
+    failed: number;
+    skipped: number;
+    time: number;
+  };
+}
+
 const getEnvironmentReport = () => {
   // TODO: Replace any with the types
   const envData: any = {};
@@ -31,7 +45,7 @@ const getEnvironmentReport = () => {
       files: {}
     };
 
-    const environmentData = window.nightwatchReport.environments[envName];
+    const environmentData = report[envName];
     const environmentDataFiles = environmentData.modules;
 
     envData[envName]['metadata'] = environmentData.metadata;
@@ -69,6 +83,8 @@ const getEnvironmentReport = () => {
       }
     });
   });
+
+  console.log('>>>>>>>', envData);
 
   return envData;
 };

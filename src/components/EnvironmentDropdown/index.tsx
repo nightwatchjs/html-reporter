@@ -1,7 +1,6 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { ArrowDropDown, ArrowDropUp } from '../../icons';
-import { MetaDataProps } from '../EnvironmentMetadata';
 import Search from '../Search';
 import EnvironmentContent from './EnvironmentContent';
 import {
@@ -11,24 +10,14 @@ import {
   EnvironmentSelectorWrapper,
   FilterWrapper
 } from './style';
-
-type EnvironmentData = {
-  name: string;
-  meta: MetaDataProps['meta'];
-  testResult: {
-    passed: number;
-    failed: number;
-    skipped: number;
-  };
-};
-
-type EnvironmentDropdownProps = {
-  data: EnvironmentData[];
-};
+import { EnvironmentData, EnvironmentDropdownProps } from './types';
+import { filterData } from './utils';
 
 const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
+  const [query, setQuery] = useState<string>('');
+  const filteredData = filterData(data, query);
   const [isDropDownOpen, setDropdownOpen] = useState(false);
-  const [context, setContext] = useState('Environment 2');
+  const [context, setContext] = useState(filteredData[0].name);
   const [envData, setEnvData] = useState<Partial<EnvironmentData>>({});
 
   useEffect(() => {
@@ -55,23 +44,18 @@ const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
       <DropdownMenu.Portal>
         <DropdownMenuContent>
           <FilterWrapper>
-            <Search placeholder="Search for Environments, OS, Browser, Device" width={100} />
+            <Search
+              placeholder="Search for Environments, OS, Browser, Device"
+              width={100}
+              onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
+            />
           </FilterWrapper>
           <DropdownMenu.RadioGroup value={context} onValueChange={setContext}>
-            <DropdownRadioItemContent value={data[0]['name']}>
-              <EnvironmentContent
-                name={data[0]['name']}
-                meta={data[0]['meta']}
-                testResult={data[0]['testResult']}
-              />
-            </DropdownRadioItemContent>
-            <DropdownRadioItemContent value={data[1]['name']}>
-              <EnvironmentContent
-                name={data[1]['name']}
-                meta={data[1]['meta']}
-                testResult={data[0]['testResult']}
-              />
-            </DropdownRadioItemContent>
+            {filteredData.map(({ name, meta, testResult }, index) => (
+              <DropdownRadioItemContent key={index} value={name}>
+                <EnvironmentContent name={name} meta={meta} testResult={testResult} />
+              </DropdownRadioItemContent>
+            ))}
           </DropdownMenu.RadioGroup>
         </DropdownMenuContent>
       </DropdownMenu.Portal>

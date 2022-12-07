@@ -28,7 +28,7 @@ export interface TestMetadata {
   platformName: string;
   device: string;
   browserName: string;
-  browserVersion: string;
+  browserVersion: number;
   time: number;
   executionMode: string;
 }
