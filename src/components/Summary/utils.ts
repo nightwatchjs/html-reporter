@@ -35,21 +35,18 @@ export interface IEnvironmentDropdownData {
 }
 
 // TODO: replace any with it's type
-export const getEnvironmentDropDownData = (environments: Record<string, any>) => {
-  const reverseSortedEnv = Object.entries(environments).sort(
-    ([, a], [, b]) => b.stats.failed - a.stats.failed
-  );
-
+export const getEnvironmentDropDownData = (environments: Record<string, any>[]) => {
   const resultData: any = [];
 
-  reverseSortedEnv.forEach((environment, index) => {
+  Object.entries(environments).forEach((environment, index) => {
     const envDropdownData: any = {};
+    const envName = environment[0];
     const { device, browserName, browserVersion, platformName, time, executionMode } =
       environment[1].metadata;
     const { stats } = environment[1];
     const { hours, minutes, seconds } = convertMsToTime(time).time;
 
-    envDropdownData['name'] = `Environment ${index + 1}`;
+    envDropdownData['name'] = `Environment ${index + 1} (${envName})`;
     envDropdownData['meta'] = {
       device: device,
       browserName: browserName,
@@ -67,8 +64,6 @@ export const getEnvironmentDropDownData = (environments: Record<string, any>) =>
 
     resultData.push(envDropdownData);
   });
-
-  console.log('......', resultData);
 
   return resultData;
 };

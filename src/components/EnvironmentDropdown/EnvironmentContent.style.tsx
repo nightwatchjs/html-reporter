@@ -18,9 +18,5 @@ export const EnvironmentHeading = styled.h2`
   font-size: var(--font-size-14);
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-bold);
-  text-transform: lowercase;
-
-  &::first-letter {
-    text-transform: uppercase;
-  }
+  text-transform: capitalize;
 `;

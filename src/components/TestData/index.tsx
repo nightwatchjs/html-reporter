@@ -1,5 +1,5 @@
 import React from 'react';
-import Accordion from '../Accordion';
+import TestFileView from '../TestFileView';
 import FilterDropdown from '../FilterDropdown';
 import Search from '../Search';
 import TestCaseView from '../TestCaseView';
@@ -17,7 +17,7 @@ const TestData: React.FC = () => {
             <ExpandAll type="button">Expand all</ExpandAll>
             <FilterDropdown />
           </Actions>
-          <Accordion />
+          <TestFileView />
         </Left>
         <Right>
           <TestCaseView />

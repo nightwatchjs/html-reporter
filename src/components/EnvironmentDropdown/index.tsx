@@ -1,7 +1,9 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useMemo, useState } from 'react';
+import { useGlobalContext } from '../../hooks/GlobalContext';
 import { ArrowDropDown, ArrowDropUp } from '../../icons';
 import Search from '../Search';
+import { getEnvironmentDropDownData } from '../Summary/utils';
 import EnvironmentContent from './EnvironmentContent';
 import {
   DropdownMenuContent,
@@ -10,18 +12,22 @@ import {
   EnvironmentSelectorWrapper,
   FilterWrapper
 } from './style';
-import { EnvironmentData, EnvironmentDropdownProps } from './types';
+import { EnvironmentData } from './types';
 import { filterData } from './utils';
 
-const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
-  const [query, setQuery] = useState<string>('');
-  const filteredData = filterData(data, query);
-  const [isDropDownOpen, setDropdownOpen] = useState(false);
-  const [context, setContext] = useState(filteredData[0].name);
-  const [envData, setEnvData] = useState<Partial<EnvironmentData>>({});
+const EnvironmentDropdown: React.FC = () => {
+  const { environments } = useGlobalContext();
+  const envDropdownData = getEnvironmentDropDownData(environments);
 
-  useEffect(() => {
-    data.forEach((data) => {
+  // React States
+  const [query, setQuery] = useState<string>('');
+  const [isDropDownOpen, setDropdownOpen] = useState(false);
+  const filteredData = filterData(envDropdownData, query);
+  const [context, setContext] = useState(filteredData[0]['name']);
+  const [envData, setEnvData] = useState({} as EnvironmentData);
+
+  useMemo(() => {
+    envDropdownData.find((data: any) => {
       if (data.name == context) {
         setEnvData(data);
       }

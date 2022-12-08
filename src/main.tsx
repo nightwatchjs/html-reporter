@@ -5,8 +5,7 @@ import styled from 'styled-components';
 import GlobalStyles from './components/GlobalStyles';
 import Report from './Report';
 import { StyledEngineProvider } from '@mui/material/styles';
-import { GlobalContext } from './globalContext';
-import { transformNightwatchReport } from './transform';
+import { GlobalContextProvider } from './contexts/GlobalContext';
 
 const Wrapper = styled.section`
   max-width: 1280px;
@@ -31,9 +30,9 @@ window.addEventListener('load', () => {
         <React.StrictMode>
           <GlobalStyles />
           <Wrapper>
-            <GlobalContext.Provider value={transformNightwatchReport()}>
+            <GlobalContextProvider>
               <Report />
-            </GlobalContext.Provider>
+            </GlobalContextProvider>
           </Wrapper>
         </React.StrictMode>
       </StyledEngineProvider>

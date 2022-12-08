@@ -2,7 +2,7 @@ import { Assertion, TestFile } from './types/nightwatch';
 
 export const transformNightwatchReport = () => {
   return {
-    environment: getEnvironmentReport(),
+    environments: getEnvironmentReport(),
     stats: getSuiteStats(),
     metadata: getReportMetadata()
   };
@@ -22,10 +22,10 @@ interface IFileStats {
   status: string;
 }
 
-export type Environment = Record<string, IEnvironmentData>;
+export type Environments = Record<string, IEnvironmentData>[];
 
 // TODO: Files can have only pass or fail or skip. Rn, types expect all three needed to be there
-interface IEnvironmentData {
+export interface IEnvironmentData {
   files: Record<'pass' | 'fail' | 'skip', IFileStats[]>;
   metadata: ITestStats['metadata'];
   stats: {
@@ -84,9 +84,16 @@ const getEnvironmentReport = () => {
     });
   });
 
-  console.log('>>>>>>>', envData);
+  return getReverseSortedArray(envData);
+};
 
-  return envData;
+export const getReverseSortedArray = (environments: Record<string, any>) => {
+  // TODO: Sort by Skipped after fail
+  return Object.entries(environments)
+    .sort(([, a], [, b]) => {
+      return b.stats.failed - a.stats.failed;
+    })
+    .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
 };
 
 interface ITestStats {

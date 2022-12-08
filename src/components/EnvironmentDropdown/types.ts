@@ -9,7 +9,3 @@ export type EnvironmentData = {
     skipped: number;
   };
 };
-
-export type EnvironmentDropdownProps = {
-  data: EnvironmentData[];
-};

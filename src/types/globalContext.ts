@@ -1,9 +1,9 @@
-import { Environment } from '../transform';
+import { Environments } from '../transform';
 
 export {};
 
 export interface IGlobalContext {
-  environment: Environment;
+  environments: Environments;
   stats: SuiteStats;
   metadata: ReportMetadata;
 }

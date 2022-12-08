@@ -15,14 +15,13 @@ export interface NightwatchHTMLReport {
   metadata: Metadata;
 }
 
-export type Environments = Record<
-  string,
-  {
-    metadata: TestMetadata;
-    stats: TestStats;
-    modules: Record<string, TestFile>;
-  }
->;
+export type EnvironmentData = {
+  metadata: TestMetadata;
+  stats: TestStats;
+  modules: Record<string, TestFile>;
+};
+
+export type Environments = Record<string, EnvironmentData>;
 
 export interface TestMetadata {
   platformName: string;
