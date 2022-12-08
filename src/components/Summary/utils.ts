@@ -47,6 +47,7 @@ export const getEnvironmentDropDownData = (environments: Record<string, any>[]) 
     const { hours, minutes, seconds } = convertMsToTime(time).time;
 
     envDropdownData['name'] = `Environment ${index + 1} (${envName})`;
+    envDropdownData['origName'] = envName;
     envDropdownData['meta'] = {
       device: device,
       browserName: browserName,
