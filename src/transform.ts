@@ -105,7 +105,7 @@ export const getReverseSortedArray = (environments: Record<string, any>) => {
     .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
 };
 
-interface ITestStats {
+export interface ITestStats {
   testName: string;
   results: {
     steps: Assertion[];
