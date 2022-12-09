@@ -1,3 +1,4 @@
+import { Environments } from '../../transform';
 import { convertMsToTime } from '../../utils';
 
 export const getTestPercentage = (
@@ -35,7 +36,7 @@ export interface IEnvironmentDropdownData {
 }
 
 // TODO: replace any with it's type
-export const getEnvironmentDropDownData = (environments: Record<string, any>[]) => {
+export const getEnvironmentDropDownData = (environments: Environments) => {
   const resultData: any = [];
 
   Object.entries(environments).forEach((environment, index) => {

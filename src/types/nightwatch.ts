@@ -46,7 +46,7 @@ export interface TestFile {
   status: 'pass' | 'fail' | 'skip';
   lastError: LastError;
   skipped: string[];
-  time: string;
+  time: number;
   // TODO: replace any with it's types
   completed: Record<string, TestObject>;
   errmessages: any[];

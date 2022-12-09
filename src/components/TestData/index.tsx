@@ -12,7 +12,7 @@ const TestData: React.FC = () => {
       <TestStatusBar />
       <TestDetailsWrapper>
         <Left>
-          <Search placeholder="Spec, test, tag" />
+          <Search placeholder="Spec, test" />
           <Actions>
             <ExpandAll type="button">Expand all</ExpandAll>
             <FilterDropdown />

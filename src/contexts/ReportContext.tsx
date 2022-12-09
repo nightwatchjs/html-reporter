@@ -11,7 +11,7 @@ const ReportContextProvider: React.FC<ReportContextProps> = ({ children }) => {
   const { name, fileIndex, testIndex } = findFailedTestDetails();
 
   const [environmentName, setEnvironmentName] = useState<string>(name);
-  const [fileId, setFileId] = useState<number>(fileIndex);
+  const [fileId, setFileId] = useState<string>(fileIndex);
   const [testId, setTestId] = useState<number>(testIndex);
 
   const value = useMemo(

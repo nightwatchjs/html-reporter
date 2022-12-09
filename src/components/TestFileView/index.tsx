@@ -1,4 +1,6 @@
 import React, { ReactNode, useState } from 'react';
+import { useGlobalContext } from '../../hooks/GlobalContext';
+import { useReportContext } from '../../hooks/ReportContext';
 import TestBlock from '../TestBlock';
 import {
   AccordionHeader,
@@ -15,63 +17,69 @@ import {
 
 interface Props {
   children: ReactNode;
-  'data-state'?: string;
-  failed?: string[];
-  value?: string;
+}
+
+interface AccordionTriggerProps extends Props {
+  failed: boolean;
+  value: string;
 }
 
 const TestFileView: React.FC = () => {
+  const { environmentName, fileId } = useReportContext();
+  const { environments } = useGlobalContext();
+
+  const {
+    files: { pass, fail, skip }
+  } = environments[environmentName];
+  console.log(pass, fail, skip);
+
   const [failed, setFailed] = useState(['item-1', 'item-2']);
 
   return (
     <AccordionRoot type="multiple" value={failed} onValueChange={(data) => setFailed(data)}>
-      <AccordionItem value="item-1">
-        <AccordionTrigger failed={failed} value="item-1">
-          DuckDuckGo
-        </AccordionTrigger>
-        <AccordionContent>
-          <TestBlock>Test title with lengthy text will be wrapped in second line</TestBlock>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger failed={failed} value="item-2">
-          Is it accessible?
-        </AccordionTrigger>
-        <AccordionContent>
-          <TestBlock>Find Nightwatch JS in duckDuckgo</TestBlock>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger failed={failed} value="item-3">
-          Is it accessible?
-        </AccordionTrigger>
-        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-4">
-        <AccordionTrigger failed={failed} value="item-4">
-          Is it accessible?
-        </AccordionTrigger>
-        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-5">
-        <AccordionTrigger failed={failed} value="item-5">
-          Is it accessible?
-        </AccordionTrigger>
-        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-      </AccordionItem>
+      {fail &&
+        fail.map((file) => (
+          // list of items fail/pass object, filter criteria (memo) = "goo"
+          // filter =>
+          // [{},{}]
+          // key = "fail-1"
+          <AccordionItem key={file.key} value="item-1">
+            <AccordionTrigger failed={failed.includes('item-1')} value="item-1">
+              {file.fileName}
+            </AccordionTrigger>
+            <AccordionContent>
+              {file.tests.map((test, index) => {
+                return <TestBlock key={index}>{test.testName}</TestBlock>;
+              })}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      {pass &&
+        pass.map((file) => (
+          <AccordionItem key={file.key} value="item-1">
+            <AccordionTrigger failed={failed.includes('item-1')} value="item-1">
+              {file.fileName}
+            </AccordionTrigger>
+            <AccordionContent>
+              {file.tests.map((test, index) => {
+                return <TestBlock key={index}>{test.testName}</TestBlock>;
+              })}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
     </AccordionRoot>
   );
 };
 
-const AccordionTrigger = React.forwardRef<HTMLButtonElement, Props>(
-  ({ children, ...props }, forwardedRef) => (
+const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTriggerProps>(
+  ({ children, failed, ...props }, forwardedRef) => (
     <AccordionHeader>
       <StyledAccordionTrigger {...props} ref={forwardedRef}>
         <AccordionHeaderContent>
           {props.value === 'item-5' ? <CheckCircleIcon /> : <CancelIcon />}
           {children}
         </AccordionHeaderContent>
-        {props.failed!.includes(props.value!) ? <RemoveIcon /> : <AddIcon />}
+        {failed ? <RemoveIcon /> : <AddIcon />}
       </StyledAccordionTrigger>
     </AccordionHeader>
   )

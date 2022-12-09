@@ -1,5 +1,5 @@
 import { useGlobalContext } from '../hooks/GlobalContext';
-import { IEnvironmentData } from '../transform';
+import { IEnvironmentData, IFileStats, Status } from '../transform';
 
 type FailedTest = {
   name: string;
@@ -32,38 +32,39 @@ const findMaximumFailedEnv = (environments: Record<string, any>): FailedTest => 
 
 interface IFailedData {
   name: string;
-  fileIndex: number;
+  fileIndex: string;
   testIndex: number;
 }
+
+const createDataObject = (name: string, status: Status, files: IFileStats[]): IFailedData => {
+  const data = {
+    name
+  } as IFailedData;
+
+  data['fileIndex'] = `${status}-${0}`;
+  data['testIndex'] = files[0].tests.reduce((index, test) => {
+    if (test.status === 'fail') {
+      return index;
+    }
+    return 0;
+  }, 0);
+
+  return data;
+};
 
 export const findFailedTestDetails = () => {
   const { environments } = useGlobalContext();
   const {
     name,
-    data: { files }
+    data: {
+      files: { pass, fail, skip }
+    }
   } = findMaximumFailedEnv(environments);
 
-  const failedData = {
-    name
-  } as IFailedData;
-
-  if (files.fail.length > 0) {
-    failedData['fileIndex'] = 0;
-    failedData['testIndex'] = files.fail[0].tests.reduce((index, test) => {
-      if (test.status === 'fail') {
-        return index;
-      }
-      return index;
-    }, 0);
-  } else if (files.skip.length > 0) {
-    failedData['fileIndex'] = 0;
-    failedData['testIndex'] = files.skip[0].tests.reduce((index, test) => {
-      if (test.status === 'skip') {
-        return index;
-      }
-      return index;
-    }, 0);
+  if (fail.length > 0) {
+    return createDataObject(name, 'fail', fail);
+  } else if (skip.length > 0) {
+    return createDataObject(name, 'skip', skip);
   }
-
-  return failedData;
+  return createDataObject(name, 'pass', pass);
 };

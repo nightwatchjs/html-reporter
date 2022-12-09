@@ -16,17 +16,20 @@ const getReportMetadata = () => {
   return window.nightwatchReport.metadata;
 };
 
-interface IFileStats {
+export interface IFileStats {
+  key: string;
   fileName: string;
   tests: ITestStats[];
   status: string;
 }
 
-export type Environments = Record<string, IEnvironmentData>[];
+export type Environments = Record<string, IEnvironmentData>;
+
+export type Status = 'pass' | 'fail' | 'skip';
 
 // TODO: Files can have only pass or fail or skip. Rn, types expect all three needed to be there
 export interface IEnvironmentData {
-  files: Record<'pass' | 'fail' | 'skip', IFileStats[]>;
+  files: Record<Status, IFileStats[]>;
   metadata: ITestStats['metadata'];
   stats: {
     passed: number;
@@ -65,6 +68,8 @@ const getEnvironmentReport = () => {
         if (typeof envData[envName].files['pass'] === 'undefined') {
           envData[envName].files['pass'] = [];
         }
+        const uniqueKey = envData[envName].files['pass'].length;
+        fileData['key'] = `pass-${uniqueKey}`;
         envData[envName].files['pass'].push(fileData);
       }
 
@@ -72,6 +77,8 @@ const getEnvironmentReport = () => {
         if (typeof envData[envName].files['fail'] === 'undefined') {
           envData[envName].files['fail'] = [];
         }
+        const uniqueKey = envData[envName].files['fail'].length;
+        fileData['key'] = `fail-${uniqueKey}`;
         envData[envName].files['fail'].push(fileData);
       }
 
@@ -79,6 +86,8 @@ const getEnvironmentReport = () => {
         if (typeof envData[envName].files['skip'] === 'undefined') {
           envData[envName].files['skip'] = [];
         }
+        const uniqueKey = envData[envName].files['skip'].length;
+        fileData['key'] = `skip-${uniqueKey}`;
         envData[envName].files['skip'].push(fileData);
       }
     });
@@ -110,7 +119,7 @@ interface ITestStats {
     browserName: string;
     browserVersion: string;
     executionMode: string;
-    time: string;
+    time: number;
     filename: string;
     filepath: string;
     envName: string;
