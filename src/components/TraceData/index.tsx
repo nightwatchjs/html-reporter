@@ -1,5 +1,6 @@
 import React from 'react';
-import { Wrapper, Filters } from './style';
+import { Wrapper, Filters, TraceWrapper } from './style';
+import TraceIframe from '../TraceIframe';
 
 const TraceData: React.FC = () => {
   return (
@@ -7,6 +8,9 @@ const TraceData: React.FC = () => {
       <Filters>
         https://www.ecosia.org/
       </Filters>
+      <TraceWrapper>
+        <TraceIframe />
+      </TraceWrapper>
     </Wrapper>
   );
 };

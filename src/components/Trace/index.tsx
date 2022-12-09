@@ -17,7 +17,7 @@ const Trace: React.FC = () => {
       <Tabs.Content className="TabsContent" value="tab2">
         <TraceData />
       </Tabs.Content>
-    </TabsRoot>
+      </TabsRoot>
     </Wrapper>
   );
 };
