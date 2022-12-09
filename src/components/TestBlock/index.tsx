@@ -1,16 +1,19 @@
 import React from 'react';
 import { Text } from '../Text';
-import { FailedIcon, Left, Wrapper } from './style';
+import { FailedIcon, Left, PassedIcon, SkippedIcon, Wrapper } from './style';
 
 type TestBlockProps = {
   children: React.ReactNode;
+  status: string;
+  highlightBlock: boolean;
 };
 
-const TestBlock: React.FC<TestBlockProps> = ({ children }) => {
+const TestBlock: React.FC<TestBlockProps> = ({ children, status, highlightBlock }) => {
   return (
-    <Wrapper>
+    <Wrapper highlight={highlightBlock}>
       <Left>
-        <FailedIcon />
+        {/* FIXME:  Remove nested terniary operator */}
+        {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}
       </Left>
       <Text fontSize={14} lineHight={20} color="grey-100">
         {children}

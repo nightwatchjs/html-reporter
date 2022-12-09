@@ -106,6 +106,7 @@ export const getReverseSortedArray = (environments: Record<string, any>) => {
 };
 
 export interface ITestStats {
+  key: string;
   testName: string;
   results: {
     steps: Assertion[];
@@ -137,12 +138,14 @@ const getTestsStats = (
   const resultData: ITestStats[] = [];
   const testReport = fileReport.completed;
 
-  Object.keys(testReport).forEach((testName) => {
+  Object.keys(testReport).forEach((testName, index) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
 
     // Add testName
+
+    testData['key'] = `${singleTestReport.status}-${index}`;
     testData['testName'] = testName;
 
     // Add Results

@@ -1,12 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Check, Close, RemoveCircleOutline } from '../../icons/index';
 
-export const Wrapper = styled.article`
+type WrapperProps = {
+  highlight: boolean;
+};
+
+export const Wrapper = styled.article<WrapperProps>`
   display: flex;
   gap: var(--gap-8);
   background: var(--color-grey-10);
   border-top: var(--border-1) solid var(--color-grey-50);
   padding: var(--padding-8);
+  ${(props) =>
+    props.highlight &&
+    css`
+      background-color: var(--light-color-red-background-10);
+    `}
 `;
 
 export const Left = styled.div`

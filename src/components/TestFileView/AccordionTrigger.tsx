@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from '../Text';
 import {
   AccordionHeader,
   AccordionHeaderContent,
@@ -11,14 +12,21 @@ import {
 import { AccordionTriggerProps } from './types';
 
 export const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTriggerProps>(
-  ({ children, failed, ...props }, forwardedRef) => (
+  ({ children, failed, expandedIds, value, ...props }, forwardedRef) => (
     <AccordionHeader>
       <StyledAccordionTrigger {...props} ref={forwardedRef}>
         <AccordionHeaderContent>
-          {props.value === 'item-5' ? <CheckCircleIcon /> : <CancelIcon />}
-          {children}
+          {!failed ? <CheckCircleIcon /> : <CancelIcon />}
+          <Text
+            lineHight={20}
+            fontSize={14}
+            color="--color-grey-100"
+            fontWeight="--font-weight-bold"
+            transformText>
+            {children}
+          </Text>
         </AccordionHeaderContent>
-        {failed ? <RemoveIcon /> : <AddIcon />}
+        {expandedIds.includes(value) ? <RemoveIcon /> : <AddIcon />}
       </StyledAccordionTrigger>
     </AccordionHeader>
   )

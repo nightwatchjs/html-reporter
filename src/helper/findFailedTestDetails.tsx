@@ -33,7 +33,7 @@ const findMaximumFailedEnv = (environments: Record<string, any>): FailedTest => 
 interface IFailedData {
   name: string;
   fileIndex: string;
-  testIndex: number;
+  testIndex: string;
 }
 
 const createDataObject = (name: string, status: Status, files: IFileStats[]): IFailedData => {
@@ -41,13 +41,12 @@ const createDataObject = (name: string, status: Status, files: IFileStats[]): IF
     name
   } as IFailedData;
 
+  const failedTest = files[0].tests.find((test) => {
+    return test.status === 'fail' && test.key;
+  });
+
   data['fileIndex'] = `${status}-${0}`;
-  data['testIndex'] = files[0].tests.reduce((index, test) => {
-    if (test.status === 'fail') {
-      return index;
-    }
-    return 0;
-  }, 0);
+  data['testIndex'] = failedTest!.key;
 
   return data;
 };

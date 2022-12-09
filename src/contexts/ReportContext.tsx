@@ -12,7 +12,7 @@ const ReportContextProvider: React.FC<ReportContextProps> = ({ children }) => {
 
   const [environmentName, setEnvironmentName] = useState<string>(name);
   const [fileId, setFileId] = useState<string>(fileIndex);
-  const [testId, setTestId] = useState<number>(testIndex);
+  const [testId, setTestId] = useState<string>(testIndex);
 
   const value = useMemo(
     () => ({
