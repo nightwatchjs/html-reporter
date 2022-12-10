@@ -56,9 +56,9 @@ export const getEnvironmentDropDownData = (environments: Environments) => {
       operatingSystemName: platformName,
       tags: [executionMode],
       time: {
-        hour: hours,
-        min: minutes,
-        sec: seconds
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
       }
     };
 

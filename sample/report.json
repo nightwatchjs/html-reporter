@@ -683,7 +683,7 @@
           "skipped": [
             "test will skip"
           ],
-          "time": "7.955",
+          "time": "7955",
           "completed": {
             "Demo test ecosia.org": {
               "time": "7.955",
@@ -693,35 +693,40 @@
                   "message": "Element <body> was visible after 22 milliseconds.",
                   "stackTrace": "",
                   "fullMsg": "Element <body> was visible after 22 milliseconds.",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if the page title contains 'Ecosia' (4ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if the page title contains \u001b[0;33m'Ecosia'\u001b[0m \u001b[0;90m(4ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <input[type=search]> is visible (16ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <button[type=submit]> is visible (13ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(13ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <.layout__content> contains text 'lorem ipsum' in 5000ms - expected \"contains text 'lorem ipsum'\" but got: \"does not contain 'lorem ipsum'\" (5327ms)",
                   "stackTrace": "    at Proxy.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js:16:15)\n    at Context.call (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:727:80)\n    at Runnable.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:841:49)\n    at TestSuite.handleRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:856:33)\n    at /Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:727:21",
                   "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'lorem ipsum'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'lorem ipsum'\"\u001b[0m but got: \u001b[0;31m\"does not contain 'lorem ipsum'\"\u001b[0m \u001b[0;90m(5327ms)\u001b[0m",
-                  "failure": "Expected \"contains text 'lorem ipsum'\" but got: \"does not contain 'lorem ipsum'\""
+                  "failure": "Expected \"contains text 'lorem ipsum'\" but got: \"does not contain 'lorem ipsum'\"",
+                  "status": "fail"
                 }
               ],
               "passed": 4,
@@ -1214,7 +1219,7 @@
           "status": "pass",
           "lastError": null,
           "skipped": [],
-          "time": "8.307",
+          "time": "8307",
           "completed": {
             "demo test using expect apis": {
               "time": "8.307",
@@ -1224,14 +1229,16 @@
                   "message": "Element <form[action=\"/search\"] input[type=text]> was visible after 21 milliseconds.",
                   "stackTrace": "",
                   "fullMsg": "Element <form[action=\"/search\"] input[type=text]> was visible after 21 milliseconds.",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <#rso>:first-child> contains text 'Nightwatch.js' (21ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if element \u001b[0;33m<#rso>:first-child>\u001b[0m contains text \u001b[0;33m'Nightwatch.js'\u001b[0m \u001b[0;90m(21ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 }
               ],
               "passed": 2,
@@ -1440,7 +1447,7 @@
           "status": "pass",
           "lastError": null,
           "skipped": [],
-          "time": "3.530",
+          "time": "3530",
           "completed": {
             "Demo test ecosia.org": {
               "time": "3.530",
@@ -1450,35 +1457,40 @@
                   "message": "Element <body> was visible after 18 milliseconds.",
                   "stackTrace": "",
                   "fullMsg": "Element <body> was visible after 18 milliseconds.",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if the page title contains 'Ecosia' (5ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if the page title contains \u001b[0;33m'Ecosia'\u001b[0m \u001b[0;90m(5ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <input[type=search]> is visible (13ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(13ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <button[type=submit]> is visible (16ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <.layout__content> contains text 'Nightwatch.js' (271ms)",
                   "stackTrace": "",
                   "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'Nightwatch.js'\u001b[0m \u001b[0;90m(271ms)\u001b[0m",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 }
               ],
               "passed": 5,
@@ -1776,7 +1788,7 @@
             "stack": "Error\n    at Proxy.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/examples/tests/google.js:33:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
           },
           "skipped": [],
-          "time": "13.81",
+          "time": "13810",
           "completed": {
             "demo test using expect apis": {
               "time": "13.81",
@@ -1786,14 +1798,16 @@
                   "message": "Element <form[action=\"/search\"] input[type=text]> was visible after 17 milliseconds.",
                   "stackTrace": "",
                   "fullMsg": "Element <form[action=\"/search\"] input[type=text]> was visible after 17 milliseconds.",
-                  "failure": false
+                  "failure": false,
+                  "status": "pass"
                 },
                 {
                   "name": "NightwatchAssertError",
                   "message": "Testing if element <#rso>:first-child> contains text 'notfoundjs' in 5000ms - expected \"contains text 'notfoundjs'\" but got: \"does not contain 'notfoundjs'\" (5469ms)",
                   "stackTrace": "    at Proxy.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/examples/tests/google.js:33:15)",
                   "fullMsg": "Testing if element \u001b[0;33m<#rso>:first-child>\u001b[0m contains text \u001b[0;33m'notfoundjs'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'notfoundjs'\"\u001b[0m but got: \u001b[0;31m\"does not contain 'notfoundjs'\"\u001b[0m \u001b[0;90m(5469ms)\u001b[0m",
-                  "failure": "Expected \"contains text 'notfoundjs'\" but got: \"does not contain 'notfoundjs'\""
+                  "failure": "Expected \"contains text 'notfoundjs'\" but got: \"does not contain 'notfoundjs'\"",
+                  "status": "fail"
                 }
               ],
               "passed": 1,
@@ -2294,8 +2308,8 @@
     "failed": 2,
     "skipped": 1,
     "time": {
-      "min": 1,
-      "sec": 40
+      "minutes": 1,
+      "seconds": 40
     }
   },
   "metadata": {

@@ -15,9 +15,9 @@ export type MetaDataProps = {
     operatingSystemName: 'windows' | 'linux' | 'macos';
     tags: string[];
     time: {
-      hour?: number;
-      min?: number;
-      sec?: number;
+      hours?: number;
+      minutes?: number;
+      seconds?: number;
     };
   };
 };

@@ -14,9 +14,9 @@ interface SuiteStats {
   failed: number;
   skipped: number;
   time: {
-    hour?: number;
-    min?: number;
-    sec?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
   };
 }
 

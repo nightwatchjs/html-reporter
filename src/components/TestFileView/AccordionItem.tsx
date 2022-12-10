@@ -8,7 +8,7 @@ import { AccordionItemsProps } from './types';
 import { filterData } from './util';
 
 const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds, expandedIds }) => {
-  const { testId } = useReportContext();
+  const { testId, setTestId, setFileId } = useReportContext();
   const filterTestData = filterData(data, query);
 
   return (
@@ -22,9 +22,16 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds,
             {file.fileName}
           </AccordionTrigger>
           <AccordionContent>
-            {file.tests.map((test, index) => {
+            {file.tests.map((test) => {
               return (
-                <TestBlock key={index} status={test.status} highlightBlock={test.key === testId}>
+                <TestBlock
+                  key={test.key}
+                  status={test.status}
+                  highlightBlock={test.key === testId}
+                  fileKey={file.key}
+                  testKey={test.key}
+                  setTestId={setTestId}
+                  setFileId={setFileId}>
                   {test.testName}
                 </TestBlock>
               );

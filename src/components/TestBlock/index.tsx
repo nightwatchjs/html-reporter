@@ -6,11 +6,28 @@ type TestBlockProps = {
   children: React.ReactNode;
   status: string;
   highlightBlock: boolean;
+  fileKey: string;
+  testKey: string;
+  setTestId: React.Dispatch<React.SetStateAction<string>>;
+  setFileId: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const TestBlock: React.FC<TestBlockProps> = ({ children, status, highlightBlock }) => {
+const TestBlock: React.FC<TestBlockProps> = ({
+  children,
+  status,
+  highlightBlock,
+  fileKey,
+  testKey,
+  setTestId,
+  setFileId
+}) => {
   return (
-    <Wrapper highlight={highlightBlock}>
+    <Wrapper
+      highlight={highlightBlock}
+      onClick={() => {
+        setFileId(fileKey);
+        setTestId(testKey);
+      }}>
       <Left>
         {/* FIXME:  Remove nested terniary operator */}
         {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}

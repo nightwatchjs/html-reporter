@@ -5,7 +5,7 @@ type WrapperProps = {
   highlight: boolean;
 };
 
-export const Wrapper = styled.article<WrapperProps>`
+export const Wrapper = styled.button<WrapperProps>`
   display: flex;
   gap: var(--gap-8);
   background: var(--color-grey-10);
@@ -16,6 +16,7 @@ export const Wrapper = styled.article<WrapperProps>`
     css`
       background-color: var(--light-color-red-background-10);
     `}
+  flex: 1;
 `;
 
 export const Left = styled.div`

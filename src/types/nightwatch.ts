@@ -105,6 +105,7 @@ export interface Assertion {
   stackTrace: string;
   fullMsg: string;
   failure: any;
+  status: string;
 }
 
 export interface SessionCapabilities {
