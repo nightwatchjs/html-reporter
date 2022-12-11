@@ -18,8 +18,6 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
 
   const testObj = data.files[fileType][fileLocation].tests.find((test) => test.key === testID);
 
-  console.log('????????', testObj);
-
   const resultObj = {} as ITestResult;
 
   const passedTestStep = testObj?.results.steps.reduce((result, test) => {

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
 import { IFailedTestSteps, IPassedTestSteps } from '../SpecMetaData/types';
 import { SearchWrapper, TestStepWrapper, Wrapper } from './style';
+import { filterTestSteps } from './utils';
 
 type TestDetailsViewProps = {
   passedStepsData: IPassedTestSteps[];
@@ -11,22 +12,28 @@ type TestDetailsViewProps = {
 };
 
 const TestDetailsView: React.FC<TestDetailsViewProps> = ({ passedStepsData, failedStepsData }) => {
+  const [query, setQuery] = useState<string>('');
+
+  const { passed, failed } = filterTestSteps(passedStepsData, failedStepsData, query);
   return (
     <Wrapper>
       <SearchWrapper>
-        <Search placeholder="Search test steps" />
+        <Search
+          placeholder="Search test steps"
+          onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
+        />
       </SearchWrapper>
       <TestStepWrapper>
-        {passedStepsData &&
-          passedStepsData.map((data, index) => {
+        {passed &&
+          passed.map((data, index) => {
             return (
               <PassTestStep key={index} time={data.time}>
                 {data.stepName}
               </PassTestStep>
             );
           })}
-        {failedStepsData &&
-          failedStepsData.map((data, index) => {
+        {failed &&
+          failed.map((data, index) => {
             return (
               <ErrorTestStep
                 key={index}
@@ -37,7 +44,6 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ passedStepsData, fail
               </ErrorTestStep>
             );
           })}
-        <PassTestStep time={6}>After Hooks</PassTestStep>
       </TestStepWrapper>
     </Wrapper>
   );
