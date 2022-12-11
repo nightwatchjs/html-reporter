@@ -1,8 +1,10 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useMemo, useState } from 'react';
+import { useGlobalContext } from '../../hooks/GlobalContext';
+import { useReportContext } from '../../hooks/ReportContext';
 import { ArrowDropDown, ArrowDropUp } from '../../icons';
-import { MetaDataProps } from '../EnvironmentMetadata';
 import Search from '../Search';
+import { getEnvironmentDropDownData } from '../Summary/utils';
 import EnvironmentContent from './EnvironmentContent';
 import {
   DropdownMenuContent,
@@ -11,42 +13,38 @@ import {
   EnvironmentSelectorWrapper,
   FilterWrapper
 } from './style';
+import { EnvironmentData } from './types';
+import { filterData } from './utils';
 
-type EnvironmentData = {
-  name: string;
-  meta: MetaDataProps['meta'];
-  testResult: {
-    passed: number;
-    failed: number;
-    skipped: number;
-  };
-};
+const EnvironmentDropdown: React.FC = () => {
+  const { environments } = useGlobalContext();
+  const { environmentName, setEnvironmentName } = useReportContext();
+  const envDropdownData = getEnvironmentDropDownData(environments);
 
-type EnvironmentDropdownProps = {
-  data: EnvironmentData[];
-};
-
-const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
+  // React States
+  const [query, setQuery] = useState<string>('');
   const [isDropDownOpen, setDropdownOpen] = useState(false);
-  const [context, setContext] = useState('Environment1');
-  const [envData, setEnvData] = useState<Partial<EnvironmentData>>({});
+  const filteredData = filterData(envDropdownData, query);
+  const [envData, setEnvData] = useState({} as EnvironmentData);
 
-  useEffect(() => {
-    data.forEach((data) => {
-      if (data.name == context) {
+  const defaultDropdownData = envDropdownData.find((data: any) => data.origName == environmentName);
+
+  useMemo(() => {
+    envDropdownData.find((data: any) => {
+      if (data.name == environmentName) {
         setEnvData(data);
       }
     });
-  }, [context]);
+  }, [environmentName]);
 
   return (
     <DropdownMenu.Root onOpenChange={(open) => setDropdownOpen(open)}>
       <DropdownMenuTrigger asChild>
         <EnvironmentSelectorWrapper>
           <EnvironmentContent
-            name={envData.name || data[0]['name']}
-            meta={envData.meta || data[0]['meta']}
-            testResult={envData.testResult || data[0]['testResult']}
+            name={envData.name || defaultDropdownData.name}
+            meta={envData.meta || defaultDropdownData.meta}
+            testResult={envData.testResult || defaultDropdownData.testResult}
           />
           {isDropDownOpen ? <ArrowDropUp /> : <ArrowDropDown />}
         </EnvironmentSelectorWrapper>
@@ -55,23 +53,18 @@ const EnvironmentDropdown: React.FC<EnvironmentDropdownProps> = ({ data }) => {
       <DropdownMenu.Portal>
         <DropdownMenuContent>
           <FilterWrapper>
-            <Search placeholder="Search for Environments, OS, Browser, Device" width={100} />
+            <Search
+              placeholder="Search for Environments, OS, Browser, Device"
+              width={100}
+              onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
+            />
           </FilterWrapper>
-          <DropdownMenu.RadioGroup value={context} onValueChange={setContext}>
-            <DropdownRadioItemContent value={data[0]['name']}>
-              <EnvironmentContent
-                name={data[0]['name']}
-                meta={data[0]['meta']}
-                testResult={data[0]['testResult']}
-              />
-            </DropdownRadioItemContent>
-            <DropdownRadioItemContent value={data[1]['name']}>
-              <EnvironmentContent
-                name={data[1]['name']}
-                meta={data[1]['meta']}
-                testResult={data[0]['testResult']}
-              />
-            </DropdownRadioItemContent>
+          <DropdownMenu.RadioGroup value={environmentName} onValueChange={setEnvironmentName}>
+            {filteredData.map(({ name, origName, meta, testResult }, index) => (
+              <DropdownRadioItemContent key={index} value={origName}>
+                <EnvironmentContent name={name} meta={meta} testResult={testResult} />
+              </DropdownRadioItemContent>
+            ))}
           </DropdownMenu.RadioGroup>
         </DropdownMenuContent>
       </DropdownMenu.Portal>

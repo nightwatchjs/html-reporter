@@ -4,16 +4,19 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Summary from './components/Summary';
 import TestData from './components/TestData';
+import { ReportContextProvider } from './contexts/ReportContext';
 
 const Report: React.FC = () => {
   return (
     <Fragment>
-      <Header />
-      <Wrapper>
-        <Summary />
-        <TestData />
-      </Wrapper>
-      <Footer />
+      <ReportContextProvider>
+        <Header />
+        <Wrapper>
+          <Summary />
+          <TestData />
+        </Wrapper>
+        <Footer />
+      </ReportContextProvider>
     </Fragment>
   );
 };

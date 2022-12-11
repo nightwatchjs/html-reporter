@@ -1,16 +1,36 @@
 import React from 'react';
 import { Text } from '../Text';
-import { FailedIcon, Left, Wrapper } from './style';
+import { FailedIcon, Left, PassedIcon, SkippedIcon, Wrapper } from './style';
 
 type TestBlockProps = {
   children: React.ReactNode;
+  status: string;
+  highlightBlock: boolean;
+  fileKey: string;
+  testKey: string;
+  setTestId: React.Dispatch<React.SetStateAction<string>>;
+  setFileId: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const TestBlock: React.FC<TestBlockProps> = ({ children }) => {
+const TestBlock: React.FC<TestBlockProps> = ({
+  children,
+  status,
+  highlightBlock,
+  fileKey,
+  testKey,
+  setTestId,
+  setFileId
+}) => {
   return (
-    <Wrapper>
+    <Wrapper
+      highlight={highlightBlock}
+      onClick={() => {
+        setFileId(fileKey);
+        setTestId(testKey);
+      }}>
       <Left>
-        <FailedIcon />
+        {/* FIXME:  Remove nested terniary operator */}
+        {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}
       </Left>
       <Text fontSize={14} lineHight={20} color="grey-100">
         {children}

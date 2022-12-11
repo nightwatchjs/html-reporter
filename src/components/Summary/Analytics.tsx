@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import { GlobalContext } from '../../globalContext';
-import { IGlobalContext } from '../../types/globalContext';
+import React from 'react';
+import { useGlobalContext } from '../../hooks/GlobalContext';
 import { getPassedTestPercentage } from '../../utils';
 import ProgressLine from '../ProgressLine';
 import Spacer from '../Spacer';
@@ -26,7 +25,7 @@ import { getTestPercentage } from './utils';
 const Analytics: React.FC = () => {
   const {
     stats: { passed, failed, skipped, total, time }
-  } = useContext<IGlobalContext>(GlobalContext);
+  } = useGlobalContext();
 
   const TestStatsInPercent = getTestPercentage(total, passed, failed, skipped);
 

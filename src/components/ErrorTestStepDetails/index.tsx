@@ -9,7 +9,7 @@ type ErrorStepDetailsProps = {
   errorDetails: {
     errorName: string;
     shortMessage: string[];
-    stackTrace: {
+    stackTrace?: {
       filename: string;
       line_number: number;
       codeSnippet: string[];
@@ -18,11 +18,7 @@ type ErrorStepDetailsProps = {
 };
 
 const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
-  errorDetails: {
-    errorName,
-    shortMessage,
-    stackTrace: { filename, line_number, codeSnippet }
-  }
+  errorDetails: { errorName, shortMessage, stackTrace }
 }) => {
   return (
     <Wrapper>
@@ -39,12 +35,14 @@ const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
         />
         <ErrorMessageText>{shortMessage[1]}</ErrorMessageText>
       </ErrorMessageWrapper>
-      <CodeBlock
-        filename={filename}
-        line_number={line_number}
-        codeSnippet={codeSnippet}
-        file_path="/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js"
-      />
+      {stackTrace && (
+        <CodeBlock
+          filename={stackTrace.filename}
+          line_number={stackTrace.line_number}
+          codeSnippet={stackTrace.codeSnippet}
+          file_path="/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js"
+        />
+      )}
     </Wrapper>
   );
 };

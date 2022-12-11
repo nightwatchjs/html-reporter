@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
-import { GlobalContext } from '../../globalContext';
+import React from 'react';
+import { useGlobalContext } from '../../hooks/GlobalContext';
 import { NightwatchIcon } from '../../icons';
-import { IGlobalContext } from '../../types/globalContext';
 import { convertMsToTime } from '../../utils';
 import { Center, Date, Left, Right, Time, Wrapper } from './style';
 import { getDateFromMillisecond } from './util';
@@ -9,7 +8,7 @@ import { getDateFromMillisecond } from './util';
 const Header = () => {
   const {
     metadata: { timestamp, date }
-  } = useContext<IGlobalContext>(GlobalContext);
+  } = useGlobalContext();
 
   return (
     <Wrapper>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { PassedIcon, FailedIcon, Wrapper } from './style';
 
-type TestBlockNameProps = {
+export type TestBlockNameProps = {
   children: React.ReactNode;
-  status: 'passed' | 'failed';
+  status: 'pass' | 'fail';
 };
 
 const TestStatusIcon = {
-  passed: <PassedIcon />,
-  failed: <FailedIcon />
+  pass: <PassedIcon />,
+  fail: <FailedIcon />
 };
 
 const TestBlockName: React.FC<TestBlockNameProps> = ({ status, children }) => {

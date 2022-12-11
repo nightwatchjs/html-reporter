@@ -1,6 +1,9 @@
+import { Environments } from '../transform';
+
 export {};
 
 export interface IGlobalContext {
+  environments: Environments;
   stats: SuiteStats;
   metadata: ReportMetadata;
 }
@@ -11,9 +14,9 @@ interface SuiteStats {
   failed: number;
   skipped: number;
   time: {
-    hour?: number;
-    min?: number;
-    sec?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
   };
 }
 

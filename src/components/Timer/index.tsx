@@ -4,18 +4,20 @@ import { Time, TimerIcon, TimerIconWrapper, Wrapper } from './style';
 
 type Props = {
   time: {
-    hour?: number;
-    min?: number;
-    sec?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
   };
   color: string;
   fontSize?: string;
   gap?: number;
 };
 
-const Timer: React.FC<Props> = ({ time: { hour, min, sec }, color, fontSize, gap }) => {
-  const getTime = (hour?: number, min?: number, sec?: number): string => {
-    return `${hour ? `${hour} hr` : ''} ${min ? `${min} min` : ''} ${sec ? `${sec} sec` : ''}`;
+const Timer: React.FC<Props> = ({ time: { hours, minutes, seconds }, color, fontSize, gap }) => {
+  const getTime = (hours?: number, minutes?: number, seconds?: number): string => {
+    return `${hours ? `${hours} hr` : ''} ${minutes ? `${minutes} min` : ''} ${
+      seconds ? `${seconds} sec` : ''
+    }`;
   };
 
   return (
@@ -23,8 +25,11 @@ const Timer: React.FC<Props> = ({ time: { hour, min, sec }, color, fontSize, gap
       <TimerIconWrapper fontSize={fontSize}>
         <TimerIcon />
       </TimerIconWrapper>
-      <Time dateTime={`PT${hour ?? 0}H${min}M${sec ?? 0}S`} color={color} fontSize={fontSize}>
-        {getTime(hour, min, sec)}
+      <Time
+        dateTime={`PT${hours ?? 0}H${minutes}M${seconds ?? 0}S`}
+        color={color}
+        fontSize={fontSize}>
+        {getTime(hours, minutes, seconds)}
       </Time>
     </Wrapper>
   );

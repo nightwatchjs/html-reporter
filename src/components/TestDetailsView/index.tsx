@@ -1,56 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
+import { IFailedTestSteps, IPassedTestSteps } from '../SpecMetaData/types';
 import { SearchWrapper, TestStepWrapper, Wrapper } from './style';
+import { filterTestSteps } from './utils';
 
-const testStepData = [
-  {
-    stepName: 'Before Hooks',
-    time: 12
-  },
-  {
-    stepName: `waitForElementVisible('body')`,
-    time: 4
-  },
-  {
-    stepName: `titleContains('Ecosia')`,
-    time: 2
-  },
-  {
-    stepName: `visible('input[type=search]')`,
-    time: 2
-  },
-  {
-    stepName: `setValue('input[type=search]', 'nightwatch')`,
-    time: 6
-  },
-  {
-    stepName: `visible('button[type=submit]')`,
-    time: 3
-  },
-  {
-    stepName: `click('button[type=submit]')`,
-    time: 2
-  }
-];
+type TestDetailsViewProps = {
+  passedStepsData: IPassedTestSteps[];
+  failedStepsData: IFailedTestSteps[];
+};
 
-const TestDetailsView: React.FC = () => {
+const TestDetailsView: React.FC<TestDetailsViewProps> = ({ passedStepsData, failedStepsData }) => {
+  const [query, setQuery] = useState<string>('');
+
+  const { passed, failed } = filterTestSteps(passedStepsData, failedStepsData, query);
   return (
     <Wrapper>
       <SearchWrapper>
-        <Search placeholder="Search test steps" />
+        <Search
+          placeholder="Search test steps"
+          onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
+        />
       </SearchWrapper>
       <TestStepWrapper>
-        {testStepData.map((data, index) => {
-          return (
-            <PassTestStep key={index} time={data.time}>
-              {data.stepName}
-            </PassTestStep>
-          );
-        })}
-        <ErrorTestStep time={24}>{`textContains('.layout__content', 'asdr.js');`}</ErrorTestStep>
-        <PassTestStep time={6}>After Hooks</PassTestStep>
+        {passed &&
+          passed.map((data, index) => {
+            return (
+              <PassTestStep key={index} time={data.time}>
+                {data.stepName}
+              </PassTestStep>
+            );
+          })}
+        {failed &&
+          failed.map((data, index) => {
+            return (
+              <ErrorTestStep
+                key={index}
+                time={data.time}
+                errorName={data.name}
+                shortMessage={data.shortMessage}
+                screenshot={data.screenshot}>
+                {data.message}
+              </ErrorTestStep>
+            );
+          })}
       </TestStepWrapper>
     </Wrapper>
   );
