@@ -8,6 +8,7 @@ export interface IFailedTestSteps extends IPassedTestSteps {
   message: string;
   shortMessage: string[];
   stacktrace: string;
+  screenshot: string;
 }
 
 export interface ITestResult {

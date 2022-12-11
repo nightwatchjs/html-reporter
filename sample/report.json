@@ -726,6 +726,7 @@
                   "stackTrace": "    at Proxy.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js:16:15)\n    at Context.call (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:727:80)\n    at Runnable.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:841:49)\n    at TestSuite.handleRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:856:33)\n    at /Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:727:21",
                   "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'lorem ipsum'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'lorem ipsum'\"\u001b[0m but got: \u001b[0;31m\"does not contain 'lorem ipsum'\"\u001b[0m \u001b[0;90m(5327ms)\u001b[0m",
                   "failure": "Expected \"contains text 'lorem ipsum'\" but got: \"does not contain 'lorem ipsum'\"",
+                  "screenshot": "https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                   "status": "fail"
                 }
               ],

@@ -36,8 +36,7 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
           shortMessage
         }}
       />
-      {/* FIXME: Add alt */}
-      {screenshot && <Screenshot src={screenshot} />}
+      {screenshot && <Screenshot src={screenshot} alt={shortMessage.join('')} />}
     </Wrapper>
   );
 };

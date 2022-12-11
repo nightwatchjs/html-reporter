@@ -39,7 +39,8 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ passedStepsData, fail
                 key={index}
                 time={data.time}
                 errorName={data.name}
-                shortMessage={data.shortMessage}>
+                shortMessage={data.shortMessage}
+                screenshot={data.screenshot}>
                 {data.message}
               </ErrorTestStep>
             );

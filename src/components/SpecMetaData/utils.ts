@@ -37,7 +37,8 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
         message: test.failure,
         stacktrace: test.stackTrace,
         shortMessage: test.message.split('-'),
-        time: Math.round(Math.random() * 10)
+        time: Math.round(Math.random() * 10),
+        screenshot: test.screenshot
       });
     return result;
   }, [] as IFailedTestSteps[]);

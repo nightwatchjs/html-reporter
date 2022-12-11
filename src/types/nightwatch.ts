@@ -106,6 +106,7 @@ export interface Assertion {
   fullMsg: string;
   failure: any;
   status: string;
+  screenshot: string;
 }
 
 export interface SessionCapabilities {
