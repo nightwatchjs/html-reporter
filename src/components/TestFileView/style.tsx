@@ -48,6 +48,7 @@ export const AccordionHeaderContent = styled.div`
 export const StyledAccordionContent = styled(Accordion.Content)`
   background: var(--color-grey-10);
   display: flex;
+  flex-direction: column;
 `;
 
 export const CancelIcon = styled(Cancel)`
