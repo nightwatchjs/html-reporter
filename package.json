@@ -5,7 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
-    "build-vrt": "tsc && vite build --config vite.config.vrt.ts",
+    "build-vrt": "tsc && vite build --config vite.config.vrt.ts && tsc -p tsconfig.node.cjs.json",
     "build": "tsc && vite build && tsc -p tsconfig.node.cjs.json",
     "preview": "vite preview",
     "lint": "eslint .",

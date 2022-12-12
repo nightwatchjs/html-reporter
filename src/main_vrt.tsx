@@ -1,12 +1,11 @@
-\import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import styled from 'styled-components';
 import GlobalStyles from './components/GlobalStyles';
 import ReportVrt from './ReportVrt';
 import { StyledEngineProvider } from '@mui/material/styles';
-import { GlobalContext } from './globalContext';
-import { transformNightwatchVrtReport } from './transform';
+import { GlobalVrtContextProvider } from './contexts/GlobalContext';
 
 const Wrapper = styled.section`
   max-width: 1280px;
@@ -31,9 +30,9 @@ window.addEventListener('load', () => {
         <React.StrictMode>
           <GlobalStyles />
           <Wrapper>
-            <GlobalContext.Provider value={transformNightwatchVrtReport()}>
-              <ReportVrt />
-            </GlobalContext.Provider>
+            <GlobalVrtContextProvider>
+              {/* <ReportVrt /> */}
+            </GlobalVrtContextProvider>
           </Wrapper>
         </React.StrictMode>
       </StyledEngineProvider>

@@ -10,7 +10,7 @@ export const transformNightwatchReport = () => {
 
 export const transformNightwatchVrtReport = () => {
   return {
-    data: {}
+    environments: getVrtEnvironmentReport(),
   };
 };
 
@@ -179,4 +179,43 @@ const getTestsStats = (
   });
 
   return resultData;
+};
+
+const getVrtEnvironmentReport = () => {
+  const envData: any = {};
+  const report = window.nightwatchVrtReport.reports;
+  Object.keys(report).forEach((envName) => {
+    envData[envName] = {
+      files: {}
+    };
+
+    const environmentData = report[envName];
+    const environmentDataFiles = environmentData.modules;
+
+    envData[envName]['metadata'] = {};
+    envData[envName]['stats'] = {};
+
+    Object.keys(environmentDataFiles).forEach((fileName) => {
+      const fileData = {} as IFileStats;
+      const fileReport = environmentDataFiles[fileName];
+
+      fileData['fileName'] = fileName;
+      fileData['status'] = 'fail';
+      fileData['tests'] = [] as ITestStats[];
+
+      // File level data aggregation (i.e. file is passed/failed/skipped)
+
+      if (fileReport.status === 'fail') {
+        if (typeof envData[envName].files['fail'] === 'undefined') {
+          envData[envName].files['fail'] = [];
+        }
+        const uniqueKey = envData[envName].files['fail'].length;
+        fileData['key'] = `fail-${uniqueKey}`;
+        envData[envName].files['fail'].push(fileData);
+      }
+      
+    });
+  });
+
+  return envData;
 };

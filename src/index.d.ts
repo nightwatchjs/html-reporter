@@ -6,6 +6,6 @@ declare global {
     nightwatchReport: NightwatchHTMLReport;
 
     // todo: change to nightwatchVrtHtmlReport
-    nightwatchVrtReport: NightwatchHTMLReport;
+    nightwatchVrtReport: NightwatchVrtReport;
   }
 }

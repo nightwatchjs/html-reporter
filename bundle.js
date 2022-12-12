@@ -7,7 +7,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const sampleReportPath = join(__dirname, 'sample', 'report.json')
 
 // Todo: change vrt report path
-const sampleVrtReportPath = join(__dirname, 'sample', 'report.json')
+const sampleVrtReportPath = join(__dirname, 'sample', 'vrtReport.json')
 
 /**
  * @returns {import('vite').Plugin}
@@ -35,7 +35,7 @@ export function bundleVrt() {
     transformIndexHtml: {
       transform(html, _ctx) {
         const reportData = readFileSync(sampleVrtReportPath,{ encoding: 'utf8' })
-        return  html + `<script>window.nightwatchReport = ${reportData}</script>`
+        return  html + `<script>window.nightwatchVrtReport = ${reportData}</script>`
       }
     }
   };

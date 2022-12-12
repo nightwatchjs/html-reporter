@@ -1,0 +1,17 @@
+{
+    "reports": {
+      "chrome": {
+        "modules": {
+          "sample": {
+            "completed": {
+              "nightwatch-vrt sample test": {
+                "completeBaselinePath": "/Users/ravi/Documents/Projects/nightwatch/vrt/baseline/chrome_mac os x/sample/footer.png",
+                "completeDiffPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/diff/chrome_mac os x/sample/footer.png",
+                "completeLatestPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/latest/chrome_mac os x/sample/footer.png"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

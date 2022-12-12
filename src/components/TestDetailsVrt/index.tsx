@@ -4,7 +4,6 @@ import { Error, Details} from './style';
 import Header from '../TestCaseView/Header';
 import { Actions, ExpandAll, Left, Right, Wrapper } from '../TestData/style';
 import Search from '../Search';
-import Accordion from '../Accordion';
 
 type Props = {
     baseline_img: string;
@@ -18,7 +17,6 @@ const TestDetailsVrt: React.FC<Props> = ({ baseline_img, diff_img }) => {
           <Actions>
             <ExpandAll type="button">Expand all</ExpandAll>
           </Actions>
-          <Accordion />
         </Left>
         <Right>
         <Header />

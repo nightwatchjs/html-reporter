@@ -1,6 +1,6 @@
 import { createContext, ReactNode } from 'react';
 import React from 'react';
-import { transformNightwatchReport } from '../transform';
+import { transformNightwatchReport, transformNightwatchVrtReport } from '../transform';
 
 const GlobalContext = createContext<any>(null);
 
@@ -14,4 +14,10 @@ const GlobalContextProvider: React.FC<GlobalContextProps> = ({ children }) => {
   return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>;
 };
 
-export { GlobalContext, GlobalContextProvider };
+const GlobalVrtContextProvider: React.FC<GlobalContextProps> = ({ children }) => {
+  const value = transformNightwatchVrtReport();
+
+  return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>;
+};
+
+export { GlobalContext, GlobalContextProvider, GlobalVrtContextProvider };

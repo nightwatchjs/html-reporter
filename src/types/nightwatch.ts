@@ -160,3 +160,7 @@ export interface Stats {
 export interface Metadata {
   timestamp: number;
 }
+
+export interface NightwatchVrtReport {
+  reports: Environments;
+}
