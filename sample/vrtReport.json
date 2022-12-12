@@ -8,6 +8,11 @@
                 "completeBaselinePath": "/Users/ravi/Documents/Projects/nightwatch/vrt/baseline/chrome_mac os x/sample/footer.png",
                 "completeDiffPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/diff/chrome_mac os x/sample/footer.png",
                 "completeLatestPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/latest/chrome_mac os x/sample/footer.png"
+              },
+              "nightwatch-vrt sample test1": {
+                "completeBaselinePath": "/Users/ravi/Documents/Projects/nightwatch/vrt/baseline/chrome_mac os x/sample/footer.png",
+                "completeDiffPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/diff/chrome_mac os x/sample/footer.png",
+                "completeLatestPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/latest/chrome_mac os x/sample/footer.png"
               }
             }
           }

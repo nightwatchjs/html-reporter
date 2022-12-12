@@ -29,11 +29,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        index: resolve(__dirname, 'index_vrt.html'),
         vrt: resolve(__dirname, 'index_vrt.html'),
       },
-      output: {
-          name: "vrt"
-        }
     },
   },
 });

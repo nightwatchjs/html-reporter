@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
           <GlobalStyles />
           <Wrapper>
             <GlobalVrtContextProvider>
-              {/* <ReportVrt /> */}
+              <ReportVrt />
             </GlobalVrtContextProvider>
           </Wrapper>
         </React.StrictMode>

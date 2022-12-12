@@ -8,6 +8,10 @@ export interface IGlobalContext {
   metadata: ReportMetadata;
 }
 
+export interface IGlobalVrtContext {
+  environments: Environments;
+}
+
 interface SuiteStats {
   total: number;
   passed: number;

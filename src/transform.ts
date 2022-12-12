@@ -1,4 +1,4 @@
-import { Assertion, TestFile } from './types/nightwatch';
+import { Assertion, TestFile, VrtTestFile } from './types/nightwatch';
 
 export const transformNightwatchReport = () => {
   return {
@@ -10,7 +10,7 @@ export const transformNightwatchReport = () => {
 
 export const transformNightwatchVrtReport = () => {
   return {
-    environments: getVrtEnvironmentReport(),
+    environments: getVrtEnvironmentReport()
   };
 };
 
@@ -26,6 +26,13 @@ export interface IFileStats {
   key: string;
   fileName: string;
   tests: ITestStats[];
+  status: string;
+}
+
+export interface IVrtFileStats {
+  key: string;
+  fileName: string;
+  tests: IVrtTestStats[];
   status: string;
 }
 
@@ -133,6 +140,17 @@ export interface ITestStats {
   };
 }
 
+export interface IVrtTestStats {
+  key: string;
+  testName: string;
+  results: {
+    completeBaselinePath: string;
+    completeDiffPath: string;
+    completeLatestPath: string;
+  };
+  status: string;
+}
+
 const getTestsStats = (
   fileReport: TestFile,
   envName: string,
@@ -196,12 +214,12 @@ const getVrtEnvironmentReport = () => {
     envData[envName]['stats'] = {};
 
     Object.keys(environmentDataFiles).forEach((fileName) => {
-      const fileData = {} as IFileStats;
+      const fileData = {} as IVrtFileStats;
       const fileReport = environmentDataFiles[fileName];
 
       fileData['fileName'] = fileName;
       fileData['status'] = 'fail';
-      fileData['tests'] = [] as ITestStats[];
+      fileData['tests'] = getVrtTestsStats(fileReport);
 
       // File level data aggregation (i.e. file is passed/failed/skipped)
 
@@ -218,4 +236,33 @@ const getVrtEnvironmentReport = () => {
   });
 
   return envData;
+};
+
+const getVrtTestsStats = (
+  fileReport: VrtTestFile
+): IVrtTestStats[] => {
+  const resultData: IVrtTestStats[] = [];
+  const testReport = fileReport.completed;
+
+  Object.keys(testReport).forEach((testName, index) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const testData = {} as IVrtTestStats;
+    const singleTestReport = testReport[testName];
+    const status = 'fail';
+
+    // Add testName
+
+    testData['key'] = `${status}-${index}`;
+    testData['testName'] = testName;
+
+    // Add Results
+    testData['results'] = singleTestReport;
+
+    // Add Status
+    testData['status'] = 'fail';
+
+    resultData.push(testData);
+  });
+
+  return resultData;
 };

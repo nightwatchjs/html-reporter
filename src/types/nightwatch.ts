@@ -164,3 +164,13 @@ export interface Metadata {
 export interface NightwatchVrtReport {
   reports: Environments;
 }
+
+export interface VrtTestFile {
+  completed: Record<string, VrtTestObject>;
+}
+
+export interface VrtTestObject {
+  completeBaselinePath: string;
+  completeDiffPath: string;
+  completeLatestPath: string;
+}
