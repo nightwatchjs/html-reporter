@@ -1,5 +1,5 @@
 import { IEnvironmentData, Status } from '../../transform';
-import { IFailedTestSteps, IPassedTestSteps, ITestResult } from './types';
+import { ITestResult, ITestSteps } from './types';
 
 export const getMetadata = (data: IEnvironmentData, fileID: string, testID: string) => {
   const [fileType, fileLocation] = fileID.split('-') as [fileType: Status, fileLocation: number];
@@ -20,32 +20,20 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
 
   const resultObj = {} as ITestResult;
 
-  const passedTestStep = testObj?.results.steps.reduce((result, test) => {
-    test.status === 'pass' &&
-      result.push({
-        stepName: test.name,
-        time: test.elapsedTime
-      });
+  const testSteps = testObj?.results.steps.reduce((result, test) => {
+    result.push({
+      name: test.name,
+      time: test.elapsedTime,
+      status: test.status,
+      ...(test.result?.message && { message: test.result.message }),
+      ...(test.result?.beautifiedStack && { stacktrace: test.result.beautifiedStack }),
+      ...(test.result?.message && { shortMessage: test.result.message.split('-') }),
+      ...(test?.screenshot && { screenshot: test.screenshot })
+    });
     return result;
-  }, [] as IPassedTestSteps[]);
+  }, [] as ITestSteps[]);
 
-  const failedTestSteps = testObj?.results.steps.reduce((result, test) => {
-    test.status === 'fail' &&
-      result.push({
-        name: test.name,
-        stepName: test.name,
-        message: test.result.message,
-        stacktrace: test.result.stack,
-        shortMessage: test.result.message.split('-'),
-        time: test.elapsedTime,
-        screenshot: test.screenshot
-      });
-    return result;
-  }, [] as IFailedTestSteps[]);
-
-  resultObj['testSteps'] = {} as ITestResult['testSteps'];
-  resultObj['testSteps']['passed'] = passedTestStep ?? [];
-  resultObj['testSteps']['failed'] = failedTestSteps ?? [];
+  resultObj['testSteps'] = testSteps ?? [];
   resultObj['httpLog'] = testObj?.results.httpLog ?? '';
   resultObj['seleniumLog'] = testObj?.results.seleniumLog ?? '';
 

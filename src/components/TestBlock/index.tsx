@@ -32,7 +32,7 @@ const TestBlock: React.FC<TestBlockProps> = ({
         {/* FIXME:  Remove nested terniary operator */}
         {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}
       </Left>
-      <Text fontSize={14} lineHight={20} color="grey-100">
+      <Text fontSize={14} lineHight={20} color="grey-100" transformText>
         {children}
       </Text>
     </Wrapper>

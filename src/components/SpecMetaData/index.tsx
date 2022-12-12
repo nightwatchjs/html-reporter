@@ -33,6 +33,7 @@ const SpecMetaData: React.FC = () => {
             {`Spec: ${meta?.filename}`}
           </Text>
         </EnvironmentAndSpecName>
+        {/* FIXME: remove type casting as any */}
         <EnvironmentMetadata
           meta={{
             device: meta?.device as any,

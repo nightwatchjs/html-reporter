@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
-import { IFailedTestSteps, IPassedTestSteps } from '../SpecMetaData/types';
+import { ITestSteps } from '../SpecMetaData/types';
 import { SearchWrapper, TestStepWrapper, Wrapper } from './style';
 import { filterTestSteps } from './utils';
 
 type TestDetailsViewProps = {
-  passedStepsData: IPassedTestSteps[];
-  failedStepsData: IFailedTestSteps[];
+  testStepsData: ITestSteps[];
 };
 
-const TestDetailsView: React.FC<TestDetailsViewProps> = ({ passedStepsData, failedStepsData }) => {
+const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
   const [query, setQuery] = useState<string>('');
 
-  const { passed, failed } = filterTestSteps(passedStepsData, failedStepsData, query);
+  const filteredTestsSteps = filterTestSteps(testStepsData, query);
+
   return (
     <Wrapper>
       <SearchWrapper>
@@ -24,27 +24,29 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ passedStepsData, fail
         />
       </SearchWrapper>
       <TestStepWrapper>
-        {passed &&
-          passed.map((data, index) => {
+        {filteredTestsSteps.map((test, index) => {
+          if (test.status === 'pass') {
             return (
-              <PassTestStep key={index} time={data.time}>
-                {data.stepName}
+              <PassTestStep key={index} time={test.time}>
+                {test.name}
               </PassTestStep>
             );
-          })}
-        {failed &&
-          failed.map((data, index) => {
+          }
+          if (test.status === 'fail') {
+            // FIXME: Replace NightwatchAssertError to dynamic value
             return (
               <ErrorTestStep
                 key={index}
-                time={data.time}
-                errorName={data.name}
-                shortMessage={data.shortMessage}
-                screenshot={data.screenshot}>
-                {data.message}
+                time={test.time}
+                errorName={'NightwatchAssertError'}
+                shortMessage={test.shortMessage ?? ['']}
+                stacktrace={test.stacktrace}
+                screenshot={test.screenshot}>
+                {test.name}
               </ErrorTestStep>
             );
-          })}
+          }
+        })}
       </TestStepWrapper>
     </Wrapper>
   );

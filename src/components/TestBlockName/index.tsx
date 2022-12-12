@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from '../Text';
 import { PassedIcon, FailedIcon, Wrapper } from './style';
 
 export type TestBlockNameProps = {
@@ -15,7 +16,13 @@ const TestBlockName: React.FC<TestBlockNameProps> = ({ status, children }) => {
   return (
     <Wrapper>
       {TestStatusIcon[status]}
-      {children}
+      <Text
+        fontSize={20}
+        lineHight={32}
+        color={status === 'fail' ? 'red-60' : '-grey-100'}
+        transformText>
+        {children}
+      </Text>
     </Wrapper>
   );
 };

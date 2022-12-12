@@ -87,3 +87,9 @@ export const COLORS = {
 };
 
 export const HEADER_HEIGHT = 76;
+
+export const PLATFORM_NAME: Record<string, string> = {
+  'mac os x': 'macos',
+  linux: 'linux',
+  windows: 'windows'
+};

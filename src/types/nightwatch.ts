@@ -115,13 +115,37 @@ export interface Assertion {
 
 export interface Commands {
   name: string;
-  args: string[],
-  startTime: number,
-  endTime: number,
-  elapsedTime: number,
-  status: string,
+  args: string[];
+  startTime: number;
+  endTime: number;
+  elapsedTime: number;
+  status: string;
   screenshot: string | undefined;
-  result: any
+  result: CommandsResult;
+}
+
+export interface BeautifiedStack {
+  filename: string;
+  line_number: number;
+  codeSnippet: CodeSnippet[];
+}
+
+export interface CodeSnippet {
+  line_number: number;
+  code: string;
+}
+
+export interface CommandsResult {
+  value?: unknown;
+  status?: number;
+  returned: number;
+  passed: boolean;
+  abortOnFailure?: boolean;
+  message?: string;
+  name?: string;
+  showDiff?: boolean;
+  stack?: string;
+  beautifiedStack?: BeautifiedStack;
 }
 
 export interface SessionCapabilities {

@@ -28,7 +28,7 @@ const Analytics: React.FC = () => {
     stats: { passed, failed, skipped, total, time }
   } = useGlobalContext();
 
-  const formattedTime = convertMsToTime(time).time;
+  const { time: formattedTime } = convertMsToTime(time);
   const TestStatsInPercent = getTestPercentage(total, passed, failed, skipped);
 
   return (

@@ -32,55 +32,64 @@
                     "completed": {
                         "Demo test ecosia.org fail": {
                             "time": "8.376",
-                            "assertions": [{
-                                "name": "NightwatchAssertError",
-                                "message": "Expected element <body> to be visible (26ms)",
-                                "stackTrace": "",
-                                "fullMsg": "Expected element <body> to be visible\u001b[0;90m (26ms)\u001b[0m",
-                                "failure": false
-                            }, {
-                                "name": "NightwatchAssertError",
-                                "message": "Element <body> was visible after 17 milliseconds.",
-                                "stackTrace": "",
-                                "fullMsg": "Element <body> was visible after 17 milliseconds.",
-                                "failure": false
-                            }, {
-                                "name": "NightwatchAssertError",
-                                "message": "Element <body> was visible after 14 milliseconds.",
-                                "stackTrace": "",
-                                "fullMsg": "Element <body> was visible after 14 milliseconds.",
-                                "failure": false
-                            }, {
-                                "name": "NightwatchAssertError",
-                                "message": "Testing if element <input[type=search]> is visible (23ms)",
-                                "stackTrace": "",
-                                "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(23ms)\u001b[0m",
-                                "failure": false
-                            }, {
-                                "name": "NightwatchAssertError",
-                                "message": "title matches /Ecosia - the search engine that plants trees/",
-                                "stackTrace": "",
-                                "fullMsg": "title matches /Ecosia - the search engine that plants trees/",
-                                "failure": false
-                            }, {
-                                "name": "NightwatchAssertError",
-                                "message": "Testing if element <.layout__content> contains text 'foo' in 5000ms - expected \"contains text 'foo'\" but got: \"element could not be located\" (5112ms)",
-                                "stackTrace": "    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)",
-                                "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
-                                "failure": "Expected \"contains text 'foo'\" but got: \"element could not be located\""
-                            }, {
-                                "name": "NightwatchAssertError",
-                                "message": "Testing if element <input[type=search]> is visible (18ms)",
-                                "stackTrace": "",
-                                "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(18ms)\u001b[0m",
-                                "failure": false
-                            }, {
-                                "name": "NightwatchAssertError",
-                                "message": "Testing if element <button[type=submit]> is visible (16ms)",
-                                "stackTrace": "",
-                                "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
-                                "failure": false
-                            }],
+                            "assertions": [
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Expected element <body> to be visible (26ms)",
+                                    "stackTrace": "",
+                                    "fullMsg": "Expected element <body> to be visible\u001b[0;90m (26ms)\u001b[0m",
+                                    "failure": false
+                                },
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Element <body> was visible after 17 milliseconds.",
+                                    "stackTrace": "",
+                                    "fullMsg": "Element <body> was visible after 17 milliseconds.",
+                                    "failure": false
+                                },
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Element <body> was visible after 14 milliseconds.",
+                                    "stackTrace": "",
+                                    "fullMsg": "Element <body> was visible after 14 milliseconds.",
+                                    "failure": false
+                                },
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Testing if element <input[type=search]> is visible (23ms)",
+                                    "stackTrace": "",
+                                    "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(23ms)\u001b[0m",
+                                    "failure": false
+                                },
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "title matches /Ecosia - the search engine that plants trees/",
+                                    "stackTrace": "",
+                                    "fullMsg": "title matches /Ecosia - the search engine that plants trees/",
+                                    "failure": false
+                                },
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Testing if element <.layout__content> contains text 'foo' in 5000ms - expected \"contains text 'foo'\" but got: \"element could not be located\" (5112ms)",
+                                    "stackTrace": "    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)",
+                                    "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
+                                    "failure": "Expected \"contains text 'foo'\" but got: \"element could not be located\""
+                                },
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Testing if element <input[type=search]> is visible (18ms)",
+                                    "stackTrace": "",
+                                    "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(18ms)\u001b[0m",
+                                    "failure": false
+                                },
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Testing if element <button[type=submit]> is visible (16ms)",
+                                    "stackTrace": "",
+                                    "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
+                                    "failure": false
+                                }
+                            ],
                             "commands": [],
                             "passed": 7,
                             "errors": 0,
@@ -93,55 +102,64 @@
                             "testcases": {
                                 "Demo test ecosia.org fail": {
                                     "time": "8.376",
-                                    "assertions": [{
-                                        "name": "NightwatchAssertError",
-                                        "message": "Expected element <body> to be visible (26ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Expected element <body> to be visible\u001b[0;90m (26ms)\u001b[0m",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Element <body> was visible after 17 milliseconds.",
-                                        "stackTrace": "",
-                                        "fullMsg": "Element <body> was visible after 17 milliseconds.",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Element <body> was visible after 14 milliseconds.",
-                                        "stackTrace": "",
-                                        "fullMsg": "Element <body> was visible after 14 milliseconds.",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <input[type=search]> is visible (23ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(23ms)\u001b[0m",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "title matches /Ecosia - the search engine that plants trees/",
-                                        "stackTrace": "",
-                                        "fullMsg": "title matches /Ecosia - the search engine that plants trees/",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <.layout__content> contains text 'foo' in 5000ms - expected \"contains text 'foo'\" but got: \"element could not be located\" (5112ms)",
-                                        "stackTrace": "    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)",
-                                        "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
-                                        "failure": "Expected \"contains text 'foo'\" but got: \"element could not be located\""
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <input[type=search]> is visible (18ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(18ms)\u001b[0m",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <button[type=submit]> is visible (16ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
-                                        "failure": false
-                                    }],
+                                    "assertions": [
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Expected element <body> to be visible (26ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Expected element <body> to be visible\u001b[0;90m (26ms)\u001b[0m",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Element <body> was visible after 17 milliseconds.",
+                                            "stackTrace": "",
+                                            "fullMsg": "Element <body> was visible after 17 milliseconds.",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Element <body> was visible after 14 milliseconds.",
+                                            "stackTrace": "",
+                                            "fullMsg": "Element <body> was visible after 14 milliseconds.",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <input[type=search]> is visible (23ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(23ms)\u001b[0m",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "title matches /Ecosia - the search engine that plants trees/",
+                                            "stackTrace": "",
+                                            "fullMsg": "title matches /Ecosia - the search engine that plants trees/",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <.layout__content> contains text 'foo' in 5000ms - expected \"contains text 'foo'\" but got: \"element could not be located\" (5112ms)",
+                                            "stackTrace": "    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)",
+                                            "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
+                                            "failure": "Expected \"contains text 'foo'\" but got: \"element could not be located\""
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <input[type=search]> is visible (18ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(18ms)\u001b[0m",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <button[type=submit]> is visible (16ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
+                                            "failure": false
+                                        }
+                                    ],
                                     "tests": 8,
                                     "commands": [],
                                     "passed": 7,
@@ -176,13 +194,15 @@
                         },
                         "Demo test ecosia.org pass": {
                             "time": "0.01600",
-                            "assertions": [{
-                                "name": "NightwatchAssertError",
-                                "message": "Expected element <body> to be visible (13ms)",
-                                "stackTrace": "",
-                                "fullMsg": "Expected element <body> to be visible\u001b[0;90m (13ms)\u001b[0m",
-                                "failure": false
-                            }],
+                            "assertions": [
+                                {
+                                    "name": "NightwatchAssertError",
+                                    "message": "Expected element <body> to be visible (13ms)",
+                                    "stackTrace": "",
+                                    "fullMsg": "Expected element <body> to be visible\u001b[0;90m (13ms)\u001b[0m",
+                                    "failure": false
+                                }
+                            ],
                             "commands": [],
                             "passed": 1,
                             "errors": 0,
@@ -195,55 +215,64 @@
                             "testcases": {
                                 "Demo test ecosia.org fail": {
                                     "time": "8.376",
-                                    "assertions": [{
-                                        "name": "NightwatchAssertError",
-                                        "message": "Expected element <body> to be visible (26ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Expected element <body> to be visible\u001b[0;90m (26ms)\u001b[0m",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Element <body> was visible after 17 milliseconds.",
-                                        "stackTrace": "",
-                                        "fullMsg": "Element <body> was visible after 17 milliseconds.",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Element <body> was visible after 14 milliseconds.",
-                                        "stackTrace": "",
-                                        "fullMsg": "Element <body> was visible after 14 milliseconds.",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <input[type=search]> is visible (23ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(23ms)\u001b[0m",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "title matches /Ecosia - the search engine that plants trees/",
-                                        "stackTrace": "",
-                                        "fullMsg": "title matches /Ecosia - the search engine that plants trees/",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <.layout__content> contains text 'foo' in 5000ms - expected \"contains text 'foo'\" but got: \"element could not be located\" (5112ms)",
-                                        "stackTrace": "    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)",
-                                        "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
-                                        "failure": "Expected \"contains text 'foo'\" but got: \"element could not be located\""
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <input[type=search]> is visible (18ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(18ms)\u001b[0m",
-                                        "failure": false
-                                    }, {
-                                        "name": "NightwatchAssertError",
-                                        "message": "Testing if element <button[type=submit]> is visible (16ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
-                                        "failure": false
-                                    }],
+                                    "assertions": [
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Expected element <body> to be visible (26ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Expected element <body> to be visible\u001b[0;90m (26ms)\u001b[0m",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Element <body> was visible after 17 milliseconds.",
+                                            "stackTrace": "",
+                                            "fullMsg": "Element <body> was visible after 17 milliseconds.",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Element <body> was visible after 14 milliseconds.",
+                                            "stackTrace": "",
+                                            "fullMsg": "Element <body> was visible after 14 milliseconds.",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <input[type=search]> is visible (23ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(23ms)\u001b[0m",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "title matches /Ecosia - the search engine that plants trees/",
+                                            "stackTrace": "",
+                                            "fullMsg": "title matches /Ecosia - the search engine that plants trees/",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <.layout__content> contains text 'foo' in 5000ms - expected \"contains text 'foo'\" but got: \"element could not be located\" (5112ms)",
+                                            "stackTrace": "    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)",
+                                            "fullMsg": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
+                                            "failure": "Expected \"contains text 'foo'\" but got: \"element could not be located\""
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <input[type=search]> is visible (18ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Testing if element \u001b[0;33m<input[type=search]>\u001b[0m is visible \u001b[0;90m(18ms)\u001b[0m",
+                                            "failure": false
+                                        },
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Testing if element <button[type=submit]> is visible (16ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Testing if element \u001b[0;33m<button[type=submit]>\u001b[0m is visible \u001b[0;90m(16ms)\u001b[0m",
+                                            "failure": false
+                                        }
+                                    ],
                                     "tests": 8,
                                     "commands": [],
                                     "passed": 7,
@@ -266,13 +295,15 @@
                                 },
                                 "Demo test ecosia.org pass": {
                                     "time": "0.01600",
-                                    "assertions": [{
-                                        "name": "NightwatchAssertError",
-                                        "message": "Expected element <body> to be visible (13ms)",
-                                        "stackTrace": "",
-                                        "fullMsg": "Expected element <body> to be visible\u001b[0;90m (13ms)\u001b[0m",
-                                        "failure": false
-                                    }],
+                                    "assertions": [
+                                        {
+                                            "name": "NightwatchAssertError",
+                                            "message": "Expected element <body> to be visible (13ms)",
+                                            "stackTrace": "",
+                                            "fullMsg": "Expected element <body> to be visible\u001b[0;90m (13ms)\u001b[0m",
+                                            "failure": false
+                                        }
+                                    ],
                                     "tests": 1,
                                     "commands": [],
                                     "passed": 1,
@@ -307,18 +338,22 @@
                         "before_hook": {
                             "time": 0,
                             "assertions": [],
-                            "commands": [{
-                                "name": "url",
-                                "args": ["https://ecosia.org/"],
-                                "startTime": 1670834346833,
-                                "endTime": 1670834350767,
-                                "elapsedTime": 3934,
-                                "status": "pass",
-                                "result": {
-                                    "value": null,
-                                    "status": 0
+                            "commands": [
+                                {
+                                    "name": "url",
+                                    "args": [
+                                        "https://ecosia.org/"
+                                    ],
+                                    "startTime": 1670834346833,
+                                    "endTime": 1670834350767,
+                                    "elapsedTime": 3934,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": null,
+                                        "status": 0
+                                    }
                                 }
-                            }],
+                            ],
                             "passed": 0,
                             "errors": 0,
                             "failed": 0,
@@ -329,148 +364,213 @@
                         "Demo test ecosia.org fail": {
                             "time": 0,
                             "assertions": [],
-                            "commands": [{
-                                "name": "expect.element",
-                                "args": ["body"],
-                                "startTime": 1670834350773,
-                                "endTime": 1670834350799,
-                                "elapsedTime": 26,
-                                "status": "pass",
-                                "result": {
-                                    "value": null,
-                                    "returned": 1
+                            "commands": [
+                                {
+                                    "name": "expect.element",
+                                    "args": [
+                                        "body"
+                                    ],
+                                    "startTime": 1670834350773,
+                                    "endTime": 1670834350799,
+                                    "elapsedTime": 26,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": null,
+                                        "returned": 1
+                                    }
+                                },
+                                {
+                                    "name": "waitForElementVisible",
+                                    "args": [
+                                        "body",
+                                        null
+                                    ],
+                                    "startTime": 1670834350800,
+                                    "endTime": 1670834350818,
+                                    "elapsedTime": 18,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": true,
+                                        "status": 0
+                                    }
+                                },
+                                {
+                                    "name": "waitForElementVisible",
+                                    "args": [
+                                        "body",
+                                        null
+                                    ],
+                                    "startTime": 1670834350818,
+                                    "endTime": 1670834350832,
+                                    "elapsedTime": 14,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": true,
+                                        "status": 0
+                                    }
+                                },
+                                {
+                                    "name": "assert.visible",
+                                    "args": [
+                                        "input[type=search]"
+                                    ],
+                                    "startTime": 1670834350832,
+                                    "endTime": 1670834350858,
+                                    "elapsedTime": 26,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": true,
+                                        "status": 0,
+                                        "returned": 1,
+                                        "passed": true
+                                    }
+                                },
+                                {
+                                    "name": "getTitle",
+                                    "args": [
+                                        null
+                                    ],
+                                    "startTime": 1670834350858,
+                                    "endTime": 1670834350864,
+                                    "elapsedTime": 6,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": "Ecosia - the search engine that plants trees",
+                                        "status": 0
+                                    }
+                                },
+                                {
+                                    "name": "click",
+                                    "args": [
+                                        "button[type=submit]"
+                                    ],
+                                    "startTime": 1670834350864,
+                                    "endTime": 1670834350900,
+                                    "elapsedTime": 36,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": null,
+                                        "status": 0
+                                    }
+                                },
+                                {
+                                    "name": "ensure.titleMatches",
+                                    "args": [],
+                                    "startTime": 1670834350901,
+                                    "endTime": 1670834350904,
+                                    "elapsedTime": 3,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": null,
+                                        "returned": 1
+                                    }
+                                },
+                                {
+                                    "name": "verify.textContains",
+                                    "args": [
+                                        ".layout__content",
+                                        "foo"
+                                    ],
+                                    "startTime": 1670834350904,
+                                    "endTime": 1670834356021,
+                                    "elapsedTime": 5117,
+                                    "status": "fail",
+                                    "result": {
+                                        "name": "NightwatchAssertError",
+                                        "message": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
+                                        "showDiff": false,
+                                        "abortOnFailure": false,
+                                        "beautifiedStack": {
+                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js",
+                                            "line_number": 21,
+                                            "codeSnippet": [
+                                                {
+                                                    "line_number": 19,
+                                                    "code": "      })"
+                                                },
+                                                {
+                                                    "line_number": 20,
+                                                    "code": "      .ensure.titleMatches(/Ecosia - the search engine that plants trees/)"
+                                                },
+                                                {
+                                                    "line_number": 21,
+                                                    "code": "      .assert.textContains('.layout__content', 'foo')"
+                                                },
+                                                {
+                                                    "line_number": 22,
+                                                    "code": "      .assert.visible('input[type=search]')"
+                                                },
+                                                {
+                                                    "line_number": 23,
+                                                    "code": "      .setValue('input[type=search]', 'nightwatch')"
+                                                }
+                                            ]
+                                        },
+                                        "stack": "Error\n    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)"
+                                    }
+                                },
+                                {
+                                    "name": "assert.visible",
+                                    "args": [
+                                        "input[type=search]"
+                                    ],
+                                    "startTime": 1670834356021,
+                                    "endTime": 1670834356040,
+                                    "elapsedTime": 19,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": true,
+                                        "status": 0,
+                                        "returned": 1,
+                                        "passed": true
+                                    }
+                                },
+                                {
+                                    "name": "setValue",
+                                    "args": [
+                                        "input[type=search]",
+                                        "nightwatch"
+                                    ],
+                                    "startTime": 1670834356040,
+                                    "endTime": 1670834356162,
+                                    "elapsedTime": 122,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": null,
+                                        "status": 0
+                                    }
+                                },
+                                {
+                                    "name": "assert.visible",
+                                    "args": [
+                                        "button[type=submit]"
+                                    ],
+                                    "startTime": 1670834356162,
+                                    "endTime": 1670834356181,
+                                    "elapsedTime": 19,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": true,
+                                        "status": 0,
+                                        "returned": 1,
+                                        "passed": true
+                                    }
+                                },
+                                {
+                                    "name": "click",
+                                    "args": [
+                                        "button[type=submit]"
+                                    ],
+                                    "startTime": 1670834356181,
+                                    "endTime": 1670834359144,
+                                    "elapsedTime": 2963,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": null,
+                                        "status": 0
+                                    }
                                 }
-                            }, {
-                                "name": "waitForElementVisible",
-                                "args": ["body", null],
-                                "startTime": 1670834350800,
-                                "endTime": 1670834350818,
-                                "elapsedTime": 18,
-                                "status": "pass",
-                                "result": {
-                                    "value": true,
-                                    "status": 0
-                                }
-                            }, {
-                                "name": "waitForElementVisible",
-                                "args": ["body", null],
-                                "startTime": 1670834350818,
-                                "endTime": 1670834350832,
-                                "elapsedTime": 14,
-                                "status": "pass",
-                                "result": {
-                                    "value": true,
-                                    "status": 0
-                                }
-                            }, {
-                                "name": "assert.visible",
-                                "args": ["input[type=search]"],
-                                "startTime": 1670834350832,
-                                "endTime": 1670834350858,
-                                "elapsedTime": 26,
-                                "status": "pass",
-                                "result": {
-                                    "value": true,
-                                    "status": 0,
-                                    "returned": 1,
-                                    "passed": true
-                                }
-                            }, {
-                                "name": "getTitle",
-                                "args": [null],
-                                "startTime": 1670834350858,
-                                "endTime": 1670834350864,
-                                "elapsedTime": 6,
-                                "status": "pass",
-                                "result": {
-                                    "value": "Ecosia - the search engine that plants trees",
-                                    "status": 0
-                                }
-                            }, {
-                                "name": "click",
-                                "args": ["button[type=submit]"],
-                                "startTime": 1670834350864,
-                                "endTime": 1670834350900,
-                                "elapsedTime": 36,
-                                "status": "pass",
-                                "result": {
-                                    "value": null,
-                                    "status": 0
-                                }
-                            }, {
-                                "name": "ensure.titleMatches",
-                                "args": [],
-                                "startTime": 1670834350901,
-                                "endTime": 1670834350904,
-                                "elapsedTime": 3,
-                                "status": "pass",
-                                "result": {
-                                    "value": null,
-                                    "returned": 1
-                                }
-                            }, {
-                                "name": "verify.textContains",
-                                "args": [".layout__content", "foo"],
-                                "startTime": 1670834350904,
-                                "endTime": 1670834356021,
-                                "elapsedTime": 5117,
-                                "status": "fail",
-                                "result": {
-                                    "name": "NightwatchAssertError",
-                                    "message": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'foo'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'foo'\"\u001b[0m but got: \u001b[0;31m\"element could not be located\"\u001b[0m \u001b[0;90m(5112ms)\u001b[0m",
-                                    "showDiff": false,
-                                    "abortOnFailure": false,
-                                    "stack": "Error\n    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:852:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:867:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:738:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)"
-                                }
-                            }, {
-                                "name": "assert.visible",
-                                "args": ["input[type=search]"],
-                                "startTime": 1670834356021,
-                                "endTime": 1670834356040,
-                                "elapsedTime": 19,
-                                "status": "pass",
-                                "result": {
-                                    "value": true,
-                                    "status": 0,
-                                    "returned": 1,
-                                    "passed": true
-                                }
-                            }, {
-                                "name": "setValue",
-                                "args": ["input[type=search]", "nightwatch"],
-                                "startTime": 1670834356040,
-                                "endTime": 1670834356162,
-                                "elapsedTime": 122,
-                                "status": "pass",
-                                "result": {
-                                    "value": null,
-                                    "status": 0
-                                }
-                            }, {
-                                "name": "assert.visible",
-                                "args": ["button[type=submit]"],
-                                "startTime": 1670834356162,
-                                "endTime": 1670834356181,
-                                "elapsedTime": 19,
-                                "status": "pass",
-                                "result": {
-                                    "value": true,
-                                    "status": 0,
-                                    "returned": 1,
-                                    "passed": true
-                                }
-                            }, {
-                                "name": "click",
-                                "args": ["button[type=submit]"],
-                                "startTime": 1670834356181,
-                                "endTime": 1670834359144,
-                                "elapsedTime": 2963,
-                                "status": "pass",
-                                "result": {
-                                    "value": null,
-                                    "status": 0
-                                }
-                            }],
+                            ],
                             "passed": 0,
                             "errors": 0,
                             "failed": 0,
@@ -481,18 +581,22 @@
                         "Demo test ecosia.org pass": {
                             "time": 0,
                             "assertions": [],
-                            "commands": [{
-                                "name": "expect.element",
-                                "args": ["body"],
-                                "startTime": 1670834359148,
-                                "endTime": 1670834359161,
-                                "elapsedTime": 13,
-                                "status": "pass",
-                                "result": {
-                                    "value": null,
-                                    "returned": 1
+                            "commands": [
+                                {
+                                    "name": "expect.element",
+                                    "args": [
+                                        "body"
+                                    ],
+                                    "startTime": 1670834359148,
+                                    "endTime": 1670834359161,
+                                    "elapsedTime": 13,
+                                    "status": "pass",
+                                    "result": {
+                                        "value": null,
+                                        "returned": 1
+                                    }
                                 }
-                            }],
+                            ],
                             "passed": 0,
                             "errors": 0,
                             "failed": 0,
@@ -503,14 +607,16 @@
                         "after_hook": {
                             "time": 0,
                             "assertions": [],
-                            "commands": [{
-                                "name": "end",
-                                "args": [],
-                                "startTime": 1670834359164,
-                                "endTime": 1670834359222,
-                                "elapsedTime": 58,
-                                "status": "pass"
-                            }],
+                            "commands": [
+                                {
+                                    "name": "end",
+                                    "args": [],
+                                    "startTime": 1670834359164,
+                                    "endTime": 1670834359222,
+                                    "elapsedTime": 58,
+                                    "status": "pass"
+                                }
+                            ],
                             "passed": 0,
                             "errors": 0,
                             "failed": 0,
@@ -577,156 +683,748 @@
                     "failures": 1,
                     "errors": 0,
                     "httpOutput": [
-                        ["2022-12-12T08:39:05.670Z", "  Request <b><span style=\"color:#0AA\">POST /session  </span></b>", "{\n     capabilities: {\n       firstMatch: [ {} ],\n       alwaysMatch: {\n         browserName: <span style=\"color:#0A0\">&#39;chrome&#39;<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;goog:chromeOptions&#39;<span style=\"color:#FFF\">: { w3c: <span style=\"color:#A50\">true<span style=\"color:#FFF\">, args: [] }\n       }\n     }\n  }</span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:06.825Z", "  Response 200 POST /session (1157ms)", "{\n     value: {\n       capabilities: {\n         acceptInsecureCerts: <span style=\"color:#A50\">false<span style=\"color:#FFF\">,\n         browserName: <span style=\"color:#0A0\">&#39;chrome&#39;<span style=\"color:#FFF\">,\n         browserVersion: <span style=\"color:#0A0\">&#39;108.0.5359.98&#39;<span style=\"color:#FFF\">,\n         chrome: {\n           chromedriverVersion: <span style=\"color:#0A0\">&#39;107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})&#39;<span style=\"color:#FFF\">,\n           userDataDir: <span style=\"color:#0A0\">&#39;/var/folders/c4/v7pl5j0s34qg1yb4b34_lg300000gq/T/.com.google.Chrome.qIUqTw&#39;<span style=\"color:#FFF\">\n         },\n         <span style=\"color:#0A0\">&#39;goog:chromeOptions&#39;<span style=\"color:#FFF\">: { debuggerAddress: <span style=\"color:#0A0\">&#39;localhost:55435&#39;<span style=\"color:#FFF\"> },\n         networkConnectionEnabled: <span style=\"color:#A50\">false<span style=\"color:#FFF\">,\n         pageLoadStrategy: <span style=\"color:#0A0\">&#39;normal&#39;<span style=\"color:#FFF\">,\n         platformName: <span style=\"color:#0A0\">&#39;mac os x&#39;<span style=\"color:#FFF\">,\n         proxy: {},\n         setWindowRect: <span style=\"color:#A50\">true<span style=\"color:#FFF\">,\n         strictFileInteractability: <span style=\"color:#A50\">false<span style=\"color:#FFF\">,\n         timeouts: { implicit: <span style=\"color:#A50\">0<span style=\"color:#FFF\">, pageLoad: <span style=\"color:#A50\">300000<span style=\"color:#FFF\">, script: <span style=\"color:#A50\">30000<span style=\"color:#FFF\"> },\n         unhandledPromptBehavior: <span style=\"color:#0A0\">&#39;dismiss and notify&#39;<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;webauthn:extension:credBlob&#39;<span style=\"color:#FFF\">: <span style=\"color:#A50\">true<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;webauthn:extension:largeBlob&#39;<span style=\"color:#FFF\">: <span style=\"color:#A50\">true<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;webauthn:virtualAuthenticators&#39;<span style=\"color:#FFF\">: <span style=\"color:#A50\">true<span style=\"color:#FFF\">\n       },\n       sessionId: <span style=\"color:#0A0\">&#39;33f58d4a2c5d0a5726d610fc6ecc3319&#39;<span style=\"color:#FFF\">\n     }\n  }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:06.838Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url  </span></b>", "{ url: <span style=\"color:#0A0\">&#39;https://ecosia.org/&#39;<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:10.766Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url (3928ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"],
-                        ["2022-12-12T08:39:10.774Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.785Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.787Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>", "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:10.798Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (11ms)", "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:10.801Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.806Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.808Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>", "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:10.817Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)", "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:10.818Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.823Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.824Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>", "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:10.831Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (7ms)", "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:10.836Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;input[type=search]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.844Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.845Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>", "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:10.855Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (10ms)", "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:10.860Z", "  Request <b><span style=\"color:#0AA\">GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  </span></b>", "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"],
-                        ["2022-12-12T08:39:10.863Z", "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)", "{ value: <span style=\"color:#0A0\">&#39;Ecosia - the search engine that plants trees&#39;<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:10.865Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;button[type=submit]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.872Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.873Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  </span></b>", "{}"],
-                        ["2022-12-12T08:39:10.900Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (27ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"],
-                        ["2022-12-12T08:39:10.901Z", "  Request <b><span style=\"color:#0AA\">GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  </span></b>", "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"],
-                        ["2022-12-12T08:39:10.904Z", "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)", "{ value: <span style=\"color:#0A0\">&#39;Ecosia - the search engine that plants trees&#39;<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:10.906Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:10.913Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:11.415Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:11.421Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:11.924Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:11.931Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:12.434Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:12.442Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:12.943Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:12.948Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:13.451Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:13.462Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:13.963Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:13.969Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:14.473Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:14.481Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:14.984Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:14.996Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (12ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:15.499Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:15.507Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:16.010Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.016Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:16.024Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;input[type=search]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.029Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.030Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>", "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:16.039Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)", "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:16.041Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;input[type=search]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.046Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.047Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear  </span></b>", "{}"],
-                        ["2022-12-12T08:39:16.069Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear (22ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"],
-                        ["2022-12-12T08:39:16.070Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value  </span></b>", "{\n     text: <span style=\"color:#0A0\">&#39;nightwatch&#39;<span style=\"color:#FFF\">,\n     value: [\n       <span style=\"color:#0A0\">&#39;n&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;i&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;g&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;h&#39;<span style=\"color:#FFF\">,\n       <span style=\"color:#0A0\">&#39;t&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;w&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;a&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;t&#39;<span style=\"color:#FFF\">,\n       <span style=\"color:#0A0\">&#39;c&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;h&#39;<span style=\"color:#FFF\">\n     ]\n  }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:16.162Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value (92ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"],
-                        ["2022-12-12T08:39:16.165Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;button[type=submit]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.169Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.171Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>", "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:16.179Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)", "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:16.182Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;button[type=submit]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.187Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:16.187Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  </span></b>", "{}"],
-                        ["2022-12-12T08:39:19.143Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (2956ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"],
-                        ["2022-12-12T08:39:19.148Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>", "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"],
-                        ["2022-12-12T08:39:19.153Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"],
-                        ["2022-12-12T08:39:19.153Z", "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>", "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"],
-                        ["2022-12-12T08:39:19.161Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)", "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"],
-                        ["2022-12-12T08:39:19.166Z", "  Request <b><span style=\"color:#0AA\">DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319  </span></b>", "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"],
-                        ["2022-12-12T08:39:19.218Z", "  Response 200 DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319 (52ms)", "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"]
+                        [
+                            "2022-12-12T08:39:05.670Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session  </span></b>",
+                            "{\n     capabilities: {\n       firstMatch: [ {} ],\n       alwaysMatch: {\n         browserName: <span style=\"color:#0A0\">&#39;chrome&#39;<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;goog:chromeOptions&#39;<span style=\"color:#FFF\">: { w3c: <span style=\"color:#A50\">true<span style=\"color:#FFF\">, args: [] }\n       }\n     }\n  }</span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:06.825Z",
+                            "  Response 200 POST /session (1157ms)",
+                            "{\n     value: {\n       capabilities: {\n         acceptInsecureCerts: <span style=\"color:#A50\">false<span style=\"color:#FFF\">,\n         browserName: <span style=\"color:#0A0\">&#39;chrome&#39;<span style=\"color:#FFF\">,\n         browserVersion: <span style=\"color:#0A0\">&#39;108.0.5359.98&#39;<span style=\"color:#FFF\">,\n         chrome: {\n           chromedriverVersion: <span style=\"color:#0A0\">&#39;107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})&#39;<span style=\"color:#FFF\">,\n           userDataDir: <span style=\"color:#0A0\">&#39;/var/folders/c4/v7pl5j0s34qg1yb4b34_lg300000gq/T/.com.google.Chrome.qIUqTw&#39;<span style=\"color:#FFF\">\n         },\n         <span style=\"color:#0A0\">&#39;goog:chromeOptions&#39;<span style=\"color:#FFF\">: { debuggerAddress: <span style=\"color:#0A0\">&#39;localhost:55435&#39;<span style=\"color:#FFF\"> },\n         networkConnectionEnabled: <span style=\"color:#A50\">false<span style=\"color:#FFF\">,\n         pageLoadStrategy: <span style=\"color:#0A0\">&#39;normal&#39;<span style=\"color:#FFF\">,\n         platformName: <span style=\"color:#0A0\">&#39;mac os x&#39;<span style=\"color:#FFF\">,\n         proxy: {},\n         setWindowRect: <span style=\"color:#A50\">true<span style=\"color:#FFF\">,\n         strictFileInteractability: <span style=\"color:#A50\">false<span style=\"color:#FFF\">,\n         timeouts: { implicit: <span style=\"color:#A50\">0<span style=\"color:#FFF\">, pageLoad: <span style=\"color:#A50\">300000<span style=\"color:#FFF\">, script: <span style=\"color:#A50\">30000<span style=\"color:#FFF\"> },\n         unhandledPromptBehavior: <span style=\"color:#0A0\">&#39;dismiss and notify&#39;<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;webauthn:extension:credBlob&#39;<span style=\"color:#FFF\">: <span style=\"color:#A50\">true<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;webauthn:extension:largeBlob&#39;<span style=\"color:#FFF\">: <span style=\"color:#A50\">true<span style=\"color:#FFF\">,\n         <span style=\"color:#0A0\">&#39;webauthn:virtualAuthenticators&#39;<span style=\"color:#FFF\">: <span style=\"color:#A50\">true<span style=\"color:#FFF\">\n       },\n       sessionId: <span style=\"color:#0A0\">&#39;33f58d4a2c5d0a5726d610fc6ecc3319&#39;<span style=\"color:#FFF\">\n     }\n  }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:06.838Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url  </span></b>",
+                            "{ url: <span style=\"color:#0A0\">&#39;https://ecosia.org/&#39;<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.766Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url (3928ms)",
+                            "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.774Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.785Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.787Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>",
+                            "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.798Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (11ms)",
+                            "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.801Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.806Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.808Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>",
+                            "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.817Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)",
+                            "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.818Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.823Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.824Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>",
+                            "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;b312d6b8-090d-43de-8a09-24809475466b&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.831Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (7ms)",
+                            "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.836Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;input[type=search]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.844Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.845Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>",
+                            "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.855Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (10ms)",
+                            "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.860Z",
+                            "  Request <b><span style=\"color:#0AA\">GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  </span></b>",
+                            "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.863Z",
+                            "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)",
+                            "{ value: <span style=\"color:#0A0\">&#39;Ecosia - the search engine that plants trees&#39;<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.865Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;button[type=submit]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.872Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.873Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  </span></b>",
+                            "{}"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.900Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (27ms)",
+                            "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.901Z",
+                            "  Request <b><span style=\"color:#0AA\">GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  </span></b>",
+                            "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.904Z",
+                            "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)",
+                            "{ value: <span style=\"color:#0A0\">&#39;Ecosia - the search engine that plants trees&#39;<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.906Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.913Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.415Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.421Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.924Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.931Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.434Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.442Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.943Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.948Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.451Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.462Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.963Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.969Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.473Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.481Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.984Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.996Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (12ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:15.499Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:15.507Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.010Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;.layout__content&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.016Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.024Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;input[type=search]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.029Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.030Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>",
+                            "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.039Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)",
+                            "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.041Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;input[type=search]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.046Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.047Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear  </span></b>",
+                            "{}"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.069Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear (22ms)",
+                            "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.070Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value  </span></b>",
+                            "{\n     text: <span style=\"color:#0A0\">&#39;nightwatch&#39;<span style=\"color:#FFF\">,\n     value: [\n       <span style=\"color:#0A0\">&#39;n&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;i&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;g&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;h&#39;<span style=\"color:#FFF\">,\n       <span style=\"color:#0A0\">&#39;t&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;w&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;a&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;t&#39;<span style=\"color:#FFF\">,\n       <span style=\"color:#0A0\">&#39;c&#39;<span style=\"color:#FFF\">, <span style=\"color:#0A0\">&#39;h&#39;<span style=\"color:#FFF\">\n     ]\n  }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.162Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value (92ms)",
+                            "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.165Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;button[type=submit]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.169Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.171Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>",
+                            "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.179Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)",
+                            "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.182Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;button[type=submit]&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.187Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.187Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  </span></b>",
+                            "{}"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.143Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (2956ms)",
+                            "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.148Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  </span></b>",
+                            "{ using: <span style=\"color:#0A0\">&#39;css selector&#39;<span style=\"color:#FFF\">, value: <span style=\"color:#0A0\">&#39;body&#39;<span style=\"color:#FFF\"> }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.153Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.153Z",
+                            "  Request <b><span style=\"color:#0AA\">POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  </span></b>",
+                            "{\n     script: <span style=\"color:#0A0\">&#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;<span style=\"color:#FFF\">,\n     args: [\n       {\n         <span style=\"color:#0A0\">&#39;element-6066-11e4-a52e-4f735466cecf&#39;<span style=\"color:#FFF\">: <span style=\"color:#0A0\">&#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;<span style=\"color:#FFF\">,\n         ELEMENT: <span style=\"color:#0A0\">&#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;<span style=\"color:#FFF\">\n       }\n     ]\n  }</span></span></span></span></span></span></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.161Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)",
+                            "{ value: <span style=\"color:#A50\">true<span style=\"color:#FFF\"> }</span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.166Z",
+                            "  Request <b><span style=\"color:#0AA\">DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319  </span></b>",
+                            "<span style=\"color:#0A0\">&#39;&#39;<span style=\"color:#FFF\"></span></span>"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.218Z",
+                            "  Response 200 DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319 (52ms)",
+                            "{ value: <b>null<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"> }</span></b>"
+                        ]
                     ],
                     "rawHttpOutput": [
-                        ["2022-12-12T08:39:05.670Z", "  Request POST /session  ", "{\n     capabilities: {\n       firstMatch: [ {} ],\n       alwaysMatch: {\n         browserName: &#39;chrome&#39;,\n         &#39;goog:chromeOptions&#39;: { w3c: true, args: [] }\n       }\n     }\n  }"],
-                        ["2022-12-12T08:39:06.825Z", "  Response 200 POST /session (1157ms)", "{\n     value: {\n       capabilities: {\n         acceptInsecureCerts: false,\n         browserName: &#39;chrome&#39;,\n         browserVersion: &#39;108.0.5359.98&#39;,\n         chrome: {\n           chromedriverVersion: &#39;107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})&#39;,\n           userDataDir: &#39;/var/folders/c4/v7pl5j0s34qg1yb4b34_lg300000gq/T/.com.google.Chrome.qIUqTw&#39;\n         },\n         &#39;goog:chromeOptions&#39;: { debuggerAddress: &#39;localhost:55435&#39; },\n         networkConnectionEnabled: false,\n         pageLoadStrategy: &#39;normal&#39;,\n         platformName: &#39;mac os x&#39;,\n         proxy: {},\n         setWindowRect: true,\n         strictFileInteractability: false,\n         timeouts: { implicit: 0, pageLoad: 300000, script: 30000 },\n         unhandledPromptBehavior: &#39;dismiss and notify&#39;,\n         &#39;webauthn:extension:credBlob&#39;: true,\n         &#39;webauthn:extension:largeBlob&#39;: true,\n         &#39;webauthn:virtualAuthenticators&#39;: true\n       },\n       sessionId: &#39;33f58d4a2c5d0a5726d610fc6ecc3319&#39;\n     }\n  }"],
-                        ["2022-12-12T08:39:06.838Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url  ", "{ url: &#39;https://ecosia.org/&#39; }"],
-                        ["2022-12-12T08:39:10.766Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url (3928ms)", "{ value: null }"],
-                        ["2022-12-12T08:39:10.774Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"],
-                        ["2022-12-12T08:39:10.785Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.787Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ", "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;,\n         ELEMENT: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.798Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (11ms)", "{ value: true }"],
-                        ["2022-12-12T08:39:10.801Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"],
-                        ["2022-12-12T08:39:10.806Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.808Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ", "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;,\n         ELEMENT: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.817Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)", "{ value: true }"],
-                        ["2022-12-12T08:39:10.818Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"],
-                        ["2022-12-12T08:39:10.823Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.824Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ", "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;,\n         ELEMENT: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.831Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (7ms)", "{ value: true }"],
-                        ["2022-12-12T08:39:10.836Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;input[type=search]&#39; }"],
-                        ["2022-12-12T08:39:10.844Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.845Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ", "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;,\n         ELEMENT: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.855Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (10ms)", "{ value: true }"],
-                        ["2022-12-12T08:39:10.860Z", "  Request GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  ", "&#39;&#39;"],
-                        ["2022-12-12T08:39:10.863Z", "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)", "{ value: &#39;Ecosia - the search engine that plants trees&#39; }"],
-                        ["2022-12-12T08:39:10.865Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;button[type=submit]&#39; }"],
-                        ["2022-12-12T08:39:10.872Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:10.873Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  ", "{}"],
-                        ["2022-12-12T08:39:10.900Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (27ms)", "{ value: null }"],
-                        ["2022-12-12T08:39:10.901Z", "  Request GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  ", "&#39;&#39;"],
-                        ["2022-12-12T08:39:10.904Z", "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)", "{ value: &#39;Ecosia - the search engine that plants trees&#39; }"],
-                        ["2022-12-12T08:39:10.906Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:10.913Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:11.415Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:11.421Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:11.924Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:11.931Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:12.434Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:12.442Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:12.943Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:12.948Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:13.451Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:13.462Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:13.963Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:13.969Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:14.473Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:14.481Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:14.984Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:14.996Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (12ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:15.499Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:15.507Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:16.010Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"],
-                        ["2022-12-12T08:39:16.016Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)", "{ value: [] }"],
-                        ["2022-12-12T08:39:16.024Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;input[type=search]&#39; }"],
-                        ["2022-12-12T08:39:16.029Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:16.030Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ", "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;,\n         ELEMENT: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:16.039Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)", "{ value: true }"],
-                        ["2022-12-12T08:39:16.041Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;input[type=search]&#39; }"],
-                        ["2022-12-12T08:39:16.046Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:16.047Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear  ", "{}"],
-                        ["2022-12-12T08:39:16.069Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear (22ms)", "{ value: null }"],
-                        ["2022-12-12T08:39:16.070Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value  ", "{\n     text: &#39;nightwatch&#39;,\n     value: [\n       &#39;n&#39;, &#39;i&#39;, &#39;g&#39;, &#39;h&#39;,\n       &#39;t&#39;, &#39;w&#39;, &#39;a&#39;, &#39;t&#39;,\n       &#39;c&#39;, &#39;h&#39;\n     ]\n  }"],
-                        ["2022-12-12T08:39:16.162Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value (92ms)", "{ value: null }"],
-                        ["2022-12-12T08:39:16.165Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;button[type=submit]&#39; }"],
-                        ["2022-12-12T08:39:16.169Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:16.171Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ", "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;,\n         ELEMENT: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:16.179Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)", "{ value: true }"],
-                        ["2022-12-12T08:39:16.182Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;button[type=submit]&#39; }"],
-                        ["2022-12-12T08:39:16.187Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:16.187Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  ", "{}"],
-                        ["2022-12-12T08:39:19.143Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (2956ms)", "{ value: null }"],
-                        ["2022-12-12T08:39:19.148Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ", "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"],
-                        ["2022-12-12T08:39:19.153Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)", "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:19.153Z", "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ", "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;,\n         ELEMENT: &#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;\n       }\n     ]\n  }"],
-                        ["2022-12-12T08:39:19.161Z", "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)", "{ value: true }"],
-                        ["2022-12-12T08:39:19.166Z", "  Request DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319  ", "&#39;&#39;"],
-                        ["2022-12-12T08:39:19.218Z", "  Response 200 DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319 (52ms)", "{ value: null }"]
+                        [
+                            "2022-12-12T08:39:05.670Z",
+                            "  Request POST /session  ",
+                            "{\n     capabilities: {\n       firstMatch: [ {} ],\n       alwaysMatch: {\n         browserName: &#39;chrome&#39;,\n         &#39;goog:chromeOptions&#39;: { w3c: true, args: [] }\n       }\n     }\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:06.825Z",
+                            "  Response 200 POST /session (1157ms)",
+                            "{\n     value: {\n       capabilities: {\n         acceptInsecureCerts: false,\n         browserName: &#39;chrome&#39;,\n         browserVersion: &#39;108.0.5359.98&#39;,\n         chrome: {\n           chromedriverVersion: &#39;107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})&#39;,\n           userDataDir: &#39;/var/folders/c4/v7pl5j0s34qg1yb4b34_lg300000gq/T/.com.google.Chrome.qIUqTw&#39;\n         },\n         &#39;goog:chromeOptions&#39;: { debuggerAddress: &#39;localhost:55435&#39; },\n         networkConnectionEnabled: false,\n         pageLoadStrategy: &#39;normal&#39;,\n         platformName: &#39;mac os x&#39;,\n         proxy: {},\n         setWindowRect: true,\n         strictFileInteractability: false,\n         timeouts: { implicit: 0, pageLoad: 300000, script: 30000 },\n         unhandledPromptBehavior: &#39;dismiss and notify&#39;,\n         &#39;webauthn:extension:credBlob&#39;: true,\n         &#39;webauthn:extension:largeBlob&#39;: true,\n         &#39;webauthn:virtualAuthenticators&#39;: true\n       },\n       sessionId: &#39;33f58d4a2c5d0a5726d610fc6ecc3319&#39;\n     }\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:06.838Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url  ",
+                            "{ url: &#39;https://ecosia.org/&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.766Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/url (3928ms)",
+                            "{ value: null }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.774Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.785Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.787Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ",
+                            "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;,\n         ELEMENT: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.798Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (11ms)",
+                            "{ value: true }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.801Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.806Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.808Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ",
+                            "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;,\n         ELEMENT: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.817Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)",
+                            "{ value: true }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.818Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.823Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.824Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ",
+                            "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;,\n         ELEMENT: &#39;b312d6b8-090d-43de-8a09-24809475466b&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.831Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (7ms)",
+                            "{ value: true }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.836Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;input[type=search]&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.844Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.845Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ",
+                            "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;,\n         ELEMENT: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.855Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (10ms)",
+                            "{ value: true }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.860Z",
+                            "  Request GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  ",
+                            "&#39;&#39;"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.863Z",
+                            "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)",
+                            "{ value: &#39;Ecosia - the search engine that plants trees&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.865Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;button[type=submit]&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.872Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.873Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  ",
+                            "{}"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.900Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (27ms)",
+                            "{ value: null }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.901Z",
+                            "  Request GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title  ",
+                            "&#39;&#39;"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.904Z",
+                            "  Response 200 GET /session/33f58d4a2c5d0a5726d610fc6ecc3319/title (3ms)",
+                            "{ value: &#39;Ecosia - the search engine that plants trees&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.906Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:10.913Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.415Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.421Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.924Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:11.931Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.434Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.442Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (8ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.943Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:12.948Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.451Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.462Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (11ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.963Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:13.969Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.473Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.481Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.984Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:14.996Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (12ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:15.499Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:15.507Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (9ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.010Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;.layout__content&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.016Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (7ms)",
+                            "{ value: [] }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.024Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;input[type=search]&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.029Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (6ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.030Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ",
+                            "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;,\n         ELEMENT: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.039Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (9ms)",
+                            "{ value: true }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.041Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;input[type=search]&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.046Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;df909530-75c9-42ed-b7b4-5bc6a9110c2f&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.047Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear  ",
+                            "{}"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.069Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/clear (22ms)",
+                            "{ value: null }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.070Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value  ",
+                            "{\n     text: &#39;nightwatch&#39;,\n     value: [\n       &#39;n&#39;, &#39;i&#39;, &#39;g&#39;, &#39;h&#39;,\n       &#39;t&#39;, &#39;w&#39;, &#39;a&#39;, &#39;t&#39;,\n       &#39;c&#39;, &#39;h&#39;\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.162Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/df909530-75c9-42ed-b7b4-5bc6a9110c2f/value (92ms)",
+                            "{ value: null }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.165Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;button[type=submit]&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.169Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.171Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ",
+                            "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;,\n         ELEMENT: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.179Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)",
+                            "{ value: true }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.182Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;button[type=submit]&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.187Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;65541100-ee16-4cd1-9cdf-6a6e501113d2&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:16.187Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click  ",
+                            "{}"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.143Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/element/65541100-ee16-4cd1-9cdf-6a6e501113d2/click (2956ms)",
+                            "{ value: null }"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.148Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements  ",
+                            "{ using: &#39;css selector&#39;, value: &#39;body&#39; }"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.153Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/elements (5ms)",
+                            "{\n     value: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.153Z",
+                            "  Request POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync  ",
+                            "{\n     script: &#39;return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.execScript(&quot;var &quot;+a... (44027 characters)&#39;,\n     args: [\n       {\n         &#39;element-6066-11e4-a52e-4f735466cecf&#39;: &#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;,\n         ELEMENT: &#39;d5a1d406-5056-4849-aec5-8332bb0c70ec&#39;\n       }\n     ]\n  }"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.161Z",
+                            "  Response 200 POST /session/33f58d4a2c5d0a5726d610fc6ecc3319/execute/sync (8ms)",
+                            "{ value: true }"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.166Z",
+                            "  Request DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319  ",
+                            "&#39;&#39;"
+                        ],
+                        [
+                            "2022-12-12T08:39:19.218Z",
+                            "  Response 200 DELETE /session/33f58d4a2c5d0a5726d610fc6ecc3319 (52ms)",
+                            "{ value: null }"
+                        ]
                     ],
                     "globalErrorRegister": "   <b><span style=\"color:#A00\">→ ✖ <b><span style=\"color:#A00\">NightwatchAssertError</span></b></span></b><br>   <span style=\"color:#A00\">Testing if element </span><span style=\"color:#A50\"><.layout__content></span> contains text <span style=\"color:#A50\">'foo'</span> in 5000ms - expected <span style=\"color:#0A0\">\"contains text 'foo'\"</span> but got: <span style=\"color:#A00\">\"element could not be located\"</span> <span style=\"color:#555\">(5112ms)</span><br><span style=\"color:#A50\"><br>    Error location:</span><br>    /Users/binayakghosh/projects/nightwatch-reporter/examples/tests/ecosia.js:<br>    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––<br>     19 |       })<br>     20 |       .ensure.titleMatches(/Ecosia - the search engine that plants trees/)<br>    <span style=\"color:#AAA\"><span style=\"background-color:#A00\"> 21 |       .verify.textContains('.layout__content', 'foo') </span></span><br>     22 |       .assert.visible('input[type=search]')<br>     23 |       .setValue('input[type=search]', 'nightwatch')<br>    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––<br>"
                 }
