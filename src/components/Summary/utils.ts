@@ -42,10 +42,10 @@ export const getEnvironmentDropDownData = (environments: Environments) => {
   Object.entries(environments).forEach((environment, index) => {
     const envDropdownData: any = {};
     const envName = environment[0];
-    const { device, browserName, browserVersion, platformName, time, executionMode } =
+    const { device, browserName, browserVersion, platformName, executionMode } =
       environment[1].metadata;
     const { stats } = environment[1];
-    const { hours, minutes, seconds } = convertMsToTime(time).time;
+    const { hours, minutes, seconds } = convertMsToTime(stats.time).time;
 
     envDropdownData['name'] = `Environment ${index + 1} (${envName})`;
     envDropdownData['origName'] = envName;

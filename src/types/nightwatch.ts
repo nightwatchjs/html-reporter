@@ -47,6 +47,7 @@ export interface TestFile {
   lastError: LastError;
   skipped: string[];
   time: number;
+  timeMs: number;
   // TODO: replace any with it's types
   completed: Record<string, TestObject>;
   completedSections: Record<string, TestObject>;

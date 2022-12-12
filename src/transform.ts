@@ -61,7 +61,7 @@ const getEnvironmentReport = () => {
 
       fileData['fileName'] = fileName;
       fileData['status'] = fileReport.status;
-      fileData['tests'] = getTestsStats(fileReport, envName, metadata);
+      fileData['tests'] = getTestsStats(fileName, fileReport, envName, metadata);
 
       // File level data aggregation (i.e. file is passed/failed/skipped)
       if (fileReport.status === 'pass') {
@@ -125,9 +125,17 @@ export interface ITestStats {
     filepath: string;
     envName: string;
   };
+  stats: {
+    passed: number
+    failed: number,
+    skipped: number,
+    total: number,
+    time: number
+  }
 }
 
 const getTestsStats = (
+  fileName: string,
   fileReport: TestFile,
   envName: string,
   metadata: Pick<
@@ -166,9 +174,9 @@ const getTestsStats = (
     //  Add Metadata
     testData['metadata'] = {
       ...metadata,
-      ...{ filename: fileReport.fileName },
+      ...{ filename: fileName },
       ...{ filepath: fileReport.modulePath },
-      ...{ time: fileReport.time },
+      ...{ time: fileReport.timeMs },
       ...{ envName }
     };
 

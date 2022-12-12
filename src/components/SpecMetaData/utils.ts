@@ -24,7 +24,7 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
     test.status === 'pass' &&
       result.push({
         stepName: test.name,
-        time: Math.round(Math.random() * 10)
+        time: test.elapsedTime
       });
     return result;
   }, [] as IPassedTestSteps[]);
@@ -37,7 +37,7 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
         message: test.result.message,
         stacktrace: test.result.stack,
         shortMessage: test.result.message.split('-'),
-        time: Math.round(Math.random() * 10),
+        time: test.elapsedTime,
         screenshot: test.screenshot
       });
     return result;
