@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../hooks/GlobalContext';
+import { useGlobalContext, useVrtGlobalContext } from '../hooks/GlobalContext';
 import { IEnvironmentData, IFileStats, Status } from '../transform';
 
 type FailedTest = {
@@ -66,4 +66,16 @@ export const findFailedTestDetails = () => {
     return createDataObject(name, 'skip', skip);
   }
   return createDataObject(name, 'pass', pass);
+};
+
+export const findVrtTestDetails = () => {
+  const { environments } = useVrtGlobalContext();
+  const name = Object.keys(environments)[0];
+  const status = 'fail';
+  const data = {
+    name
+  } as IFailedData;
+  data['fileIndex'] = `${status}-${0}`;
+  data['testIndex'] = `${status}-${0}`;
+  return data;
 };
