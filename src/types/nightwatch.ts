@@ -49,6 +49,7 @@ export interface TestFile {
   time: number;
   // TODO: replace any with it's types
   completed: Record<string, TestObject>;
+  completedSections: Record<string, TestObject>;
   errmessages: any[];
   testsCount: number;
   skippedCount: number;
@@ -68,12 +69,14 @@ export interface TestFile {
   failures: number;
   errors: number;
   httpOutput: string[][];
+  rawHttpOutput: string[][];
   globalErrorRegister: string[];
 }
 
 export interface TestObject {
   time: string;
   assertions: Assertion[];
+  commands: Commands[];
   passed: number;
   errors: number;
   failed: number;
@@ -107,6 +110,17 @@ export interface Assertion {
   failure: any;
   status: string;
   screenshot: string;
+}
+
+export interface Commands {
+  name: string;
+  args: string[],
+  startTime: number,
+  endTime: number,
+  elapsedTime: number,
+  status: string,
+  screenshot: string | undefined;
+  result: any
 }
 
 export interface SessionCapabilities {

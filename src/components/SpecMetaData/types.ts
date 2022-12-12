@@ -8,7 +8,7 @@ export interface IFailedTestSteps extends IPassedTestSteps {
   message: string;
   shortMessage: string[];
   stacktrace: string;
-  screenshot: string;
+  screenshot: string | undefined;
 }
 
 export interface ITestResult {
