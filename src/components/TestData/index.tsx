@@ -4,10 +4,11 @@ import FilterDropdown from '../FilterDropdown';
 import Search from '../Search';
 import TestCaseView from '../TestCaseView';
 import TestStatusBar from '../TestStatusBar';
-import { Actions, ExpandAll, Left, Right, TestDetailsWrapper, Wrapper } from './style';
+import { Actions, Left, Right, TestDetailsWrapper, ToggleRoot, Wrapper } from './style';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useReportContext } from '../../hooks/ReportContext';
 import { getAllExpandedFileIds, getFailedTestsId } from './utils';
+import { Text } from '../Text';
 
 const TestData: React.FC = () => {
   const { environments } = useGlobalContext();
@@ -47,11 +48,16 @@ const TestData: React.FC = () => {
             onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
           />
           <Actions>
-            <ExpandAll
-              type="button"
-              onClick={() => setExpanded(getAllExpandedFileIds(environments[environmentName]))}>
-              Expand all
-            </ExpandAll>
+            <ToggleRoot
+              onPressedChange={(pressed) =>
+                pressed
+                  ? setExpanded(getAllExpandedFileIds(environments[environmentName]))
+                  : setExpanded([''])
+              }>
+              <Text color="grey-90" fontSize={12} lineHight={20}>
+                Expand all
+              </Text>
+            </ToggleRoot>
             <FilterDropdown filterContext={filterContext} setFilterContext={setFilterContext} />
           </Actions>
           <TestFileView
