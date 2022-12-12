@@ -28,6 +28,7 @@ const Analytics: React.FC = () => {
     stats: { passed, failed, skipped, total, time }
   } = useGlobalContext();
 
+  const formattedTime = convertMsToTime(time).time;
   const TestStatsInPercent = getTestPercentage(total, passed, failed, skipped);
 
   return (
@@ -47,7 +48,7 @@ const Analytics: React.FC = () => {
                 Tests
               </Text>
             </TotalSpecCountWrapper>
-            <Timer time={convertMsToTime(time).time} color={'--color-grey-90'} />
+            <Timer time={formattedTime} color={'--color-grey-90'} />
           </DetailsWrapper>
           <ProgressLine
             visualPartition={[

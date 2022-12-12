@@ -10,12 +10,12 @@ const TestStatusBar: React.FC = () => {
   const { environmentName } = useReportContext();
   const { environments } = useGlobalContext();
 
-  const { time } = environments[environmentName].stats;
-  const { passed, failed, skipped } = environments[environmentName].stats;
+  const { stats: {passed, failed, skipped, time} } = environments[environmentName];
+  const formattedTime = convertMsToTime(time).time; 
 
   return (
     <Wrapper>
-      <Timer time={convertMsToTime(time).time} color={'--color-grey-100'} />
+      <Timer time={formattedTime} color={'--color-grey-100'} />
       <TestResultCount passed={passed} failed={failed} skipped={skipped} />
     </Wrapper>
   );

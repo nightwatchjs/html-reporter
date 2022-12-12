@@ -2,7 +2,6 @@ import React from 'react';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { NightwatchIcon } from '../../icons';
 import { Center, Date as DateComponent, Left, Right, Time, Wrapper } from './style';
-import { getDateFromMillisecond } from './util';
 
 const Header = () => {
   const {
@@ -10,6 +9,15 @@ const Header = () => {
   } = useGlobalContext();
 
   const parsedDate = new Date(date);
+  const formattedDate = new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(parsedDate);
+  const formattedTime = new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: false
+  }).format(parsedDate)
+
+  const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   return (
     <Wrapper>
@@ -18,8 +26,8 @@ const Header = () => {
       </Left>
       <Center>Test Reporter</Center>
       <Right>
-        <DateComponent>{getDateFromMillisecond(parsedDate)}</DateComponent>
-        <Time>{parsedDate.toLocaleDateString ()}</Time>
+        <DateComponent>{formattedDate}</DateComponent>
+        <Time>{`${formattedTime} (${timezoneName})` }</Time>
       </Right>
     </Wrapper>
   );
