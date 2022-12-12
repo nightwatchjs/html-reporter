@@ -23,8 +23,8 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
   const passedTestStep = testObj?.results.steps.reduce((result, test) => {
     test.status === 'pass' &&
       result.push({
-        stepName: test.message,
-        time: Math.round(Math.random() * 10)
+        stepName: test.name,
+        time: test.elapsedTime
       });
     return result;
   }, [] as IPassedTestSteps[]);
@@ -33,11 +33,11 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
     test.status === 'fail' &&
       result.push({
         name: test.name,
-        stepName: test.message,
-        message: test.failure,
-        stacktrace: test.stackTrace,
-        shortMessage: test.message.split('-'),
-        time: Math.round(Math.random() * 10),
+        stepName: test.name,
+        message: test.result.message,
+        stacktrace: test.result.stack,
+        shortMessage: test.result.message.split('-'),
+        time: test.elapsedTime,
         screenshot: test.screenshot
       });
     return result;

@@ -28,7 +28,7 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
       <FailedStepWrapper>
         <FailedIcon />
         <Text>{children}</Text>
-        <ElapsedTime>{`${time} sec`}</ElapsedTime>
+        <ElapsedTime>{`${time} ms`}</ElapsedTime>
       </FailedStepWrapper>
       <ErrorTestStepDetails
         errorDetails={{

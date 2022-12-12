@@ -1,4 +1,4 @@
-import { Assertion, TestFile } from './types/nightwatch';
+import { Commands, TestFile } from './types/nightwatch';
 
 export const transformNightwatchReport = () => {
   return {
@@ -61,7 +61,7 @@ const getEnvironmentReport = () => {
 
       fileData['fileName'] = fileName;
       fileData['status'] = fileReport.status;
-      fileData['tests'] = getTestsStats(fileReport, envName, metadata);
+      fileData['tests'] = getTestsStats(fileName, fileReport, envName, metadata);
 
       // File level data aggregation (i.e. file is passed/failed/skipped)
       if (fileReport.status === 'pass') {
@@ -109,7 +109,7 @@ export interface ITestStats {
   key: string;
   testName: string;
   results: {
-    steps: Assertion[];
+    steps: Commands[];
     httpLog: string;
     seleniumLog: string;
   };
@@ -125,9 +125,17 @@ export interface ITestStats {
     filepath: string;
     envName: string;
   };
+  stats: {
+    passed: number
+    failed: number,
+    skipped: number,
+    total: number,
+    time: number
+  }
 }
 
 const getTestsStats = (
+  fileName: string,
   fileReport: TestFile,
   envName: string,
   metadata: Pick<
@@ -136,9 +144,12 @@ const getTestsStats = (
   >
 ): ITestStats[] => {
   const resultData: ITestStats[] = [];
-  const testReport = fileReport.completed;
+  const testReport = fileReport.completedSections;
 
   Object.keys(testReport).forEach((testName, index) => {
+
+    if (testName == 'global_beforeEach_hook' || testName == 'global_afterEach_hook') return;
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
@@ -150,12 +161,12 @@ const getTestsStats = (
 
     // Add Results
     testData['results'] = {} as ITestStats['results'];
-    testData['results']['steps'] = singleTestReport.assertions;
+    testData['results']['steps'] = singleTestReport.commands;
     // TODO: Verify httpOutput is string
-    testData['results']['httpLog'] = fileReport.httpOutput.join(' ');
+    testData['results']['httpLog'] = fileReport.rawHttpOutput.join(' ');
     // TODO: Replace '' to fileReport.seleniumLog
     testData['results']['seleniumLog'] = '';
-    testData['results']['steps'] = singleTestReport.assertions;
+    testData['results']['steps'] = singleTestReport.commands;
 
     // Add Status
     testData['status'] = singleTestReport.status;
@@ -163,9 +174,9 @@ const getTestsStats = (
     //  Add Metadata
     testData['metadata'] = {
       ...metadata,
-      ...{ filename: fileReport.fileName },
+      ...{ filename: fileName },
       ...{ filepath: fileReport.modulePath },
-      ...{ time: fileReport.time },
+      ...{ time: fileReport.timeMs },
       ...{ envName }
     };
 
