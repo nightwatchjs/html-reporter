@@ -1,14 +1,15 @@
 import React from 'react';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { NightwatchIcon } from '../../icons';
-import { convertMsToTime } from '../../utils';
-import { Center, Date, Left, Right, Time, Wrapper } from './style';
+import { Center, Date as DateComponent, Left, Right, Time, Wrapper } from './style';
 import { getDateFromMillisecond } from './util';
 
 const Header = () => {
   const {
-    metadata: { timestamp, date }
+    metadata: { date }
   } = useGlobalContext();
+
+  const parsedDate = new Date(date);
 
   return (
     <Wrapper>
@@ -17,8 +18,8 @@ const Header = () => {
       </Left>
       <Center>Test Reporter</Center>
       <Right>
-        <Date>{getDateFromMillisecond(date)}</Date>
-        <Time>{convertMsToTime(timestamp).paddedTime}</Time>
+        <DateComponent>{getDateFromMillisecond(parsedDate)}</DateComponent>
+        <Time>{parsedDate.toLocaleDateString ()}</Time>
       </Right>
     </Wrapper>
   );

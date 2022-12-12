@@ -1,10 +1,11 @@
 import React from 'react';
 import { useGlobalContext } from '../../hooks/GlobalContext';
-import { getPassedTestPercentage } from '../../utils';
+import { convertMsToTime, getPassedTestPercentage } from '../../utils';
 import ProgressLine from '../ProgressLine';
 import Spacer from '../Spacer';
 import { Text } from '../Text';
 import Timer from '../Timer';
+
 import {
   DetailsWrapper,
   Header,
@@ -46,7 +47,7 @@ const Analytics: React.FC = () => {
                 Tests
               </Text>
             </TotalSpecCountWrapper>
-            <Timer time={time} color={'--color-grey-90'} />
+            <Timer time={convertMsToTime(time).time} color={'--color-grey-90'} />
           </DetailsWrapper>
           <ProgressLine
             visualPartition={[

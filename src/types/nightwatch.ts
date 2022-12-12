@@ -173,5 +173,6 @@ export interface Stats {
 }
 
 export interface Metadata {
+  date: Date;
   timestamp: number;
 }
