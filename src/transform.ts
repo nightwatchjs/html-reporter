@@ -134,6 +134,17 @@ export interface ITestStats {
   }
 }
 
+const normalizeTestName = (testName: string): string => {
+  switch (testName) {
+    case '__before_hook':
+      return 'Before'
+    case '__after_hook':
+      return 'After'
+    default:
+      return testName
+  }
+}
+
 const getTestsStats = (
   fileName: string,
   fileReport: TestFile,
@@ -148,7 +159,7 @@ const getTestsStats = (
 
   Object.keys(testReport).forEach((testName, index) => {
 
-    if (testName == 'global_beforeEach_hook' || testName == 'global_afterEach_hook') return;
+    if (testName == '__global_beforeEach_hook' || testName == '__global_afterEach_hook') return;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testData = {} as ITestStats;
@@ -157,7 +168,7 @@ const getTestsStats = (
     // Add testName
 
     testData['key'] = `${singleTestReport.status}-${index}`;
-    testData['testName'] = testName;
+    testData['testName'] = normalizeTestName(testName);
 
     // Add Results
     testData['results'] = {} as ITestStats['results'];
