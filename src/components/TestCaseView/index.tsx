@@ -14,8 +14,9 @@ const vrtReport = () => {
 }
 
 const TestDetails: React.FC = () => {
+  const vrt = true;
   return (
-    <Wrapper>
+    <Wrapper vrt={vrt}>
       <Header />
       <TestBody>
         {vrtReport()}
