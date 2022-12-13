@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as Toggle from '@radix-ui/react-toggle';
 
 export const Wrapper = styled.section`
   display: flex;
@@ -35,15 +36,16 @@ export const Actions = styled.div`
   gap: var(--gap-12);
 `;
 
-export const ExpandAll = styled.button`
+export const ToggleRoot = styled(Toggle.Root)`
   padding: var(--padding-4) var(--padding-8);
-  font-size: var(--font-size-12);
-  line-height: var(--line-height-20);
-  color: var(--color-grey-90);
   border: 1px solid var(--color-grey-50);
   border-radius: var(--border-radius-4);
   background: var(--color-grey-10);
   cursor: pointer;
+
+  &[data-state='on'] {
+    box-shadow: 0 0 0 1px var(--color-primary-60);
+  }
 
   &:focus {
     box-shadow: 0 0 0 1px var(--color-primary-60);

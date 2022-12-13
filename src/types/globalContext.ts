@@ -13,14 +13,9 @@ interface SuiteStats {
   passed: number;
   failed: number;
   skipped: number;
-  time: {
-    hours?: number;
-    minutes?: number;
-    seconds?: number;
-  };
+  time: number;
 }
 
 interface ReportMetadata {
-  timestamp: number;
-  date: number;
+  date: string;
 }

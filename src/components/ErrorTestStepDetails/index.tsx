@@ -1,6 +1,7 @@
 import React from 'react';
 import { Error } from '../../icons';
-import { wrapTextWithSpan } from '../../utils';
+import { CodeSnippet } from '../../types/nightwatch';
+import { cleanAnsi, wrapTextWithSpan } from '../../utils';
 import AlertBanner from '../AlertBanner';
 import CodeBlock from '../CodeBlock';
 import { ErrorMessageText, ErrorMessageWrapper, Wrapper } from './style';
@@ -12,7 +13,7 @@ type ErrorStepDetailsProps = {
     stackTrace?: {
       filename: string;
       line_number: number;
-      codeSnippet: string[];
+      codeSnippet: CodeSnippet[];
     };
   };
 };
@@ -27,13 +28,13 @@ const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
         <ErrorMessageText
           dangerouslySetInnerHTML={{
             __html: wrapTextWithSpan(
-              shortMessage[0],
+              cleanAnsi(shortMessage[0]),
               ['blue-text-color', 'blue-text-color'],
               ['arrow_regex', 'single_quote']
             )
           }}
         />
-        <ErrorMessageText>{shortMessage[1]}</ErrorMessageText>
+        <ErrorMessageText>{cleanAnsi(shortMessage[1])}</ErrorMessageText>
       </ErrorMessageWrapper>
       {stackTrace && (
         <CodeBlock

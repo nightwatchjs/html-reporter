@@ -47,8 +47,10 @@ export interface TestFile {
   lastError: LastError;
   skipped: string[];
   time: number;
+  timeMs: number;
   // TODO: replace any with it's types
   completed: Record<string, TestObject>;
+  completedSections: Record<string, TestObject>;
   errmessages: any[];
   testsCount: number;
   skippedCount: number;
@@ -68,12 +70,14 @@ export interface TestFile {
   failures: number;
   errors: number;
   httpOutput: string[][];
+  rawHttpOutput: string[][];
   globalErrorRegister: string[];
 }
 
 export interface TestObject {
   time: string;
   assertions: Assertion[];
+  commands: Commands[];
   passed: number;
   errors: number;
   failed: number;
@@ -113,6 +117,41 @@ export interface Assertion {
   failure: any;
   status: string;
   screenshot: string;
+}
+
+export interface Commands {
+  name: string;
+  args: string[];
+  startTime: number;
+  endTime: number;
+  elapsedTime: number;
+  status: string;
+  screenshot: string | undefined;
+  result: CommandsResult;
+}
+
+export interface BeautifiedStack {
+  filename: string;
+  line_number: number;
+  codeSnippet: CodeSnippet[];
+}
+
+export interface CodeSnippet {
+  line_number: number;
+  code: string;
+}
+
+export interface CommandsResult {
+  value?: unknown;
+  status?: number;
+  returned: number;
+  passed: boolean;
+  abortOnFailure?: boolean;
+  message?: string;
+  name?: string;
+  showDiff?: boolean;
+  stack?: string;
+  beautifiedStack?: BeautifiedStack;
 }
 
 export interface SessionCapabilities {
@@ -164,5 +203,6 @@ export interface Stats {
 }
 
 export interface Metadata {
+  date: Date;
   timestamp: number;
 }

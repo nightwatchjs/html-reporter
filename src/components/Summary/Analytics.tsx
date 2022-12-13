@@ -1,10 +1,11 @@
 import React from 'react';
 import { useGlobalContext } from '../../hooks/GlobalContext';
-import { getPassedTestPercentage } from '../../utils';
+import { convertMsToTime, getPassedTestPercentage } from '../../utils';
 import ProgressLine from '../ProgressLine';
 import Spacer from '../Spacer';
 import { Text } from '../Text';
 import Timer from '../Timer';
+
 import {
   DetailsWrapper,
   Header,
@@ -27,6 +28,7 @@ const Analytics: React.FC = () => {
     stats: { passed, failed, skipped, total, time }
   } = useGlobalContext();
 
+  const { time: formattedTime } = convertMsToTime(time);
   const TestStatsInPercent = getTestPercentage(total, passed, failed, skipped);
 
   return (
@@ -46,7 +48,7 @@ const Analytics: React.FC = () => {
                 Tests
               </Text>
             </TotalSpecCountWrapper>
-            <Timer time={time} color={'--color-grey-90'} />
+            <Timer time={formattedTime} color={'--color-grey-90'} />
           </DetailsWrapper>
           <ProgressLine
             visualPartition={[

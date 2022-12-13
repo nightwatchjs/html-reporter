@@ -1,21 +1,21 @@
+import { BeautifiedStack } from './../../types/nightwatch';
 export interface IPassedTestSteps {
-  stepName: string;
+  name: string;
   time: number;
+  status: string;
 }
 
 export interface IFailedTestSteps extends IPassedTestSteps {
-  name: string;
-  message: string;
-  shortMessage: string[];
-  stacktrace: string;
-  screenshot: string;
+  message?: string;
+  shortMessage?: string[];
+  stacktrace?: BeautifiedStack;
+  screenshot?: string;
 }
 
+export interface ITestSteps extends IPassedTestSteps, IFailedTestSteps {}
+
 export interface ITestResult {
-  testSteps: {
-    passed: IPassedTestSteps[];
-    failed: IFailedTestSteps[];
-  };
+  testSteps: ITestSteps[];
   httpLog: string;
   seleniumLog: string;
 }

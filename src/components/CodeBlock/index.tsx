@@ -4,15 +4,19 @@ import theme from 'prism-react-renderer/themes/github';
 import { Segment } from '../../icons';
 import Tooltip from '../Tooltip';
 import { CodeWrapper, Filename, Line, LineContent, LineNo, Link, Pre, Wrapper } from './style';
+import { CodeSnippet } from '../../types/nightwatch';
+import { destructCodeBlock } from './utils';
 
 type CodeBlockProps = {
   filename: string;
   line_number: number;
-  codeSnippet: string[];
+  codeSnippet: CodeSnippet[];
   file_path: string;
 };
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippet, file_path }) => {
+  const { code, line: lineNumbers } = destructCodeBlock(codeSnippet);
+
   return (
     <Wrapper>
       <Filename>
@@ -23,14 +27,15 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippe
         </Tooltip>
       </Filename>
       <CodeWrapper>
-        <Highlight {...defaultProps} theme={theme} code={codeSnippet.join('\n')} language="jsx">
+        <Highlight {...defaultProps} theme={theme} code={code.join('\n')} language="jsx">
           {({ className, tokens, getLineProps, getTokenProps }) => (
             <Pre className={className}>
               {tokens.map((line, i) => (
-                // TODO: Highlight based on the number from Nightwatch
-                <Line highlight={i == 1} key={i} {...getLineProps({ line, key: i })}>
-                  {/* TODO: Add 10/100 based on the line number from nightwatch -> {i + 10/100 + 1} */}
-                  <LineNo>{i + 1}</LineNo>
+                <Line
+                  highlight={lineNumbers[i] === line_number}
+                  key={i}
+                  {...getLineProps({ line, key: i })}>
+                  <LineNo>{lineNumbers[i]}</LineNo>
                   <LineContent>
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />

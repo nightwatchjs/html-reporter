@@ -11,7 +11,7 @@ const PassTestStep: React.FC<TestStepProps> = ({ time, children }) => {
     <Wrapper>
       <PassedIcon />
       <Text>{children}</Text>
-      <ElapsedTime>{`${time} sec`}</ElapsedTime>
+      <ElapsedTime>{time < 1000 ? `${time} ms` : `${Math.round(time / 1000)} sec`}</ElapsedTime>
     </Wrapper>
   );
 };
