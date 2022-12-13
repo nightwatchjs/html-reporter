@@ -133,6 +133,13 @@ export interface ITestStats {
     envName: string;
     diff: string;
   };
+  stats: {
+    passed: number
+    failed: number,
+    skipped: number,
+    total: number,
+    time: number
+  };
   vrt: IVrtData;
 }
 
@@ -140,13 +147,6 @@ export interface IVrtData {
   completeBaselinePath: string;
   completeDiffPath: string;
   completeLatestPath: string;
-  stats: {
-    passed: number
-    failed: number,
-    skipped: number,
-    total: number,
-    time: number
-  }
 }
 
 const normalizeTestName = (testName: string): string => {
@@ -180,7 +180,7 @@ const getTestsStats = (
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
     // Will be replaced 
-const vrt = true;
+    const vrt = true;
     if (vrt) {
       singleTestReport.status = 'fail';
     }

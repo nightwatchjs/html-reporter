@@ -12,16 +12,17 @@ import { getMetadata } from './utils';
 import TestMetadataVrt from '../TestMetadataVrt';
 
 const returnEnvironmentMetadata = (meta: any) => {
+  {/* FIXME: remove type casting as any */}
   return (<EnvironmentMetadata
-  meta={{
-    device: meta?.device as any,
-    browserName: meta?.browserName as any,
-    browserVersion: meta?.browserVersion as any,
-    operatingSystemName: meta?.platformName as any,
-    tags: [meta?.executionMode as any],
-    time: convertMsToTime(meta?.time).time
-  }}
-/>)
+    meta={{
+      device: meta?.device as any,
+      browserName: meta?.browserName as any,
+      browserVersion: meta?.browserVersion as any,
+      operatingSystemName: meta?.platformName as any,
+      tags: [meta?.executionMode as any],
+      time: convertMsToTime(meta?.time).time
+    }}
+  />)
 }
 
 const returnTestBlockDetails = (meta: any) => {
@@ -66,17 +67,6 @@ const vrt = true;
             {`Spec: ${meta?.filename}`}
           </Text>
         </EnvironmentAndSpecName>
-        {/* FIXME: remove type casting as any */}
-        <EnvironmentMetadata
-          meta={{
-            device: meta?.device as any,
-            browserName: meta?.browserName as any,
-            browserVersion: meta?.browserVersion as any,
-            operatingSystemName: meta?.platformName as any,
-            tags: [meta?.executionMode as any],
-            time: convertMsToTime(meta?.time).time
-          }}
-        />
         { vrt ?  returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta) }
       </Metadata>
       <TestBlockName status={status}>{testName}</TestBlockName>
