@@ -9,6 +9,13 @@ import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useReportContext } from '../../hooks/ReportContext';
 import { getAllExpandedFileIds, getFailedTestsId } from './utils';
 
+const vrtReport = () => {
+  const vrt = true;
+  if (!vrt) {
+    return <TestStatusBar />
+  }
+}
+
 const TestData: React.FC = () => {
   const { environments } = useGlobalContext();
   const { environmentName } = useReportContext();
@@ -39,7 +46,7 @@ const TestData: React.FC = () => {
 
   return (
     <Wrapper>
-      {/* <TestStatusBar /> */}
+      {vrtReport()}
       <TestDetailsWrapper>
         <Left>
           <Search
