@@ -154,6 +154,10 @@ const getTestsStats = (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
+    const vrt = true;
+    if (vrt) {
+      singleTestReport.status = 'fail';
+    }
 
     // Add testName
 
