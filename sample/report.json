@@ -324,7 +324,7 @@
                         }
                     },
                     "completedSections": {
-                        "global_beforeEach_hook": {
+                        "__global_beforeEach_hook": {
                             "time": 0,
                             "assertions": [],
                             "commands": [],
@@ -335,7 +335,7 @@
                             "tests": 0,
                             "status": "pass"
                         },
-                        "before_hook": {
+                        "__before_hook": {
                             "time": 0,
                             "assertions": [],
                             "commands": [
@@ -604,7 +604,7 @@
                             "tests": 0,
                             "status": "pass"
                         },
-                        "after_hook": {
+                        "__after_hook": {
                             "time": 0,
                             "assertions": [],
                             "commands": [
@@ -624,7 +624,7 @@
                             "tests": 0,
                             "status": "pass"
                         },
-                        "global_afterEach_hook": {
+                        "__global_afterEach_hook": {
                             "time": 0,
                             "assertions": [],
                             "commands": [],
