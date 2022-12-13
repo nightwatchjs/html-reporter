@@ -3,7 +3,7 @@
       "chrome": {
         "modules": {
           "sample": {
-            "completed": {
+            "completedSections": {
               "nightwatch-vrt sample test": {
                 "vrt": {
                     "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
@@ -23,7 +23,7 @@
             }
           },
           "sample1": {
-            "completed": {
+            "completedSections": {
               "nightwatch-vrt sample test3": {
                 "vrt": {
                   "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
@@ -43,7 +43,7 @@
             }
           },
           "sample2": {
-            "completed": {
+            "completedSections": {
               "nightwatch-vrt sample test3": {
                 "vrt": {
                   "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
