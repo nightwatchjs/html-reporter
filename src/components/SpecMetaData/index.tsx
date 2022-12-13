@@ -9,8 +9,9 @@ import TestBlockName from '../TestBlockName';
 import { Text } from '../Text';
 import { EnvironmentAndSpecName, Metadata, TestBlockDetails, Wrapper } from './style';
 import { getMetadata } from './utils';
+import TestMetadataVrt from '../TestMetadataVrt';
 
-const returnEnvironmentMetadata = (meta) => {
+const returnEnvironmentMetadata = (meta: any) => {
   return (<EnvironmentMetadata
   meta={{
     device: meta?.device as any,
@@ -23,7 +24,7 @@ const returnEnvironmentMetadata = (meta) => {
 />)
 }
 
-const returnTestBlockDetails = (meta) => {
+const returnTestBlockDetails = (meta: any) => {
   return (<TestBlockDetails>
     <FilePathView>{`${meta?.filepath}`}</FilePathView>
     {/* <TagGroup>
@@ -32,6 +33,14 @@ const returnTestBlockDetails = (meta) => {
   </TestBlockDetails>)
 }
 
+const returnTestMetadataVrt = (meta: any) => {
+  return (<TestMetadataVrt
+    meta={{
+      browserName: meta?.envName as any,
+      diff: meta?.diff as any
+    }}
+  />)
+}
 const SpecMetaData: React.FC = () => {
   const vrt =true;
   const { environmentName, fileId, testId } = useReportContext();
@@ -56,7 +65,7 @@ const SpecMetaData: React.FC = () => {
             {`Spec: ${meta?.filename}`}
           </Text>
         </EnvironmentAndSpecName>
-        { !vrt ?  returnEnvironmentMetadata(meta): '' }
+        { vrt ?  returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta) }
       </Metadata>
       <TestBlockName status={status}>{testName}</TestBlockName>
       { !vrt ?  returnTestBlockDetails(meta): '' }

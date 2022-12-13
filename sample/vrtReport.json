@@ -6,17 +6,19 @@
             "completed": {
               "nightwatch-vrt sample test": {
                 "vrt": {
-                    "completeBaselinePath": "vrtdata/youtube-cover.svg",
-                    "completeDiffPath": "vrtdata/youtube-cover.svg",
-                    "completeLatestPath": "vrtdata/youtube-cover.svg"
-                }
+                    "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                    "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
+                    "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg"
+                },
+                "diff": "90%"
               },
               "nightwatch-vrt sample test1": {
                 "vrt": {
-                    "completeBaselinePath": "vrtdata/sample.png",
-                    "completeDiffPath": "vrtdata/sample.png",
-                    "completeLatestPath": "vrtdata/sample.png"
-                }
+                    "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                    "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                    "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png"
+                },
+                "diff": "90%"
               }
             }
           },
@@ -24,17 +26,39 @@
             "completed": {
               "nightwatch-vrt sample test3": {
                 "vrt": {
-                  "completeBaselinePath": "vrtdata/sample.png",
-                  "completeDiffPath": "vrtdata/sample.png",
-                  "completeLatestPath": "vrtdata/sample.png"
-                }
+                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                },
+                "diff": "90%"
               },
               "nightwatch-vrt sample test4": {
                 "vrt": {
-                  "completeBaselinePath": "vrtdata/youtube-cover.svg",
-                  "completeDiffPath": "vrtdata/youtube-cover.svg",
-                  "completeLatestPath": "vrtdata/youtube-cover.svg"
+                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
+                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
+                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg"
+                },
+                "diff": "90%"
               }
+            }
+          },
+          "sample2": {
+            "completed": {
+              "nightwatch-vrt sample test3": {
+                "vrt": {
+                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png"
+                },
+                "diff": "80%"
+              },
+              "nightwatch-vrt sample test4": {
+                "vrt": {
+                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
+                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
+                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg"
+              },
+              "diff": "100%"
               }
             }
           }
@@ -44,5 +68,6 @@
     "metadata": {
       "date": 1670331481990,
       "timestamp": 31525000
-    }
+    },
+    "vrt": true
   }

@@ -63,6 +63,7 @@ const getEnvironmentReport = () => {
       
       if (vrt) {
         fileReport.status = 'fail';
+        fileReport.fileName = fileName;
       }
       fileData['fileName'] = fileName;
       fileData['status'] = fileReport.status;
@@ -129,6 +130,7 @@ export interface ITestStats {
     filename: string;
     filepath: string;
     envName: string;
+    diff: string;
   };
   vrt: IVrtData;
 }
@@ -182,7 +184,8 @@ const getTestsStats = (
       ...{ filename: fileReport.fileName },
       ...{ filepath: fileReport.modulePath },
       ...{ time: fileReport.time },
-      ...{ envName }
+      ...{ envName },
+      ...{ diff: singleTestReport.diff }
     };
 
     // Add vrt data
