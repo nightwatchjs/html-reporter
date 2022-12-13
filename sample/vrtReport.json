@@ -7,8 +7,8 @@
               "nightwatch-vrt sample test": {
                 "vrt": {
                     "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                    "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
-                    "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg"
+                    "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
+                    "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg"
                 },
                 "diff": "90%"
               },
@@ -28,15 +28,15 @@
                 "vrt": {
                   "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
                   "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
+                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png"
                 },
                 "diff": "90%"
               },
               "nightwatch-vrt sample test4": {
                 "vrt": {
-                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
-                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
-                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg"
+                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
+                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
+                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg"
                 },
                 "diff": "90%"
               }
@@ -54,9 +54,9 @@
               },
               "nightwatch-vrt sample test4": {
                 "vrt": {
-                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
-                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg",
-                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/youtube-cover.svg"
+                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
+                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
+                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg"
               },
               "diff": "100%"
               }

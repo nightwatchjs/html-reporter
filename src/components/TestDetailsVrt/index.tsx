@@ -12,7 +12,8 @@ const TestDetailsVrt: React.FC = () => {
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
   const vrtData: IVrtData = getVrtData(environments[environmentName], fileId, testId);
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   return (
         <Wrapper>
             <Details>

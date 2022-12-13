@@ -12,7 +12,8 @@ type WrapperProps = {
 };
 
 const vrtReport = () => {
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   if (vrt) {
     return (
       <Wrapper vrt={vrt}>

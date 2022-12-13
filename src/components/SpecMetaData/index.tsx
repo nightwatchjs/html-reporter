@@ -42,7 +42,8 @@ const returnTestMetadataVrt = (meta: any) => {
   />)
 }
 const SpecMetaData: React.FC = () => {
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
 

@@ -6,6 +6,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 let sampleReportPath = join(__dirname, 'sample', 'report.json')
 
+// Will be replaced 
 const vrt = true;
 if (vrt) {
   sampleReportPath = join(__dirname, 'sample', 'vrtReport.json')

@@ -10,7 +10,8 @@ import { useReportContext } from '../../hooks/ReportContext';
 import { getAllExpandedFileIds, getFailedTestsId } from './utils';
 
 const vrtReport = () => {
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   if (!vrt) {
     return <TestStatusBar />
   }

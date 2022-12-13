@@ -53,7 +53,8 @@ const createDataObject = (name: string, status: Status, files: IFileStats[]): IF
 
 export const findFailedTestDetails = () => {
   const { environments } = useGlobalContext();
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   const {
     name,
     data: {

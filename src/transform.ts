@@ -43,7 +43,8 @@ const getEnvironmentReport = () => {
   // TODO: Replace any with the types
   const envData: any = {};
   // use process.env
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   const report = window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {
@@ -156,7 +157,8 @@ const getTestsStats = (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
-    const vrt = true;
+    // Will be replaced 
+const vrt = true;
     if (vrt) {
       singleTestReport.status = 'fail';
     }

@@ -5,7 +5,8 @@ import { TestBody, Wrapper } from './style';
 import TestDetailsVrt from '../TestDetailsVrt';
 
 const vrtReport = () => {
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   if (vrt) {
       return <TestDetailsVrt />
   } else {
@@ -14,7 +15,8 @@ const vrtReport = () => {
 }
 
 const TestDetails: React.FC = () => {
-  const vrt = true;
+  // Will be replaced 
+const vrt = true;
   return (
     <Wrapper>
       <Header />
