@@ -12,7 +12,7 @@ type ErrorStepDetailsProps = {
     shortMessage: string[];
     stackTrace?: {
       filename: string;
-      line_number: number;
+      error_line_number: number;
       codeSnippet: CodeSnippet[];
     };
   };
@@ -39,7 +39,7 @@ const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
       {stackTrace && (
         <CodeBlock
           filename={stackTrace.filename}
-          line_number={stackTrace.line_number}
+          line_number={stackTrace.error_line_number}
           codeSnippet={stackTrace.codeSnippet}
           file_path="/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js"
         />

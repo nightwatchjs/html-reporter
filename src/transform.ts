@@ -61,7 +61,6 @@ const getEnvironmentReport = () => {
 
       fileData['fileName'] = fileName;
       fileData['status'] = fileReport.status;
-      fileData['tests'] = getTestsStats(fileName, fileReport, envName, metadata);
 
       // File level data aggregation (i.e. file is passed/failed/skipped)
       if (fileReport.status === 'pass') {
@@ -70,6 +69,7 @@ const getEnvironmentReport = () => {
         }
         const uniqueKey = envData[envName].files['pass'].length;
         fileData['key'] = `pass-${uniqueKey}`;
+        fileData['tests'] = getTestsStats(fileName, fileData['key'], fileReport, envName, metadata);
         envData[envName].files['pass'].push(fileData);
       }
 
@@ -79,6 +79,7 @@ const getEnvironmentReport = () => {
         }
         const uniqueKey = envData[envName].files['fail'].length;
         fileData['key'] = `fail-${uniqueKey}`;
+        fileData['tests'] = getTestsStats(fileName, fileData['key'], fileReport, envName, metadata);
         envData[envName].files['fail'].push(fileData);
       }
 
@@ -88,6 +89,7 @@ const getEnvironmentReport = () => {
         }
         const uniqueKey = envData[envName].files['skip'].length;
         fileData['key'] = `skip-${uniqueKey}`;
+        fileData['tests'] = getTestsStats(fileName, fileData['key'], fileReport, envName, metadata);
         envData[envName].files['skip'].push(fileData);
       }
     });
@@ -126,27 +128,28 @@ export interface ITestStats {
     envName: string;
   };
   stats: {
-    passed: number
-    failed: number,
-    skipped: number,
-    total: number,
-    time: number
-  }
+    passed: number;
+    failed: number;
+    skipped: number;
+    total: number;
+    time: number;
+  };
 }
 
 const normalizeTestName = (testName: string): string => {
   switch (testName) {
     case '__before_hook':
-      return 'Before'
+      return 'Before';
     case '__after_hook':
-      return 'After'
+      return 'After';
     default:
-      return testName
+      return testName;
   }
-}
+};
 
 const getTestsStats = (
   fileName: string,
+  fileKey: string,
   fileReport: TestFile,
   envName: string,
   metadata: Pick<
@@ -157,17 +160,15 @@ const getTestsStats = (
   const resultData: ITestStats[] = [];
   const testReport = fileReport.completedSections;
 
-  Object.keys(testReport).forEach((testName, index) => {
-
+  Object.keys(testReport).forEach((testName) => {
     if (testName == '__global_beforeEach_hook' || testName == '__global_afterEach_hook') return;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
 
     // Add testName
 
-    testData['key'] = `${singleTestReport.status}-${index}`;
+    testData['key'] = `${fileKey}-${singleTestReport.status}-${resultData.length}`;
     testData['testName'] = normalizeTestName(testName);
 
     // Add Results

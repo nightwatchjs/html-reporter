@@ -15,5 +15,14 @@ export const SearchWrapper = styled.div`
 
 export const TestStepWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+`;
+
+export const TestSteps = styled.div`
+  flex: 1;
+`;
+
+export const TestDiv = styled.div`
+  background: hotpink;
+  flex: 1;
+  margin-left: 10px;
 `;
