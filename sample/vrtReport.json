@@ -1,0 +1,48 @@
+{
+    "environments": {
+      "chrome": {
+        "modules": {
+          "sample": {
+            "completed": {
+              "nightwatch-vrt sample test": {
+                "vrt": {
+                    "completeBaselinePath": "vrtdata/youtube-cover.svg",
+                    "completeDiffPath": "vrtdata/youtube-cover.svg",
+                    "completeLatestPath": "vrtdata/youtube-cover.svg"
+                }
+              },
+              "nightwatch-vrt sample test1": {
+                "vrt": {
+                    "completeBaselinePath": "vrtdata/sample.png",
+                    "completeDiffPath": "vrtdata/sample.png",
+                    "completeLatestPath": "vrtdata/sample.png"
+                }
+              }
+            }
+          },
+          "sample1": {
+            "completed": {
+              "nightwatch-vrt sample test3": {
+                "vrt": {
+                  "completeBaselinePath": "vrtdata/sample.png",
+                  "completeDiffPath": "vrtdata/sample.png",
+                  "completeLatestPath": "vrtdata/sample.png"
+                }
+              },
+              "nightwatch-vrt sample test4": {
+                "vrt": {
+                  "completeBaselinePath": "vrtdata/youtube-cover.svg",
+                  "completeDiffPath": "vrtdata/youtube-cover.svg",
+                  "completeLatestPath": "vrtdata/youtube-cover.svg"
+              }
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "date": 1670331481990,
+      "timestamp": 31525000
+    }
+  }

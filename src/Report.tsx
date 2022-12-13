@@ -6,15 +6,27 @@ import Summary from './components/Summary';
 import TestData from './components/TestData';
 import { ReportContextProvider } from './contexts/ReportContext';
 
+const vrtReport = () => {
+  const vrt = true;
+  if (vrt) {
+    return (
+      <Wrapper>
+        <TestData />
+      </Wrapper>
+    )
+  } else {
+    <Wrapper>
+      <Summary />
+      <TestData />
+    </Wrapper>
+  }
+}
 const Report: React.FC = () => {
   return (
     <Fragment>
       <ReportContextProvider>
         <Header />
-        <Wrapper>
-          <Summary />
-          <TestData />
-        </Wrapper>
+        {vrtReport()}
         <Footer />
       </ReportContextProvider>
     </Fragment>

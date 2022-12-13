@@ -1,4 +1,4 @@
-import { Assertion, TestFile } from './types/nightwatch';
+import { Assertion, TestFile, Stats } from './types/nightwatch';
 
 export const transformNightwatchReport = () => {
   return {
@@ -9,7 +9,7 @@ export const transformNightwatchReport = () => {
 };
 
 const getSuiteStats = () => {
-  return window.nightwatchReport.stats;
+  return window.nightwatchReport.stats || {} as Stats;
 };
 
 const getReportMetadata = () => {
@@ -42,6 +42,8 @@ export interface IEnvironmentData {
 const getEnvironmentReport = () => {
   // TODO: Replace any with the types
   const envData: any = {};
+  // use process.env
+  const vrt = true;
   const report = window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {
@@ -52,13 +54,16 @@ const getEnvironmentReport = () => {
     const environmentDataFiles = environmentData.modules;
 
     envData[envName]['metadata'] = environmentData.metadata;
-    envData[envName]['stats'] = environmentData.stats;
+    envData[envName]['stats'] = environmentData.stats || {} as Stats;
 
     Object.keys(environmentDataFiles).forEach((fileName) => {
       const fileData = {} as IFileStats;
       const fileReport = environmentDataFiles[fileName];
       const metadata = envData[envName].metadata;
-
+      
+      if (vrt) {
+        fileReport.status = 'fail';
+      }
       fileData['fileName'] = fileName;
       fileData['status'] = fileReport.status;
       fileData['tests'] = getTestsStats(fileReport, envName, metadata);
@@ -93,7 +98,7 @@ const getEnvironmentReport = () => {
     });
   });
 
-  return getReverseSortedArray(envData);
+  return vrt? envData: getReverseSortedArray(envData);
 };
 
 export const getReverseSortedArray = (environments: Record<string, any>) => {
@@ -125,6 +130,13 @@ export interface ITestStats {
     filepath: string;
     envName: string;
   };
+  vrt: IVrtData;
+}
+
+export interface IVrtData {
+  completeBaselinePath: string;
+  completeDiffPath: string;
+  completeLatestPath: string;
 }
 
 const getTestsStats = (
@@ -152,7 +164,7 @@ const getTestsStats = (
     testData['results'] = {} as ITestStats['results'];
     testData['results']['steps'] = singleTestReport.assertions;
     // TODO: Verify httpOutput is string
-    testData['results']['httpLog'] = fileReport.httpOutput.join(' ');
+    testData['results']['httpLog'] = fileReport.httpOutput ? fileReport.httpOutput.join(' ') : '';
     // TODO: Replace '' to fileReport.seleniumLog
     testData['results']['seleniumLog'] = '';
     testData['results']['steps'] = singleTestReport.assertions;
@@ -168,6 +180,9 @@ const getTestsStats = (
       ...{ time: fileReport.time },
       ...{ envName }
     };
+
+    // Add vrt data
+    testData['vrt'] = singleTestReport.vrt;
 
     resultData.push(testData);
   });

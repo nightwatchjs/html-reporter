@@ -87,6 +87,11 @@ export interface TestObject {
   startTimestamp: string;
   endTimestamp: string;
   status: string;
+  vrt: {
+    completeBaselinePath: string;
+    completeDiffPath: string;
+    completeLatestPath: string;
+  }
 }
 
 export interface LastError {

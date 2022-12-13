@@ -46,19 +46,20 @@ const createDataObject = (name: string, status: Status, files: IFileStats[]): IF
   });
 
   data['fileIndex'] = `${status}-${0}`;
-  data['testIndex'] = failedTest!.key;
+  data['testIndex'] = failedTest ? failedTest.key : `${status}-${0}` ;
 
   return data;
 };
 
 export const findFailedTestDetails = () => {
   const { environments } = useGlobalContext();
+  const vrt = true;
   const {
     name,
     data: {
       files: { pass, fail, skip }
     }
-  } = findMaximumFailedEnv(environments);
+  } = vrt ? findVrtData(environments) : findMaximumFailedEnv(environments);
 
   if (fail.length > 0) {
     return createDataObject(name, 'fail', fail);
@@ -66,4 +67,12 @@ export const findFailedTestDetails = () => {
     return createDataObject(name, 'skip', skip);
   }
   return createDataObject(name, 'pass', pass);
+};
+
+const findVrtData = (environments: Record<string, any>): FailedTest => {
+  const failedTest = {} as FailedTest;
+  const name = Object.keys(environments)[0];
+  failedTest.name = name;
+  failedTest.data = environments[name];
+  return failedTest;
 };

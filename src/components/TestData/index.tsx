@@ -39,7 +39,7 @@ const TestData: React.FC = () => {
 
   return (
     <Wrapper>
-      <TestStatusBar />
+      {/* <TestStatusBar /> */}
       <TestDetailsWrapper>
         <Left>
           <Search

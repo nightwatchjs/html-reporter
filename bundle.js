@@ -4,7 +4,12 @@ import * as url from 'url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const sampleReportPath = join(__dirname, 'sample', 'report.json')
+let sampleReportPath = join(__dirname, 'sample', 'report.json')
+
+const vrt = true;
+if (vrt) {
+  sampleReportPath = join(__dirname, 'sample', 'vrtReport.json')
+}
 
 /**
  * @returns {import('vite').Plugin}
