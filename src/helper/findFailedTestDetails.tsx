@@ -1,6 +1,6 @@
 import { useGlobalContext } from '../hooks/GlobalContext';
 import { IEnvironmentData, IFileStats, Status } from '../transform';
-import { VRT } from '../constants';
+import { isVRT } from '../constants';
 
 type FailedTest = {
   name: string;
@@ -59,7 +59,7 @@ export const findFailedTestDetails = () => {
     data: {
       files: { pass, fail, skip }
     }
-  } = VRT ? findVrtData(environments) : findMaximumFailedEnv(environments);
+  } = isVRT() ? findVrtData(environments) : findMaximumFailedEnv(environments);
 
   if (fail.length > 0) {
     return createDataObject(name, 'fail', fail);

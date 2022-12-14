@@ -10,7 +10,7 @@ import { Text } from '../Text';
 import { EnvironmentAndSpecName, Metadata, TestBlockDetails, Wrapper } from './style';
 import { getMetadata } from './utils';
 import TestMetadataVrt from '../TestMetadataVrt';
-import { VRT } from '../../constants';
+import { isVRT } from '../../constants';
 
 const returnEnvironmentMetadata = (meta: any) => {
   {
@@ -74,10 +74,10 @@ const SpecMetaData: React.FC = () => {
             {`Spec: ${meta?.filename}`}
           </Text>
         </EnvironmentAndSpecName>
-        {VRT ? returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta)}
+        {isVRT() ? returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta)}
       </Metadata>
       <TestBlockName status={status}>{testName}</TestBlockName>
-      {!VRT ? returnTestBlockDetails(meta) : ''}
+      {!isVRT() ? returnTestBlockDetails(meta) : ''}
     </Wrapper>
   );
 };

@@ -3,10 +3,10 @@ import TestStepsView from '../TestStepsView';
 import Header from './Header';
 import { TestBody, Wrapper } from './style';
 import TestDetailsVrt from '../TestDetailsVrt';
-import { VRT } from '../../constants';
+import { isVRT } from '../../constants';
 
 const vrtReport = () => {
-  if (VRT) {
+  if (isVRT()) {
     return <TestDetailsVrt />;
   } else {
     return <TestStepsView />;

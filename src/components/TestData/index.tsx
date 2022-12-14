@@ -9,10 +9,10 @@ import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useReportContext } from '../../hooks/ReportContext';
 import { getAllExpandedFileIds, getFailedTestsId } from './utils';
 import { Text } from '../Text';
-import { VRT } from '../../constants';
+import { isVRT } from '../../constants';
 
 const vrtReport = () => {
-  if (!VRT) {
+  if (!isVRT()) {
     return <TestStatusBar />;
   }
 };

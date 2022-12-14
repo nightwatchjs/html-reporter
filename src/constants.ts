@@ -94,5 +94,8 @@ export const PLATFORM_NAME: Record<string, string> = {
   windows: 'windows'
 };
 
-// TODO: Replace with ENV Varaible
-export const VRT = true;
+// Checking for vrt reporter
+const PRODUCT = import.meta.env.VITE_PRODUCT;
+
+export const isVRT = () => PRODUCT === 'VRT';
+export const isHtml = () => PRODUCT === 'HTML';

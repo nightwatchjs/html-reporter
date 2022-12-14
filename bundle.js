@@ -4,13 +4,13 @@ import * as url from 'url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-let sampleReportPath = join(__dirname, 'sample', 'report.json')
+const htmlReportPath = join(__dirname, 'sample', 'report.json');
+const vrtReportPath = join(__dirname, 'sample', 'vrtReport.json');
 
-// Will be replaced 
-const vrt = true;
-if (vrt) {
-  sampleReportPath = join(__dirname, 'sample', 'vrtReport.json')
-}
+// eslint-disable-next-line no-undef
+const isVRT = () => process.env.VITE_PRODUCT === 'VRT';
+console.log(isVRT())
+const sampleReportPath = isVRT() ?  vrtReportPath : htmlReportPath; 
 
 /**
  * @returns {import('vite').Plugin}

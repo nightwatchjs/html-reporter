@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build && tsc -p tsconfig.node.cjs.json",
+    "dev:html": "VITE_PRODUCT=HTML vite",
+    "dev:vrt": "VITE_PRODUCT=VRT vite",
+    "build:html": "tsc && VITE_PRODUCT=HTML vite build && tsc -p tsconfig.node.cjs.json",
+    "build:vrt": "tsc && VITE_PRODUCT=VRT vite build && tsc -p tsconfig.node.cjs.json",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",

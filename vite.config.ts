@@ -23,5 +23,8 @@ export default defineConfig({
     viteSingleFile(),
     // Plugin to bundle report.json during dev run
     bundle()
-  ]
+  ],
+  build: {
+    outDir: process.env.VITE_PRODUCT
+  },
 });

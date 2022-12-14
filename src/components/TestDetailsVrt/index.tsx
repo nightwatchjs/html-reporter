@@ -7,7 +7,7 @@ import { IVrtData } from '../../transform';
 import { getVrtData } from './utils';
 import { TabsList, TabsRoot, TabsTrigger } from '../TestStepsView/style';
 import * as Tabs from '@radix-ui/react-tabs';
-import { VRT } from '../../constants';
+import { isVRT } from '../../constants';
 
 const TestDetailsVrt: React.FC = () => {
   const { environmentName, fileId, testId } = useReportContext();
@@ -16,7 +16,7 @@ const TestDetailsVrt: React.FC = () => {
   return (
     <Wrapper>
       <Details>
-        <TabsRoot defaultValue="tab1" vrt={VRT}>
+        <TabsRoot defaultValue="tab1" vrt={isVRT()}>
           <TabsList aria-label="Manage your Tests">
             <TabsTrigger value="tab1">Baseline and Diff</TabsTrigger>
             <TabsTrigger value="tab2">Baseline and Latest</TabsTrigger>

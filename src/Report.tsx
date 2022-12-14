@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Summary from './components/Summary';
 import TestData from './components/TestData';
 import { ReportContextProvider } from './contexts/ReportContext';
-import { VRT } from './constants';
+import { isVRT } from './constants';
 
 type WrapperProps = {
   vrt?: boolean;
@@ -14,9 +14,9 @@ type WrapperProps = {
 
 const vrtReport = () => {
   // Will be replaced
-  if (VRT) {
+  if (isVRT()) {
     return (
-      <Wrapper vrt={VRT}>
+      <Wrapper vrt = { isVRT() }>
         <ApproveAll />
         <TestData />
       </Wrapper>
@@ -35,7 +35,7 @@ const Report: React.FC = () => {
     <Fragment>
       <ReportContextProvider>
         <Header />
-        {vrtReport()}
+        { vrtReport() }
         <Footer />
       </ReportContextProvider>
     </Fragment>
