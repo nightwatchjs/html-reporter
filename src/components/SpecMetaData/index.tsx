@@ -10,12 +10,10 @@ import { Text } from '../Text';
 import { EnvironmentAndSpecName, Metadata, TestBlockDetails, Wrapper } from './style';
 import { getMetadata } from './utils';
 import TestMetadataVrt from '../TestMetadataVrt';
-import { isVRT } from '../../constants';
+import { isVRT, isHtml } from '../../constants';
 
 const returnEnvironmentMetadata = (meta: any) => {
-  {
-    /* FIXME: remove type casting as any */
-  }
+  // FIXME: remove type casting as any
   return (
     <EnvironmentMetadata
       meta={{
@@ -77,7 +75,7 @@ const SpecMetaData: React.FC = () => {
         {isVRT() ? returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta)}
       </Metadata>
       <TestBlockName status={status}>{testName}</TestBlockName>
-      {!isVRT() ? returnTestBlockDetails(meta) : ''}
+      {isHtml() && returnTestBlockDetails(meta)}
     </Wrapper>
   );
 };
