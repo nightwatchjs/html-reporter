@@ -1,15 +1,13 @@
 import React from 'react';
-import { Wrapper, Filters, TraceWrapper } from './style';
-import TraceIframe from '../TraceIframe';
+import { Wrapper, URL, TraceWrapper } from './style';
+const traceFilepath = '../../../sample/trace.html';
 
 const TraceData: React.FC = () => {
   return (
     <Wrapper>
-      <Filters>
-        https://www.ecosia.org/
-      </Filters>
+      <URL>https://www.ecosia.org/</URL>
       <TraceWrapper>
-        <TraceIframe />
+        <iframe title="static_html" src={traceFilepath} scrolling="yes" height="500px"></iframe>
       </TraceWrapper>
     </Wrapper>
   );

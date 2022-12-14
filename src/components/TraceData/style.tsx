@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   gap: var(--gap-12);
 `;
 
-export const Filters = styled.div `
+export const URL = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,7 +22,7 @@ export const Filters = styled.div `
   color: var(--color-grey-90);
 `;
 
-export const TraceWrapper = styled.div `
+export const TraceWrapper = styled.div`
   display: flex;
   height: auto;
   width: auto;

@@ -3,7 +3,8 @@ import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
 import { ITestSteps } from '../SpecMetaData/types';
-import { SearchWrapper, TestDiv, TestSteps, TestStepWrapper, Wrapper } from './style';
+import Trace from '../Trace';
+import { SearchWrapper, TestSteps, TestStepWrapper, Wrapper } from './style';
 import { filterTestSteps } from './utils';
 
 type TestDetailsViewProps = {
@@ -49,7 +50,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
             }
           })}
         </TestSteps>
-        <TestDiv>Lorem ipsum</TestDiv>
+        <Trace />
       </TestStepWrapper>
     </Wrapper>
   );

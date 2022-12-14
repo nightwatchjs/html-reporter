@@ -20,9 +20,3 @@ export const TestStepWrapper = styled.div`
 export const TestSteps = styled.div`
   flex: 1;
 `;
-
-export const TestDiv = styled.div`
-  background: hotpink;
-  flex: 1;
-  margin-left: 10px;
-`;
