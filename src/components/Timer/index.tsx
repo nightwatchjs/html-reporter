@@ -28,7 +28,8 @@ const Timer: React.FC<Props> = ({ time: { hours, minutes, seconds }, color, font
       <Time
         dateTime={`PT${hours ?? 0}H${minutes}M${seconds ?? 0}S`}
         color={color}
-        fontSize={fontSize}>
+        fontSize={fontSize}
+      >
         {getTime(hours, minutes, seconds)}
       </Time>
     </Wrapper>

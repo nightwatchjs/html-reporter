@@ -18,7 +18,8 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds,
           <AccordionTrigger
             failed={failedIds.includes(file.key)}
             value={file.key}
-            expandedIds={expandedIds}>
+            expandedIds={expandedIds}
+          >
             {file.fileName}
           </AccordionTrigger>
           <AccordionContent>
@@ -31,7 +32,8 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds,
                   fileKey={file.key}
                   testKey={test.key}
                   setTestId={setTestId}
-                  setFileId={setFileId}>
+                  setFileId={setFileId}
+                >
                   {test.testName}
                 </TestBlock>
               );
