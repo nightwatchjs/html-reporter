@@ -1,4 +1,4 @@
-import {  readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join } from 'path';
 import * as url from 'url';
 
@@ -20,8 +20,8 @@ export function bundle() {
     apply: 'serve',
     transformIndexHtml: {
       transform(html, _ctx) {
-        const reportData = readFileSync(sampleReportPath,{ encoding: 'utf8' })
-        return  html + `<script>window.nightwatchReport = ${reportData}</script>`
+        const reportData = readFileSync(sampleReportPath, { encoding: 'utf8' });
+        return html + `<script>window.nightwatchReport = ${reportData}</script>`;
       }
     }
   };

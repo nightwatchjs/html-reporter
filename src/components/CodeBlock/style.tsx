@@ -11,6 +11,9 @@ export const Wrapper = styled.div`
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   background-color: var(--color-grey-20);
+  /* FIXME: Add it via dynamic for traceviewer */
+  max-width: 388px;
+  overflow: auto;
 `;
 
 export const Filename = styled.div`
@@ -28,13 +31,11 @@ export const CodeWrapper = styled.div`
   text-align: center;
   color: var(--color-grey-100);
   margin: var(--margin-12) var(--margin-8) var(--margin-20) var(--margin-8);
-  width: 100%;
 `;
 
 export const Pre = styled.pre`
   text-align: left;
   padding: 0 var(--padding-12);
-  overflow: scroll;
 
   & .token-line {
     line-height: 1.3em;

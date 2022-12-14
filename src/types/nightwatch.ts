@@ -132,7 +132,7 @@ export interface Commands {
 
 export interface BeautifiedStack {
   filename: string;
-  line_number: number;
+  error_line_number: number;
   codeSnippet: CodeSnippet[];
 }
 

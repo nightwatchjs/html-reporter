@@ -3,7 +3,8 @@ import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
 import { ITestSteps } from '../SpecMetaData/types';
-import { SearchWrapper, TestStepWrapper, Wrapper } from './style';
+import Trace from '../Trace';
+import { SearchWrapper, TestSteps, TestStepWrapper, Wrapper } from './style';
 import { filterTestSteps } from './utils';
 
 type TestDetailsViewProps = {
@@ -24,30 +25,33 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
         />
       </SearchWrapper>
       <TestStepWrapper>
-        {filteredTestsSteps.map((test, index) => {
-          if (test.status === 'pass') {
-            return (
-              <PassTestStep key={index} time={test.time}>
-                {test.name}
-              </PassTestStep>
-            );
-          }
-          if (test.status === 'fail') {
-            // FIXME: Replace NightwatchAssertError to dynamic value
-            return (
-              <ErrorTestStep
-                key={index}
-                time={test.time}
-                errorName={'NightwatchAssertError'}
-                shortMessage={test.shortMessage ?? ['']}
-                stacktrace={test.stacktrace}
-                screenshot={test.screenshot}
-              >
-                {test.name}
-              </ErrorTestStep>
-            );
-          }
-        })}
+        <TestSteps>
+          {filteredTestsSteps.map((test, index) => {
+            if (test.status === 'pass') {
+              return (
+                <PassTestStep key={index} time={test.time}>
+                  {test.name}
+                </PassTestStep>
+              );
+            }
+            if (test.status === 'fail') {
+              // FIXME: Replace NightwatchAssertError to dynamic value
+              return (
+                <ErrorTestStep
+                  key={index}
+                  time={test.time}
+                  errorName={'NightwatchAssertError'}
+                  shortMessage={test.shortMessage ?? ['']}
+                  stacktrace={test.stacktrace}
+                  screenshot={test.screenshot}
+                >
+                  {test.name}
+                </ErrorTestStep>
+              );
+            }
+          })}
+        </TestSteps>
+        <Trace />
       </TestStepWrapper>
     </Wrapper>
   );

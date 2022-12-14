@@ -11,7 +11,7 @@ export type TestStepProps = {
   shortMessage: string[];
   stacktrace?: {
     filename: string;
-    line_number: number;
+    error_line_number: number;
     codeSnippet: CodeSnippet[];
   };
   screenshot?: string;
