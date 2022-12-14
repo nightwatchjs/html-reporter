@@ -28,7 +28,8 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
       ...(test.result?.message && { message: test.result.message }),
       ...(test.result?.beautifiedStack && { stacktrace: test.result.beautifiedStack }),
       ...(test.result?.message && { shortMessage: test.result.message.split('-') }),
-      ...(test?.screenshot && { screenshot: test.screenshot })
+      ...(test?.screenshot && { screenshot: test.screenshot }),
+      ...(test?.trace && { trace: test.trace })
     });
     return result;
   }, [] as ITestSteps[]);
@@ -36,6 +37,7 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
   resultObj['testSteps'] = testSteps ?? [];
   resultObj['httpLog'] = testObj?.results.httpLog ?? '';
   resultObj['seleniumLog'] = testObj?.results.seleniumLog ?? '';
+  resultObj['traceView'] = testSteps!.some((test) => test.trace);
 
   return resultObj;
 };

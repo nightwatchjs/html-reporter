@@ -16,10 +16,12 @@ type ErrorStepDetailsProps = {
       codeSnippet: CodeSnippet[];
     };
   };
+  tracePresent?: boolean;
 };
 
 const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
-  errorDetails: { errorName, shortMessage, stackTrace }
+  errorDetails: { errorName, shortMessage, stackTrace },
+  tracePresent
 }) => {
   return (
     <Wrapper>
@@ -37,11 +39,13 @@ const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
         <ErrorMessageText>{cleanAnsi(shortMessage[1])}</ErrorMessageText>
       </ErrorMessageWrapper>
       {stackTrace && (
+        // FIXME: fileName is wrong, should be filePath
         <CodeBlock
           filename={stackTrace.filename}
           line_number={stackTrace.error_line_number}
           codeSnippet={stackTrace.codeSnippet}
           file_path="/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js"
+          tracePresent={tracePresent}
         />
       )}
     </Wrapper>

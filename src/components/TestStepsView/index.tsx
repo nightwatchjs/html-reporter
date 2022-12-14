@@ -5,13 +5,13 @@ import { useReportContext } from '../../hooks/ReportContext';
 import LogView from '../LogView';
 import { getTestsSteps } from '../SpecMetaData/utils';
 import TestDetailsView from '../TestDetailsView';
-import { TabsList, TabsRoot, TabsTrigger } from './style';
+import { LogWrapper, SeleniumLog, TabsList, TabsRoot, TabsTrigger } from './style';
 
 const TestStepsView: React.FC = () => {
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
 
-  const { testSteps, httpLog, seleniumLog } = getTestsSteps(
+  const { testSteps, httpLog, seleniumLog, traceView } = getTestsSteps(
     environments[environmentName],
     fileId,
     testId
@@ -25,13 +25,15 @@ const TestStepsView: React.FC = () => {
         <TabsTrigger value="tab3">Selenium logs</TabsTrigger>
       </TabsList>
       <Tabs.Content className="TabsContent" value="tab1">
-        <TestDetailsView testStepsData={testSteps} />
+        <TestDetailsView testStepsData={testSteps} tracePresent={traceView} />
       </Tabs.Content>
       <Tabs.Content className="TabsContent" value="tab2">
         <LogView log={httpLog} />
       </Tabs.Content>
       <Tabs.Content className="TabsContent" value="tab3">
-        <LogView log={seleniumLog} />
+        <LogWrapper>
+          <SeleniumLog src={seleniumLog} frameBorder="0" />
+        </LogWrapper>
       </Tabs.Content>
     </TabsRoot>
   );

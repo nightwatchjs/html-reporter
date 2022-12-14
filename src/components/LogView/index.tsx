@@ -2,7 +2,7 @@ import React from 'react';
 import { Log, Wrapper } from './style';
 
 type LogViewProps = {
-  log: string;
+  log?: string;
 };
 
 const LogView: React.FC<LogViewProps> = ({ log }) => {

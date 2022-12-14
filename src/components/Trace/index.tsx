@@ -1,24 +1,25 @@
-import * as Tabs from '@radix-ui/react-tabs';
 import React from 'react';
-import { Wrapper } from './style';
-// FIXME: Common out styles
-import { TabsList, TabsRoot, TabsTrigger } from '../TestStepsView/style';
-import TraceData from '../TraceData';
-const Trace: React.FC = () => {
+import { TraceWrapper, Wrapper, URL, IFrame, ImageWrapper } from './style';
+import NoResult from '../../icons/NoResult';
+
+type TraceProps = {
+  url?: string;
+  src?: string;
+};
+
+const Trace: React.FC<TraceProps> = ({ url, src }) => {
   return (
     <Wrapper>
-      <TabsRoot defaultValue="tab1">
-        <TabsList aria-label="Manage your Tests">
-          <TabsTrigger value="tab1">Before</TabsTrigger>
-          <TabsTrigger value="tab2">After</TabsTrigger>
-        </TabsList>
-        <Tabs.Content value="tab1">
-          <TraceData />
-        </Tabs.Content>
-        <Tabs.Content value="tab2">
-          <TraceData />
-        </Tabs.Content>
-      </TabsRoot>
+      <URL>{url}</URL>
+      <TraceWrapper>
+        {src ? (
+          <IFrame title="Trace Viewer" src={src} scrolling="yes" height="700px" />
+        ) : (
+          <ImageWrapper>
+            <NoResult />
+          </ImageWrapper>
+        )}
+      </TraceWrapper>
     </Wrapper>
   );
 };

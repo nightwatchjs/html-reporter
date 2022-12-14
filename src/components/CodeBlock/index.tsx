@@ -12,19 +12,25 @@ type CodeBlockProps = {
   line_number: number;
   codeSnippet: CodeSnippet[];
   file_path: string;
+  tracePresent?: boolean;
 };
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippet, file_path }) => {
+const CodeBlock: React.FC<CodeBlockProps> = ({
+  filename,
+  line_number,
+  codeSnippet,
+  file_path,
+  tracePresent
+}) => {
   const { code, line: lineNumbers } = destructCodeBlock(codeSnippet);
 
   return (
-    <Wrapper>
+    <Wrapper shrink={tracePresent}>
       <Filename>
         <Segment />
         <Tooltip content="Open in IDE">
           <Link
-            href={`vscode://file/${file_path}:${line_number}:1`}
-          >{`${filename} : ${line_number}`}</Link>
+            href={`vscode://file/${file_path}:${line_number}:1`}>{`${filename} : ${line_number}`}</Link>
         </Tooltip>
       </Filename>
       <CodeWrapper>
@@ -35,8 +41,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippe
                 <Line
                   highlight={lineNumbers[i] === line_number}
                   key={i}
-                  {...getLineProps({ line, key: i })}
-                >
+                  {...getLineProps({ line, key: i })}>
                   <LineNo>{lineNumbers[i]}</LineNo>
                   <LineContent>
                     {line.map((token, key) => (

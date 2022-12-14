@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
@@ -9,12 +9,23 @@ import { filterTestSteps } from './utils';
 
 type TestDetailsViewProps = {
   testStepsData: ITestSteps[];
+  tracePresent: boolean;
 };
 
-const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
+const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, tracePresent }) => {
   const [query, setQuery] = useState<string>('');
+  const [trace, setTrace] = useState<{ url?: string; snapshotPath?: string } | undefined>();
 
   const filteredTestsSteps = filterTestSteps(testStepsData, query);
+
+  useEffect(() => {
+    const firstTestWithTrace = filteredTestsSteps.find((test) => test.trace);
+    const traceObject = firstTestWithTrace?.trace;
+    if (traceObject) {
+      const { traceSnapshot, traceUrl } = traceObject;
+      setTrace({ url: traceUrl, snapshotPath: traceSnapshot });
+    }
+  }, [filterTestSteps]);
 
   return (
     <Wrapper>
@@ -29,7 +40,11 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
           {filteredTestsSteps.map((test, index) => {
             if (test.status === 'pass') {
               return (
-                <PassTestStep key={index} time={test.time}>
+                <PassTestStep
+                  key={index}
+                  time={test.time}
+                  traceData={test.trace ?? {}}
+                  setTrace={setTrace}>
                   {test.name}
                 </PassTestStep>
               );
@@ -44,14 +59,14 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
                   shortMessage={test.shortMessage ?? ['']}
                   stacktrace={test.stacktrace}
                   screenshot={test.screenshot}
-                >
+                  tracePresent={tracePresent}>
                   {test.name}
                 </ErrorTestStep>
               );
             }
           })}
         </TestSteps>
-        <Trace />
+        {tracePresent && <Trace url={trace?.url} src={trace?.snapshotPath} />}
       </TestStepWrapper>
     </Wrapper>
   );

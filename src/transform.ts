@@ -174,10 +174,8 @@ const getTestsStats = (
     // Add Results
     testData['results'] = {} as ITestStats['results'];
     testData['results']['steps'] = singleTestReport.commands;
-    // TODO: Verify httpOutput is string
     testData['results']['httpLog'] = fileReport.rawHttpOutput.join(' ');
-    // TODO: Replace '' to fileReport.seleniumLog
-    testData['results']['seleniumLog'] = '';
+    testData['results']['seleniumLog'] = fileReport.seleniumLog;
     testData['results']['steps'] = singleTestReport.commands;
 
     // Add Status

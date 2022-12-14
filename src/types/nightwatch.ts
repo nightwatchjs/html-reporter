@@ -71,6 +71,7 @@ export interface TestFile {
   errors: number;
   httpOutput: string[][];
   rawHttpOutput: string[][];
+  seleniumLog: string;
   globalErrorRegister: string[];
 }
 
@@ -122,6 +123,12 @@ export interface Commands {
   status: string;
   screenshot: string | undefined;
   result: CommandsResult;
+  trace: Trace;
+}
+
+export interface Trace {
+  traceUrl: string;
+  traceSnapshot: string;
 }
 
 export interface BeautifiedStack {

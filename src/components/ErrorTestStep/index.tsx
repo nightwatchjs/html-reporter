@@ -15,6 +15,7 @@ export type TestStepProps = {
     codeSnippet: CodeSnippet[];
   };
   screenshot?: string;
+  tracePresent?: boolean;
 };
 
 const ErrorTestStep: React.FC<TestStepProps> = ({
@@ -23,7 +24,8 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
   errorName,
   shortMessage,
   screenshot,
-  stacktrace
+  stacktrace,
+  tracePresent
 }) => {
   return (
     <Wrapper>
@@ -38,6 +40,7 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
           shortMessage,
           stackTrace: stacktrace
         }}
+        tracePresent={tracePresent}
       />
       {screenshot && <Screenshot src={screenshot} alt={shortMessage.join('')} />}
     </Wrapper>
