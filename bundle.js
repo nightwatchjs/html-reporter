@@ -9,7 +9,6 @@ const vrtReportPath = join(__dirname, 'sample', 'vrtReport.json');
 
 // eslint-disable-next-line no-undef
 const isVRT = () => process.env.VITE_PRODUCT === 'VRT';
-console.log(isVRT())
 const sampleReportPath = isVRT() ?  vrtReportPath : htmlReportPath; 
 
 /**

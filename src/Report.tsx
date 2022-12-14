@@ -12,30 +12,15 @@ type WrapperProps = {
   vrt?: boolean;
 };
 
-const vrtReport = () => {
-  // Will be replaced
-  if (isVRT()) {
-    return (
-      <Wrapper vrt = { isVRT() }>
-        <ApproveAll />
-        <TestData />
-      </Wrapper>
-    );
-  } else {
-    return (
-      <Wrapper>
-        <Summary />
-        <TestData />
-      </Wrapper>
-    );
-  }
-};
 const Report: React.FC = () => {
   return (
     <Fragment>
       <ReportContextProvider>
         <Header />
-        { vrtReport() }
+        <Wrapper vrt = {isVRT()}>
+          {isVRT() ? <ApproveAll /> : <Summary />}
+          <TestData />
+        </Wrapper>
         <Footer />
       </ReportContextProvider>
     </Fragment>

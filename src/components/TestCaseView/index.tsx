@@ -5,19 +5,13 @@ import { TestBody, Wrapper } from './style';
 import TestDetailsVrt from '../TestDetailsVrt';
 import { isVRT } from '../../constants';
 
-const vrtReport = () => {
-  if (isVRT()) {
-    return <TestDetailsVrt />;
-  } else {
-    return <TestStepsView />;
-  }
-};
-
 const TestDetails: React.FC = () => {
   return (
     <Wrapper>
       <Header />
-      <TestBody>{vrtReport()}</TestBody>
+      <TestBody>
+        {isVRT() ? <TestDetailsVrt /> : <TestStepsView />}
+      </TestBody>
     </Wrapper>
   );
 };
