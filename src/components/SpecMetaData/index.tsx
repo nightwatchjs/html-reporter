@@ -10,39 +10,47 @@ import { Text } from '../Text';
 import { EnvironmentAndSpecName, Metadata, TestBlockDetails, Wrapper } from './style';
 import { getMetadata } from './utils';
 import TestMetadataVrt from '../TestMetadataVrt';
-import { VRT } from '../../constants'
+import { VRT } from '../../constants';
 
 const returnEnvironmentMetadata = (meta: any) => {
-  {/* FIXME: remove type casting as any */}
-  return (<EnvironmentMetadata
-    meta={{
-      device: meta?.device as any,
-      browserName: meta?.browserName as any,
-      browserVersion: meta?.browserVersion as any,
-      operatingSystemName: meta?.platformName as any,
-      tags: [meta?.executionMode as any],
-      time: convertMsToTime(meta?.time).time
-    }}
-  />)
-}
+  {
+    /* FIXME: remove type casting as any */
+  }
+  return (
+    <EnvironmentMetadata
+      meta={{
+        device: meta?.device as any,
+        browserName: meta?.browserName as any,
+        browserVersion: meta?.browserVersion as any,
+        operatingSystemName: meta?.platformName as any,
+        tags: [meta?.executionMode as any],
+        time: convertMsToTime(meta?.time).time
+      }}
+    />
+  );
+};
 
 const returnTestBlockDetails = (meta: any) => {
-  return (<TestBlockDetails>
-    <FilePathView>{`${meta?.filepath}`}</FilePathView>
-    {/* <TagGroup>
+  return (
+    <TestBlockDetails>
+      <FilePathView>{`${meta?.filepath}`}</FilePathView>
+      {/* <TagGroup>
       <Tags>Tag Name</Tags>
     </TagGroup> */}
-  </TestBlockDetails>)
-}
+    </TestBlockDetails>
+  );
+};
 
 const returnTestMetadataVrt = (meta: any) => {
-  return (<TestMetadataVrt
-    meta={{
-      browserName: meta?.envName as any,
-      diff: meta?.diff as any
-    }}
-  />)
-}
+  return (
+    <TestMetadataVrt
+      meta={{
+        browserName: meta?.envName as any,
+        diff: meta?.diff as any
+      }}
+    />
+  );
+};
 const SpecMetaData: React.FC = () => {
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
@@ -66,10 +74,10 @@ const SpecMetaData: React.FC = () => {
             {`Spec: ${meta?.filename}`}
           </Text>
         </EnvironmentAndSpecName>
-        { VRT ?  returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta) }
+        {VRT ? returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta)}
       </Metadata>
       <TestBlockName status={status}>{testName}</TestBlockName>
-      { !VRT ?  returnTestBlockDetails(meta): '' }
+      {!VRT ? returnTestBlockDetails(meta) : ''}
     </Wrapper>
   );
 };

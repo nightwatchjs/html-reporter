@@ -6,30 +6,30 @@ import Header from './components/Header';
 import Summary from './components/Summary';
 import TestData from './components/TestData';
 import { ReportContextProvider } from './contexts/ReportContext';
-import { VRT } from './constants'
+import { VRT } from './constants';
 
 type WrapperProps = {
   vrt?: boolean;
 };
 
 const vrtReport = () => {
-  // Will be replaced 
+  // Will be replaced
   if (VRT) {
     return (
       <Wrapper vrt={VRT}>
         <ApproveAll />
         <TestData />
       </Wrapper>
-    )
+    );
   } else {
     return (
       <Wrapper>
         <Summary />
         <TestData />
       </Wrapper>
-    )
+    );
   }
-}
+};
 const Report: React.FC = () => {
   return (
     <Fragment>
@@ -50,7 +50,7 @@ const Wrapper = styled.section<WrapperProps>`
     !props.vrt &&
     css`
       gap: var(--gap-20);
-  `}
+    `}
   border-left: 1px solid var(--color-grey-50);
   border-right: 1px solid var(--color-grey-50);
 `;

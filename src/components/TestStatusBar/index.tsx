@@ -10,8 +10,10 @@ const TestStatusBar: React.FC = () => {
   const { environmentName } = useReportContext();
   const { environments } = useGlobalContext();
 
-  const { stats: {passed, failed, skipped, time} } = environments[environmentName];
-  const formattedTime = convertMsToTime(time).time; 
+  const {
+    stats: { passed, failed, skipped, time }
+  } = environments[environmentName];
+  const formattedTime = convertMsToTime(time).time;
 
   return (
     <Wrapper>

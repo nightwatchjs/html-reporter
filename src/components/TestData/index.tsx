@@ -9,13 +9,13 @@ import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useReportContext } from '../../hooks/ReportContext';
 import { getAllExpandedFileIds, getFailedTestsId } from './utils';
 import { Text } from '../Text';
-import { VRT } from '../../constants'
+import { VRT } from '../../constants';
 
 const vrtReport = () => {
   if (!VRT) {
-    return <TestStatusBar />
+    return <TestStatusBar />;
   }
-}
+};
 
 const TestData: React.FC = () => {
   const { environments } = useGlobalContext();
@@ -60,7 +60,8 @@ const TestData: React.FC = () => {
                 pressed
                   ? setExpanded(getAllExpandedFileIds(environments[environmentName]))
                   : setExpanded([''])
-              }>
+              }
+            >
               <Text color="grey-90" fontSize={12} lineHight={20}>
                 Expand all
               </Text>

@@ -7,19 +7,17 @@ import { VRT } from '../../constants';
 
 const vrtReport = () => {
   if (VRT) {
-      return <TestDetailsVrt />
+    return <TestDetailsVrt />;
   } else {
-    return <TestStepsView />
+    return <TestStepsView />;
   }
-}
+};
 
 const TestDetails: React.FC = () => {
   return (
     <Wrapper>
       <Header />
-      <TestBody>
-        {vrtReport()}
-      </TestBody>
+      <TestBody>{vrtReport()}</TestBody>
     </Wrapper>
   );
 };

@@ -6,5 +6,5 @@ export const getVrtData = (data: IEnvironmentData, fileID: string, testID: strin
 
   const testObj = data.files[fileType][fileLocation].tests.find((test) => test.key === testID);
 
-  return testObj ? testObj.vrt : {} as IVrtData;
+  return testObj ? testObj.vrt : ({} as IVrtData);
 };

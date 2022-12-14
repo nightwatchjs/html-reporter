@@ -8,7 +8,7 @@ export const Wrapper = styled.header`
   align-items: center;
   padding: var(--padding-8) var(--padding-20);
   background: var(--color-grey-10);
-  border-bottom: 1px solid #DDDDDD;
+  border-bottom: 1px solid #dddddd;
 `;
 
 export const Text = styled.div`

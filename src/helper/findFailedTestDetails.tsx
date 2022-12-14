@@ -1,6 +1,6 @@
 import { useGlobalContext } from '../hooks/GlobalContext';
 import { IEnvironmentData, IFileStats, Status } from '../transform';
-import { VRT } from '../constants'
+import { VRT } from '../constants';
 
 type FailedTest = {
   name: string;
@@ -47,7 +47,7 @@ const createDataObject = (name: string, status: Status, files: IFileStats[]): IF
   });
 
   data['fileIndex'] = `${status}-${0}`;
-  data['testIndex'] = failedTest ? failedTest.key : `${status}-${0}` ;
+  data['testIndex'] = failedTest ? failedTest.key : `${status}-${0}`;
 
   return data;
 };

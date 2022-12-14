@@ -41,7 +41,8 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
                 errorName={'NightwatchAssertError'}
                 shortMessage={test.shortMessage ?? ['']}
                 stacktrace={test.stacktrace}
-                screenshot={test.screenshot}>
+                screenshot={test.screenshot}
+              >
                 {test.name}
               </ErrorTestStep>
             );

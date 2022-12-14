@@ -95,7 +95,7 @@ export interface TestObject {
     completeBaselinePath: string;
     completeDiffPath: string;
     completeLatestPath: string;
-  },
+  };
   diff: string;
 }
 

@@ -1,5 +1,5 @@
 import { Commands, TestFile, Stats } from './types/nightwatch';
-import { VRT } from './constants'
+import { VRT } from './constants';
 export const transformNightwatchReport = () => {
   return {
     environments: getEnvironmentReport(),
@@ -9,7 +9,7 @@ export const transformNightwatchReport = () => {
 };
 
 const getSuiteStats = () => {
-  return window.nightwatchReport.stats || {} as Stats;
+  return window.nightwatchReport.stats || ({} as Stats);
 };
 
 const getReportMetadata = () => {
@@ -43,7 +43,7 @@ const getEnvironmentReport = () => {
   // TODO: Replace any with the types
   const envData: any = {};
   // use process.env
-  // Will be replaced 
+  // Will be replaced
   const report = window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {
@@ -54,13 +54,13 @@ const getEnvironmentReport = () => {
     const environmentDataFiles = environmentData.modules;
 
     envData[envName]['metadata'] = environmentData.metadata;
-    envData[envName]['stats'] = environmentData.stats || {} as Stats;
+    envData[envName]['stats'] = environmentData.stats || ({} as Stats);
 
     Object.keys(environmentDataFiles).forEach((fileName) => {
       const fileData = {} as IFileStats;
       const fileReport = environmentDataFiles[fileName];
       const metadata = envData[envName].metadata;
-      
+
       if (VRT) {
         fileReport.status = 'fail';
         fileReport.fileName = fileName;
@@ -99,7 +99,7 @@ const getEnvironmentReport = () => {
     });
   });
 
-  return VRT? envData: getReverseSortedArray(envData);
+  return VRT ? envData : getReverseSortedArray(envData);
 };
 
 export const getReverseSortedArray = (environments: Record<string, any>) => {
@@ -133,11 +133,11 @@ export interface ITestStats {
     diff: string;
   };
   stats: {
-    passed: number
-    failed: number,
-    skipped: number,
-    total: number,
-    time: number
+    passed: number;
+    failed: number;
+    skipped: number;
+    total: number;
+    time: number;
   };
   vrt: IVrtData;
 }
@@ -151,13 +151,13 @@ export interface IVrtData {
 const normalizeTestName = (testName: string): string => {
   switch (testName) {
     case '__before_hook':
-      return 'Before'
+      return 'Before';
     case '__after_hook':
-      return 'After'
+      return 'After';
     default:
-      return testName
+      return testName;
   }
-}
+};
 
 const getTestsStats = (
   fileName: string,
@@ -172,7 +172,6 @@ const getTestsStats = (
   const testReport = fileReport.completedSections;
 
   Object.keys(testReport).forEach((testName, index) => {
-
     if (testName == '__global_beforeEach_hook' || testName == '__global_afterEach_hook') return;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
