@@ -10,6 +10,7 @@ import { Text } from '../Text';
 import { EnvironmentAndSpecName, Metadata, TestBlockDetails, Wrapper } from './style';
 import { getMetadata } from './utils';
 import TestMetadataVrt from '../TestMetadataVrt';
+import { VRT } from '../../constants'
 
 const returnEnvironmentMetadata = (meta: any) => {
   {/* FIXME: remove type casting as any */}
@@ -43,8 +44,6 @@ const returnTestMetadataVrt = (meta: any) => {
   />)
 }
 const SpecMetaData: React.FC = () => {
-  // Will be replaced 
-const vrt = true;
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
 
@@ -67,10 +66,10 @@ const vrt = true;
             {`Spec: ${meta?.filename}`}
           </Text>
         </EnvironmentAndSpecName>
-        { vrt ?  returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta) }
+        { VRT ?  returnTestMetadataVrt(meta) : returnEnvironmentMetadata(meta) }
       </Metadata>
       <TestBlockName status={status}>{testName}</TestBlockName>
-      { !vrt ?  returnTestBlockDetails(meta): '' }
+      { !VRT ?  returnTestBlockDetails(meta): '' }
     </Wrapper>
   );
 };

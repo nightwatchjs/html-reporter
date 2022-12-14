@@ -1,3 +1,4 @@
+import { env } from 'process';
 export const COLORS = {
   primary: {
     '10': 'hsl(25, 35%, 93%)',
@@ -93,3 +94,6 @@ export const PLATFORM_NAME: Record<string, string> = {
   linux: 'linux',
   windows: 'windows'
 };
+
+export const VRT = env.NODE_ENV || false;
+// export const VRT =true;

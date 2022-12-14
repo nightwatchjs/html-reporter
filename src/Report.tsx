@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Summary from './components/Summary';
 import TestData from './components/TestData';
 import { ReportContextProvider } from './contexts/ReportContext';
+import { VRT } from './constants'
 
 type WrapperProps = {
   vrt?: boolean;
@@ -13,10 +14,9 @@ type WrapperProps = {
 
 const vrtReport = () => {
   // Will be replaced 
-const vrt = true;
-  if (vrt) {
+  if (VRT) {
     return (
-      <Wrapper vrt={vrt}>
+      <Wrapper vrt={VRT}>
         <ApproveAll />
         <TestData />
       </Wrapper>

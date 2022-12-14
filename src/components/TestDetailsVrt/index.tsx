@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Error, Wrapper, Details} from './style';
 import BaselineVrt from '../BaselineVrt'
 import { useGlobalContext } from '../../hooks/GlobalContext';
@@ -7,17 +7,16 @@ import { IVrtData } from '../../transform';
 import { getVrtData } from './utils';
 import { TabsList, TabsRoot, TabsTrigger } from '../TestStepsView/style';
 import * as Tabs from '@radix-ui/react-tabs';
+import { VRT } from '../../constants';
 
 const TestDetailsVrt: React.FC = () => {
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
   const vrtData: IVrtData = getVrtData(environments[environmentName], fileId, testId);
-  // Will be replaced 
-const vrt = true;
   return (
         <Wrapper>
             <Details>
-                    <TabsRoot defaultValue="tab1" vrt={vrt}>
+                    <TabsRoot defaultValue="tab1" vrt={VRT}>
                         <TabsList aria-label="Manage your Tests">
                             <TabsTrigger value="tab1">Baseline and Diff</TabsTrigger>
                             <TabsTrigger value="tab2">Baseline and Latest</TabsTrigger>

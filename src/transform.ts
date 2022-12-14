@@ -1,5 +1,5 @@
 import { Commands, TestFile, Stats } from './types/nightwatch';
-
+import { VRT } from './constants'
 export const transformNightwatchReport = () => {
   return {
     environments: getEnvironmentReport(),
@@ -44,7 +44,6 @@ const getEnvironmentReport = () => {
   const envData: any = {};
   // use process.env
   // Will be replaced 
-const vrt = true;
   const report = window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {
@@ -62,7 +61,7 @@ const vrt = true;
       const fileReport = environmentDataFiles[fileName];
       const metadata = envData[envName].metadata;
       
-      if (vrt) {
+      if (VRT) {
         fileReport.status = 'fail';
         fileReport.fileName = fileName;
       }
@@ -100,7 +99,7 @@ const vrt = true;
     });
   });
 
-  return vrt? envData: getReverseSortedArray(envData);
+  return VRT? envData: getReverseSortedArray(envData);
 };
 
 export const getReverseSortedArray = (environments: Record<string, any>) => {
@@ -179,9 +178,7 @@ const getTestsStats = (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
-    // Will be replaced 
-    const vrt = true;
-    if (vrt) {
+    if (VRT) {
       singleTestReport.status = 'fail';
     }
 

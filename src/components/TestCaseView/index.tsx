@@ -3,11 +3,10 @@ import TestStepsView from '../TestStepsView';
 import Header from './Header';
 import { TestBody, Wrapper } from './style';
 import TestDetailsVrt from '../TestDetailsVrt';
+import { VRT } from '../../constants';
 
 const vrtReport = () => {
-  // Will be replaced 
-const vrt = true;
-  if (vrt) {
+  if (VRT) {
       return <TestDetailsVrt />
   } else {
     return <TestStepsView />
@@ -15,8 +14,6 @@ const vrt = true;
 }
 
 const TestDetails: React.FC = () => {
-  // Will be replaced 
-const vrt = true;
   return (
     <Wrapper>
       <Header />
