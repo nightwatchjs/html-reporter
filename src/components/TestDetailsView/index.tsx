@@ -5,7 +5,7 @@ import Search from '../Search';
 import { ITestSteps } from '../SpecMetaData/types';
 import Trace from '../Trace';
 import { SearchWrapper, TestSteps, TestStepWrapper, Wrapper } from './style';
-import { filterTestSteps } from './utils';
+import { filterTestSteps, validTestArgs } from './utils';
 
 type TestDetailsViewProps = {
   testStepsData: ITestSteps[];
@@ -45,7 +45,8 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                   time={test.time}
                   traceData={test.trace ?? {}}
                   setTrace={setTrace}>
-                  {test.name}
+                  {/* FIXME: move it to utils */}
+                  {`${test.name}${validTestArgs(test.args) ? `('${test.args!.join('')}')` : ''}`}
                 </PassTestStep>
               );
             }
@@ -60,7 +61,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                   stacktrace={test.stacktrace}
                   screenshot={test.screenshot}
                   tracePresent={tracePresent}>
-                  {test.name}
+                  {`${test.name}${validTestArgs(test.args) ? `('${test.args!.join('')}')` : ''}`}
                 </ErrorTestStep>
               );
             }

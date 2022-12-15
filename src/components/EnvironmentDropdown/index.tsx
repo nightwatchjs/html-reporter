@@ -30,6 +30,7 @@ const EnvironmentDropdown: React.FC = () => {
   const defaultDropdownData = envDropdownData.find((data: any) => data.origName == environmentName);
 
   useMemo(() => {
+    // FIXME: Replace any with it's datatype
     envDropdownData.find((data: any) => {
       if (data.name == environmentName) {
         setEnvData(data);
@@ -45,6 +46,7 @@ const EnvironmentDropdown: React.FC = () => {
             name={envData.name || defaultDropdownData.name}
             meta={envData.meta || defaultDropdownData.meta}
             testResult={envData.testResult || defaultDropdownData.testResult}
+            isDropdownTrigger
           />
           {isDropDownOpen ? <ArrowDropUp /> : <ArrowDropDown />}
         </EnvironmentSelectorWrapper>

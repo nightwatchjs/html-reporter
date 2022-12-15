@@ -20,10 +20,9 @@ export const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTri
           <Text
             lineHight={20}
             fontSize={14}
-            color="--color-grey-100"
+            color="grey-100"
             fontWeight="--font-weight-bold"
-            transformText
-          >
+            transformText>
             {children}
           </Text>
         </AccordionHeaderContent>

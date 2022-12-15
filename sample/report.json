@@ -25,7 +25,7 @@
                         "showDiff": false,
                         "abortOnFailure": true,
                         "beautifiedStack": {
-                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                             "error_line_number": 21,
                             "codeSnippet": [
                                 {
@@ -179,7 +179,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -217,7 +217,7 @@
                                 "showDiff": false,
                                 "abortOnFailure": true,
                                 "beautifiedStack": {
-                                    "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                    "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                     "error_line_number": 21,
                                     "codeSnippet": [
                                         {
@@ -433,7 +433,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -1234,7 +1234,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -1312,7 +1312,7 @@
                         "showDiff": false,
                         "abortOnFailure": true,
                         "beautifiedStack": {
-                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                             "error_line_number": 21,
                             "codeSnippet": [
                                 {
@@ -1466,7 +1466,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -1504,7 +1504,7 @@
                                 "showDiff": false,
                                 "abortOnFailure": true,
                                 "beautifiedStack": {
-                                    "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                    "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                     "error_line_number": 21,
                                     "codeSnippet": [
                                         {
@@ -1694,7 +1694,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -2491,7 +2491,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {

@@ -24,6 +24,7 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
     result.push({
       name: test.name,
       time: test.elapsedTime,
+      args: test.args,
       status: test.status,
       ...(test.result?.message && { message: test.result.message }),
       ...(test.result?.beautifiedStack && { stacktrace: test.result.beautifiedStack }),

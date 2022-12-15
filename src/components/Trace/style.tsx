@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   flex: 1;
   margin-left: var(--margin-10);
   padding: var(--padding-12);
+  min-height: calc(850 / 16 * 1rem);
 `;
 
 export const URL = styled.div`
@@ -28,10 +29,20 @@ export const URL = styled.div`
 export const TraceWrapper = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
   overflow: scroll;
 `;
 
 export const IFrame = styled.iframe`
+  width: calc(1280 / 16 * 1rem);
+  height: calc(2200 / 16 * 1rem);
+  border: 0;
+  transform: scale(0.35);
+  transform-origin: 0 0;
+  position: absolute;
+  left: 0;
   flex: 1;
 `;
 

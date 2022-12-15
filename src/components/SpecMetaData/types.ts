@@ -9,6 +9,7 @@ export interface ITrace {
 export interface IPassedTestSteps {
   name: string;
   time: number;
+  args?: string[];
   status: string;
 }
 

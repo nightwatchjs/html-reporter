@@ -4,7 +4,7 @@ export const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   padding: var(--padding-12) var(--padding-20);
-  border: var(--border-1) solid var(--color-grey-50);
+  box-shadow: 0 0 0 1px var(--color-grey-50);
   border-radius: var(--border-radius-8);
   height: calc(158 / 16 * 1rem);
 `;

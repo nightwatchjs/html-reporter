@@ -132,7 +132,7 @@ export interface Trace {
 }
 
 export interface BeautifiedStack {
-  filename: string;
+  filePath: string;
   error_line_number: number;
   codeSnippet: CodeSnippet[];
 }

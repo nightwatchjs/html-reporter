@@ -19,9 +19,8 @@ const TestBlockName: React.FC<TestBlockNameProps> = ({ status, children }) => {
       <Text
         fontSize={20}
         lineHight={32}
-        color={status === 'fail' ? 'red-60' : '-grey-100'}
-        transformText
-      >
+        color={status === 'fail' ? 'red-60' : 'grey-100'}
+        transformText>
         {children}
       </Text>
     </Wrapper>

@@ -10,7 +10,7 @@ export type TestStepProps = {
   errorName: string;
   shortMessage: string[];
   stacktrace?: {
-    filename: string;
+    filePath: string;
     error_line_number: number;
     codeSnippet: CodeSnippet[];
   };
