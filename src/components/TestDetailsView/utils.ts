@@ -2,7 +2,8 @@ import { ITestSteps } from '../SpecMetaData/types';
 
 const filterArgs = (query: string, args?: string[]) => {
   return (
-    args && args.filter((arg) => arg !== null && arg.toLowerCase().includes(query.toLowerCase()))
+    args &&
+    args.filter((arg) => validTestArgs([arg]) && arg.toLowerCase().includes(query.toLowerCase()))
   );
 };
 
@@ -34,4 +35,11 @@ export const validTestArgs = (args: string[] | undefined): boolean => {
   }
 
   return true;
+};
+
+export const joinArgs = (args: string[]): string => {
+  if (args.length === 1) {
+    return args.join('');
+  }
+  return args.filter((arg) => arg !== null).join(', ');
 };
