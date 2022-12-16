@@ -4,7 +4,9 @@ import { ITestResult, ITestSteps } from './types';
 export const getMetadata = (data: IEnvironmentData, fileID: string, testID: string) => {
   const [fileType, fileLocation] = fileID.split('-') as [fileType: Status, fileLocation: number];
 
-  const testObj = data.files[fileType][fileLocation].tests.find((test) => test.key === testID);
+  const [, , , index] = testID.split('-');
+
+  const testObj = data.files[fileType][fileLocation].tests[Number(index)];
 
   return {
     testName: testObj?.testName,
@@ -16,7 +18,10 @@ export const getMetadata = (data: IEnvironmentData, fileID: string, testID: stri
 export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: string) => {
   const [fileType, fileLocation] = fileID.split('-') as [fileType: Status, fileLocation: number];
 
-  const testObj = data.files[fileType][fileLocation].tests.find((test) => test.key === testID);
+  // file_status-index-test-status-index, we only want test index
+  const [, , , index] = testID.split('-');
+
+  const testObj = data.files[fileType][fileLocation].tests[Number(index)];
 
   const resultObj = {} as ITestResult;
 
@@ -38,7 +43,7 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
   resultObj['testSteps'] = testSteps ?? [];
   resultObj['httpLog'] = testObj?.results.httpLog ?? '';
   resultObj['seleniumLog'] = testObj?.results.seleniumLog ?? '';
-  resultObj['traceView'] = testSteps!.some((test) => test.trace);
+  resultObj['traceView'] = testSteps.some((test) => test.trace);
 
   return resultObj;
 };
