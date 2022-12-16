@@ -24,11 +24,13 @@ const TestBlock: React.FC<TestBlockProps> = ({
   return (
     <Wrapper
       highlight={highlightBlock}
+      clickable={status !== 'skip'}
       onClick={() => {
-        setFileId(fileKey);
-        setTestId(testKey);
-      }}
-    >
+        if (status !== 'skip') {
+          setFileId(fileKey);
+          setTestId(testKey);
+        }
+      }}>
       <Left>
         {/* FIXME:  Remove nested terniary operator */}
         {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}
