@@ -2,8 +2,7 @@ import { ITestSteps } from '../SpecMetaData/types';
 
 const filterArgs = (query: string, args?: string[]) => {
   return (
-    args &&
-    args.filter((arg) => validTestArgs([arg]) && arg.toLowerCase().includes(query.toLowerCase()))
+    args && args.filter((arg) => arg !== null && (typeof arg == 'string') && arg.toLowerCase().includes(query.toLowerCase()))
   );
 };
 

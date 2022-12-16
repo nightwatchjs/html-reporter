@@ -1080,6 +1080,7 @@ const OperatingSystem: React.FC<OperatingSystemProps> = ({ name }) => {
       component = Linux();
       break;
     case 'mac os x':
+    case 'mac':
       component = MacOS();
       break;
   }
