@@ -30,7 +30,8 @@ const TestBlock: React.FC<TestBlockProps> = ({
           setFileId(fileKey);
           setTestId(testKey);
         }
-      }}>
+      }}
+    >
       <Left>
         {/* FIXME:  Remove nested terniary operator */}
         {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}

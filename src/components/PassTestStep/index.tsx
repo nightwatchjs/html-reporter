@@ -33,7 +33,8 @@ const PassTestStep: React.FC<TestStepProps> = ({
             ? { url: traceUrl }
             : undefined
         )
-      }>
+      }
+    >
       <PassedIcon />
       <Text>{children}</Text>
       <ElapsedTime>{time < 1000 ? `${time} ms` : `${Math.round(time / 1000)} sec`}</ElapsedTime>

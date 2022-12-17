@@ -89,7 +89,7 @@ export const COLORS = {
 export const HEADER_HEIGHT = 76;
 
 export const PLATFORM_NAME: Record<string, string> = {
-  'mac': 'mac os',
+  mac: 'mac os',
   'mac os x': 'mac os',
   linux: 'linux',
   windows: 'windows'
