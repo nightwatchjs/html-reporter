@@ -1,23 +1,21 @@
+import Fuse from 'fuse.js';
 import { ITestSteps } from '../SpecMetaData/types';
 
-const filterArgs = (query: string, args?: string[]) => {
-  return (
-    args && args.filter((arg) => arg !== null && (typeof arg == 'string') && arg.toLowerCase().includes(query.toLowerCase()))
-  );
-};
-
 export const filterTestSteps = (testStepsData: ITestSteps[], query: string) => {
-  return testStepsData.filter((test) => {
-    const filteredArgs = filterArgs(query, test.args);
+  const options = {
+    keys: ['name', 'args']
+  };
 
-    if (test.name.toLowerCase().includes(query.toLowerCase())) {
-      return test;
-    }
+  const fuse = new Fuse(testStepsData, options);
 
-    if (filteredArgs && filteredArgs.length >= 1) {
-      return test;
-    }
-  });
+  const result = fuse.search(query);
+
+  const filteredResult = result.reduce((result, test) => {
+    result.push(test.item);
+    return result;
+  }, [] as ITestSteps[]);
+
+  return query.length > 0 ? filteredResult : testStepsData;
 };
 
 export const validTestArgs = (args: string[] | undefined): boolean => {

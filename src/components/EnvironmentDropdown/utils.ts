@@ -1,35 +1,27 @@
+import Fuse from 'fuse.js';
 import { EnvironmentData } from './types';
 
 export const filterData = (data: EnvironmentData[], query: string): EnvironmentData[] => {
-  const filteredData = data.filter((value) => {
-    if (query === '') {
-      return data;
-    }
-    // Filter Browsers
-    if (value.meta.browserName.toLowerCase().includes(query.toLowerCase())) {
-      return data;
-    }
+  const options = {
+    keys: [
+      'name',
+      'meta.device',
+      'meta.browserName',
+      'meta.browserVersion',
+      'meta.operatingSystemName',
+      'meta.tags'
+    ]
+  };
 
-    // Filter Devices
-    if (value.meta.device.toLowerCase().includes(query.toLowerCase())) {
-      return data;
-    }
+  const fuse = new Fuse(data, options);
 
-    // Filter Operating System
-    if (value.meta.operatingSystemName.toLowerCase().includes(query.toLowerCase())) {
-      return data;
-    }
+  const result = fuse.search(query);
+  console.log(result);
 
-    // Filter Tags
-    if (value.meta.tags[0].toLowerCase().includes(query.toLowerCase())) {
-      return data;
-    }
+  const filteredResult = result.reduce((result, test) => {
+    result.push(test.item);
+    return result;
+  }, [] as EnvironmentData[]);
 
-    // Filter Environment Name
-    if (value.name.toLowerCase().includes(query.toLowerCase())) {
-      return data;
-    }
-  });
-
-  return filteredData;
+  return query.length > 0 ? filteredResult : data;
 };

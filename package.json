@@ -57,6 +57,7 @@
     }
   },
   "dependencies": {
-    "@radix-ui/react-toggle": "1.0.1"
+    "@radix-ui/react-toggle": "1.0.1",
+    "fuse.js": "^6.6.2"
   }
 }

@@ -1,42 +1,20 @@
-import { IFileStats, ITestStats } from '../../transform';
-
-const filterTests = (data: ITestStats[], query: string) => {
-  return data.filter((test) => {
-    if (test.testName.toLowerCase().includes(query.toLowerCase())) {
-      return data;
-    }
-  });
-};
+import Fuse from 'fuse.js';
+import { IFileStats } from '../../transform';
 
 export const filterData = (data: IFileStats[], query: string) => {
-  const filteredData = data.filter((value) => {
-    if (query === '') {
-      return data;
-    }
+  const options = {
+    keys: ['fileName', 'tests.testName']
+  };
 
-    if (value.fileName.toLowerCase().includes(query.toLowerCase())) {
-      return data;
-    }
+  const fuse = new Fuse(data, options);
 
-    if (filterTests(value.tests, query).length > 0) {
-      return data;
-    }
-  });
+  const result = fuse.search(query);
+  console.log('>>>>>>', result);
 
-  return filteredData;
+  const filteredResult = result.reduce((result, test) => {
+    result.push(test.item);
+    return result;
+  }, [] as IFileStats[]);
+
+  return query.length > 0 ? filteredResult : data;
 };
-
-// FIXME: Remove this block if not needed
-// export const getCountOfAllTests = (pass?: number, fail?: number, skip?: number): number => {
-//   let count = 0;
-//   if (pass !== undefined) {
-//     count += pass;
-//   }
-//   if (fail !== undefined) {
-//     count += fail;
-//   }
-//   if (skip !== undefined) {
-//     count += skip;
-//   }
-//   return count;
-// };
