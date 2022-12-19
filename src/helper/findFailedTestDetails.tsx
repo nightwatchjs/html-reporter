@@ -37,9 +37,7 @@ interface IFailedData {
 }
 
 const findFailedTests = (file: IFileStats) => {
-  const test = file.tests.find((test) => {
-    return test.status === file.status && test.key;
-  });
+  const test = file.tests.find((test) => test.status === file.status && test.key);
   // we are returning the test so it would never be undefined
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return test!.key;

@@ -19,19 +19,7 @@ export const filterTestSteps = (testStepsData: ITestSteps[], query: string) => {
 };
 
 export const validTestArgs = (args: string[] | undefined): boolean => {
-  if (args === undefined) {
-    return false;
-  }
-
-  if (args && args.length < 1) {
-    return false;
-  }
-
-  if (args && args[0] === null) {
-    return false;
-  }
-
-  return true;
+  return args !== undefined && args.length > 0 && args[0] !== null;
 };
 
 export const joinArgs = (args: string[]): string => {
