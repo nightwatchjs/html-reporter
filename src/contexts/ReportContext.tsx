@@ -1,5 +1,6 @@
 import React, { useState, createContext, useMemo } from 'react';
 import { findFailedTestDetails } from '../helper/findFailedTestDetails';
+import { useGlobalContext } from '../hooks/GlobalContext';
 
 const ReportContext = createContext<any>(null);
 
@@ -8,7 +9,8 @@ type ReportContextProps = {
 };
 
 const ReportContextProvider: React.FC<ReportContextProps> = ({ children }) => {
-  const { name, fileIndex, testIndex } = findFailedTestDetails();
+  const { environments } = useGlobalContext();
+  const { name, fileIndex, testIndex } = findFailedTestDetails(environments);
 
   const [environmentName, setEnvironmentName] = useState<string>(name);
   const [fileId, setFileId] = useState<string>(fileIndex);

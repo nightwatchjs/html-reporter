@@ -1,5 +1,4 @@
-import { useGlobalContext } from '../hooks/GlobalContext';
-import { IEnvironmentData, IFileStats, Status } from '../transform';
+import { Environments, IEnvironmentData, IFileStats, Status } from '../transform';
 
 type FailedTest = {
   name: string;
@@ -54,8 +53,7 @@ const createDataObject = (name: string, status: Status, files: IFileStats[]): IF
   return data;
 };
 
-export const findFailedTestDetails = () => {
-  const { environments } = useGlobalContext();
+export const findFailedTestDetails = (environments: Environments) => {
   const {
     name,
     data: {
@@ -63,10 +61,23 @@ export const findFailedTestDetails = () => {
     }
   } = findMaximumFailedEnv(environments);
 
-  if (fail && fail.length > 0) {
+  if (fail?.length > 0) {
     return createDataObject(name, 'fail', fail);
-  } else if (skip && skip.length > 0) {
+  } else if (skip?.length > 0) {
     return createDataObject(name, 'skip', skip);
   }
   return createDataObject(name, 'pass', pass);
+};
+
+export const findTestDetailsForEnv = (environments: Environments, envName: string) => {
+  const {
+    files: { pass, fail, skip }
+  } = environments[envName];
+
+  if (fail?.length > 0) {
+    return createDataObject(envName, 'fail', fail);
+  } else if (skip?.length > 0) {
+    return createDataObject(envName, 'skip', skip);
+  }
+  return createDataObject(envName, 'pass', pass);
 };
