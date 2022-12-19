@@ -112,7 +112,7 @@ export interface ITestStats {
   testName: string;
   results: {
     steps: Commands[];
-    httpLog: string;
+    httpLog: string[][];
     seleniumLog: string;
   };
   status: string;
@@ -174,7 +174,7 @@ const getTestsStats = (
     // Add Results
     testData.results = {} as ITestStats['results'];
     testData.results.steps = singleTestReport.commands;
-    testData.results.httpLog = fileReport.rawHttpOutput.join(' ');
+    testData.results.httpLog = fileReport.rawHttpOutput;
     testData.results.seleniumLog = fileReport.seleniumLog;
 
     // Add Status

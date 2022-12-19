@@ -24,7 +24,7 @@ export interface ITestSteps extends IPassedTestSteps, IFailedTestSteps, ITrace {
 
 export interface ITestResult {
   testSteps: ITestSteps[];
-  httpLog: string;
+  httpLog: string[][];
   seleniumLog: string;
   traceView: boolean;
 }
