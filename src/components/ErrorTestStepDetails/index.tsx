@@ -40,7 +40,6 @@ const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
         <ErrorMessageText>{cleanAnsi(shortMessage[1])}</ErrorMessageText>
       </ErrorMessageWrapper>
       {stackTrace && (
-        // FIXME: fileName is wrong, should be filePath
         <CodeBlock
           filename={getFileNameFromFilePath(stackTrace.filePath)}
           line_number={stackTrace.error_line_number}

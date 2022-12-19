@@ -9,7 +9,6 @@ export const filterData = (data: IFileStats[], query: string) => {
   const fuse = new Fuse(data, options);
 
   const result = fuse.search(query);
-  console.log('>>>>>>', result);
 
   const filteredResult = result.reduce((result, test) => {
     result.push(test.item);

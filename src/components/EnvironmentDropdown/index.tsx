@@ -25,7 +25,7 @@ const EnvironmentDropdown: React.FC = () => {
   const [query, setQuery] = useState<string>('');
   const [isDropDownOpen, setDropdownOpen] = useState(false);
   const filteredData = filterData(envDropdownData, query);
-  const [envData, setEnvData] = useState({} as EnvironmentData);
+  const [envData, setEnvData] = useState<EnvironmentData>({} as EnvironmentData);
 
   const defaultDropdownData = envDropdownData.find((data: any) => data.origName == environmentName);
 

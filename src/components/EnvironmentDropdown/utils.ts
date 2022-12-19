@@ -16,7 +16,6 @@ export const filterData = (data: EnvironmentData[], query: string): EnvironmentD
   const fuse = new Fuse(data, options);
 
   const result = fuse.search(query);
-  console.log(result);
 
   const filteredResult = result.reduce((result, test) => {
     result.push(test.item);

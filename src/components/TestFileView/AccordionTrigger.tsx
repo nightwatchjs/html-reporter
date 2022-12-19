@@ -22,12 +22,11 @@ export const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTri
             fontSize={14}
             color="grey-100"
             fontWeight="--font-weight-bold"
-            transformText
-          >
+            transformText>
             {children}
           </Text>
         </AccordionHeaderContent>
-        {expandedIds.includes(value) ? <RemoveIcon /> : <AddIcon />}
+        {expandedIds?.includes(value) ? <RemoveIcon /> : <AddIcon />}
       </StyledAccordionTrigger>
     </AccordionHeader>
   )

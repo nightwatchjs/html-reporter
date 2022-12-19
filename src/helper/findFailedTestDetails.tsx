@@ -36,17 +36,31 @@ interface IFailedData {
   testIndex: string;
 }
 
+const findFailedTests = (file: IFileStats) => {
+  const test = file.tests.find((test) => {
+    if (test.status === 'fail') {
+      return test.key;
+    }
+    if (test.status === 'skip') {
+      return test.key;
+    }
+    if (test.status === 'pass') {
+      return test.key;
+    }
+    return test.key;
+  });
+  // we are returning the test so it would never be undefined
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return test!.key;
+};
+
 const createDataObject = (name: string, status: Status, files: IFileStats[]): IFailedData => {
   const data = {
     name
   } as IFailedData;
 
-  const failedTest = files[0].tests.find((test) => {
-    return test.status === 'fail' && test.key;
-  });
-
   data['fileIndex'] = `${status}-${0}`;
-  data['testIndex'] = failedTest!.key;
+  data['testIndex'] = findFailedTests(files[0]);
 
   return data;
 };
@@ -60,9 +74,9 @@ export const findFailedTestDetails = () => {
     }
   } = findMaximumFailedEnv(environments);
 
-  if (fail.length > 0) {
+  if (fail && fail.length > 0) {
     return createDataObject(name, 'fail', fail);
-  } else if (skip.length > 0) {
+  } else if (skip && skip.length > 0) {
     return createDataObject(name, 'skip', skip);
   }
   return createDataObject(name, 'pass', pass);

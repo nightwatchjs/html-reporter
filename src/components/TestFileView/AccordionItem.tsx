@@ -16,10 +16,9 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds,
       {filterTestData.map((file) => (
         <AccordionItem key={file.key} value={file.key}>
           <AccordionTrigger
-            failed={failedIds.includes(file.key)}
+            failed={failedIds.includes(file.key) && file.key.toLowerCase().includes('fail')}
             value={file.key}
-            expandedIds={expandedIds}
-          >
+            expandedIds={expandedIds}>
             {file.fileName}
           </AccordionTrigger>
           <AccordionContent>
@@ -32,8 +31,7 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds,
                   fileKey={file.key}
                   testKey={test.key}
                   setTestId={setTestId}
-                  setFileId={setFileId}
-                >
+                  setFileId={setFileId}>
                   {test.testName}
                 </TestBlock>
               );

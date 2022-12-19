@@ -33,11 +33,13 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
       <ChipWithIcon icon={<DesktopWindowsOutlined />}>{device}</ChipWithIcon>
       <ChipWithIcon
         title={browserVersion}
-        icon={<Browser name={browserName} />}
-      >{`${browserName} ${majorBrowserVersion}`}</ChipWithIcon>
+        icon={
+          <Browser name={browserName} />
+        }>{`${browserName} ${majorBrowserVersion}`}</ChipWithIcon>
       <ChipWithIcon
-        icon={<OperatingSystem name={operatingSystemName} />}
-      >{`${PLATFORM_NAME[operatingSystemName]}`}</ChipWithIcon>
+        icon={
+          <OperatingSystem name={operatingSystemName} />
+        }>{`${PLATFORM_NAME[operatingSystemName]}`}</ChipWithIcon>
       {tags.map((label, index) => {
         return <Tags key={index}>{label}</Tags>;
       })}
