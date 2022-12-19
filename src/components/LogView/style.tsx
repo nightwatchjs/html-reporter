@@ -57,6 +57,7 @@ export const Request = styled.span`
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-16);
+  color: var(--color-green-80);
 `;
 
 export const Response = styled.span`
@@ -66,6 +67,7 @@ export const Response = styled.span`
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-16);
+  color: var(--color-orange-80);
 `;
 
 export const Time = styled.div`
