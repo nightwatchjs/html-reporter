@@ -19,11 +19,11 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
   const filteredTestsSteps = filterTestSteps(testStepsData, query);
 
   useEffect(() => {
-    const firstTestWithTrace = filteredTestsSteps.find((test) => test.trace);
-    const traceObject = firstTestWithTrace?.trace;
+    const firstTestWithTrace = filteredTestsSteps.find((test) => test.domSnapshot);
+    const traceObject = firstTestWithTrace?.domSnapshot;
     if (traceObject) {
-      const { traceSnapshot, traceUrl } = traceObject;
-      setTrace({ url: traceUrl, snapshotPath: traceSnapshot });
+      const { snapshotFilePath, snapshotUrl } = traceObject;
+      setTrace({ url: snapshotUrl, snapshotPath: snapshotFilePath });
     }
   }, [filterTestSteps]);
 
@@ -43,7 +43,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                 <PassTestStep
                   key={index}
                   time={test.time}
-                  traceData={test.trace ?? {}}
+                  traceData={test.domSnapshot ?? {}}
                   setTrace={setTrace}>
                   {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
                 </PassTestStep>

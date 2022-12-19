@@ -1,9 +1,9 @@
 import { BeautifiedStack } from './../../types/nightwatch';
 
 export interface ITrace {
-  trace: {
-    traceUrl: string;
-    traceSnapshot: string;
+  domSnapshot: {
+    snapshotUrl: string;
+    snapshotFilePath: string;
   };
 }
 export interface IPassedTestSteps {

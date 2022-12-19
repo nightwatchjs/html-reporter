@@ -123,12 +123,12 @@ export interface Commands {
   status: string;
   screenshot: string | undefined;
   result: CommandsResult;
-  trace: Trace;
+  domSnapshot: Trace;
 }
 
 export interface Trace {
-  traceUrl: string;
-  traceSnapshot: string;
+  snapshotUrl: string;
+  snapshotFilePath: string;
 }
 
 export interface BeautifiedStack {

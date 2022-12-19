@@ -13,7 +13,7 @@ const Trace: React.FC<TraceProps> = ({ url, src }) => {
       <URL>{url}</URL>
       <TraceWrapper>
         {src ? (
-          <IFrame title="Trace Viewer" src={src} scrolling="yes" height="700px" />
+          <IFrame title="Trace Viewer" src={src} scrolling="yes" height="700px" sandbox="" />
         ) : (
           <ImageWrapper>
             <NoResult />

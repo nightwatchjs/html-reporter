@@ -5,7 +5,7 @@ import { ElapsedTime, Wrapper, Text, PassedIcon } from './style';
 type TestStepProps = {
   time: number;
   children: React.ReactNode;
-  traceData: ITrace['trace'];
+  traceData: ITrace['domSnapshot'];
   setTrace: React.Dispatch<
     React.SetStateAction<
       | {
@@ -20,20 +20,20 @@ type TestStepProps = {
 const PassTestStep: React.FC<TestStepProps> = ({
   time,
   children,
-  traceData: { traceUrl, traceSnapshot },
+  traceData: { snapshotUrl, snapshotFilePath },
   setTrace
 }) => {
   return (
     <Wrapper
       onClick={() =>
         setTrace(
-          traceSnapshot
+          snapshotFilePath
             ? {
-                ...(traceUrl && { url: traceUrl }),
-                snapshotPath: traceSnapshot
+                ...(snapshotUrl && { url: snapshotUrl }),
+                snapshotPath: snapshotFilePath
               }
             : {
-                ...(traceUrl && { url: traceUrl })
+                ...(snapshotUrl && { url: snapshotUrl })
               }
         )
       }>

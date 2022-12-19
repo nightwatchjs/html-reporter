@@ -19,6 +19,7 @@ export const Text = styled.p`
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   color: var(--color-grey-100);
+  overflow-wrap: anywhere;
 `;
 
 export const ElapsedTime = styled.div`
