@@ -37,4 +37,5 @@ export const ElapsedTime = styled.div`
   text-align: right;
   color: var(--color-grey-80);
   margin-left: auto;
+  flex-shrink: 0;
 `;

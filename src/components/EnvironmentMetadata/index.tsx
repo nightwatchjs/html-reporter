@@ -30,12 +30,13 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
 
   return (
     <Wrapper>
-      <ChipWithIcon icon={<DesktopWindowsOutlined />}>{device}</ChipWithIcon>
+      <ChipWithIcon icon={<DesktopWindowsOutlined />} transformText>
+        {device}
+      </ChipWithIcon>
       <ChipWithIcon
         title={browserVersion}
-        icon={
-          <Browser name={browserName} />
-        }>{`${browserName} ${majorBrowserVersion}`}</ChipWithIcon>
+        icon={<Browser name={browserName} />}
+        transformText>{`${browserName} ${majorBrowserVersion}`}</ChipWithIcon>
       <ChipWithIcon
         icon={
           <OperatingSystem name={operatingSystemName} />

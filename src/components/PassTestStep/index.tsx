@@ -28,13 +28,13 @@ const PassTestStep: React.FC<TestStepProps> = ({
       onClick={() =>
         setTrace(
           traceSnapshot
-            ? { url: traceUrl, snapshotPath: traceSnapshot }
-            : traceUrl
-            ? { url: traceUrl }
+            ? {
+                ...(traceUrl && { url: traceUrl }),
+                snapshotPath: traceSnapshot
+              }
             : undefined
         )
-      }
-    >
+      }>
       <PassedIcon />
       <Text>{children}</Text>
       <ElapsedTime>{time < 1000 ? `${time} ms` : `${Math.round(time / 1000)} sec`}</ElapsedTime>

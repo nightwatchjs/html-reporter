@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from '../Text';
-import { FailedIcon, Left, PassedIcon, SkippedIcon, Wrapper } from './style';
+import { Left, Wrapper } from './style';
+import { statusIcon, TestStatus } from './utils';
 
 type TestBlockProps = {
   children: React.ReactNode;
@@ -30,12 +31,8 @@ const TestBlock: React.FC<TestBlockProps> = ({
           setFileId(fileKey);
           setTestId(testKey);
         }
-      }}
-    >
-      <Left>
-        {/* FIXME:  Remove nested terniary operator */}
-        {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}
-      </Left>
+      }}>
+      <Left>{statusIcon(status as TestStatus)}</Left>
       <Text fontSize={14} lineHight={20} color="grey-100" transformText>
         {children}
       </Text>
