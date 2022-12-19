@@ -16,7 +16,7 @@ export const URL = styled.div`
   flex-direction: row;
   align-items: center;
   padding: var(--padding-4) 0px var(--padding-4) var(--padding-12);
-  gap: 12px;
+  gap: var(--gap-12);
   background: var(--color-grey-30);
   width: 100%;
 

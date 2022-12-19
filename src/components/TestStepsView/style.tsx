@@ -45,7 +45,7 @@ export const LogWrapper = styled.div`
   display: flex;
   margin: var(--margin-12);
   /* FIXME: Height should be based on the content? */
-  height: 1444px;
+  height: var(--log-view-height);
 `;
 
 export const SeleniumLog = styled.iframe`

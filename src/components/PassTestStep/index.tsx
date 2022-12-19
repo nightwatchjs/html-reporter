@@ -32,7 +32,9 @@ const PassTestStep: React.FC<TestStepProps> = ({
                 ...(traceUrl && { url: traceUrl }),
                 snapshotPath: traceSnapshot
               }
-            : undefined
+            : {
+                ...(traceUrl && { url: traceUrl })
+              }
         )
       }>
       <PassedIcon />

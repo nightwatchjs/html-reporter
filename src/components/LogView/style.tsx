@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.article`
   margin: var(--margin-12);
+  max-height: var(--log-view-height);
+  overflow: auto;
 `;
 
 export const Log = styled.pre`

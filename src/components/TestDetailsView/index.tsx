@@ -44,8 +44,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                   key={index}
                   time={test.time}
                   traceData={test.trace ?? {}}
-                  setTrace={setTrace}
-                >
+                  setTrace={setTrace}>
                   {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
                 </PassTestStep>
               );
@@ -60,8 +59,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                   shortMessage={test.shortMessage ?? ['']}
                   stacktrace={test.stacktrace}
                   screenshot={test.screenshot}
-                  tracePresent={tracePresent}
-                >
+                  tracePresent={tracePresent}>
                   {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
                 </ErrorTestStep>
               );
