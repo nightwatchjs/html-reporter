@@ -1,5 +1,7 @@
 import Fuse from 'fuse.js';
-import { IFileStats } from '../../transform';
+import { createElement } from 'react';
+import { IFileStats, Status } from '../../transform';
+import { CancelIcon, CheckCircleIcon, RemoveCircleIcon } from './style';
 
 export const filterData = (data: IFileStats[], query: string) => {
   const options = {
@@ -16,4 +18,15 @@ export const filterData = (data: IFileStats[], query: string) => {
   }, [] as IFileStats[]);
 
   return query.length > 0 ? filteredResult : data;
+};
+
+export const statusIcon = (status: Status) => {
+  switch (status) {
+    case 'pass':
+      return createElement(CheckCircleIcon);
+    case 'fail':
+      return createElement(CancelIcon);
+    case 'skip':
+      return createElement(RemoveCircleIcon);
+  }
 };

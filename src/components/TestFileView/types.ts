@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { IFileStats } from '../../transform';
+import { IFileStats, Status } from '../../transform';
 
 export type TestFileViewProps = {
   query: string;
@@ -15,7 +15,6 @@ export type TestFileViewProps = {
 export type AccordionItemsProps = {
   query: string;
   data: IFileStats[];
-  failedIds: string[];
   expandedIds: string[];
 };
 
@@ -24,7 +23,7 @@ export interface AccordionProps {
 }
 
 export interface AccordionTriggerProps extends AccordionProps {
-  failed: boolean;
+  status: Status;
   value: string;
   expandedIds: string[];
 }

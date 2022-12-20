@@ -25,7 +25,11 @@ export const getAllExpandedFileIds = (data: IEnvironmentData): string[] => {
   const { files } = data;
   const result: string[] = [];
   Object.values(files).forEach((arr) => {
-    arr.forEach((test) => result.push(test.key));
+    arr.forEach((test) => {
+      if (test.status !== 'skip') {
+        result.push(test.key);
+      }
+    });
   });
   return result;
 };

@@ -13,7 +13,7 @@ const TestStatusBar: React.FC = () => {
   const {
     stats: { passed, failed, skipped, time }
   } = environments[environmentName];
-  const formattedTime = convertMsToTime(time).time;
+  const { time: formattedTime } = convertMsToTime(time);
 
   return (
     <Wrapper>

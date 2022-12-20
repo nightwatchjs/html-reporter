@@ -1,7 +1,8 @@
 import React from 'react';
+import { Status } from '../../transform';
 import { Text } from '../Text';
 import { Left, Wrapper } from './style';
-import { statusIcon, TestStatus } from './utils';
+import { statusIcon } from './utils';
 
 type TestBlockProps = {
   children: React.ReactNode;
@@ -32,7 +33,7 @@ const TestBlock: React.FC<TestBlockProps> = ({
           setTestId(testKey);
         }
       }}>
-      <Left>{statusIcon(status as TestStatus)}</Left>
+      <Left>{statusIcon(status as Status)}</Left>
       <Text fontSize={14} lineHight={20} color="grey-100" transformText>
         {children}
       </Text>

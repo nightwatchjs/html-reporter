@@ -50,23 +50,22 @@ export const ResponseBlock = styled.div`
   border-radius: var(--border-radius-4);
 `;
 
-export const Request = styled.span`
-  background-color: var(--color-green-20);
+const Text = styled.span`
   padding: var(--padding-4);
   border-radius: var(--border-radius-3);
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-16);
+  flex-shrink: 0;
+`;
+
+export const Request = styled(Text)`
+  background-color: var(--color-green-20);
   color: var(--color-green-80);
 `;
 
-export const Response = styled.span`
+export const Response = styled(Text)`
   background-color: var(--color-orange-20);
-  padding: var(--padding-4);
-  border-radius: var(--border-radius-3);
-  font-size: var(--font-size-12);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-16);
   color: var(--color-orange-80);
 `;
 
@@ -77,6 +76,7 @@ export const Time = styled.div`
   border-radius: var(--border-radius-3);
   padding: var(--padding-4);
   background-color: var(--color-grey-50);
+  flex-shrink: 0;
 `;
 
 export const RequestText = styled.div`
@@ -86,4 +86,5 @@ export const RequestText = styled.div`
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   align-items: center;
+  overflow-wrap: anywhere;
 `;

@@ -1,6 +1,10 @@
 import * as Accordion from '@radix-ui/react-accordion';
-import styled from 'styled-components';
-import { Add, Cancel, Remove, CheckCircle } from '../../icons/index';
+import styled, { css } from 'styled-components';
+import { Add, Cancel, Remove, CheckCircle, RemoveCircle } from '../../icons/index';
+
+type AccordionItemProps = {
+  skip: number;
+};
 
 export const AccordionRoot = styled(Accordion.Root)`
   background: var(--color-grey-20);
@@ -9,7 +13,7 @@ export const AccordionRoot = styled(Accordion.Root)`
   gap: var(--gap-4);
 `;
 
-export const AccordionItem = styled(Accordion.Item)`
+export const AccordionItem = styled(Accordion.Item)<AccordionItemProps>`
   display: flex;
   flex-direction: column;
   border: var(--border-1) solid var(--color-grey-50);
@@ -17,6 +21,11 @@ export const AccordionItem = styled(Accordion.Item)`
     position: relative;
     box-shadow: 0 0 0 2px var(--color-primary-50);
   }
+  ${({ skip }) =>
+    skip &&
+    css`
+      cursor: not-allowed;
+    `}
 `;
 
 export const AccordionHeader = styled(Accordion.Header)`
@@ -69,4 +78,9 @@ export const AddIcon = styled(Add)`
 export const CheckCircleIcon = styled(CheckCircle)`
   font-size: var(--font-size-16);
   color: var(--color-green-50);
+`;
+
+export const RemoveCircleIcon = styled(RemoveCircle)`
+  font-size: var(--font-size-16);
+  color: var(--color-orange-50);
 `;

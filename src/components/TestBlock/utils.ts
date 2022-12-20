@@ -1,9 +1,8 @@
 import { createElement } from 'react';
+import { Status } from '../../transform';
 import { FailedIcon, PassedIcon, SkippedIcon } from './style';
 
-export type TestStatus = 'pass' | 'fail' | 'skip';
-
-export const statusIcon = (status: TestStatus) => {
+export const statusIcon = (status: Status) => {
   switch (status) {
     case 'pass':
       return createElement(PassedIcon);

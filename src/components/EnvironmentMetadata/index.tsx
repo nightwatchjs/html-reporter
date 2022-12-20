@@ -30,18 +30,23 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
 
   return (
     <Wrapper>
-      <ChipWithIcon icon={<DesktopWindowsOutlined />} transformText>
-        {device}
-      </ChipWithIcon>
-      <ChipWithIcon
-        title={browserVersion}
-        icon={<Browser name={browserName} />}
-        transformText>{`${browserName} ${majorBrowserVersion}`}</ChipWithIcon>
-      <ChipWithIcon
-        icon={
-          <OperatingSystem name={operatingSystemName} />
-        }>{`${PLATFORM_NAME[operatingSystemName]}`}</ChipWithIcon>
-      {tags.map((label, index) => {
+      {device && (
+        <ChipWithIcon icon={<DesktopWindowsOutlined />} transformText>
+          {device}
+        </ChipWithIcon>
+      )}
+      {browserName && (
+        <ChipWithIcon
+          title={browserVersion}
+          icon={<Browser name={browserName} />}
+          transformText>{`${browserName} ${majorBrowserVersion ?? ''}`}</ChipWithIcon>
+      )}
+      {operatingSystemName && (
+        <ChipWithIcon icon={<OperatingSystem name={operatingSystemName} />}>{`${
+          PLATFORM_NAME[operatingSystemName] ?? ''
+        }`}</ChipWithIcon>
+      )}
+      {tags?.map((label, index) => {
         return <Tags key={index}>{label}</Tags>;
       })}
       <Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />
