@@ -25,7 +25,7 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
 
   const resultObj = {} as ITestResult;
 
-  const testSteps = testObj?.results.steps.reduce((result, test) => {
+  const testSteps = testObj?.results?.steps?.reduce((result, test) => {
     if (test.name !== 'saveScreenshot') {
       result.push({
         name: test.name,
