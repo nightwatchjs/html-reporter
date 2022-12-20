@@ -15,6 +15,7 @@ import {
   Wrapper
 } from './style';
 import { getRequestBlockData } from './utils';
+import { Virtuoso } from 'react-virtuoso';
 
 type LogViewProps = {
   log: string[][];
@@ -24,48 +25,52 @@ const LogView: React.FC<LogViewProps> = ({ log }) => {
   return (
     <Wrapper>
       <LogWrapper>
-        {log.map((logArr, index) => {
-          const [date, requestData, response] = logArr;
+        <Virtuoso
+          style={{ height: '100vh' }}
+          data={log}
+          totalCount={log?.length}
+          itemContent={(index, logArr) => {
+            const [date, requestData, response] = logArr;
+            const [method, text] = getRequestBlockData(requestData);
 
-          const [method, text] = getRequestBlockData(requestData);
-
-          return (
-            <Fragment key={index}>
-              <RequestBlock>
-                <Time>{String(new Date(date).toLocaleTimeString())}</Time>
-                <RequestText>
-                  {method.includes('Request') ? (
-                    <Request>{method}</Request>
-                  ) : (
-                    <Response>{method}</Response>
-                  )}
-                  {text}
-                </RequestText>
-              </RequestBlock>
-              <ResponseBlock>
-                <Highlight
-                  {...defaultProps}
-                  theme={theme}
-                  code={String(response.replaceAll('&#39;', "'"))}
-                  language="jsx">
-                  {({ className, tokens, getLineProps, getTokenProps }) => (
-                    <Pre className={className}>
-                      {tokens.map((line, i) => (
-                        <Line key={i} {...getLineProps({ line, key: i })}>
-                          <LineContent>
-                            {line.map((token, key) => (
-                              <span key={key} {...getTokenProps({ token, key })} />
-                            ))}
-                          </LineContent>
-                        </Line>
-                      ))}
-                    </Pre>
-                  )}
-                </Highlight>
-              </ResponseBlock>
-            </Fragment>
-          );
-        })}
+            return (
+              <Fragment key={index}>
+                <RequestBlock>
+                  <Time>{String(new Date(date).toLocaleTimeString())}</Time>
+                  <RequestText>
+                    {method.includes('Request') ? (
+                      <Request>{method}</Request>
+                    ) : (
+                      <Response>{method}</Response>
+                    )}
+                    {text}
+                  </RequestText>
+                </RequestBlock>
+                <ResponseBlock>
+                  <Highlight
+                    {...defaultProps}
+                    theme={theme}
+                    code={String(response.replaceAll('&#39;', "'"))}
+                    language="jsx">
+                    {({ className, tokens, getLineProps, getTokenProps }) => (
+                      <Pre className={className}>
+                        {tokens.map((line, i) => (
+                          <Line key={i} {...getLineProps({ line, key: i })}>
+                            <LineContent>
+                              {line.map((token, key) => (
+                                <span key={key} {...getTokenProps({ token, key })} />
+                              ))}
+                            </LineContent>
+                          </Line>
+                        ))}
+                      </Pre>
+                    )}
+                  </Highlight>
+                </ResponseBlock>
+              </Fragment>
+            );
+          }}
+        />
       </LogWrapper>
     </Wrapper>
   );
