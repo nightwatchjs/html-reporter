@@ -1,6 +1,6 @@
 {
   "name": "@nightwatch/html-reporter-template",
-  "private": true,
+  "description": "Nightwatch HTML reporter template",
   "version": "0.0.1",
   "type": "commonjs",
   "scripts": {
@@ -12,6 +12,22 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "clean": "rm -rf dist index.js index.d.ts *.tsbuildinfo *.tgz"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightwatchjs/html-reporter.git"
+  },
+  "author": "Vaibhav Singh <vaibhav.s@browserstack.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nightwatchjs/html-reporter/issues"
+  },
+  "homepage": "https://github.com/nightwatchjs/html-reporter#readme",
+  "keywords": [
+    "nightwatch",
+    "html-reporter",
+    "react",
+    "e2e"
+  ],
   "devDependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
