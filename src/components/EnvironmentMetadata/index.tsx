@@ -46,9 +46,10 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
           PLATFORM_NAME[operatingSystemName] ?? ''
         }`}</ChipWithIcon>
       )}
-      {tags?.map((label, index) => {
-        return <Tags key={index}>{label}</Tags>;
-      })}
+      {tags &&
+        tags?.map((label, index) => {
+          return label && <Tags key={index}>{label}</Tags>;
+        })}
       <Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />
     </Wrapper>
   );

@@ -1,5 +1,6 @@
 export const getPassedTestPercentage = (totalTests: number, passedTests: number): string => {
-  return ((passedTests / totalTests) * 100).toFixed();
+  const passedPercentage = (passedTests / totalTests) * 100;
+  return Number.isNaN(passedPercentage) ? '0' : passedPercentage.toFixed();
 };
 
 const regexHash: Record<string, RegExp> = {

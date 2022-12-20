@@ -45,7 +45,7 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
   resultObj['testSteps'] = testSteps ?? [];
   resultObj['httpLog'] = testObj?.results.httpLog ?? [['']];
   resultObj['seleniumLog'] = testObj?.results.seleniumLog ?? '';
-  resultObj['traceView'] = testSteps.some((test) => test.domSnapshot);
+  resultObj['traceView'] = testSteps?.some((test) => test?.domSnapshot);
 
   return resultObj;
 };
