@@ -1012,7 +1012,7 @@ const MacOS = () => (
 const OperatingSystem: React.FC<OperatingSystemProps> = ({ name }) => {
   let component: React.ReactNode = null;
 
-  switch (name.toLowerCase()) {
+  switch (name?.toLowerCase()) {
     case 'windows':
       component = Windows();
       break;

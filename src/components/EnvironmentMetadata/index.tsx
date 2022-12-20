@@ -26,7 +26,7 @@ export type MetaDataProps = {
 const EnvironmentMetadata: React.FC<MetaDataProps> = ({
   meta: { device, browserName, browserVersion, operatingSystemName, tags, time }
 }) => {
-  const majorBrowserVersion = browserVersion.split('.')[0];
+  const majorBrowserVersion = browserVersion?.split('.')[0];
 
   return (
     <Wrapper>
