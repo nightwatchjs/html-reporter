@@ -16,7 +16,7 @@ const TestDetailsVrt: React.FC = () => {
   return (
     <Wrapper>
       <Details>
-        <TabsRoot defaultValue="tab1" vrt={isVRT()}>
+        <TabsRoot defaultValue="tab1" vrt={isVRT}>
           <TabsList aria-label="Manage your Tests">
             <TabsTrigger value="tab1">Baseline and Diff</TabsTrigger>
             <TabsTrigger value="tab2">Baseline and Latest</TabsTrigger>

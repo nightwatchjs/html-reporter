@@ -9,7 +9,7 @@ import { ReportContextProvider } from './contexts/ReportContext';
 import { isVRT } from './constants';
 
 type WrapperProps = {
-  vrt?: boolean;
+  gap?: boolean;
 };
 
 const Report: React.FC = () => {
@@ -17,8 +17,8 @@ const Report: React.FC = () => {
     <Fragment>
       <ReportContextProvider>
         <Header />
-        <Wrapper vrt = {isVRT()}>
-          {isVRT() ? <ApproveAll /> : <Summary />}
+        <Wrapper gap = {isVRT}>
+          {isVRT ? <ApproveAll /> : <Summary />}
           <TestData />
         </Wrapper>
         <Footer />
@@ -32,7 +32,7 @@ const Wrapper = styled.section<WrapperProps>`
   flex-direction: column;
   align-items: center;
   ${(props) =>
-    !props.vrt &&
+    !props.gap &&
     css`
       gap: var(--gap-20);
     `}

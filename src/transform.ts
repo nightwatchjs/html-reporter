@@ -1,4 +1,4 @@
-import { Commands, TestFile, Stats, Metadata, Environments as Env, EnvironmentData} from './types/nightwatch';
+import { Commands, TestFile, Stats, Metadata} from './types/nightwatch';
 import { isVRT } from './constants';
 
 export const transformNightwatchReport = () => {
@@ -14,9 +14,7 @@ const getSuiteStats = () => {
 };
 
 const getReportMetadata = () => {
-  const metadata = {} as Metadata;
-  metadata.date = new Date();
-  return window.nightwatchReport.metadata || metadata;
+  return window.nightwatchReport.metadata;
 };
 
 export interface IFileStats {
@@ -47,7 +45,7 @@ const getEnvironmentReport = () => {
   const envData: any = {};
   // use process.env
   // Will be replaced
-  const report = isVRT() ? flattenVrtData(window.nightwatchReport.environments) : window.nightwatchReport.environments;
+  const report = window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {
       files: {}
@@ -63,7 +61,7 @@ const getEnvironmentReport = () => {
       const fileReport = environmentDataFiles[fileName];
       const metadata = envData[envName].metadata;
 
-      if (isVRT()) {
+      if (isVRT) {
         fileReport.status = 'fail';
         fileReport.fileName = fileName;
       }
@@ -105,7 +103,7 @@ const getEnvironmentReport = () => {
     });
   });
 
-  return isVRT() ? envData : getReverseSortedArray(envData);
+  return isVRT ? envData : getReverseSortedArray(envData);
 };
 
 export const getReverseSortedArray = (environments: Record<string, any>) => {
@@ -184,7 +182,7 @@ const getTestsStats = (
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
     
-    if (isVRT()) {
+    if (isVRT) {
       singleTestReport.status = 'fail';
     }
 
@@ -209,50 +207,20 @@ const getTestsStats = (
       ...{ filepath: fileReport.modulePath },
       ...{ time: fileReport.timeMs },
       ...{ envName },
-      ...{ envName },
-      ...{ diff: isVRT() ? singleTestReport.vrt.diff : ''}
+      ...{ diff: isVRT ? singleTestReport.vrt.diff : ''}
     };
 
-    // Add vrt data
-    testData['vrt'] = isVRT() ? {
+    // Add VRT data
+    testData['vrt'] = isVRT ? {
       completeBaselinePath: singleTestReport.vrt.completeBaselinePath,
       completeDiffPath: singleTestReport.vrt.completeDiffPath,
       completeLatestPath: singleTestReport.vrt.completeLatestPath
     }: {} as IVrtData;
+    // adding browsername incase for VRT
+    testData.metadata.browserName = fileReport.sessionCapabilities.browserName;
 
     resultData.push(testData);
   });
 
   return resultData;
 };
-
-const flattenVrtData = (jsonReportObject: any) => {
-  const vrtModules: any = {};
-  const environments = {} as Env;
-  environments['default'] = {} as EnvironmentData;
-  const vrtData = jsonReportObject;
-  for (const envName of Object.keys(vrtData)) {
-    const modules = vrtData[envName];
-    for (const moduleKey of Object.keys(modules)) {
-      const completedSections = modules[moduleKey].completedSections;
-      const vrtCompletedSections = filterVrtTests(completedSections);
-      if (Object.keys(vrtCompletedSections).length) {
-        const vrtModuleKey = `${envName}-${moduleKey}`;
-        vrtModules[vrtModuleKey] = {completedSections: vrtCompletedSections};
-      }
-    }
-  }
-  environments.default.modules = vrtModules;
-  return environments;
-}
-
-const filterVrtTests = (completedSections: any) => {
-  const vrtCompletedSections: any = {};
-  for (const testName of Object.keys(completedSections)) {
-    const test = completedSections[testName];
-    if (Object.keys(test).includes('vrt')) {
-      vrtCompletedSections[testName] = test;
-    }
-  }
-  return vrtCompletedSections;
-}

@@ -10,7 +10,7 @@ import { Text } from '../Text';
 import { EnvironmentAndSpecName, Metadata, TestBlockDetails, Wrapper } from './style';
 import { getMetadata } from './utils';
 import TestMetadataVrt from '../TestMetadataVrt';
-import { isVRT, isHtml } from '../../constants';
+import { isVRT } from '../../constants';
 
 const returnEnvironmentMetadata = (meta: any) => {
   // FIXME: remove type casting as any

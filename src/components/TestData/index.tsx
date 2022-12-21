@@ -9,7 +9,7 @@ import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useReportContext } from '../../hooks/ReportContext';
 import { getAllExpandedFileIds, getFailedTestsId } from './utils';
 import { Text } from '../Text';
-import { isHtml } from '../../constants';
+import { isVRT } from '../../constants';
 
 const TestData: React.FC = () => {
   const { environments } = useGlobalContext();
@@ -42,7 +42,7 @@ const TestData: React.FC = () => {
 
   return (
     <Wrapper>
-      {isHtml() && <TestStatusBar />}
+      {!isVRT && <TestStatusBar />}
       <TestDetailsWrapper>
         <Left>
           <Search

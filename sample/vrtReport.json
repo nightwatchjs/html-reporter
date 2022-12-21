@@ -1,73 +1,97 @@
 {
-    "environments": {
-      "chrome": {
+  "environments": {
+      "defaults": {
         "modules": {
-          "sample": {
+          "sample(chrome)": {
+            "sessionCapabilities": {
+              "acceptInsecureCerts": false,
+              "browserName": "chrome",
+              "browserVersion": "108.0.1",
+              "moz:accessibilityChecks": false,
+              "moz:buildID": "20221215175817",
+              "moz:geckodriverVersion": "0.32.0",
+              "moz:headless": false,
+              "moz:platformVersion": "21.6.0",
+              "moz:processID": 56342,
+              "moz:profile": "/var/folders/n9/8h4bw85j2y95c2rw67sjjdmr0000gn/T/rust_mozprofilexcTgpQ",
+              "moz:shutdownTimeout": 60000,
+              "moz:useNonSpecCompliantPointerOrigin": false,
+              "moz:webdriverClick": true,
+              "moz:windowless": false,
+              "pageLoadStrategy": "normal",
+              "platformName": "mac",
+              "proxy": {
+              },
+              "setWindowRect": true,
+              "strictFileInteractability": false,
+              "timeouts": {
+                "implicit": 0,
+                "pageLoad": 300000,
+                "script": 30000
+              },
+              "unhandledPromptBehavior": "dismiss and notify",
+            },
+            "status": "fail",
             "completedSections": {
               "nightwatch-vrt sample test": {
                 "vrt": {
-                    "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                    "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
-                    "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg"
+                  "completeBaselinePath": "/Users/ravi/Documents/Projects/nightwatch/vrt/baseline/firefox_mac/sample/footer.png",
+                  "completeDiffPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/diff/firefox_mac/sample/footer.png",
+                  "completeLatestPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/latest/firefox_mac/sample/footer.png",
+                  "diff": 0.1720494699646643
                 },
-                "diff": "90%"
-              },
-              "nightwatch-vrt sample test1": {
-                "vrt": {
-                    "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                    "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                    "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png"
-                },
-                "diff": "90%"
+                "time": 0,
+                "status": "fail"
               }
             }
           },
-          "sample1": {
+          "sample(firefox)": {
+            "sessionCapabilities": {
+              "acceptInsecureCerts": false,
+              "browserName": "firefox",
+              "browserVersion": "108.0.1",
+              "moz:accessibilityChecks": false,
+              "moz:buildID": "20221215175817",
+              "moz:geckodriverVersion": "0.32.0",
+              "moz:headless": false,
+              "moz:platformVersion": "21.6.0",
+              "moz:processID": 56342,
+              "moz:profile": "/var/folders/n9/8h4bw85j2y95c2rw67sjjdmr0000gn/T/rust_mozprofilexcTgpQ",
+              "moz:shutdownTimeout": 60000,
+              "moz:useNonSpecCompliantPointerOrigin": false,
+              "moz:webdriverClick": true,
+              "moz:windowless": false,
+              "pageLoadStrategy": "normal",
+              "platformName": "mac",
+              "proxy": {
+              },
+              "setWindowRect": true,
+              "strictFileInteractability": false,
+              "timeouts": {
+                "implicit": 0,
+                "pageLoad": 300000,
+                "script": 30000,
+              },
+              "unhandledPromptBehavior": "dismiss and notify"
+            },
+            "status": "fail",
             "completedSections": {
-              "nightwatch-vrt sample test3": {
+              "nightwatch-vrt sample test": {
                 "vrt": {
-                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png"
+                  "completeBaselinePath": "/Users/ravi/Documents/Projects/nightwatch/vrt/baseline/firefox_mac/sample/footer.png",
+                  "completeDiffPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/diff/firefox_mac/sample/footer.png",
+                  "completeLatestPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/latest/firefox_mac/sample/footer.png",
+                  "diff": 0.1720494699646643
                 },
-                "diff": "90%"
-              },
-              "nightwatch-vrt sample test4": {
-                "vrt": {
-                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
-                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
-                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg"
-                },
-                "diff": "90%"
-              }
-            }
-          },
-          "sample2": {
-            "completedSections": {
-              "nightwatch-vrt sample test3": {
-                "vrt": {
-                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png",
-                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample.png"
-                },
-                "diff": "80%"
-              },
-              "nightwatch-vrt sample test4": {
-                "vrt": {
-                  "completeBaselinePath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
-                  "completeDiffPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg",
-                  "completeLatestPath": "/Users/prudhvi/work/html-reporter/vrtdata/sample2.jpg"
-              },
-              "diff": "100%"
+                "time": 0,
+                "status": "fail"
               }
             }
           }
         }
       }
-    },
-    "metadata": {
-      "date": 1670331481990,
-      "timestamp": 31525000
-    },
-    "vrt": true
+  },
+  "metadata": {
+    "date": "2022-12-21T09:07:54.770Z"
   }
+}

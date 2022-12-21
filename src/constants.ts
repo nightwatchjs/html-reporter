@@ -99,5 +99,4 @@ export const PLATFORM_NAME: Record<string, string> = {
 // Checking for vrt reporter
 const PRODUCT = import.meta.env.VITE_PRODUCT;
 
-export const isVRT = () => PRODUCT === 'VRT';
-export const isHtml = () => PRODUCT === 'HTML';
+export const isVRT = PRODUCT === 'VRT';

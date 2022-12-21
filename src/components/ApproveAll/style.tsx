@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  height: 56px;
   width: 100%;
   display: flex;
   justify-content: center;

@@ -62,7 +62,7 @@ export const findFailedTestDetails = (environments: Environments) => {
     data: {
       files: { pass, fail, skip }
     }
-  } = isVRT() ? findVrtData(environments) : findMaximumFailedEnv(environments);
+  } = isVRT ? findVrtData(environments) : findMaximumFailedEnv(environments);
 
   if (fail?.length > 0) {
     return createDataObject(name, 'fail', fail);

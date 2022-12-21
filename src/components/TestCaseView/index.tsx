@@ -15,7 +15,7 @@ const TestDetails: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
     <Wrapper>
       <Header />
       <TestBody>
-        {isVRT() ? <TestDetailsVrt /> : <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />}
+        {isVRT ? <TestDetailsVrt /> : <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />}
       </TestBody>
     </Wrapper>
   );
