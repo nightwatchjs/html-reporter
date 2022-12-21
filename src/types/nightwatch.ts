@@ -1,15 +1,4 @@
-export {};
-
 export interface NightwatchHTMLReport {
-  passed: number;
-  failed: number;
-  errors: number;
-  skipped: number;
-  tests: number;
-  assertions: number;
-  errmessages: any[];
-  // TODO: Replace any with it's types
-  modules: any;
   environments: Environments;
   stats: Stats;
   metadata: Metadata;
@@ -48,7 +37,6 @@ export interface TestFile {
   skipped: string[];
   time: number;
   timeMs: number;
-  // TODO: replace any with it's types
   completed: Record<string, TestObject>;
   completedSections: Record<string, TestObject>;
   errmessages: any[];
@@ -71,6 +59,7 @@ export interface TestFile {
   errors: number;
   httpOutput: string[][];
   rawHttpOutput: string[][];
+  seleniumLog: string;
   globalErrorRegister: string[];
 }
 
@@ -128,10 +117,16 @@ export interface Commands {
   status: string;
   screenshot: string | undefined;
   result: CommandsResult;
+  domSnapshot: Trace;
+}
+
+export interface Trace {
+  snapshotUrl: string;
+  snapshotFilePath: string;
 }
 
 export interface BeautifiedStack {
-  filename: string;
+  filePath: string;
   error_line_number: number;
   codeSnippet: CodeSnippet[];
 }
@@ -177,9 +172,7 @@ export interface SessionCapabilities {
     script: number;
   };
   unhandledPromptBehavior: string;
-  'webauthn:extension:credBlob': boolean;
-  'webauthn:extension:largeBlob': boolean;
-  'webauthn:virtualAuthenticators': boolean;
+  [key: string]: unknown;
 }
 
 export interface LastError {

@@ -10,17 +10,15 @@ const Firefox = () => (
     width="77.42"
     height="79.97"
     viewBox="0 0 77.42 79.97"
-    style={{ height: 12, width: 12 }}
-  >
+    style={{ height: 12, width: 12 }}>
     <defs>
       <radialGradient
-        id="b"
+        id="firefox_b"
         cx="-7907"
         cy="-8515"
         r="80.8"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".13" stopColor="#ffbd4f" />
         <stop offset=".19" stopColor="#ffac31" />
         <stop offset=".25" stopColor="#ff9d17" />
@@ -32,13 +30,12 @@ const Firefox = () => (
         <stop offset=".86" stopColor="#e50080" />
       </radialGradient>
       <radialGradient
-        id="c"
+        id="firefox_c"
         cx="-7937"
         cy="-8482"
         r="80.8"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".3" stopColor="#960e18" />
         <stop offset=".35" stopColor="#b11927" stopOpacity=".74" />
         <stop offset=".43" stopColor="#db293d" stopOpacity=".34" />
@@ -46,52 +43,48 @@ const Firefox = () => (
         <stop offset=".53" stopColor="#ff3750" stopOpacity="0" />
       </radialGradient>
       <radialGradient
-        id="d"
+        id="firefox_d"
         cx="-7927"
         cy="-8533"
         r="58.53"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".13" stopColor="#fff44f" />
         <stop offset=".25" stopColor="#ffdc3e" />
         <stop offset=".51" stopColor="#ff9d12" />
         <stop offset=".53" stopColor="#ff980e" />
       </radialGradient>
       <radialGradient
-        id="e"
+        id="firefox_e"
         cx="-7946"
         cy="-8461"
         r="38.47"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".35" stopColor="#3a8ee6" />
         <stop offset=".47" stopColor="#5c79f0" />
         <stop offset=".67" stopColor="#9059ff" />
         <stop offset="1" stopColor="#c139e6" />
       </radialGradient>
       <radialGradient
-        id="f"
+        id="firefox_f"
         cx="-7936"
         cy="-8492"
         r="20.4"
         gradientTransform="matrix(.972 -.235 .275 1.138 10090 7834)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".21" stopColor="#9059ff" stopOpacity="0" />
         <stop offset=".28" stopColor="#8c4ff3" stopOpacity=".06" />
         <stop offset=".75" stopColor="#7716a8" stopOpacity=".45" />
         <stop offset=".97" stopColor="#6e008b" stopOpacity=".6" />
       </radialGradient>
       <radialGradient
-        id="g"
+        id="firefox_g"
         cx="-7938"
         cy="-8518"
         r="27.68"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#ffe226" />
         <stop offset=".12" stopColor="#ffdb27" />
         <stop offset=".29" stopColor="#ffc82a" />
@@ -100,13 +93,12 @@ const Firefox = () => (
         <stop offset=".79" stopColor="#ff7139" />
       </radialGradient>
       <radialGradient
-        id="h"
+        id="firefox_h"
         cx="-7916"
         cy="-8536"
         r="118.1"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".11" stopColor="#fff44f" />
         <stop offset=".46" stopColor="#ff980e" />
         <stop offset=".62" stopColor="#ff5634" />
@@ -114,13 +106,12 @@ const Firefox = () => (
         <stop offset=".9" stopColor="#e31587" />
       </radialGradient>
       <radialGradient
-        id="i"
+        id="firefox_i"
         cx="-7927"
         cy="-8523"
         r="86.5"
         gradientTransform="matrix(.105 .995 -.653 .069 -4685 8470)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#fff44f" />
         <stop offset=".06" stopColor="#ffe847" />
         <stop offset=".17" stopColor="#ffc830" />
@@ -131,13 +122,12 @@ const Firefox = () => (
         <stop offset=".74" stopColor="#e31587" />
       </radialGradient>
       <radialGradient
-        id="j"
+        id="firefox_j"
         cx="-7938"
         cy="-8508"
         r="73.72"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".14" stopColor="#fff44f" />
         <stop offset=".48" stopColor="#ff980e" />
         <stop offset=".59" stopColor="#ff5634" />
@@ -145,27 +135,25 @@ const Firefox = () => (
         <stop offset=".9" stopColor="#e31587" />
       </radialGradient>
       <radialGradient
-        id="k"
+        id="firefox_k"
         cx="-7919"
         cy="-8504"
         r="80.69"
         gradientTransform="translate(7974 8524)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".09" stopColor="#fff44f" />
         <stop offset=".23" stopColor="#ffe141" />
         <stop offset=".51" stopColor="#ffaf1e" />
         <stop offset=".63" stopColor="#ff980e" />
       </radialGradient>
       <linearGradient
-        id="a"
+        id="firefox_a"
         x1="70.79"
         x2="6.45"
         y1="12.39"
         y2="74.47"
         gradientTransform="translate(-1.3)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".05" stopColor="#fff44f" />
         <stop offset=".11" stopColor="#ffe847" />
         <stop offset=".23" stopColor="#ffc830" />
@@ -176,14 +164,13 @@ const Firefox = () => (
         <stop offset=".7" stopColor="#e31587" />
       </linearGradient>
       <linearGradient
-        id="l"
+        id="firefox_l"
         x1="70.01"
         x2="15.27"
         y1="12.06"
         y2="66.81"
         gradientTransform="translate(-1.3)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".17" stopColor="#fff44f" stopOpacity=".8" />
         <stop offset=".27" stopColor="#fff44f" stopOpacity=".63" />
         <stop offset=".49" stopColor="#fff44f" stopOpacity=".22" />
@@ -191,62 +178,62 @@ const Firefox = () => (
       </linearGradient>
     </defs>
     <path
-      fill="url(#a)"
+      fill="url(#firefox_a)"
       d="M74.62 26.83c-1.68-4.05-5.1-8.43-7.78-9.81a40.27 40.27 0 0 1 3.93 11.76v.06C66.4 17.92 58.98 13.51 52.9 3.92c-.31-.48-.62-.97-.92-1.48-.17-.3-.3-.56-.42-.8a7.05 7.05 0 0 1-.58-1.53.1.1 0 0 0-.09-.1.14.14 0 0 0-.07 0h-.02l-.03.02.02-.02c-9.74 5.7-13.04 16.25-13.34 21.53a19.39 19.39 0 0 0-10.67 4.1 11.59 11.59 0 0 0-1-.75 17.97 17.97 0 0 1-.11-9.47 28.7 28.7 0 0 0-9.33 7.2h-.02c-1.54-1.94-1.43-8.36-1.34-9.7a6.93 6.93 0 0 0-1.3.68 28.22 28.22 0 0 0-3.78 3.25 33.84 33.84 0 0 0-3.62 4.35 32.73 32.73 0 0 0-5.2 11.74l-.06.25c-.07.34-.33 2.05-.38 2.42v.09A36.94 36.94 0 0 0 0 41.04v.2a38.76 38.76 0 0 0 76.95 6.55l.18-1.5a39.86 39.86 0 0 0-2.51-19.47zM29.95 57.17c.18.09.35.18.54.26l.02.02-.56-.28zm40.83-28.31v-.04.04z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#b)"
+      fill="url(#firefox_b)"
       d="M74.62 26.83c-1.68-4.05-5.1-8.43-7.78-9.81a40.27 40.27 0 0 1 3.93 11.76v.08a35.1 35.1 0 0 1-1.2 26.16c-4.44 9.53-15.19 19.3-32.02 18.82C19.37 73.32 3.35 59.83.36 42.16c-.54-2.79 0-4.2.27-6.47a28.88 28.88 0 0 0-.62 5.35v.2a38.76 38.76 0 0 0 76.95 6.55l.18-1.5a39.86 39.86 0 0 0-2.52-19.46z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#c)"
+      fill="url(#firefox_c)"
       d="M74.62 26.83c-1.68-4.05-5.1-8.43-7.78-9.81a40.27 40.27 0 0 1 3.93 11.76v.08a35.1 35.1 0 0 1-1.2 26.16c-4.44 9.53-15.19 19.3-32.02 18.82C19.37 73.32 3.35 59.83.36 42.16c-.54-2.79 0-4.2.27-6.47a28.88 28.88 0 0 0-.62 5.35v.2a38.76 38.76 0 0 0 76.95 6.55l.18-1.5a39.86 39.86 0 0 0-2.52-19.46z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#d)"
+      fill="url(#firefox_d)"
       d="m55.78 31.38.24.18a21.1 21.1 0 0 0-3.6-4.7C40.37 14.81 49.26.74 50.76.02l.02-.02c-9.74 5.7-13.04 16.25-13.34 21.53.45-.03.9-.07 1.36-.07a19.56 19.56 0 0 1 16.98 9.92z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#e)"
+      fill="url(#firefox_e)"
       d="M38.82 33.79c-.06.96-3.47 4.29-4.66 4.29-11.02 0-12.81 6.67-12.81 6.67.49 5.61 4.4 10.24 9.13 12.68l.65.3q.57.26 1.14.47a17.24 17.24 0 0 0 5.04.98c19.32.9 23.06-23.1 9.12-30.07a13.38 13.38 0 0 1 9.35 2.27 19.56 19.56 0 0 0-16.98-9.92c-.46 0-.91.04-1.37.07a19.39 19.39 0 0 0-10.67 4.1c.6.5 1.26 1.18 2.67 2.56 2.63 2.6 9.37 5.28 9.39 5.6z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#f)"
+      fill="url(#firefox_f)"
       d="M38.82 33.79c-.06.96-3.47 4.29-4.66 4.29-11.02 0-12.81 6.67-12.81 6.67.49 5.61 4.4 10.24 9.13 12.68l.65.3q.57.26 1.14.47a17.24 17.24 0 0 0 5.04.98c19.32.9 23.06-23.1 9.12-30.07a13.38 13.38 0 0 1 9.35 2.27 19.56 19.56 0 0 0-16.98-9.92c-.46 0-.91.04-1.37.07a19.39 19.39 0 0 0-10.67 4.1c.6.5 1.26 1.18 2.67 2.56 2.63 2.6 9.37 5.28 9.39 5.6z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#g)"
+      fill="url(#firefox_g)"
       d="m24.96 24.36.8.53a17.97 17.97 0 0 1-.1-9.47 28.7 28.7 0 0 0-9.34 7.2c.2 0 5.81-.1 8.64 1.74z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#h)"
+      fill="url(#firefox_h)"
       d="M.35 42.16c3 17.67 19.01 31.17 37.2 31.68 16.82.48 27.57-9.3 32.01-18.82a35.1 35.1 0 0 0 1.21-26.16v-.07.06c1.38 8.98-3.18 17.67-10.32 23.56l-.03.05c-13.9 11.33-27.21 6.83-29.9 5q-.29-.13-.57-.28c-8.1-3.88-11.46-11.26-10.74-17.6a9.95 9.95 0 0 1-9.18-5.78 14.62 14.62 0 0 1 14.25-.57 19.3 19.3 0 0 0 14.55.58c-.01-.32-6.76-3-9.39-5.6-1.4-1.38-2.07-2.05-2.66-2.55a11.59 11.59 0 0 0-1-.76l-.8-.53c-2.83-1.83-8.45-1.73-8.64-1.73h-.02c-1.53-1.95-1.42-8.37-1.34-9.7a6.93 6.93 0 0 0-1.29.68 28.22 28.22 0 0 0-3.79 3.25 33.84 33.84 0 0 0-3.64 4.33 32.73 32.73 0 0 0-5.2 11.74c-.01.08-1.4 6.1-.71 9.22z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#i)"
+      fill="url(#firefox_i)"
       d="M52.42 26.86a21.1 21.1 0 0 1 3.6 4.7c.21.16.41.32.58.48 8.79 8.1 4.18 19.55 3.84 20.36 7.14-5.88 11.7-14.58 10.33-23.56C66.4 17.9 58.95 13.5 52.9 3.9c-.3-.49-.61-.97-.91-1.49-.17-.3-.31-.55-.43-.8A7.05 7.05 0 0 1 50.97.1a.1.1 0 0 0-.08-.1.14.14 0 0 0-.08 0h-.02l-.02.02c-1.5.71-10.4 14.8 1.66 26.83z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#j)"
+      fill="url(#firefox_j)"
       d="M56.6 32.04a8.08 8.08 0 0 0-.58-.48l-.24-.17a13.38 13.38 0 0 0-9.35-2.27c13.94 6.97 10.2 30.97-9.12 30.07a17.24 17.24 0 0 1-5.04-.97q-.57-.22-1.14-.47l-.65-.31.03.01c2.69 1.84 16 6.34 29.9-5l.03-.05c.35-.8 4.95-12.26-3.84-20.36z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#k)"
+      fill="url(#firefox_k)"
       d="M21.35 44.74s1.79-6.67 12.81-6.67c1.2 0 4.6-3.32 4.66-4.29a19.3 19.3 0 0 1-14.55-.57 14.62 14.62 0 0 0-14.25.57 9.95 9.95 0 0 0 9.18 5.78c-.72 6.34 2.63 13.72 10.74 17.6.18.09.35.18.54.26-4.73-2.44-8.64-7.07-9.13-12.68z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
     <path
-      fill="url(#l)"
+      fill="url(#firefox_l)"
       d="M74.62 26.83c-1.68-4.05-5.1-8.43-7.78-9.81a40.27 40.27 0 0 1 3.93 11.76v.06C66.4 17.92 58.98 13.51 52.9 3.92c-.31-.48-.62-.97-.92-1.48-.17-.3-.3-.56-.42-.8a7.05 7.05 0 0 1-.58-1.53.1.1 0 0 0-.09-.1.14.14 0 0 0-.07 0h-.02l-.03.02.02-.02c-9.74 5.7-13.04 16.25-13.34 21.53.45-.04.9-.07 1.36-.07a19.56 19.56 0 0 1 16.98 9.91 13.38 13.38 0 0 0-9.35-2.27c13.94 6.97 10.2 30.97-9.12 30.07a17.24 17.24 0 0 1-5.04-.97q-.57-.21-1.14-.46c-.22-.1-.43-.2-.65-.32l.03.02q-.29-.13-.57-.28c.18.09.35.18.54.26-4.73-2.44-8.64-7.07-9.13-12.68 0 0 1.79-6.66 12.81-6.66 1.2 0 4.6-3.33 4.66-4.3-.01-.3-6.76-3-9.39-5.58-1.4-1.39-2.07-2.05-2.66-2.55a11.59 11.59 0 0 0-1-.76 17.97 17.97 0 0 1-.11-9.48 28.7 28.7 0 0 0-9.33 7.21h-.02c-1.53-1.94-1.43-8.36-1.34-9.7a6.93 6.93 0 0 0-1.3.68 28.22 28.22 0 0 0-3.78 3.25 33.84 33.84 0 0 0-3.62 4.35 32.73 32.73 0 0 0-5.2 11.73l-.05.26c-.08.34-.4 2.07-.45 2.44a45.09 45.09 0 0 0-.57 5.4v.2a38.76 38.76 0 0 0 76.95 6.56l.17-1.5a39.86 39.86 0 0 0-2.51-19.47zm-3.85 2 .01.03z"
       transform="matrix(.98198 0 0 .98198 .7 .72)"
     />
@@ -259,8 +246,7 @@ const Chrome = () => (
     width="48"
     height="48"
     viewBox="0 0 48 48"
-    style={{ height: 12, width: 12 }}
-  >
+    style={{ height: 12, width: 12 }}>
     <defs>
       <linearGradient
         id="chrome_a"
@@ -268,8 +254,7 @@ const Chrome = () => (
         x2="44.78"
         y1="15"
         y2="15"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#d93025" />
         <stop offset="1" stopColor="#ea4335" />
       </linearGradient>
@@ -279,8 +264,7 @@ const Chrome = () => (
         x2="41.5"
         y1="47.68"
         y2="11.68"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#fcc934" />
         <stop offset="1" stopColor="#fbbc04" />
       </linearGradient>
@@ -290,8 +274,7 @@ const Chrome = () => (
         x2="5.82"
         y1="46.5"
         y2="10.51"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#1e8e3e" />
         <stop offset="1" stopColor="#34a853" />
       </linearGradient>
@@ -323,8 +306,7 @@ const Safari = () => (
     width="250.08"
     height="248.71"
     viewBox="0 0 66.17 65.8"
-    style={{ height: 12, width: 12 }}
-  >
+    style={{ height: 12, width: 12 }}>
     <defs>
       <linearGradient id="safari_b">
         <stop offset="0" stopColor="#06c2e7" />
@@ -353,8 +335,7 @@ const Safari = () => (
         height="1.04"
         x="-.02"
         y="-.02"
-        colorInterpolationFilters="sRGB"
-      >
+        colorInterpolationFilters="sRGB">
         <feGaussianBlur stdDeviation=".96" />
       </filter>
       <filter
@@ -363,8 +344,7 @@ const Safari = () => (
         height="1.1"
         x="-.05"
         y="-.05"
-        colorInterpolationFilters="sRGB"
-      >
+        colorInterpolationFilters="sRGB">
         <feGaussianBlur stdDeviation="3.56" />
       </filter>
       <radialGradient
@@ -429,8 +409,7 @@ const Edge = () => (
         cy="68.9"
         r="95.4"
         gradientTransform="matrix(1 0 0 -.95 0 248.8)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".7" stopOpacity="0" />
         <stop offset=".9" stopOpacity=".5" />
         <stop offset="1" />
@@ -441,8 +420,7 @@ const Edge = () => (
         cy="63"
         r="143.2"
         gradientTransform="matrix(.15 -.99 -.8 -.12 176.6 -125.4)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset=".8" stopOpacity="0" />
         <stop offset=".9" stopOpacity=".5" />
         <stop offset="1" />
@@ -453,8 +431,7 @@ const Edge = () => (
         cy="570.2"
         r="202.4"
         gradientTransform="matrix(-.04 1 2.13 .08 -1179.5 -106.7)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#35c1f1" />
         <stop offset=".1" stopColor="#34c1ed" />
         <stop offset=".2" stopColor="#2fc2df" />
@@ -467,8 +444,7 @@ const Edge = () => (
         cy="568"
         r="97.3"
         gradientTransform="matrix(.28 .96 .78 -.23 -303.8 -148.5)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#66eb6e" />
         <stop offset="1" stopColor="#66eb6e" stopOpacity="0" />
       </radialGradient>
@@ -479,8 +455,7 @@ const Edge = () => (
         y1="84"
         y2="84"
         gradientTransform="matrix(1 0 0 -1 0 266)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#0c59a4" />
         <stop offset="1" stopColor="#114a8b" />
       </linearGradient>
@@ -491,8 +466,7 @@ const Edge = () => (
         y1="161.4"
         y2="40.1"
         gradientTransform="matrix(1 0 0 -1 0 266)"
-        gradientUnits="userSpaceOnUse"
-      >
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#1b9de2" />
         <stop offset=".2" stopColor="#1595df" />
         <stop offset=".7" stopColor="#0680d7" />
@@ -537,7 +511,7 @@ const Edge = () => (
 const Browser: React.FC<BrowserProps> = ({ name }) => {
   let component: React.ReactNode = null;
 
-  switch (name) {
+  switch (name.toLowerCase()) {
     case 'chrome':
       component = Chrome();
       break;

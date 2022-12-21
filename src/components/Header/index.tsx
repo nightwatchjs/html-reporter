@@ -11,7 +11,7 @@ const Header = () => {
   const parsedDate = new Date(date);
   const formattedDate = new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(parsedDate);
 
-  const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const { timeZone } = Intl.DateTimeFormat().resolvedOptions();
 
   return (
     <Wrapper>
@@ -21,7 +21,7 @@ const Header = () => {
       <Center>Test Reporter</Center>
       <Right>
         <DateComponent>{formattedDate}</DateComponent>
-        <Time>{`${parsedDate.toLocaleTimeString()} (${timezoneName})`}</Time>
+        <Time>{`${parsedDate.toLocaleTimeString()} (${timeZone})`}</Time>
       </Right>
     </Wrapper>
   );

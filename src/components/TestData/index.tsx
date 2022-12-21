@@ -54,8 +54,7 @@ const TestData: React.FC = () => {
                 pressed
                   ? setExpanded(getAllExpandedFileIds(environments[environmentName]))
                   : setExpanded([''])
-              }
-            >
+              }>
               <Text color="grey-90" fontSize={12} lineHight={20}>
                 Expand all
               </Text>

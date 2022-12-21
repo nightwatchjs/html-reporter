@@ -1,5 +1,6 @@
 import React from 'react';
 import { useReportContext } from '../../hooks/ReportContext';
+import { Status } from '../../transform';
 import TestBlock from '../TestBlock';
 import { AccordionContent } from './AccordionContent';
 import { AccordionTrigger } from './AccordionTrigger';
@@ -7,19 +8,22 @@ import { AccordionItem } from './style';
 import { AccordionItemsProps } from './types';
 import { filterData } from './util';
 
-const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds, expandedIds }) => {
+const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, expandedIds }) => {
   const { testId, setTestId, setFileId } = useReportContext();
   const filterTestData = filterData(data, query);
 
   return (
     <>
       {filterTestData.map((file) => (
-        <AccordionItem key={file.key} value={file.key}>
+        <AccordionItem
+          key={file.key}
+          value={file.key}
+          disabled={file.status === 'skip'}
+          skip={+(file.status === 'skip')}>
           <AccordionTrigger
-            failed={failedIds.includes(file.key)}
+            status={file.status as Status}
             value={file.key}
-            expandedIds={expandedIds}
-          >
+            expandedIds={expandedIds}>
             {file.fileName}
           </AccordionTrigger>
           <AccordionContent>
@@ -32,8 +36,7 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ data, query, failedIds,
                   fileKey={file.key}
                   testKey={test.key}
                   setTestId={setTestId}
-                  setFileId={setFileId}
-                >
+                  setFileId={setFileId}>
                   {test.testName}
                 </TestBlock>
               );

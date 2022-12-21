@@ -89,9 +89,11 @@ export const COLORS = {
 export const HEADER_HEIGHT = 76;
 
 export const PLATFORM_NAME: Record<string, string> = {
-  'mac os x': 'macos',
-  linux: 'linux',
-  windows: 'windows'
+  mac: 'macOS',
+  'mac os x': 'macOS',
+  macOS: 'macOS',
+  linux: 'Linux',
+  windows: 'Windows'
 };
 
 // Checking for vrt reporter

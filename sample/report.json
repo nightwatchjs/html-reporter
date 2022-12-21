@@ -25,7 +25,7 @@
                         "showDiff": false,
                         "abortOnFailure": true,
                         "beautifiedStack": {
-                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                             "error_line_number": 21,
                             "codeSnippet": [
                                 {
@@ -179,7 +179,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -217,7 +217,7 @@
                                 "showDiff": false,
                                 "abortOnFailure": true,
                                 "beautifiedStack": {
-                                    "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                    "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                     "error_line_number": 21,
                                     "codeSnippet": [
                                         {
@@ -303,6 +303,10 @@
                                     "result": {
                                         "value": null,
                                         "returned": 1
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org",
+                                        "traceSnapshot": "../../../sample/snapshots/click_Dec-13-2022-143344-GMT+0530.html"
                                     }
                                 },
                                 {
@@ -318,6 +322,10 @@
                                     "result": {
                                         "value": true,
                                         "status": 0
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org",
+                                        "traceSnapshot": "../../../sample/snapshots/setValue_Dec-13-2022-143340-GMT+0530.html"
                                     }
                                 },
                                 {
@@ -333,6 +341,10 @@
                                     "result": {
                                         "value": true,
                                         "status": 0
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org",
+                                        "traceSnapshot": "../../../sample/snapshots/click_Dec-13-2022-143344-GMT+0530.html"
                                     }
                                 },
                                 {
@@ -349,6 +361,10 @@
                                         "status": 0,
                                         "returned": 1,
                                         "passed": true
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org",
+                                        "traceSnapshot": "./../../sample/snapshots/waitForElementVisible_Dec-13-2022-143236-GMT+0530.html"
                                     }
                                 },
                                 {
@@ -363,6 +379,9 @@
                                     "result": {
                                         "value": "Ecosia - the search engine that plants trees",
                                         "status": 0
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org"
                                     }
                                 },
                                 {
@@ -377,6 +396,10 @@
                                     "result": {
                                         "value": null,
                                         "status": 0
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org",
+                                        "traceSnapshot": "../../../sample/snapshots/click_Dec-13-2022-143344-GMT+0530.html"
                                     }
                                 },
                                 {
@@ -389,6 +412,9 @@
                                     "result": {
                                         "value": null,
                                         "returned": 1
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org"
                                     }
                                 },
                                 {
@@ -407,7 +433,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -433,6 +459,9 @@
                                             ]
                                         },
                                         "stack": "Error\n    at Proxy.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/lib/api/index.js:149:30)\n    at DescribeInstance.<anonymous> (/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js:21:15)\n    at Context.call (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/context.js:476:35)\n    at TestCase.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:739:80)\n    at Runnable.run (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:853:49)\n    at TestSuite.handleRunnable (/Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:868:33)\n    at /Users/binayakghosh/projects/nightwatch-reporter/lib/testsuite/index.js:739:21\n    at async DefaultRunner.runTestSuite (/Users/binayakghosh/projects/nightwatch-reporter/lib/runner/test-runners/default.js:76:7)"
+                                    },
+                                    "trace": {
+                                        "traceUrl": "https://ecosia.org"
                                     }
                                 }
                             ],
@@ -1045,6 +1074,7 @@
                             "{ value: null }"
                         ]
                     ],
+                    "seleniumLog": "/Users/vaibhavsingh/Dev/html-reporter/sample/ecoisa.log",
                     "globalErrorRegister": "   <b><span style=\"color:#A00\">→ ✖ <b><span style=\"color:#A00\">NightwatchAssertError</span></b></span></b><br>   <span style=\"color:#A00\">Testing if element </span><span style=\"color:#A50\"><.layout__content></span> contains text <span style=\"color:#A50\">'foo'</span> in 5000ms - expected <span style=\"color:#0A0\">\"contains text 'foo'\"</span> but got: <span style=\"color:#A00\">\"element could not be located\"</span> <span style=\"color:#555\">(5117ms)</span><br><span style=\"color:#A50\"><br>    Error location:</span><br>    /Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js:<br>    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––<br>     19 |       })<br>     20 |       .ensure.titleMatches(/Ecosia - the search engine that plants trees/)<br>    <span style=\"color:#AAA\"><span style=\"background-color:#A00\"> 21 |       .assert.textContains('.layout__content', 'foo') </span></span><br>     22 |       .assert.visible('input[type=search]')<br>     23 |       .setValue('input[type=search]', 'nightwatch')<br>    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––<br>",
                     "completedSection": {
                         "__global_beforeEach_hook": {
@@ -1204,7 +1234,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path1/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -1282,7 +1312,7 @@
                         "showDiff": false,
                         "abortOnFailure": true,
                         "beautifiedStack": {
-                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                             "error_line_number": 21,
                             "codeSnippet": [
                                 {
@@ -1436,7 +1466,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -1474,7 +1504,7 @@
                                 "showDiff": false,
                                 "abortOnFailure": true,
                                 "beautifiedStack": {
-                                    "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                    "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                     "error_line_number": 21,
                                     "codeSnippet": [
                                         {
@@ -1664,7 +1694,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {
@@ -2461,7 +2491,7 @@
                                         "showDiff": false,
                                         "abortOnFailure": true,
                                         "beautifiedStack": {
-                                            "filename": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
+                                            "filePath": "/Users/binayakghosh/projects/nightwatch-reporter/mytests/path2/ecosia.js",
                                             "error_line_number": 21,
                                             "codeSnippet": [
                                                 {

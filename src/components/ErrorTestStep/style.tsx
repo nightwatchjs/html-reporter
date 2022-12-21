@@ -28,6 +28,7 @@ export const Text = styled.p`
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   color: var(--color-grey-100);
+  overflow-wrap: anywhere;
 `;
 
 export const ElapsedTime = styled.div`
@@ -37,4 +38,5 @@ export const ElapsedTime = styled.div`
   text-align: right;
   color: var(--color-grey-80);
   margin-left: auto;
+  flex-shrink: 0;
 `;

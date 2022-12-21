@@ -3,6 +3,7 @@ import { Check, Close, RemoveCircleOutline } from '../../icons/index';
 
 type WrapperProps = {
   highlight: boolean;
+  clickable: boolean;
 };
 
 export const Wrapper = styled.button<WrapperProps>`
@@ -11,6 +12,7 @@ export const Wrapper = styled.button<WrapperProps>`
   background: var(--color-grey-10);
   border-top: var(--border-1) solid var(--color-grey-50);
   padding: var(--padding-8);
+  cursor: ${(props) => (props.clickable ? 'pointer' : 'not-allowed')};
   ${(props) =>
     props.highlight &&
     css`

@@ -36,7 +36,7 @@ const Analytics: React.FC = () => {
       <Header>Overall Performance</Header>
       <TestStatusWrapper>
         <Status>
-          <PercentageText>{`${getPassedTestPercentage(total, passed + skipped)}%`}</PercentageText>
+          <PercentageText>{`${getPassedTestPercentage(total, passed)}%`}</PercentageText>
           <PassedText>Passed</PassedText>
         </Status>
         <StatisticsWrapper>

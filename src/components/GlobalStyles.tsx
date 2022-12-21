@@ -244,6 +244,8 @@ const GlobalStyles = createGlobalStyle`
     --border-1: calc(1 / 16 * 1rem);
     --border-2: calc(2 / 16 * 1rem);
 
+    --log-view-height: calc(1444 / 16 * 1rem);
+
     .blue-text-color {
       color: var(--color-blue-60);
     }

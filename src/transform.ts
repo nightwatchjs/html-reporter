@@ -68,6 +68,8 @@ const getEnvironmentReport = () => {
       }
       fileData['fileName'] = fileName;
       fileData['status'] = fileReport.status;
+      fileData.fileName = fileName;
+      fileData.status = fileReport.status;
 
       // File level data aggregation (i.e. file is passed/failed/skipped)
       if (fileReport.status === 'pass') {
@@ -75,8 +77,8 @@ const getEnvironmentReport = () => {
           envData[envName].files['pass'] = [];
         }
         const uniqueKey = envData[envName].files['pass'].length;
-        fileData['key'] = `pass-${uniqueKey}`;
-        fileData['tests'] = getTestsStats(fileName, fileData['key'], fileReport, envName, metadata);
+        fileData.key = `pass-${uniqueKey}`;
+        fileData.tests = getTestsStats(fileName, fileData.key, fileReport, envName, metadata);
         envData[envName].files['pass'].push(fileData);
       }
 
@@ -85,8 +87,8 @@ const getEnvironmentReport = () => {
           envData[envName].files['fail'] = [];
         }
         const uniqueKey = envData[envName].files['fail'].length;
-        fileData['key'] = `fail-${uniqueKey}`;
-        fileData['tests'] = getTestsStats(fileName, fileData['key'], fileReport, envName, metadata);
+        fileData.key = `fail-${uniqueKey}`;
+        fileData.tests = getTestsStats(fileName, fileData.key, fileReport, envName, metadata);
         envData[envName].files['fail'].push(fileData);
       }
 
@@ -95,8 +97,8 @@ const getEnvironmentReport = () => {
           envData[envName].files['skip'] = [];
         }
         const uniqueKey = envData[envName].files['skip'].length;
-        fileData['key'] = `skip-${uniqueKey}`;
-        fileData['tests'] = getTestsStats(fileName, fileData['key'], fileReport, envName, metadata);
+        fileData.key = `skip-${uniqueKey}`;
+        fileData.tests = getTestsStats(fileName, fileData.key, fileReport, envName, metadata);
         envData[envName].files['skip'].push(fileData);
       }
     });
@@ -119,7 +121,7 @@ export interface ITestStats {
   testName: string;
   results: {
     steps: Commands[];
-    httpLog: string;
+    httpLog: string[][];
     seleniumLog: string;
   };
   status: string;
@@ -187,23 +189,20 @@ const getTestsStats = (
 
     // Add testName
 
-    testData['key'] = `${fileKey}-${singleTestReport.status}-${resultData.length}`;
-    testData['testName'] = normalizeTestName(testName);
+    testData.key = `${fileKey}-${singleTestReport.status}-${resultData.length}`;
+    testData.testName = normalizeTestName(testName);
 
     // Add Results
-    testData['results'] = {} as ITestStats['results'];
-    testData['results']['steps'] = singleTestReport.commands;
-    // TODO: Verify httpOutput is string
-    testData['results']['httpLog'] = fileReport.httpOutput ? fileReport.httpOutput.join(' ') : '';
-    // TODO: Replace '' to fileReport.seleniumLog
-    testData['results']['seleniumLog'] = '';
-    testData['results']['steps'] = singleTestReport.commands;
+    testData.results = {} as ITestStats['results'];
+    testData.results.steps = singleTestReport.commands;
+    testData.results.httpLog = fileReport.rawHttpOutput;
+    testData.results.seleniumLog = fileReport.seleniumLog;
 
     // Add Status
-    testData['status'] = singleTestReport.status;
+    testData.status = singleTestReport.status;
 
     //  Add Metadata
-    testData['metadata'] = {
+    testData.metadata = {
       ...metadata,
       ...{ filename: fileName },
       ...{ filepath: fileReport.modulePath },

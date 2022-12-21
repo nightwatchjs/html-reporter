@@ -1,20 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
 import { ITestSteps } from '../SpecMetaData/types';
 import Trace from '../Trace';
 import { SearchWrapper, TestSteps, TestStepWrapper, Wrapper } from './style';
-import { filterTestSteps } from './utils';
+import { filterTestSteps, joinArgs, validTestArgs } from './utils';
 
 type TestDetailsViewProps = {
   testStepsData: ITestSteps[];
+  tracePresent: boolean;
 };
 
-const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
+const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, tracePresent }) => {
   const [query, setQuery] = useState<string>('');
+  const [trace, setTrace] = useState<{ url?: string; snapshotPath?: string } | undefined>();
 
   const filteredTestsSteps = filterTestSteps(testStepsData, query);
+
+  useEffect(() => {
+    const firstTestWithTrace = filteredTestsSteps.find((test) => test.domSnapshot);
+    const traceObject = firstTestWithTrace?.domSnapshot;
+    if (traceObject) {
+      const { snapshotFilePath, snapshotUrl } = traceObject;
+      setTrace({ url: snapshotUrl, snapshotPath: snapshotFilePath });
+    }
+  }, [filterTestSteps]);
 
   return (
     <Wrapper>
@@ -29,8 +40,12 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
           {filteredTestsSteps.map((test, index) => {
             if (test.status === 'pass') {
               return (
-                <PassTestStep key={index} time={test.time}>
-                  {test.name}
+                <PassTestStep
+                  key={index}
+                  time={test.time}
+                  traceData={test.domSnapshot ?? {}}
+                  setTrace={setTrace}>
+                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
                 </PassTestStep>
               );
             }
@@ -44,14 +59,14 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData }) => {
                   shortMessage={test.shortMessage ?? ['']}
                   stacktrace={test.stacktrace}
                   screenshot={test.screenshot}
-                >
-                  {test.name}
+                  tracePresent={tracePresent}>
+                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
                 </ErrorTestStep>
               );
             }
           })}
         </TestSteps>
-        <Trace />
+        {tracePresent && <Trace url={trace?.url} src={trace?.snapshotPath} />}
       </TestStepWrapper>
     </Wrapper>
   );

@@ -1,6 +1,8 @@
 import React from 'react';
+import { Status } from '../../transform';
 import { Text } from '../Text';
-import { FailedIcon, Left, PassedIcon, SkippedIcon, Wrapper } from './style';
+import { Left, Wrapper } from './style';
+import { statusIcon } from './utils';
 
 type TestBlockProps = {
   children: React.ReactNode;
@@ -24,15 +26,14 @@ const TestBlock: React.FC<TestBlockProps> = ({
   return (
     <Wrapper
       highlight={highlightBlock}
+      clickable={status !== 'skip'}
       onClick={() => {
-        setFileId(fileKey);
-        setTestId(testKey);
-      }}
-    >
-      <Left>
-        {/* FIXME:  Remove nested terniary operator */}
-        {status === 'pass' ? <PassedIcon /> : status === 'skip' ? <SkippedIcon /> : <FailedIcon />}
-      </Left>
+        if (status !== 'skip') {
+          setFileId(fileKey);
+          setTestId(testKey);
+        }
+      }}>
+      <Left>{statusIcon(status as Status)}</Left>
       <Text fontSize={14} lineHight={20} color="grey-100" transformText>
         {children}
       </Text>

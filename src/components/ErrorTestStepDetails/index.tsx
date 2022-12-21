@@ -5,21 +5,24 @@ import { cleanAnsi, wrapTextWithSpan } from '../../utils';
 import AlertBanner from '../AlertBanner';
 import CodeBlock from '../CodeBlock';
 import { ErrorMessageText, ErrorMessageWrapper, Wrapper } from './style';
+import { getFileNameFromFilePath } from './utils';
 
 type ErrorStepDetailsProps = {
   errorDetails: {
     errorName: string;
     shortMessage: string[];
     stackTrace?: {
-      filename: string;
+      filePath: string;
       error_line_number: number;
       codeSnippet: CodeSnippet[];
     };
   };
+  tracePresent?: boolean;
 };
 
 const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
-  errorDetails: { errorName, shortMessage, stackTrace }
+  errorDetails: { errorName, shortMessage, stackTrace },
+  tracePresent
 }) => {
   return (
     <Wrapper>
@@ -38,10 +41,11 @@ const ErrorTestStepDetails: React.FC<ErrorStepDetailsProps> = ({
       </ErrorMessageWrapper>
       {stackTrace && (
         <CodeBlock
-          filename={stackTrace.filename}
+          filename={getFileNameFromFilePath(stackTrace.filePath)}
           line_number={stackTrace.error_line_number}
           codeSnippet={stackTrace.codeSnippet}
-          file_path="/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js"
+          file_path={stackTrace.filePath}
+          tracePresent={tracePresent}
         />
       )}
     </Wrapper>
