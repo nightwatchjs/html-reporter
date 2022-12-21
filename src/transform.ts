@@ -1,4 +1,4 @@
-import { Commands, TestFile, Stats } from './types/nightwatch';
+import { Commands, TestFile, Stats, Metadata } from './types/nightwatch';
 import { isVRT } from './constants';
 
 export const transformNightwatchReport = () => {
@@ -14,7 +14,9 @@ const getSuiteStats = () => {
 };
 
 const getReportMetadata = () => {
-  return window.nightwatchReport.metadata;
+  const metadata = {} as Metadata;
+  metadata.date = new Date();
+  return window.nightwatchReport.metadata || metadata;
 };
 
 export interface IFileStats {
@@ -45,12 +47,11 @@ const getEnvironmentReport = () => {
   const envData: any = {};
   // use process.env
   // Will be replaced
-  const report = window.nightwatchReport.environments;
+  const report = isVRT() ? flattenVrtData(window.nightwatchReport.environments) : window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {
       files: {}
     };
-
     const environmentData = report[envName];
     const environmentDataFiles = environmentData.modules;
 
@@ -209,14 +210,52 @@ const getTestsStats = (
       ...{ time: fileReport.timeMs },
       ...{ envName },
       ...{ envName },
-      ...{ diff: singleTestReport.diff }
+      ...{ diff: singleTestReport.vrt.diff }
     };
 
     // Add vrt data
-    testData['vrt'] = singleTestReport.vrt;
+    testData['vrt'] = {
+      completeBaselinePath: singleTestReport.vrt.completeBaselinePath,
+      completeDiffPath: singleTestReport.vrt.completeDiffPath,
+      completeLatestPath: singleTestReport.vrt.completeLatestPath
+    };
 
     resultData.push(testData);
   });
 
   return resultData;
 };
+
+const flattenVrtData = (jsonReportObject: any) => {
+  const vrtModules: any = {};
+  const environments = {
+    default: {
+      modules: {}
+    }
+  };
+  const vrtData = jsonReportObject;
+  for (const envName of Object.keys(vrtData)) {
+    const modules = vrtData[envName];
+    for (const moduleKey of Object.keys(modules)) {
+      const completedSections = modules[moduleKey].completedSections;
+      const vrtCompletedSections = filterVrtTests(completedSections);
+      if (Object.keys(vrtCompletedSections).length) {
+        const vrtModuleKey = `${envName}-${moduleKey}`;
+        vrtModules[vrtModuleKey] = {completedSections: vrtCompletedSections};
+      }
+    }
+  }
+  environments.default.modules = vrtModules;
+  return environments;
+}
+
+const filterVrtTests = (completedSections: any) => {
+  const vrtCompletedSections: any = {};
+  for (const testName of Object.keys(completedSections)) {
+    const test = completedSections[testName];
+    if (Object.keys(test).includes('vrt')) {
+      vrtCompletedSections[testName] = test;
+    }
+  }
+  return vrtCompletedSections;
+}

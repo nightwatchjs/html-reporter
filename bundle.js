@@ -5,7 +5,7 @@ import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const htmlReportPath = join(__dirname, 'sample', 'report.json');
-const vrtReportPath = join(__dirname, 'sample', 'vrtReport.json');
+const vrtReportPath = join(__dirname, 'sample', 'vrtReport1.json');
 
 // eslint-disable-next-line no-undef
 const isVRT = () => process.env.VITE_PRODUCT === 'VRT';
