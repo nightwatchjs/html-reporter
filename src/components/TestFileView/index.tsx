@@ -16,9 +16,9 @@ const TestFileView: React.FC<TestFileViewProps> = ({
   const { pass, fail, skip } = data;
 
   const flattenedData = [
-    ...(fail as IFileStats[]),
-    ...(skip as IFileStats[]),
-    ...(pass as IFileStats[])
+    ...((fail as IFileStats[]) || []),
+    ...((skip as IFileStats[]) || []),
+    ...((pass as IFileStats[]) || [])
   ];
   const filteredData = filterData(flattenedData, query);
 
