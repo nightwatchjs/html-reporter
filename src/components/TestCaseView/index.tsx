@@ -3,12 +3,17 @@ import TestStepsView from '../TestStepsView';
 import Header from './Header';
 import { TestBody, Wrapper } from './style';
 
-const TestDetails: React.FC = () => {
+export type TabValueProps = {
+  tabValue: string;
+  setTabValue: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const TestDetails: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
   return (
     <Wrapper>
       <Header />
       <TestBody>
-        <TestStepsView />
+        <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />
       </TestBody>
     </Wrapper>
   );

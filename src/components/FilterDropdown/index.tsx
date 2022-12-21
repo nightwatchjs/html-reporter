@@ -7,6 +7,7 @@ import {
   DropdownMenuContent,
   DropdownMenuRadioGroup,
   DropdownMenuSeparator,
+  DropdownMenuTrigger,
   DropdownRadioItem,
   TestFilterButton,
   TestFilterWrapper
@@ -22,12 +23,12 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({ filterContext, setFilte
 
   return (
     <DropdownMenu.Root onOpenChange={(open) => setOpen(open)}>
-      <DropdownMenu.Trigger asChild>
+      <DropdownMenuTrigger asChild>
         <TestFilterWrapper>
           <ArrowWrapper>{open ? <ArrowDropUp /> : <ArrowDropDown />}</ArrowWrapper>
           <TestFilterButton aria-label="Customize options">{filterContext}</TestFilterButton>
         </TestFilterWrapper>
-      </DropdownMenu.Trigger>
+      </DropdownMenuTrigger>
 
       <DropdownMenu.Portal>
         <DropdownMenuContent>

@@ -5,6 +5,7 @@ export const TabsRoot = styled(Tabs.Root)`
   display: flex;
   flex-direction: column;
   flex: 1;
+  cursor: pointer;
 `;
 
 export const TabsList = styled(Tabs.List)`

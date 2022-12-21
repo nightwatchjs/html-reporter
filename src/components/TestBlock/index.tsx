@@ -12,6 +12,7 @@ type TestBlockProps = {
   testKey: string;
   setTestId: React.Dispatch<React.SetStateAction<string>>;
   setFileId: React.Dispatch<React.SetStateAction<string>>;
+  setTabValue?: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const TestBlock: React.FC<TestBlockProps> = ({
@@ -21,7 +22,8 @@ const TestBlock: React.FC<TestBlockProps> = ({
   fileKey,
   testKey,
   setTestId,
-  setFileId
+  setFileId,
+  setTabValue
 }) => {
   return (
     <Wrapper
@@ -31,6 +33,7 @@ const TestBlock: React.FC<TestBlockProps> = ({
         if (status !== 'skip') {
           setFileId(fileKey);
           setTestId(testKey);
+          setTabValue && setTabValue('test-details');
         }
       }}>
       <Left>{statusIcon(status as Status)}</Left>
