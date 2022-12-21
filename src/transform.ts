@@ -1,4 +1,4 @@
-import { Commands, TestFile, Stats, Metadata } from './types/nightwatch';
+import { Commands, TestFile, Stats, Metadata, Environments as Env, EnvironmentData} from './types/nightwatch';
 import { isVRT } from './constants';
 
 export const transformNightwatchReport = () => {
@@ -210,15 +210,15 @@ const getTestsStats = (
       ...{ time: fileReport.timeMs },
       ...{ envName },
       ...{ envName },
-      ...{ diff: singleTestReport.vrt.diff }
+      ...{ diff: isVRT() ? singleTestReport.vrt.diff : ''}
     };
 
     // Add vrt data
-    testData['vrt'] = {
+    testData['vrt'] = isVRT() ? {
       completeBaselinePath: singleTestReport.vrt.completeBaselinePath,
       completeDiffPath: singleTestReport.vrt.completeDiffPath,
       completeLatestPath: singleTestReport.vrt.completeLatestPath
-    };
+    }: {} as IVrtData;
 
     resultData.push(testData);
   });
@@ -228,11 +228,8 @@ const getTestsStats = (
 
 const flattenVrtData = (jsonReportObject: any) => {
   const vrtModules: any = {};
-  const environments = {
-    default: {
-      modules: {}
-    }
-  };
+  const environments = {} as Env;
+  environments['default'] = {} as EnvironmentData;
   const vrtData = jsonReportObject;
   for (const envName of Object.keys(vrtData)) {
     const modules = vrtData[envName];
