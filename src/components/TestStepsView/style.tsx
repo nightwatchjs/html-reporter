@@ -8,6 +8,7 @@ export const TabsRoot = styled(Tabs.Root)<WrapperProps>`
   display: flex;
   flex-direction: column;
   flex: 1;
+  cursor: pointer;
   ${(props) =>
     props.vrt &&
     css`

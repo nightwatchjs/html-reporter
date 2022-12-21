@@ -2,6 +2,7 @@ import React from 'react';
 import { CodeSnippet } from '../../types/nightwatch';
 import ErrorTestStepDetails from '../ErrorTestStepDetails';
 import Screenshot from '../Screenshot';
+import { ITrace } from '../SpecMetaData/types';
 import { ElapsedTime, FailedIcon, FailedStepWrapper, Text, Wrapper } from './style';
 
 export type TestStepProps = {
@@ -15,6 +16,16 @@ export type TestStepProps = {
     codeSnippet: CodeSnippet[];
   };
   screenshot?: string;
+  traceData: ITrace['domSnapshot'];
+  setTrace: React.Dispatch<
+    React.SetStateAction<
+      | {
+          url?: string;
+          snapshotPath?: string;
+        }
+      | undefined
+    >
+  >;
   tracePresent?: boolean;
 };
 
@@ -25,10 +36,24 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
   shortMessage,
   screenshot,
   stacktrace,
-  tracePresent
+  tracePresent,
+  traceData: { snapshotUrl, snapshotFilePath },
+  setTrace
 }) => {
   return (
-    <Wrapper>
+    <Wrapper
+      onClick={() =>
+        setTrace(
+          snapshotFilePath
+            ? {
+                ...(snapshotUrl && { url: snapshotUrl }),
+                snapshotPath: snapshotFilePath
+              }
+            : {
+                ...(snapshotUrl && { url: snapshotUrl })
+              }
+        )
+      }>
       <FailedStepWrapper>
         <FailedIcon />
         <Text>{children}</Text>

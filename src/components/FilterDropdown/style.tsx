@@ -5,6 +5,10 @@ export const TestFilterWrapper = styled.div`
   position: relative;
 `;
 
+export const DropdownMenuTrigger = styled(DropdownMenu.Trigger)`
+  cursor: pointer;
+`;
+
 export const ArrowWrapper = styled.div`
   display: flex;
   position: absolute;
@@ -53,6 +57,7 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
 
 export const DropdownMenuRadioGroup = styled(DropdownMenu.RadioGroup)`
   width: 100%;
+  cursor: pointer;
 `;
 
 export const DropdownMenuSeparator = styled(DropdownMenu.Separator)`

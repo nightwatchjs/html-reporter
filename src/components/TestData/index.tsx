@@ -19,6 +19,7 @@ const TestData: React.FC = () => {
   const [expanded, setExpanded] = useState<string[]>(
     getFailedTestsId(environments[environmentName])
   );
+  const [tabValue, setTabValue] = useState('test-details');
   const [filterContext, setFilterContext] = useState('All Tests');
 
   const {
@@ -66,10 +67,11 @@ const TestData: React.FC = () => {
             expanded={expanded}
             setExpanded={setExpanded}
             data={filterData()}
+            setTabValue={setTabValue}
           />
         </Left>
         <Right>
-          <TestCaseView />
+          <TestCaseView tabValue={tabValue} setTabValue={setTabValue} />
         </Right>
       </TestDetailsWrapper>
     </Wrapper>

@@ -10,12 +10,13 @@ export type TestFileViewProps = {
     fail?: IFileStats[];
     skip?: IFileStats[];
   };
+  setTabValue?: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export type AccordionItemsProps = {
-  query: string;
-  data: IFileStats[];
+  file: IFileStats;
   expandedIds: string[];
+  setTabValue?: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export interface AccordionProps {

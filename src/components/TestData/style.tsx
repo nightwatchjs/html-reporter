@@ -10,8 +10,7 @@ export const Wrapper = styled.section`
 
 export const TestDetailsWrapper = styled.div`
   display: flex;
-  /* TODO: Should be removed */
-  min-height: 1080px;
+  min-height: 100vh;
 `;
 
 export const Left = styled.div`
@@ -21,6 +20,7 @@ export const Left = styled.div`
   flex-direction: column;
   padding: var(--padding-12) var(--padding-20);
   gap: var(--gap-12);
+  min-height: 100%;
 `;
 
 export const Right = styled.div`

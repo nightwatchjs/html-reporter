@@ -1,5 +1,5 @@
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/github';
+import theme from 'prism-react-renderer/themes/nightOwl';
 import React, { Fragment } from 'react';
 import {
   Line,
@@ -53,8 +53,8 @@ const LogView: React.FC<LogViewProps> = ({ log }) => {
                       theme={theme}
                       code={String(response.replaceAll('&#39;', "'"))}
                       language="jsx">
-                      {({ className, tokens, getLineProps, getTokenProps }) => (
-                        <Pre className={className}>
+                      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                        <Pre className={className} style={style}>
                           {tokens.map((line, i) => (
                             <Line key={i} {...getLineProps({ line, key: i })}>
                               <LineContent>

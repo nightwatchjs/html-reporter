@@ -25,7 +25,7 @@ export const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTri
             {children}
           </Text>
         </AccordionHeaderContent>
-        {expandedIds?.includes(value) ? <RemoveIcon /> : <AddIcon />}
+        {status !== 'skip' && (expandedIds?.includes(value) ? <RemoveIcon /> : <AddIcon />)}
       </StyledAccordionTrigger>
     </AccordionHeader>
   )
