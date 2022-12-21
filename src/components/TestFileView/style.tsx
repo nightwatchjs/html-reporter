@@ -12,12 +12,14 @@ export const AccordionRoot = styled(Accordion.Root)`
   flex-direction: column;
   gap: var(--gap-4);
   cursor: pointer;
+  flex-grow: 1;
 `;
 
 export const AccordionItem = styled(Accordion.Item)<AccordionItemProps>`
   display: flex;
   flex-direction: column;
   border: var(--border-1) solid var(--color-grey-50);
+  margin-bottom: 4px;
   &:focus-within {
     position: relative;
     box-shadow: 0 0 0 2px var(--color-primary-50);
