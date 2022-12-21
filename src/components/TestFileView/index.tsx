@@ -22,16 +22,11 @@ const TestFileView: React.FC<TestFileViewProps> = ({
   ];
   const filteredData = filterData(flattenedData, query);
 
-  console.log(filteredData);
-
   return (
     <AccordionRoot type="multiple" value={expanded} onValueChange={(data) => setExpanded(data)}>
       <Virtuoso
-        style={{ height: 1444 }}
         data={filteredData}
         itemContent={(index, testFile) => {
-          console.log('>>>>>', index);
-
           return (
             <AccordionItems
               key={index}

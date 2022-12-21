@@ -12,6 +12,7 @@ export const AccordionRoot = styled(Accordion.Root)`
   flex-direction: column;
   gap: var(--gap-4);
   cursor: pointer;
+  flex-grow: 1;
 `;
 
 export const AccordionItem = styled(Accordion.Item)<AccordionItemProps>`
