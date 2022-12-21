@@ -1,7 +1,10 @@
 import React from 'react';
+import { Virtuoso } from 'react-virtuoso';
+import { IFileStats } from '../../transform';
 import AccordionItems from './AccordionItem';
 import { AccordionRoot } from './style';
 import { TestFileViewProps } from './types';
+import { filterData } from './util';
 
 const TestFileView: React.FC<TestFileViewProps> = ({
   query,
@@ -12,33 +15,33 @@ const TestFileView: React.FC<TestFileViewProps> = ({
 }) => {
   const { pass, fail, skip } = data;
 
+  const flattenedData = [
+    ...(fail as IFileStats[]),
+    ...(skip as IFileStats[]),
+    ...(pass as IFileStats[])
+  ];
+  const filteredData = filterData(flattenedData, query);
+
+  console.log(filteredData);
+
   return (
-    // FIXME: TODO: Add Virtuso
     <AccordionRoot type="multiple" value={expanded} onValueChange={(data) => setExpanded(data)}>
-      {fail && (
-        <AccordionItems
-          data={fail}
-          query={query}
-          expandedIds={expanded}
-          setTabValue={setTabValue}
-        />
-      )}
-      {skip && (
-        <AccordionItems
-          data={skip}
-          query={query}
-          expandedIds={expanded}
-          setTabValue={setTabValue}
-        />
-      )}
-      {pass && (
-        <AccordionItems
-          data={pass}
-          query={query}
-          expandedIds={expanded}
-          setTabValue={setTabValue}
-        />
-      )}
+      <Virtuoso
+        style={{ height: 1444 }}
+        data={filteredData}
+        itemContent={(index, testFile) => {
+          console.log('>>>>>', index);
+
+          return (
+            <AccordionItems
+              key={index}
+              file={testFile}
+              expandedIds={expanded}
+              setTabValue={setTabValue}
+            />
+          );
+        }}
+      />
     </AccordionRoot>
   );
 };

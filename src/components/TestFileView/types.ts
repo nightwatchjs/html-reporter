@@ -14,8 +14,7 @@ export type TestFileViewProps = {
 };
 
 export type AccordionItemsProps = {
-  query: string;
-  data: IFileStats[];
+  file: IFileStats;
   expandedIds: string[];
   setTabValue?: React.Dispatch<React.SetStateAction<string>>;
 };
