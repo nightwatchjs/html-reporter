@@ -61,6 +61,7 @@ export interface TestFile {
   rawHttpOutput: string[][];
   seleniumLog: string;
   globalErrorRegister: string[];
+  testEnv: string
 }
 
 export interface TestObject {
@@ -80,6 +81,12 @@ export interface TestObject {
   startTimestamp: string;
   endTimestamp: string;
   status: string;
+  vrt: {
+    completeBaselinePath: string;
+    completeDiffPath: string;
+    completeLatestPath: string;
+    diff: string;
+  };
 }
 
 export interface LastError {

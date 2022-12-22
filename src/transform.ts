@@ -1,4 +1,5 @@
-import { Commands, TestFile } from './types/nightwatch';
+import { Commands, TestFile, Stats } from './types/nightwatch';
+import { isVRT } from './constants';
 
 export const transformNightwatchReport = () => {
   return {
@@ -9,7 +10,7 @@ export const transformNightwatchReport = () => {
 };
 
 const getSuiteStats = () => {
-  return window.nightwatchReport.stats;
+  return window.nightwatchReport.stats || ({} as Stats);
 };
 
 const getReportMetadata = () => {
@@ -47,18 +48,23 @@ const getEnvironmentReport = () => {
     envData[envName] = {
       files: {}
     };
-
     const environmentData = report[envName];
     const environmentDataFiles = environmentData.modules;
 
     envData[envName]['metadata'] = environmentData.metadata;
-    envData[envName]['stats'] = environmentData.stats;
+    envData[envName]['stats'] = environmentData.stats || ({} as Stats);
 
     Object.keys(environmentDataFiles).forEach((fileName) => {
       const fileData = {} as IFileStats;
       const fileReport = environmentDataFiles[fileName];
       const metadata = envData[envName].metadata;
 
+      if (isVRT) {
+        fileReport.status = 'fail';
+        fileReport.fileName = fileName;
+      }
+      fileData['fileName'] = fileName;
+      fileData['status'] = fileReport.status;
       fileData.fileName = fileName;
       fileData.status = fileReport.status;
 
@@ -95,7 +101,7 @@ const getEnvironmentReport = () => {
     });
   });
 
-  return getReverseSortedArray(envData);
+  return isVRT ? envData : getReverseSortedArray(envData);
 };
 
 export const getReverseSortedArray = (environments: Record<string, any>) => {
@@ -126,6 +132,7 @@ export interface ITestStats {
     filename: string;
     filepath: string;
     envName: string;
+    diff?: string;
   };
   stats: {
     passed: number;
@@ -134,6 +141,13 @@ export interface ITestStats {
     total: number;
     time: number;
   };
+  vrt: IVrtData;
+}
+
+export interface IVrtData {
+  completeBaselinePath: string;
+  completeDiffPath: string;
+  completeLatestPath: string;
 }
 
 const normalizeTestName = (testName: string): string => {
@@ -166,6 +180,10 @@ const getTestsStats = (
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
 
+    if (isVRT) {
+      singleTestReport.status = 'fail';
+    }
+
     // Add testName
 
     testData.key = `${fileKey}-${singleTestReport.status}-${resultData.length}`;
@@ -186,11 +204,30 @@ const getTestsStats = (
       ...{ filename: fileName },
       ...{ filepath: fileReport.modulePath },
       ...{ time: fileReport.timeMs },
-      ...{ envName }
+      ...{ envName },
+      ...(isVRT && { diff: roundOff(singleTestReport.vrt.diff) })
     };
+
+    // Add VRT data
+    testData['vrt'] = isVRT
+      ? {
+          completeBaselinePath: singleTestReport.vrt.completeBaselinePath,
+          completeDiffPath: singleTestReport.vrt.completeDiffPath,
+          completeLatestPath: singleTestReport.vrt.completeLatestPath
+        }
+      : ({} as IVrtData);
+    // adding browsername incase for VRT
+    if (isVRT) {
+      testData.metadata.browserName = fileReport.sessionCapabilities.browserName;
+      testData.metadata.envName = fileReport.testEnv || 'All';
+    }
 
     resultData.push(testData);
   });
 
   return resultData;
+};
+
+const roundOff = (diff: string): string => {
+  return (parseFloat(diff)*100).toFixed(2)
 };

@@ -27,7 +27,8 @@ const SpecMetaData: React.FC = () => {
       platformName,
       executionMode,
       time,
-      filepath
+      filepath,
+      diff
     } = {
       envName: undefined,
       filename: undefined,
@@ -37,7 +38,8 @@ const SpecMetaData: React.FC = () => {
       platformName: undefined,
       executionMode: undefined,
       time: undefined,
-      filepath: undefined
+      filepath: undefined,
+      diff: undefined
     }
   } = getMetadata(environments[environmentName], fileId, testId) as any;
 
@@ -57,15 +59,15 @@ const SpecMetaData: React.FC = () => {
             </>
           )}
         </EnvironmentAndSpecName>
-        {/* FIXME: remove type casting as any */}
         <EnvironmentMetadata
           meta={{
-            device: device as any,
-            browserName: browserName as any,
-            browserVersion: browserVersion as any,
-            operatingSystemName: platformName as any,
-            tags: [executionMode as any],
-            time: convertMsToTime(time).time
+            device: device,
+            browserName: browserName,
+            browserVersion: browserVersion,
+            operatingSystemName: platformName,
+            tags: [executionMode],
+            time: convertMsToTime(time).time,
+            diff: diff
           }}
         />
       </Metadata>

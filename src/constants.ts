@@ -95,3 +95,7 @@ export const PLATFORM_NAME: Record<string, string> = {
   linux: 'Linux',
   windows: 'Windows'
 };
+
+const PRODUCT = import.meta.env.VITE_PRODUCT;
+
+export const isVRT = PRODUCT === 'vrt';

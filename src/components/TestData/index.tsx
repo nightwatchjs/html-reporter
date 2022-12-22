@@ -9,6 +9,7 @@ import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useReportContext } from '../../hooks/ReportContext';
 import { getAllExpandedFileIds, getFailedTestsId } from './utils';
 import { Text } from '../Text';
+import { isVRT } from '../../constants';
 
 const TestData: React.FC = () => {
   const { environments } = useGlobalContext();
@@ -41,7 +42,7 @@ const TestData: React.FC = () => {
 
   return (
     <Wrapper>
-      <TestStatusBar />
+      {!isVRT && <TestStatusBar />}
       <TestDetailsWrapper>
         <Left>
           <Search
@@ -59,7 +60,9 @@ const TestData: React.FC = () => {
                 Expand all
               </Text>
             </ToggleRoot>
-            <FilterDropdown filterContext={filterContext} setFilterContext={setFilterContext} />
+            {!isVRT && (
+              <FilterDropdown filterContext={filterContext} setFilterContext={setFilterContext} />
+            )}
           </Actions>
           <TestFileView
             query={query}
