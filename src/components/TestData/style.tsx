@@ -11,6 +11,7 @@ export const Wrapper = styled.section`
 export const TestDetailsWrapper = styled.div`
   display: flex;
   min-height: 100vh;
+  border-bottom: var(--border-1) solid var(--color-grey-50);
 `;
 
 export const Left = styled.div`

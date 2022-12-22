@@ -18,9 +18,7 @@ export const LineContent = styled.span`
 
 export const Wrapper = styled.article`
   margin: var(--margin-12);
-  max-height: var(--log-view-height);
-  display: flex;
-  flex-direction: column;
+  display: block;
   overflow: auto;
 `;
 
@@ -34,6 +32,7 @@ export const LogWrapper = styled.div`
   font-weight: var(--font-weight-semi-light);
   color: var(--color-grey-100);
   border-radius: var(--border-radius-4);
+  height: 100vh;
 `;
 
 export const RequestBlock = styled.div`
