@@ -61,6 +61,7 @@ export interface TestFile {
   rawHttpOutput: string[][];
   seleniumLog: string;
   globalErrorRegister: string[];
+  testEnv: string
 }
 
 export interface TestObject {

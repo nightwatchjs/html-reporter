@@ -215,7 +215,10 @@ const getTestsStats = (
       completeLatestPath: singleTestReport.vrt.completeLatestPath
     }: {} as IVrtData;
     // adding browsername incase for VRT
-    testData.metadata.browserName = fileReport.sessionCapabilities.browserName;
+    if (isVRT) {
+      testData.metadata.browserName = fileReport.sessionCapabilities.browserName;
+      testData.metadata.envName = fileReport.testEnv;
+    }
 
     resultData.push(testData);
   });

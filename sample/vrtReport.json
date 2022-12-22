@@ -43,7 +43,8 @@
                 "time": 0,
                 "status": "fail"
               }
-            }
+            },
+            "testEnv": "chrome"
           },
           "sample(firefox)": {
             "sessionCapabilities": {
@@ -86,7 +87,8 @@
                 "time": 0,
                 "status": "fail"
               }
-            }
+            },
+            "testEnv": "firefox"
           }
         }
       }
