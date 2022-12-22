@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Filters = styled.div`
+export const Header = styled.div`
   display: flex;
   align-items: center;
   padding: var(--padding-4) 0 var(--padding-4) var(--padding-12);

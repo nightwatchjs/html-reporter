@@ -6,6 +6,7 @@ export const TabsRoot = styled(Tabs.Root)`
   flex-direction: column;
   flex: 1;
   cursor: pointer;
+  gap: var(--gap-12);
 `;
 
 export const TabsList = styled(Tabs.List)`
@@ -42,22 +43,26 @@ export const TabsTrigger = styled(Tabs.Trigger)`
   }
 `;
 
-export const LogWrapper = styled.div`
+export const Error = styled.div`
   display: flex;
-  margin: var(--margin-12);
-  /* FIXME: Height should be based on the content? */
-  height: var(--log-view-height);
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-20);
+`;
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  background: var(--color-grey-10);
+  border-left: var(--border-1) solid var(--color-grey-40);
 `;
 
-export const SeleniumLog = styled.iframe`
+export const Details = styled.div`
   display: flex;
-  flex: 1;
-  background-color: var(--list-color-secondary-background-10);
-  white-space: pre-wrap;
-  padding: var(--padding-12);
-  font-size: var(--font-size-12);
-  line-height: var(--line-height-20);
-  font-weight: var(--font-weight-semi-light);
-  color: var(--color-grey-100);
-  border-radius: var(--border-radius-4);
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--padding-12) var(--padding-12);
+  gap: var(--gap-12);
+  isolation: isolate;
 `;

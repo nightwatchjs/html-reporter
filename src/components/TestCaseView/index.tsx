@@ -2,7 +2,7 @@ import React from 'react';
 import TestStepsView from '../TestStepsView';
 import Header from './Header';
 import { TestBody, Wrapper } from './style';
-import TestDetailsVrt from '../TestDetailsVrt';
+import VRTView from '../VRTView';
 import { isVRT } from '../../constants';
 
 export type TabValueProps = {
@@ -15,11 +15,7 @@ const TestCaseView: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
     <Wrapper>
       <Header />
       <TestBody>
-        {isVRT ? (
-          <TestDetailsVrt />
-        ) : (
-          <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />
-        )}
+        {isVRT ? <VRTView /> : <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />}
       </TestBody>
     </Wrapper>
   );
