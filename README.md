@@ -20,10 +20,10 @@ npm install @nightwatch/html-reporter-template
 const { writeNightwatchHTMLReport } = require('@nightwatch/html-reporter-template');;
 
 /**
- * This function will insert the result object within the HTML **reporter** 
+ * This function will insert the result object within the HTML **reporter**
  * and add it to the destination folder.
  * The result object will be available in the "window.nightwatchReport" variable.
- * 
+ *
  */
 writeNightwatchHTMLReport(<destFolder>, <result object>);
 ```
@@ -36,7 +36,6 @@ writeNightwatchHTMLReport(<destFolder>, <result object>);
 Issues with this Reporter Template can filed [here](https://github.com/nightwatchjs/html-reporter/issues)
 
 If you want to contribute (or have contributed in the past), feel free to add yourself to the list of contributors in the package.json before you open a PR!
-
 
 ## 👨‍💻 Development
 
@@ -72,7 +71,6 @@ npm run build:vrt
 ```bash
 npm run clean
 ```
-
 
 [npm-badge]: https://img.shields.io/npm/v/@nightwatch/html-reporter-template.svg
 [npm]: https://www.npmjs.com/package/@nightwatch/html-reporter-template
