@@ -25,6 +25,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--gap-20);
   border-left: 1px solid var(--color-grey-50);
   border-right: 1px solid var(--color-grey-50);
 `;

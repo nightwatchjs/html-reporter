@@ -1,7 +1,11 @@
 import { appendFileSync, copyFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-export const writeNightwatchHTMLReport = (destFolder: string, jsonReportObject: string, product = 'HTML'): void => {
+export const writeNightwatchHTMLReport = (
+  destFolder: string,
+  jsonReportObject: string,
+  product = 'html'
+): void => {
   // Create Destination Folder
   mkdirSync(destFolder, { recursive: true });
 

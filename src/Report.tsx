@@ -4,11 +4,7 @@ import HtmlReporterComponent from './HtmlReporterComponent';
 import VrtReporterComponent from './VrtReporterComponent';
 
 const Report: React.FC = () => {
-  return (
-    <Fragment>
-      {isVRT ? <VrtReporterComponent /> : <HtmlReporterComponent />}
-    </Fragment>
-  )
+  return <Fragment>{isVRT ? <VrtReporterComponent /> : <HtmlReporterComponent />}</Fragment>;
 };
 
 export default Report;

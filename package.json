@@ -4,10 +4,10 @@
   "version": "0.0.2",
   "type": "commonjs",
   "scripts": {
-    "dev:html": "VITE_PRODUCT=HTML vite",
-    "dev:vrt": "VITE_PRODUCT=VRT vite",
-    "build:html": "tsc && VITE_PRODUCT=HTML vite build && tsc -p tsconfig.node.cjs.json",
-    "build:vrt": "tsc && VITE_PRODUCT=VRT vite build && tsc -p tsconfig.node.cjs.json",
+    "dev:html": "VITE_PRODUCT=html vite",
+    "dev:vrt": "VITE_PRODUCT=vrt vite",
+    "build:html": "tsc && VITE_PRODUCT=html vite build && tsc -p tsconfig.node.cjs.json",
+    "build:vrt": "tsc && VITE_PRODUCT=vrt vite build && tsc -p tsconfig.node.cjs.json",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
@@ -71,8 +71,8 @@
     "dist",
     "index.js",
     "index.d.ts",
-    "VRT",
-    "HTML"
+    "vrt",
+    "html"
   ],
   "exports": {
     ".": {

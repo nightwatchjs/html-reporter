@@ -9,7 +9,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const htmlReportPath = join(__dirname, 'sample', 'htmlReport.json');
 const vrtReportPath = join(__dirname, 'sample', 'vrtReport.json');
 
-const isVRT = process.env.VITE_PRODUCT === 'VRT';
+const isVRT = process.env.VITE_PRODUCT === 'vrt';
 const sampleReportPath = isVRT ?  vrtReportPath : htmlReportPath; 
 
 /**
