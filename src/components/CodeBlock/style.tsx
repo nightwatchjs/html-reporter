@@ -15,6 +15,8 @@ export const Wrapper = styled.div<WrapperProps>`
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   background-color: var(--color-grey-20);
+  max-width: 868px;
+  overflow: auto;
 
   ${(props) =>
     props.shrink &&
