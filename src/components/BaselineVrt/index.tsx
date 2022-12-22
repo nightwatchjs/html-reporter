@@ -9,7 +9,7 @@ const BaselineVrt: React.FC<Props> = ({ imageType, imgPath }) => {
   return (
     <Baseline>
       <Filters>{imageType}</Filters>
-      <img src={imgPath} />
+      <img src={imgPath} alt="Screenshot"/>
     </Baseline>
   );
 };

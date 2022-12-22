@@ -2,7 +2,7 @@ import * as Tabs from '@radix-ui/react-tabs';
 import styled, { css } from 'styled-components';
 
 type WrapperProps = {
-  vrt?: boolean;
+  gap?: boolean;
 };
 export const TabsRoot = styled(Tabs.Root)<WrapperProps>`
   display: flex;
@@ -10,7 +10,7 @@ export const TabsRoot = styled(Tabs.Root)<WrapperProps>`
   flex: 1;
   cursor: pointer;
   ${(props) =>
-    props.vrt &&
+    props.gap &&
     css`
       gap: var(--gap-12);
     `}

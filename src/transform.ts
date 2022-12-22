@@ -1,4 +1,4 @@
-import { Commands, TestFile, Stats, Metadata} from './types/nightwatch';
+import { Commands, TestFile, Stats} from './types/nightwatch';
 import { isVRT } from './constants';
 
 export const transformNightwatchReport = () => {
@@ -43,8 +43,6 @@ export interface IEnvironmentData {
 const getEnvironmentReport = () => {
   // TODO: Replace any with the types
   const envData: any = {};
-  // use process.env
-  // Will be replaced
   const report = window.nightwatchReport.environments;
   Object.keys(report).forEach((envName) => {
     envData[envName] = {

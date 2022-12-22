@@ -35,9 +35,9 @@
             "completedSections": {
               "nightwatch-vrt sample test": {
                 "vrt": {
-                  "completeBaselinePath": "/Users/ravi/Documents/Projects/nightwatch/vrt/baseline/firefox_mac/sample/footer.png",
-                  "completeDiffPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/diff/firefox_mac/sample/footer.png",
-                  "completeLatestPath": "/Users/ravi/Documents/Projects/nightwatch/vrt/latest/firefox_mac/sample/footer.png",
+                  "completeBaselinePath": "../vrtdata/sample.png",
+                  "completeDiffPath": "../vrtdata/sample.png",
+                  "completeLatestPath": "../vrtdata/sample.png",
                   "diff": 0.1720494699646643
                 },
                 "time": 0,

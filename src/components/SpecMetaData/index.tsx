@@ -9,46 +9,7 @@ import TestBlockName from '../TestBlockName';
 import { Text } from '../Text';
 import { EnvironmentAndSpecName, Metadata, TestBlockDetails, Wrapper } from './style';
 import { getMetadata } from './utils';
-import TestMetadataVrt from '../TestMetadataVrt';
-import { isVRT } from '../../constants';
 
-const returnEnvironmentMetadata = (meta: any) => {
-  // FIXME: remove type casting as any
-  return (
-    <EnvironmentMetadata
-      meta={{
-        device: meta?.device as any,
-        browserName: meta?.browserName as any,
-        browserVersion: meta?.browserVersion as any,
-        operatingSystemName: meta?.platformName as any,
-        tags: [meta?.executionMode as any],
-        time: convertMsToTime(meta?.time).time
-      }}
-    />
-  );
-};
-
-const returnTestBlockDetails = (meta: any) => {
-  return (
-    <TestBlockDetails>
-      <FilePathView>{`${meta?.filepath}`}</FilePathView>
-      {/* <TagGroup>
-      <Tags>Tag Name</Tags>
-    </TagGroup> */}
-    </TestBlockDetails>
-  );
-};
-
-const returnTestMetadataVrt = (meta: any) => {
-  return (
-    <TestMetadataVrt
-      meta={{
-        browserName: meta?.envName as any,
-        diff: meta?.diff as any
-      }}
-    />
-  );
-};
 const SpecMetaData: React.FC = () => {
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
@@ -66,7 +27,8 @@ const SpecMetaData: React.FC = () => {
       platformName,
       executionMode,
       time,
-      filepath
+      filepath,
+      diff
     } = {
       envName: undefined,
       filename: undefined,
@@ -76,7 +38,8 @@ const SpecMetaData: React.FC = () => {
       platformName: undefined,
       executionMode: undefined,
       time: undefined,
-      filepath: undefined
+      filepath: undefined,
+      diff: undefined
     }
   } = getMetadata(environments[environmentName], fileId, testId) as any;
 
@@ -104,7 +67,8 @@ const SpecMetaData: React.FC = () => {
             browserVersion: browserVersion as any,
             operatingSystemName: platformName as any,
             tags: [executionMode as any],
-            time: convertMsToTime(time).time
+            time: convertMsToTime(time).time,
+            diff: diff
           }}
         />
       </Metadata>

@@ -13,24 +13,25 @@ const TestDetailsVrt: React.FC = () => {
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
   const vrtData: IVrtData = getVrtData(environments[environmentName], fileId, testId);
+  const {completeBaselinePath, completeDiffPath, completeLatestPath} = vrtData;
   return (
     <Wrapper>
       <Details>
-        <TabsRoot defaultValue="tab1" vrt={isVRT}>
+        <TabsRoot defaultValue="Diff" gap={isVRT}>
           <TabsList aria-label="Manage your Tests">
-            <TabsTrigger value="tab1">Baseline and Diff</TabsTrigger>
-            <TabsTrigger value="tab2">Baseline and Latest</TabsTrigger>
+            <TabsTrigger value="Diff">Baseline and Diff</TabsTrigger>
+            <TabsTrigger value="Latest">Baseline and Latest</TabsTrigger>
           </TabsList>
-          <Tabs.Content className="TabsContent" value="tab1">
+          <Tabs.Content className="TabsContent" value="Diff">
             <Error>
-              <BaselineVrt imageType="Baseline" imgPath={vrtData.completeBaselinePath} />
-              <BaselineVrt imageType="Diff" imgPath={vrtData.completeDiffPath} />
+              <BaselineVrt imageType="Baseline" imgPath={completeBaselinePath} />
+              <BaselineVrt imageType="Diff" imgPath={completeDiffPath} />
             </Error>
           </Tabs.Content>
-          <Tabs.Content className="TabsContent" value="tab2">
+          <Tabs.Content className="TabsContent" value="Latest">
             <Error>
-              <BaselineVrt imageType="Baseline" imgPath={vrtData.completeBaselinePath} />
-              <BaselineVrt imageType="Latest" imgPath={vrtData.completeLatestPath} />
+              <BaselineVrt imageType="Baseline" imgPath={completeBaselinePath} />
+              <BaselineVrt imageType="Latest" imgPath={completeLatestPath} />
             </Error>
           </Tabs.Content>
         </TabsRoot>
