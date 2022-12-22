@@ -19,4 +19,5 @@ export const Baseline = styled.div`
   padding: 0 var(--padding-12) var(--padding-12);
   gap: var(--gap-12);
   border: var(--border-1) solid var(--color-grey-50);
+  width: 50%;
 `;
