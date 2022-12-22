@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html, body {
-      height: 100%;
+      min-height: 100%;
     }
 
     img, picture, video, canvas, svg {
@@ -68,6 +68,7 @@ const GlobalStyles = createGlobalStyle`
     body {
       line-height: 1;
       min-width: 1280px;
+      height: 100vh;
     }
     ol, ul {
       list-style: none;

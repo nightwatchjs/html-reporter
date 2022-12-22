@@ -15,7 +15,8 @@ import {
   Segment,
   TimerOutlined,
   ZoomInMap,
-  ZoomOutMap
+  ZoomOutMap,
+  GitHub
 } from '@mui/icons-material';
 import { Logo } from './Logo';
 import { NightwatchIcon } from './NightwatchIcon';
@@ -30,6 +31,7 @@ export {
   Close,
   DesktopWindowsOutlined,
   Error,
+  GitHub,
   Logo,
   NightwatchIcon,
   Remove,
