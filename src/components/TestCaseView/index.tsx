@@ -2,6 +2,8 @@ import React from 'react';
 import TestStepsView from '../TestStepsView';
 import Header from './Header';
 import { TestBody, Wrapper } from './style';
+import TestDetailsVrt from '../TestDetailsVrt';
+import { isVRT } from '../../constants';
 
 export type TabValueProps = {
   tabValue: string;
@@ -13,7 +15,7 @@ const TestDetails: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
     <Wrapper>
       <Header />
       <TestBody>
-        <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />
+        {isVRT ? <TestDetailsVrt /> : <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />}
       </TestBody>
     </Wrapper>
   );

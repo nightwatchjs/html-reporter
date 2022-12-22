@@ -1,0 +1,99 @@
+{
+  "environments": {
+      "defaults": {
+        "modules": {
+          "sample(chrome)": {
+            "sessionCapabilities": {
+              "acceptInsecureCerts": false,
+              "browserName": "chrome",
+              "browserVersion": "108.0.1",
+              "moz:accessibilityChecks": false,
+              "moz:buildID": "20221215175817",
+              "moz:geckodriverVersion": "0.32.0",
+              "moz:headless": false,
+              "moz:platformVersion": "21.6.0",
+              "moz:processID": 56342,
+              "moz:profile": "/var/folders/n9/8h4bw85j2y95c2rw67sjjdmr0000gn/T/rust_mozprofilexcTgpQ",
+              "moz:shutdownTimeout": 60000,
+              "moz:useNonSpecCompliantPointerOrigin": false,
+              "moz:webdriverClick": true,
+              "moz:windowless": false,
+              "pageLoadStrategy": "normal",
+              "platformName": "mac",
+              "proxy": {
+              },
+              "setWindowRect": true,
+              "strictFileInteractability": false,
+              "timeouts": {
+                "implicit": 0,
+                "pageLoad": 300000,
+                "script": 30000
+              },
+              "unhandledPromptBehavior": "dismiss and notify",
+            },
+            "status": "fail",
+            "completedSections": {
+              "nightwatch-vrt sample test": {
+                "vrt": {
+                  "completeBaselinePath": "../vrtdata/footer.png",
+                  "completeDiffPath": "../vrtdata/footer1.png",
+                  "completeLatestPath": "../vrtdata/footer1.png",
+                  "diff": 0.1720494699646643
+                },
+                "time": 0,
+                "status": "fail"
+              }
+            },
+            "testEnv": "chrome"
+          },
+          "sample(firefox)": {
+            "sessionCapabilities": {
+              "acceptInsecureCerts": false,
+              "browserName": "firefox",
+              "browserVersion": "108.0.1",
+              "moz:accessibilityChecks": false,
+              "moz:buildID": "20221215175817",
+              "moz:geckodriverVersion": "0.32.0",
+              "moz:headless": false,
+              "moz:platformVersion": "21.6.0",
+              "moz:processID": 56342,
+              "moz:profile": "/var/folders/n9/8h4bw85j2y95c2rw67sjjdmr0000gn/T/rust_mozprofilexcTgpQ",
+              "moz:shutdownTimeout": 60000,
+              "moz:useNonSpecCompliantPointerOrigin": false,
+              "moz:webdriverClick": true,
+              "moz:windowless": false,
+              "pageLoadStrategy": "normal",
+              "platformName": "mac",
+              "proxy": {
+              },
+              "setWindowRect": true,
+              "strictFileInteractability": false,
+              "timeouts": {
+                "implicit": 0,
+                "pageLoad": 300000,
+                "script": 30000,
+              },
+              "unhandledPromptBehavior": "dismiss and notify"
+            },
+            "status": "fail",
+            "completedSections": {
+              "nightwatch-vrt sample test": {
+                "vrt": {
+                  "completeBaselinePath": "../vrtdata/sample2.jpg",
+                  "completeDiffPath": "../vrtdata/sample2.jpg",
+                  "completeLatestPath": "../vrtdata/sample2.jpg",
+                  "diff": 0.1720494699646643
+                },
+                "time": 0,
+                "status": "fail"
+              }
+            },
+            "testEnv": "firefox"
+          }
+        }
+      }
+  },
+  "metadata": {
+    "date": "2022-12-21T09:07:54.770Z"
+  }
+}

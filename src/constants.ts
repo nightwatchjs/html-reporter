@@ -95,3 +95,8 @@ export const PLATFORM_NAME: Record<string, string> = {
   linux: 'Linux',
   windows: 'Windows'
 };
+
+// Checking for vrt reporter
+const PRODUCT = import.meta.env.VITE_PRODUCT;
+
+export const isVRT = PRODUCT === 'VRT';

@@ -1,11 +1,19 @@
 import * as Tabs from '@radix-ui/react-tabs';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const TabsRoot = styled(Tabs.Root)`
+type WrapperProps = {
+  gap?: boolean;
+};
+export const TabsRoot = styled(Tabs.Root)<WrapperProps>`
   display: flex;
   flex-direction: column;
   flex: 1;
   cursor: pointer;
+  ${(props) =>
+    props.gap &&
+    css`
+      gap: var(--gap-12);
+    `}
 `;
 
 export const TabsList = styled(Tabs.List)`

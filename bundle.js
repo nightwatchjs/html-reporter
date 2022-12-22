@@ -1,10 +1,16 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import * as url from 'url';
+import process from 'process';
+
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const sampleReportPath = join(__dirname, 'sample', 'report.json');
+const htmlReportPath = join(__dirname, 'sample', 'htmlReport.json');
+const vrtReportPath = join(__dirname, 'sample', 'vrtReport.json');
+
+const isVRT = process.env.VITE_PRODUCT === 'VRT';
+const sampleReportPath = isVRT ?  vrtReportPath : htmlReportPath; 
 
 /**
  * @returns {import('vite').Plugin}

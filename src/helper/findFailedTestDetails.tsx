@@ -1,4 +1,5 @@
 import { Environments, IEnvironmentData, IFileStats, Status } from '../transform';
+import { isVRT } from '../constants';
 
 type FailedTest = {
   name: string;
@@ -61,7 +62,7 @@ export const findFailedTestDetails = (environments: Environments) => {
     data: {
       files: { pass, fail, skip }
     }
-  } = findMaximumFailedEnv(environments);
+  } = isVRT ? findVrtData(environments) : findMaximumFailedEnv(environments);
 
   if (fail?.length > 0) {
     return createDataObject(name, 'fail', fail);
@@ -82,4 +83,12 @@ export const findTestDetailsForEnv = (environments: Environments, envName: strin
     return createDataObject(envName, 'skip', skip);
   }
   return createDataObject(envName, 'pass', pass);
+};
+
+const findVrtData = (environments: Record<string, any>): FailedTest => {
+  const failedTest = {} as FailedTest;
+  const name = Object.keys(environments)[0];
+  failedTest.name = name;
+  failedTest.data = environments[name];
+  return failedTest;
 };

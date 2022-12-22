@@ -1,5 +1,5 @@
 import React from 'react';
-import { PLATFORM_NAME } from '../../constants';
+import { PLATFORM_NAME, isVRT } from '../../constants';
 import { DesktopWindowsOutlined } from '../../icons';
 import Browser from '../../icons/Browser';
 import OperatingSystem from '../../icons/OperatingSystem';
@@ -7,6 +7,7 @@ import ChipWithIcon from '../ChipWithIcon';
 import Tags from '../Tags';
 import Timer from '../Timer';
 import { Wrapper } from './style';
+import { Text } from '../Text';
 
 export type MetaDataProps = {
   meta: {
@@ -20,11 +21,12 @@ export type MetaDataProps = {
       minutes?: number;
       seconds?: number;
     };
+    diff: string;
   };
 };
 
 const EnvironmentMetadata: React.FC<MetaDataProps> = ({
-  meta: { device, browserName, browserVersion, operatingSystemName, tags, time }
+  meta: { device, browserName, browserVersion, operatingSystemName, tags, time, diff }
 }) => {
   const majorBrowserVersion = browserVersion?.split('.')[0];
 
@@ -50,7 +52,11 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
         tags?.map((label, index) => {
           return label && <Tags key={index}>{label}</Tags>;
         })}
-      <Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />
+      {!isVRT && (<Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />)}
+      {diff && (<Text fontSize={12} lineHight={20} color="grey-100" transformText>
+        {diff} diff
+      </Text>
+      )}
     </Wrapper>
   );
 };

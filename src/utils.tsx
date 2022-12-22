@@ -1,3 +1,5 @@
+import { Environments } from './transform';
+
 export const getPassedTestPercentage = (totalTests: number, passedTests: number): string => {
   const passedPercentage = (passedTests / totalTests) * 100;
   return Number.isNaN(passedPercentage) ? '0' : passedPercentage.toFixed();
@@ -66,3 +68,16 @@ export const cleanAnsi = (str: string): string => {
     ''
   );
 };
+
+export const numberOfChangesInVrt = (environments: Environments): number => {
+  let count = 0;
+  Object.keys(environments).forEach((envname) => {
+    const files = environments[envname].files.fail;
+    Object.keys(files).forEach((filename, index) => {
+      const testLength = files[index].tests.length;
+      count += testLength;
+    });
+  });
+  return count;
+};
+
