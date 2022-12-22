@@ -1,17 +1,17 @@
 import React from 'react';
-import { Baseline, Header } from './style';
+import { Wrapper, Header } from './style';
 
-type Props = {
+type ImageContainerProps = {
   imageType: string;
   imgPath: string;
 };
 
-const ImageContainer: React.FC<Props> = ({ imageType, imgPath }) => {
+const ImageContainer: React.FC<ImageContainerProps> = ({ imageType, imgPath }) => {
   return (
-    <Baseline>
+    <Wrapper>
       <Header>{imageType}</Header>
       <img src={imgPath} alt={`${imageType} Screenshot`} />
-    </Baseline>
+    </Wrapper>
   );
 };
 
