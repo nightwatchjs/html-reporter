@@ -36,7 +36,8 @@ const PassTestStep: React.FC<TestStepProps> = ({
                 ...(snapshotUrl && { url: snapshotUrl })
               }
         )
-      }>
+      }
+    >
       <PassedIcon />
       <Text>{children}</Text>
       <ElapsedTime>{time < 1000 ? `${time} ms` : `${Math.round(time / 1000)} sec`}</ElapsedTime>

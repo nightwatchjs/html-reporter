@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "clean": "rm -rf html vrt index.js index.d.ts *.tsbuildinfo *.tgz"
+    "clean": "rm -rf html vrt index.js index.d.ts *.tsbuildinfo *.tgz",
+    "docs": "npx typedoc --tsconfig tsconfig.node.cjs.json --readme none --gitRevision main --externalPattern --excludeExternals --excludeProtected --excludePrivate --plugin typedoc-plugin-markdown --out docs/ index.ts  && npm run format"
   },
   "repository": {
     "type": "git",
@@ -63,6 +64,8 @@
     "react-medium-image-zoom": "^5.1.2",
     "react-virtuoso": "^3.1.5",
     "styled-components": "^5.3.6",
+    "typedoc": "^0.23.23",
+    "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3",
     "vite-plugin-singlefile": "^0.13.1"

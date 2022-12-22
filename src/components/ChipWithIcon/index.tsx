@@ -18,7 +18,8 @@ const ChipWithIcon: React.FC<Props> = ({ icon, children, title, transformText })
         fontSize={12}
         lineHight={20}
         color="grey-100"
-        transformText={transformText}>
+        transformText={transformText}
+      >
         {children}
       </Text>
     </Wrapper>

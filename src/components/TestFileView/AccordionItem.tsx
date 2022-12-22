@@ -15,7 +15,8 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ expandedIds, setTabValu
       key={file.key}
       value={file.key}
       disabled={file.status === 'skip'}
-      skip={+(file.status === 'skip')}>
+      skip={+(file.status === 'skip')}
+    >
       <AccordionTrigger status={file.status as Status} value={file.key} expandedIds={expandedIds}>
         {file.fileName}
       </AccordionTrigger>
@@ -30,7 +31,8 @@ const AccordionItems: React.FC<AccordionItemsProps> = ({ expandedIds, setTabValu
               testKey={test.key}
               setTestId={setTestId}
               setFileId={setFileId}
-              setTabValue={setTabValue}>
+              setTabValue={setTabValue}
+            >
               {test.testName}
             </TestBlock>
           );

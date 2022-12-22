@@ -69,7 +69,8 @@ const EnvironmentDropdown: React.FC = () => {
               setFileId(fileIndex);
               setTestId(testIndex);
               setEnvironmentName(envName);
-            }}>
+            }}
+          >
             {filteredData.map(({ name, origName, meta, testResult }, index) => (
               <DropdownRadioItemContent key={index} value={origName}>
                 <EnvironmentContent name={name} meta={meta} testResult={testResult} />

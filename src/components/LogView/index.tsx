@@ -51,7 +51,8 @@ const LogView: React.FC<LogViewProps> = ({ log }) => {
                       {...defaultProps}
                       theme={theme}
                       code={String(response.replaceAll('&#39;', "'"))}
-                      language="jsx">
+                      language="jsx"
+                    >
                       {({ className, style, tokens, getLineProps, getTokenProps }) => (
                         <Pre className={className} style={style}>
                           {tokens.map((line, i) => (

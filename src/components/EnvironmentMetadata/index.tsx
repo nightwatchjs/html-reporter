@@ -41,7 +41,8 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
         <ChipWithIcon
           title={browserVersion}
           icon={<Browser name={browserName} />}
-          transformText>{`${browserName} ${majorBrowserVersion ?? ''}`}</ChipWithIcon>
+          transformText
+        >{`${browserName} ${majorBrowserVersion ?? ''}`}</ChipWithIcon>
       )}
       {operatingSystemName && (
         <ChipWithIcon icon={<OperatingSystem name={operatingSystemName} />}>{`${

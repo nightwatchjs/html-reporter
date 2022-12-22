@@ -35,7 +35,8 @@ const TestBlock: React.FC<TestBlockProps> = ({
           setTestId(testKey);
           setTabValue && setTabValue('test-details');
         }
-      }}>
+      }}
+    >
       <Left>{statusIcon(status as Status)}</Left>
       <Text fontSize={14} lineHight={20} color="grey-100" transformText>
         {children}

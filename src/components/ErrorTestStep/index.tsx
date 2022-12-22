@@ -53,7 +53,8 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
                 ...(snapshotUrl && { url: snapshotUrl })
               }
         )
-      }>
+      }
+    >
       <FailedStepWrapper>
         <FailedIcon />
         <Text>{children}</Text>

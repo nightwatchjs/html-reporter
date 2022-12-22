@@ -26,5 +26,5 @@ export default defineConfig({
   ],
   build: {
     outDir: process.env.VITE_PRODUCT
-  },
+  }
 });
