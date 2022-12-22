@@ -69,7 +69,9 @@
   "files": [
     "dist",
     "index.js",
-    "index.d.ts"
+    "index.d.ts",
+    "VRT",
+    "HTML"
   ],
   "exports": {
     ".": {
