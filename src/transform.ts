@@ -229,6 +229,5 @@ const getTestsStats = (
 };
 
 const roundOff = (diff: string): string => {
-  const result = (parseFloat(diff)*100).toFixed(2);
-  return result.toString();
+  return (parseFloat(diff)*100).toFixed(2)
 };
