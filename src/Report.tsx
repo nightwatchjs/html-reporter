@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { isVRT } from './constants';
-import HtmlReporterComponent from './htmlReporterComponent';
-import VrtReporterComponent from './vrtReporterComponent';
+import HtmlReporterComponent from './HtmlReporterComponent';
+import VrtReporterComponent from './VrtReporterComponent';
 
 const Report: React.FC = () => {
   return (
