@@ -26,7 +26,6 @@ const LogView: React.FC<LogViewProps> = ({ log }) => {
     <Wrapper>
       <LogWrapper>
         <Virtuoso
-          style={{ height: '100vh' }}
           data={log}
           totalCount={log?.length}
           itemContent={(index, logArr) => {

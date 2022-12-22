@@ -7,7 +7,6 @@ type AccordionItemProps = {
 };
 
 export const AccordionRoot = styled(Accordion.Root)`
-  background: var(--color-grey-20);
   display: flex;
   flex-direction: column;
   gap: var(--gap-4);
@@ -22,7 +21,8 @@ export const AccordionItem = styled(Accordion.Item)<AccordionItemProps>`
   margin-bottom: 4px;
   &:focus-within {
     position: relative;
-    box-shadow: 0 0 0 2px var(--color-primary-50);
+    outline: 1px solid var(--color-primary-50);
+    outline-offset: -1px;
   }
   ${({ skip }) =>
     skip &&
@@ -35,7 +35,7 @@ export const AccordionHeader = styled(Accordion.Header)`
   display: flex;
   padding: var(--padding-8);
   background: var(--color-grey-20);
-  border-bottom: var(--border-1) solid var(--color-grey-50);
+  /* border-bottom: var(--border-1) solid var(--color-grey-50); */
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-14);
   line-height: var(--line-height-20);
