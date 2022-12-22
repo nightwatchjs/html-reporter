@@ -6,13 +6,13 @@ import LogView from '../LogView';
 import { getTestsSteps } from '../SpecMetaData/utils';
 import { TabValueProps } from '../TestCaseView';
 import TestDetailsView from '../TestDetailsView';
-import { LogWrapper, SeleniumLog, TabsList, TabsRoot, TabsTrigger } from './style';
+import { TabsList, TabsRoot, TabsTrigger } from './style';
 
 const TestStepsView: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
   const { environmentName, fileId, testId } = useReportContext();
   const { environments } = useGlobalContext();
 
-  const { testSteps, httpLog, seleniumLog, traceView } = getTestsSteps(
+  const { testSteps, httpLog, traceView } = getTestsSteps(
     environments[environmentName],
     fileId,
     testId
@@ -23,7 +23,7 @@ const TestStepsView: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
       <TabsList aria-label="Manage your Tests">
         <TabsTrigger value="test-details">Test Details</TabsTrigger>
         <TabsTrigger value="http-log">Raw HTTP log</TabsTrigger>
-        <TabsTrigger value="selenium-log">Selenium logs</TabsTrigger>
+        {/* <TabsTrigger value="selenium-log">Selenium logs</TabsTrigger> */}
       </TabsList>
       <Tabs.Content value="test-details">
         <TestDetailsView testStepsData={testSteps} tracePresent={traceView} />
@@ -31,11 +31,11 @@ const TestStepsView: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
       <Tabs.Content value="http-log">
         <LogView log={httpLog} />
       </Tabs.Content>
-      <Tabs.Content value="selenium-log">
+      {/* <Tabs.Content value="selenium-log">
         <LogWrapper>
           <SeleniumLog src={seleniumLog} frameBorder="0" />
         </LogWrapper>
-      </Tabs.Content>
+      </Tabs.Content> */}
     </TabsRoot>
   );
 };

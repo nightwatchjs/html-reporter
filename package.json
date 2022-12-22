@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "clean": "rm -rf dist index.js index.d.ts *.tsbuildinfo *.tgz"
+    "clean": "rm -rf html vrt index.js index.d.ts *.tsbuildinfo *.tgz"
   },
   "repository": {
     "type": "git",
