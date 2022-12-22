@@ -59,14 +59,13 @@ const SpecMetaData: React.FC = () => {
             </>
           )}
         </EnvironmentAndSpecName>
-        {/* FIXME: remove type casting as any */}
         <EnvironmentMetadata
           meta={{
-            device: device as any,
-            browserName: browserName as any,
-            browserVersion: browserVersion as any,
-            operatingSystemName: platformName as any,
-            tags: [executionMode as any],
+            device: device,
+            browserName: browserName,
+            browserVersion: browserVersion,
+            operatingSystemName: platformName,
+            tags: [executionMode],
             time: convertMsToTime(time).time,
             diff: diff
           }}

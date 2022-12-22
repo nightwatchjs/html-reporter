@@ -60,7 +60,9 @@ const TestData: React.FC = () => {
                 Expand all
               </Text>
             </ToggleRoot>
-            <FilterDropdown filterContext={filterContext} setFilterContext={setFilterContext} />
+            {!isVRT && (
+              <FilterDropdown filterContext={filterContext} setFilterContext={setFilterContext} />
+            )}
           </Actions>
           <TestFileView
             query={query}

@@ -21,7 +21,7 @@ export type MetaDataProps = {
       minutes?: number;
       seconds?: number;
     };
-    diff: string;
+    diff?: string;
   };
 };
 
@@ -48,14 +48,16 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
           PLATFORM_NAME[operatingSystemName] ?? ''
         }`}</ChipWithIcon>
       )}
-      {tags &&
+      {!isVRT &&
+        tags &&
         tags?.map((label, index) => {
-          return label && <Tags key={index}>{label}</Tags>;
+          return label && <Tags key={`${label}-${index}`}>{label}</Tags>;
         })}
-      {!isVRT && (<Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />)}
-      {diff && (<Text fontSize={12} lineHight={20} color="grey-100" transformText>
-        {diff} diff
-      </Text>
+      {!isVRT && <Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />}
+      {diff && (
+        <Text fontSize={12} lineHight={20} color="grey-100" transformText>
+          {diff} diff
+        </Text>
       )}
     </Wrapper>
   );

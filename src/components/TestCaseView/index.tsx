@@ -10,15 +10,19 @@ export type TabValueProps = {
   setTabValue: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const TestDetails: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
+const TestCaseView: React.FC<TabValueProps> = ({ tabValue, setTabValue }) => {
   return (
     <Wrapper>
       <Header />
       <TestBody>
-        {isVRT ? <TestDetailsVrt /> : <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />}
+        {isVRT ? (
+          <TestDetailsVrt />
+        ) : (
+          <TestStepsView tabValue={tabValue} setTabValue={setTabValue} />
+        )}
       </TestBody>
     </Wrapper>
   );
 };
 
-export default TestDetails;
+export default TestCaseView;
