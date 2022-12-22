@@ -56,7 +56,7 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
       {!isVRT && <Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />}
       {diff && (
         <Text fontSize={12} lineHight={20} color="grey-100" transformText>
-          {diff} diff
+          {diff}% diff
         </Text>
       )}
     </Wrapper>

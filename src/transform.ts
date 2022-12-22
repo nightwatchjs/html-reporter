@@ -205,7 +205,7 @@ const getTestsStats = (
       ...{ filepath: fileReport.modulePath },
       ...{ time: fileReport.timeMs },
       ...{ envName },
-      ...(isVRT && { diff: singleTestReport.vrt.diff })
+      ...(isVRT && { diff: roundOff(singleTestReport.vrt.diff) })
     };
 
     // Add VRT data
@@ -219,11 +219,16 @@ const getTestsStats = (
     // adding browsername incase for VRT
     if (isVRT) {
       testData.metadata.browserName = fileReport.sessionCapabilities.browserName;
-      testData.metadata.envName = fileReport.testEnv;
+      testData.metadata.envName = fileReport.testEnv || 'All';
     }
 
     resultData.push(testData);
   });
 
   return resultData;
+};
+
+const roundOff = (diff: string): string => {
+  const result = (parseFloat(diff)*100).toFixed(2);
+  return result.toString();
 };
