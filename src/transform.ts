@@ -1,4 +1,4 @@
-import { Commands, TestFile, Stats} from './types/nightwatch';
+import { Commands, TestFile, Stats } from './types/nightwatch';
 import { isVRT } from './constants';
 
 export const transformNightwatchReport = () => {
@@ -132,7 +132,7 @@ export interface ITestStats {
     filename: string;
     filepath: string;
     envName: string;
-    diff: string;
+    diff?: string;
   };
   stats: {
     passed: number;
@@ -153,13 +153,13 @@ export interface IVrtData {
 const normalizeTestName = (testName: string): string => {
   switch (testName) {
     case '__before_hook':
-      return 'Before'
+      return 'Before';
     case '__after_hook':
-      return 'After'
+      return 'After';
     default:
-      return testName
+      return testName;
   }
-}
+};
 
 const getTestsStats = (
   fileName: string,
@@ -179,7 +179,7 @@ const getTestsStats = (
 
     const testData = {} as ITestStats;
     const singleTestReport = testReport[testName];
-    
+
     if (isVRT) {
       singleTestReport.status = 'fail';
     }
@@ -205,15 +205,17 @@ const getTestsStats = (
       ...{ filepath: fileReport.modulePath },
       ...{ time: fileReport.timeMs },
       ...{ envName },
-      ...{ diff: isVRT ? singleTestReport.vrt.diff : ''}
+      ...(isVRT && { diff: singleTestReport.vrt.diff })
     };
 
     // Add VRT data
-    testData['vrt'] = isVRT ? {
-      completeBaselinePath: singleTestReport.vrt.completeBaselinePath,
-      completeDiffPath: singleTestReport.vrt.completeDiffPath,
-      completeLatestPath: singleTestReport.vrt.completeLatestPath
-    }: {} as IVrtData;
+    testData['vrt'] = isVRT
+      ? {
+          completeBaselinePath: singleTestReport.vrt.completeBaselinePath,
+          completeDiffPath: singleTestReport.vrt.completeDiffPath,
+          completeLatestPath: singleTestReport.vrt.completeLatestPath
+        }
+      : ({} as IVrtData);
     // adding browsername incase for VRT
     if (isVRT) {
       testData.metadata.browserName = fileReport.sessionCapabilities.browserName;

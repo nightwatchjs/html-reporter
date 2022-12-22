@@ -5,13 +5,13 @@ import Header from './components/Header';
 import TestData from './components/TestData';
 import { ReportContextProvider } from './contexts/ReportContext';
 import { Text } from './components/Text';
-import { numberOfChangesInVrt } from './utils';
+import { totalFailedVRTTests } from './utils';
 import { useGlobalContext } from './hooks/GlobalContext';
-
 
 const VrtReporterComponent: React.FC = () => {
   const { environments } = useGlobalContext();
-  const changes = numberOfChangesInVrt(environments);
+  const changes = totalFailedVRTTests(environments);
+
   return (
     <Fragment>
       <ReportContextProvider>
@@ -19,7 +19,7 @@ const VrtReporterComponent: React.FC = () => {
         <Wrapper>
           <TextWrapper>
             <Text fontSize={14} lineHight={20} color="grey-100">
-                {`${changes} changes detected`}
+              {`${changes} changes detected`}
             </Text>
           </TextWrapper>
           <TestData />
@@ -34,8 +34,8 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 1px solid var(--color-grey-50);
-  border-right: 1px solid var(--color-grey-50);
+  border-left: var(--border-1) solid var(--color-grey-50);
+  border-right: var(--border-1) solid var(--color-grey-50);
 `;
 
 export const TextWrapper = styled.div`
@@ -44,7 +44,6 @@ export const TextWrapper = styled.div`
   border-bottom: var(--border-1) solid var(--color-grey-50);
   background: var(--color-grey-10);
   padding: var(--padding-8) var(--padding-20);
-  align-items: center;
   justify-content: center;
 `;
 

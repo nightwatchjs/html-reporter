@@ -69,15 +69,14 @@ export const cleanAnsi = (str: string): string => {
   );
 };
 
-export const numberOfChangesInVrt = (environments: Environments): number => {
+export const totalFailedVRTTests = (environments: Environments): number => {
   let count = 0;
-  Object.keys(environments).forEach((envname) => {
-    const files = environments[envname].files.fail;
-    Object.keys(files).forEach((filename, index) => {
+  Object.keys(environments).forEach((envName) => {
+    const files = environments[envName].files.fail;
+    Object.keys(files).forEach((_, index) => {
       const testLength = files[index].tests.length;
       count += testLength;
     });
   });
   return count;
 };
-
