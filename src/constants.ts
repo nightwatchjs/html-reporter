@@ -87,3 +87,15 @@ export const COLORS = {
 };
 
 export const HEADER_HEIGHT = 76;
+
+export const PLATFORM_NAME: Record<string, string> = {
+  mac: 'macOS',
+  'mac os x': 'macOS',
+  macOS: 'macOS',
+  linux: 'Linux',
+  windows: 'Windows'
+};
+
+const PRODUCT = import.meta.env.VITE_PRODUCT;
+
+export const isVRT = PRODUCT === 'vrt';

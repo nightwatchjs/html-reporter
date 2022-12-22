@@ -5,6 +5,7 @@ export const TabsRoot = styled(Tabs.Root)`
   display: flex;
   flex-direction: column;
   flex: 1;
+  cursor: pointer;
 `;
 
 export const TabsList = styled(Tabs.List)`
@@ -39,4 +40,24 @@ export const TabsTrigger = styled(Tabs.Trigger)`
     position: relative;
     box-shadow: 0 0 0 1px var(--color-primary-60);
   }
+`;
+
+export const LogWrapper = styled.div`
+  display: flex;
+  margin: var(--margin-12);
+  /* FIXME: Height should be based on the content? */
+  height: var(--log-view-height);
+`;
+
+export const SeleniumLog = styled.iframe`
+  display: flex;
+  flex: 1;
+  background-color: var(--list-color-secondary-background-10);
+  white-space: pre-wrap;
+  padding: var(--padding-12);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-20);
+  font-weight: var(--font-weight-semi-light);
+  color: var(--color-grey-100);
+  border-radius: var(--border-radius-4);
 `;

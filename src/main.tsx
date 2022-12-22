@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import GlobalStyles from './components/GlobalStyles';
 import Report from './Report';
 import { StyledEngineProvider } from '@mui/material/styles';
+import { GlobalContextProvider } from './contexts/GlobalContext';
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorFallback from './components/ErrorFallback';
 
 const Wrapper = styled.section`
   max-width: 1280px;
@@ -22,15 +25,21 @@ const theme = createTheme({
   }
 });
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <ThemeProvider theme={theme}>
-    <StyledEngineProvider injectFirst>
-      <React.StrictMode>
-        <GlobalStyles />
-        <Wrapper>
-          <Report />
-        </Wrapper>
-      </React.StrictMode>
-    </StyledEngineProvider>
-  </ThemeProvider>
-);
+window.addEventListener('load', () => {
+  ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+    <ThemeProvider theme={theme}>
+      <StyledEngineProvider injectFirst>
+        <React.StrictMode>
+          <GlobalStyles />
+          <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => window.location.reload()}>
+            <Wrapper>
+              <GlobalContextProvider>
+                <Report />
+              </GlobalContextProvider>
+            </Wrapper>
+          </ErrorBoundary>
+        </React.StrictMode>
+      </StyledEngineProvider>
+    </ThemeProvider>
+  );
+});

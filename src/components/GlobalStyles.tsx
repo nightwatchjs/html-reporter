@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html, body {
-      height: 100%;
+      min-height: 100%;
     }
 
     img, picture, video, canvas, svg {
@@ -68,6 +68,7 @@ const GlobalStyles = createGlobalStyle`
     body {
       line-height: 1;
       min-width: 1280px;
+      height: 100vh;
     }
     ol, ul {
       list-style: none;
@@ -243,6 +244,8 @@ const GlobalStyles = createGlobalStyle`
     /* Border */
     --border-1: calc(1 / 16 * 1rem);
     --border-2: calc(2 / 16 * 1rem);
+
+    --log-view-height: calc(1444 / 16 * 1rem);
 
     .blue-text-color {
       color: var(--color-blue-60);

@@ -27,7 +27,7 @@ export const FilterWrapper = styled.div`
 
 export const DropdownMenuContent = styled(DropdownMenu.Content)`
   margin-top: var(--margin-4);
-  min-width: 646px;
+  min-width: calc(655 / 16 * 1rem);
   display: flex;
   flex-direction: column;
   background-color: var(--color-grey-10);
@@ -53,6 +53,7 @@ export const DropdownRadioItem = styled(DropdownMenu.RadioItem)`
 
   &:hover {
     background-color: var(--light-primary-background-10);
+    font-weight: var(--font-weight-bold);
   }
 
   &:focus {

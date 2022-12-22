@@ -15,4 +15,5 @@ export const Wrapper = styled.div`
 export const IconWrapper = styled.div`
   font-size: var(--font-size-20);
   color: var(--color-red-60);
+  display: flex;
 `;

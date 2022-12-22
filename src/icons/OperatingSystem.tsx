@@ -1,7 +1,7 @@
 import React from 'react';
 
 type OperatingSystemProps = {
-  name: 'windows' | 'linux' | 'macos';
+  name: string;
 };
 
 const Windows = () => (
@@ -1072,14 +1072,16 @@ const MacOS = () => (
 const OperatingSystem: React.FC<OperatingSystemProps> = ({ name }) => {
   let component: React.ReactNode = null;
 
-  switch (name) {
+  switch (name?.toLowerCase()) {
     case 'windows':
       component = Windows();
       break;
     case 'linux':
       component = Linux();
       break;
+    case 'mac os x':
     case 'macos':
+    case 'mac':
       component = MacOS();
       break;
   }

@@ -1,8 +1,18 @@
 import React from 'react';
+import { useGlobalContext } from '../../hooks/GlobalContext';
 import { NightwatchIcon } from '../../icons';
-import { Center, Date, Left, Right, Time, Wrapper } from './style';
+import { Center, Date as DateComponent, Left, Right, Time, Wrapper } from './style';
 
 const Header = () => {
+  const {
+    metadata: { date }
+  } = useGlobalContext();
+
+  const parsedDate = new Date(date);
+  const formattedDate = new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(parsedDate);
+
+  const { timeZone } = Intl.DateTimeFormat().resolvedOptions();
+
   return (
     <Wrapper>
       <Left>
@@ -10,8 +20,8 @@ const Header = () => {
       </Left>
       <Center>Test Reporter</Center>
       <Right>
-        <Date>Sat, Jan 09 2022</Date>
-        <Time>08:45:25 IST</Time>
+        <DateComponent>{formattedDate}</DateComponent>
+        <Time>{`${parsedDate.toLocaleTimeString()} (${timeZone})`}</Time>
       </Right>
     </Wrapper>
   );

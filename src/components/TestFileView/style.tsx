@@ -1,29 +1,41 @@
 import * as Accordion from '@radix-ui/react-accordion';
-import styled from 'styled-components';
-import { Add, Cancel, Remove, CheckCircle } from '../../icons/index';
+import styled, { css } from 'styled-components';
+import { Add, Cancel, Remove, CheckCircle, RemoveCircle } from '../../icons/index';
+
+type AccordionItemProps = {
+  skip: number;
+};
 
 export const AccordionRoot = styled(Accordion.Root)`
-  background: var(--color-grey-20);
   display: flex;
   flex-direction: column;
   gap: var(--gap-4);
+  cursor: pointer;
+  flex-grow: 1;
 `;
 
-export const AccordionItem = styled(Accordion.Item)`
+export const AccordionItem = styled(Accordion.Item)<AccordionItemProps>`
   display: flex;
   flex-direction: column;
   border: var(--border-1) solid var(--color-grey-50);
+  margin-bottom: 4px;
   &:focus-within {
     position: relative;
-    box-shadow: 0 0 0 2px var(--color-primary-50);
+    outline: 1px solid var(--color-primary-50);
+    outline-offset: -1px;
   }
+  ${({ skip }) =>
+    skip &&
+    css`
+      cursor: not-allowed;
+    `}
 `;
 
 export const AccordionHeader = styled(Accordion.Header)`
   display: flex;
   padding: var(--padding-8);
   background: var(--color-grey-20);
-  border-bottom: var(--border-1) solid var(--color-grey-50);
+  /* border-bottom: var(--border-1) solid var(--color-grey-50); */
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-14);
   line-height: var(--line-height-20);
@@ -47,6 +59,8 @@ export const AccordionHeaderContent = styled.div`
 
 export const StyledAccordionContent = styled(Accordion.Content)`
   background: var(--color-grey-10);
+  display: flex;
+  flex-direction: column;
 `;
 
 export const CancelIcon = styled(Cancel)`
@@ -67,4 +81,9 @@ export const AddIcon = styled(Add)`
 export const CheckCircleIcon = styled(CheckCircle)`
   font-size: var(--font-size-16);
   color: var(--color-green-50);
+`;
+
+export const RemoveCircleIcon = styled(RemoveCircle)`
+  font-size: var(--font-size-16);
+  color: var(--color-orange-50);
 `;

@@ -22,9 +22,10 @@ export const AnalyticsWrapper = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  height: calc(158 / 16 * 1rem);
 `;
 export const EnvironmentReportWrapper = styled(motion.div)`
-  flex: 1.4 1 0%;
+  flex: 1.45 1 0%;
 `;
 
 export const Header = styled.div`
@@ -46,6 +47,7 @@ export const SubTitle = styled.p`
   margin-right: auto;
   align-self: baseline;
   font-weight: 400;
+  margin-left: var(--margin-4);
 `;
 
 export const Link = styled(motion.a)`

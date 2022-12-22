@@ -4,33 +4,47 @@ import theme from 'prism-react-renderer/themes/github';
 import { Segment } from '../../icons';
 import Tooltip from '../Tooltip';
 import { CodeWrapper, Filename, Line, LineContent, LineNo, Link, Pre, Wrapper } from './style';
+import { CodeSnippet } from '../../types/nightwatch';
+import { destructCodeBlock } from './utils';
 
 type CodeBlockProps = {
   filename: string;
   line_number: number;
-  codeSnippet: string[];
+  codeSnippet: CodeSnippet[];
   file_path: string;
+  tracePresent?: boolean;
 };
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ filename, line_number, codeSnippet, file_path }) => {
+const CodeBlock: React.FC<CodeBlockProps> = ({
+  filename,
+  line_number,
+  codeSnippet,
+  file_path,
+  tracePresent
+}) => {
+  const { code, line: lineNumbers } = destructCodeBlock(codeSnippet);
+
   return (
-    <Wrapper>
+    <Wrapper shrink={tracePresent}>
       <Filename>
         <Segment />
         <Tooltip content="Open in IDE">
           <Link
-            href={`vscode://file/${file_path}:${line_number}:1`}>{`${filename} : ${line_number}`}</Link>
+            href={`vscode://file/${file_path}:${line_number}:1`}
+          >{`${filename}:${line_number}`}</Link>
         </Tooltip>
       </Filename>
       <CodeWrapper>
-        <Highlight {...defaultProps} theme={theme} code={codeSnippet.join('\n')} language="jsx">
+        <Highlight {...defaultProps} theme={theme} code={code.join('\n')} language="jsx">
           {({ className, tokens, getLineProps, getTokenProps }) => (
             <Pre className={className}>
               {tokens.map((line, i) => (
-                // TODO: Highlight based on the number from Nightwatch
-                <Line highlight={i == 1} key={i} {...getLineProps({ line, key: i })}>
-                  {/* TODO: Add 10/100 based on the line number from nightwatch -> {i + 10/100 + 1} */}
-                  <LineNo>{i + 1}</LineNo>
+                <Line
+                  highlight={lineNumbers[i] === line_number}
+                  key={i}
+                  {...getLineProps({ line, key: i })}
+                >
+                  <LineNo>{lineNumbers[i]}</LineNo>
                   <LineContent>
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />

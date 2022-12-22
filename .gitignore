@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+index.d.ts
+!src/index.d.ts
+index.js
+*.tsbuildinfo
+html/
+vrt/
+*.tgz

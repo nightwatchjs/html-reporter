@@ -6,13 +6,14 @@ import { Wrapper } from './style';
 
 type ScreenshotProps = {
   src: string;
+  alt: string;
 };
 
-const Screenshot: React.FC<ScreenshotProps> = ({ src }) => {
+const Screenshot: React.FC<ScreenshotProps> = ({ src, alt }) => {
   return (
     <Wrapper>
       <Zoom zoomMargin={45} IconZoom={ZoomOutMap} IconUnzoom={ZoomInMap}>
-        <img alt="That Wanaka Tree, New Zealand by Laura Smetsers" src={src} width="250" />
+        <img alt={alt} src={src} width="250" />
       </Zoom>
     </Wrapper>
   );

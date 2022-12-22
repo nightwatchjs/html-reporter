@@ -11,17 +11,19 @@ type EnvironmentContentProps = {
     failed: number;
     skipped: number;
   };
+  isDropdownTrigger?: boolean;
 };
 
 const EnvironmentContent: React.FC<EnvironmentContentProps> = ({
   name,
   meta,
-  testResult: { passed, failed, skipped }
+  testResult: { passed, failed, skipped },
+  isDropdownTrigger
 }) => {
   return (
     <Content>
       <EnvironmentDetails>
-        <EnvironmentHeading>{name}</EnvironmentHeading>
+        <EnvironmentHeading isDropdownTrigger={isDropdownTrigger}>{name}</EnvironmentHeading>
         <EnvironmentMetadata meta={meta} />
       </EnvironmentDetails>
       <TestResultCount passed={passed} failed={failed} skipped={skipped} />

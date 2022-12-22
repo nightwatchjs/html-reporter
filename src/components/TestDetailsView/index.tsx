@@ -1,56 +1,76 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ErrorTestStep from '../ErrorTestStep';
 import PassTestStep from '../PassTestStep';
 import Search from '../Search';
-import { SearchWrapper, TestStepWrapper, Wrapper } from './style';
+import { ITestSteps } from '../SpecMetaData/types';
+import Trace from '../Trace';
+import { SearchWrapper, TestSteps, TestStepWrapper, Wrapper } from './style';
+import { filterTestSteps, joinArgs, validTestArgs } from './utils';
 
-const testStepData = [
-  {
-    stepName: 'Before Hooks',
-    time: 12
-  },
-  {
-    stepName: `waitForElementVisible('body')`,
-    time: 4
-  },
-  {
-    stepName: `titleContains('Ecosia')`,
-    time: 2
-  },
-  {
-    stepName: `visible('input[type=search]')`,
-    time: 2
-  },
-  {
-    stepName: `setValue('input[type=search]', 'nightwatch')`,
-    time: 6
-  },
-  {
-    stepName: `visible('button[type=submit]')`,
-    time: 3
-  },
-  {
-    stepName: `click('button[type=submit]')`,
-    time: 2
-  }
-];
+type TestDetailsViewProps = {
+  testStepsData: ITestSteps[];
+  tracePresent: boolean;
+};
 
-const TestDetailsView: React.FC = () => {
+const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, tracePresent }) => {
+  const [query, setQuery] = useState<string>('');
+  const [trace, setTrace] = useState<{ url?: string; snapshotPath?: string } | undefined>();
+
+  const filteredTestsSteps = filterTestSteps(testStepsData, query);
+
+  useEffect(() => {
+    const firstTestWithTrace = filteredTestsSteps.find((test) => test.domSnapshot);
+    const traceObject = firstTestWithTrace?.domSnapshot;
+    if (traceObject) {
+      const { snapshotFilePath, snapshotUrl } = traceObject;
+      setTrace({ url: snapshotUrl, snapshotPath: snapshotFilePath });
+    }
+  }, [filterTestSteps]);
+
   return (
     <Wrapper>
       <SearchWrapper>
-        <Search placeholder="Search test steps" />
+        <Search
+          placeholder="Search test steps"
+          onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
+        />
       </SearchWrapper>
       <TestStepWrapper>
-        {testStepData.map((data, index) => {
-          return (
-            <PassTestStep key={index} time={data.time}>
-              {data.stepName}
-            </PassTestStep>
-          );
-        })}
-        <ErrorTestStep time={24}>{`textContains('.layout__content', 'asdr.js');`}</ErrorTestStep>
-        <PassTestStep time={6}>After Hooks</PassTestStep>
+        <TestSteps>
+          {filteredTestsSteps.map((test, index) => {
+            if (test.status === 'pass') {
+              return (
+                <PassTestStep
+                  key={index}
+                  time={test.time}
+                  traceData={test.domSnapshot ?? {}}
+                  setTrace={setTrace}
+                >
+                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
+                </PassTestStep>
+              );
+            }
+            if (test.status === 'fail') {
+              // FIXME: Replace NightwatchAssertError to dynamic value
+              return (
+                <ErrorTestStep
+                  key={index}
+                  time={test.time}
+                  errorName={'NightwatchAssertError'}
+                  shortMessage={test.shortMessage ?? ['']}
+                  stacktrace={test.stacktrace}
+                  screenshot={test.screenshot}
+                  traceData={test.domSnapshot ?? {}}
+                  setTrace={setTrace}
+                  tracePresent={tracePresent}
+                >
+                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
+                </ErrorTestStep>
+              );
+            }
+          })}
+        </TestSteps>
+        {tracePresent && <Trace url={trace?.url} src={trace?.snapshotPath} />}
       </TestStepWrapper>
     </Wrapper>
   );
