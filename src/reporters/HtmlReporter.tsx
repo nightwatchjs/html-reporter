@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Summary from './components/Summary';
-import TestData from './components/TestData';
-import { ReportContextProvider } from './contexts/ReportContext';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Summary from '../components/Summary';
+import TestData from '../components/TestData';
+import { ReportContextProvider } from '../contexts/ReportContext';
 
 const Report: React.FC = () => {
   return (
@@ -25,9 +25,9 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  border-left: 1px solid var(--color-grey-50);
-  border-right: 1px solid var(--color-grey-50);
+  gap: var(--gap-20);
+  border-left: var(--border-1) solid var(--color-grey-50);
+  border-right: var(--border-1) solid var(--color-grey-50);
 `;
 
 export default Report;

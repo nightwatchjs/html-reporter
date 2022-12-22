@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { isVRT } from './constants';
-import HtmlReporter from './HtmlReporter';
-import VrtReporter from './VrtReporter';
+import HtmlReporter from './reporters/HtmlReporter';
+import VrtReporter from './reporters/VrtReporter';
 
-const Report: React.FC = () => {
-  return <Fragment>{isVRT ? <VrtReporter /> : <HtmlReporter />}</Fragment>;
-};
+const Report: React.FC = () => (isVRT ? <VrtReporter /> : <HtmlReporter />);
 
 export default Report;

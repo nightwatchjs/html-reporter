@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import TestData from './components/TestData';
-import { ReportContextProvider } from './contexts/ReportContext';
-import { Text } from './components/Text';
-import { totalFailedVRTTests } from './utils';
-import { useGlobalContext } from './hooks/GlobalContext';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import TestData from '../components/TestData';
+import { ReportContextProvider } from '../contexts/ReportContext';
+import { Text } from '../components/Text';
+import { totalFailedVRTTests } from '../utils';
+import { useGlobalContext } from '../hooks/GlobalContext';
 
 const VrtReporterComponent: React.FC = () => {
   const { environments } = useGlobalContext();
