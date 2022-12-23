@@ -10,7 +10,6 @@ import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from './components/ErrorFallback';
 
 const Wrapper = styled.section`
-  max-width: 1280px;
   margin: auto;
   background: var(--color-grey-20);
 `;

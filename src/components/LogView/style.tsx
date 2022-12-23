@@ -23,7 +23,7 @@ export const Wrapper = styled.article`
 `;
 
 export const LogWrapper = styled.div`
-  max-width: calc(913 / 16 * 1rem);
+  //max-width: calc(913 / 16 * 1rem);
   overflow: auto;
   background-color: var(--list-color-secondary-background-10);
   padding: var(--padding-12);
@@ -76,12 +76,14 @@ export const Time = styled.div`
   padding: var(--padding-4);
   background-color: var(--color-grey-50);
   flex-shrink: 0;
+  margin-right: 15px;
 `;
 
 export const RequestText = styled.div`
   display: flex;
   gap: var(--gap-4);
   font-size: var(--font-size-14);
+  font-family: "Menlo", monospace;
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   align-items: center;

@@ -26,7 +26,7 @@ export const Left = styled.div`
 
 export const Right = styled.div`
   border-left: var(--border-1) solid var(--color-grey-40);
-  flex: 1 2 945px;
+  flex: 1 2 1480px;
   display: flex;
   flex-direction: column;
   background: var(--color-grey-10);
