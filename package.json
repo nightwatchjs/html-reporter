@@ -1,7 +1,7 @@
 {
   "name": "@nightwatch/html-reporter-template",
   "description": "Nightwatch HTML reporter template",
-  "version": "0.1.3-dev.1",
+  "version": "0.1.3",
   "type": "commonjs",
   "scripts": {
     "dev:html": "VITE_PRODUCT=html vite",
