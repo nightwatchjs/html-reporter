@@ -20,7 +20,6 @@ export const Wrapper = styled.div<WrapperProps>`
   ${(props) =>
     props.shrink &&
     css`
-      max-width: calc(388 / 16 * 1rem);
       overflow: auto;
     `}
 `;
