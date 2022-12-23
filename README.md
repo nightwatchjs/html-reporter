@@ -3,8 +3,7 @@
 [![npm][npm-badge]][npm]
 [![Discord][discord-badge]][discord]
 
-> **Warning**
-> This package is used internally for the Nightwatch Report. Please use this package with caution.
+> This package is used internally by the Nightwatch HTML reporter and it's not designed to be used directly.
 
 This Repo contains template for HTML and VRT Reporter.
 
