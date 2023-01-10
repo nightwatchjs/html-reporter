@@ -13,7 +13,7 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "clean": "rm -rf html vrt index.js index.d.ts *.tsbuildinfo *.tgz",
-    "test": "npx nightwatch",
+    "test": "npx nightwatch --headless",
     "docs": "npx typedoc --tsconfig tsconfig.node.cjs.json --readme none --gitRevision main --externalPattern --excludeExternals --excludeProtected --excludePrivate --plugin typedoc-plugin-markdown --out docs/ index.ts  && npm run format"
   },
   "repository": {
