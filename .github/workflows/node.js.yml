@@ -28,3 +28,5 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run lint -- --quiet
+    - run: npm i nightwatch
+    - run: npm run test
