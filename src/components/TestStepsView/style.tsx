@@ -5,13 +5,13 @@ export const TabsRoot = styled(Tabs.Root)`
   display: flex;
   flex-direction: column;
   flex: 1;
-  cursor: pointer;
 `;
 
 export const TabsList = styled(Tabs.List)`
   flex-shrink: 0;
   display: flex;
   border-bottom: var(--border-1) solid var(--color-grey-50);
+  cursor: pointer;
 `;
 
 export const TabsTrigger = styled(Tabs.Trigger)`
