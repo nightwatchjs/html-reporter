@@ -83,7 +83,7 @@ export const RequestText = styled.div`
   display: flex;
   gap: var(--gap-4);
   font-size: var(--font-size-14);
-  font-family: "Menlo", monospace;
+  font-family: 'Menlo', monospace;
   line-height: var(--line-height-20);
   font-weight: var(--font-weight-semi-light);
   align-items: center;

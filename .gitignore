@@ -29,3 +29,4 @@ index.js
 html/
 vrt/
 *.tgz
+tests_output

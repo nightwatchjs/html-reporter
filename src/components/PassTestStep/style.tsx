@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Check } from '../../icons';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.article`
   display: flex;
   padding: var(--padding-8);
   gap: var(--gap-8);
