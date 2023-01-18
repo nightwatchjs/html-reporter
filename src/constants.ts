@@ -96,6 +96,6 @@ export const PLATFORM_NAME: Record<string, string> = {
   windows: 'Windows'
 };
 
-const PRODUCT = import.meta.env.VITE_PRODUCT;
+const PRODUCT = import.meta.env?.VITE_PRODUCT;
 
 export const isVRT = PRODUCT === 'vrt';
