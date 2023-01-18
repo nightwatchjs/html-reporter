@@ -52,7 +52,7 @@
     "@typescript-eslint/parser": "^5.48.2",
     "@vitejs/plugin-react": "^3.0.1",
     "babel-plugin-styled-components": "^2.0.7",
-    "chromedriver": "^109.0.0",
+    "chromedriver": "^108.0.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
