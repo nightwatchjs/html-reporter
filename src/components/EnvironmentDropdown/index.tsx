@@ -53,32 +53,29 @@ const EnvironmentDropdown: React.FC = () => {
         </EnvironmentSelectorWrapper>
       </DropdownMenuTrigger>
 
-      <DropdownMenu.Portal>
-        <DropdownMenuContent>
-          <FilterWrapper>
-            <Search
-              placeholder="Search for Environments, OS, Browser, Device"
-              width={100}
-              onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
-            />
-          </FilterWrapper>
-          <DropdownMenu.RadioGroup
-            value={environmentName}
-            onValueChange={(envName) => {
-              const { fileIndex, testIndex } = findTestDetailsForEnv(environments, envName);
-              setFileId(fileIndex);
-              setTestId(testIndex);
-              setEnvironmentName(envName);
-            }}
-          >
-            {filteredData.map(({ name, origName, meta, testResult }, index) => (
-              <DropdownRadioItemContent key={index} value={origName}>
-                <EnvironmentContent name={name} meta={meta} testResult={testResult} />
-              </DropdownRadioItemContent>
-            ))}
-          </DropdownMenu.RadioGroup>
-        </DropdownMenuContent>
-      </DropdownMenu.Portal>
+      <DropdownMenuContent>
+        <FilterWrapper>
+          <Search
+            placeholder="Search for Environments, OS, Browser, Device"
+            width={100}
+            onChange={(event) => setQuery((event.target as HTMLInputElement).value)}
+          />
+        </FilterWrapper>
+        <DropdownMenu.RadioGroup
+          value={environmentName}
+          onValueChange={(envName) => {
+            const { fileIndex, testIndex } = findTestDetailsForEnv(environments, envName);
+            setFileId(fileIndex);
+            setTestId(testIndex);
+            setEnvironmentName(envName);
+          }}>
+          {filteredData.map(({ name, origName, meta, testResult }, index) => (
+            <DropdownRadioItemContent key={index} value={origName}>
+              <EnvironmentContent name={name} meta={meta} testResult={testResult} />
+            </DropdownRadioItemContent>
+          ))}
+        </DropdownMenu.RadioGroup>
+      </DropdownMenuContent>
     </DropdownMenu.Root>
   );
 };

@@ -12,6 +12,7 @@ export const Wrapper = styled(motion.article)`
   flex-direction: row;
   flex-wrap: wrap;
   background: var(--color-grey-10);
+  width: 100%;
 `;
 
 export const AnalyticsWrapper = styled(motion.div)`
