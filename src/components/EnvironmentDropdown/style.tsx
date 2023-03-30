@@ -28,7 +28,7 @@ export const FilterWrapper = styled.div`
 
 export const DropdownMenuContent = styled(DropdownMenu.Content)`
   margin-top: var(--margin-4);
-  /* min-width: calc(722 / 16 * 1rem); */
+  width: var(--radix-dropdown-menu-trigger-width);
   display: flex;
   flex-direction: column;
   background-color: var(--color-grey-10);
