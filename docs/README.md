@@ -12,13 +12,14 @@
 
 ### writeNightwatchHTMLReport
 
-▸ **writeNightwatchHTMLReport**(`destFolder`, `jsonReportObject`, `product?`): `void`
+▸ **writeNightwatchHTMLReport**(`destFolder`, `destFileName`, `jsonReportObject`, `product?`): `void`
 
 #### Parameters
 
 | Name               | Type     | Default value |
 | :----------------- | :------- | :------------ |
 | `destFolder`       | `string` | `undefined`   |
+| `destFileName`     | `string` | `undefined`   |
 | `jsonReportObject` | `string` | `undefined`   |
 | `product`          | `string` | `'html'`      |
 
