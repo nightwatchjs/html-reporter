@@ -6,6 +6,7 @@
   "scripts": {
     "dev:html": "VITE_PRODUCT=html vite",
     "dev:vrt": "VITE_PRODUCT=vrt vite",
+    "build": "npm run build:html && npm run build:vrt && tsc -p tsconfig.node.cjs.json",
     "build:html": "tsc && VITE_PRODUCT=html vite build && tsc -p tsconfig.node.cjs.json",
     "build:vrt": "tsc && VITE_PRODUCT=vrt vite build && tsc -p tsconfig.node.cjs.json",
     "preview": "vite preview",
@@ -77,7 +78,6 @@
     "vite-plugin-singlefile": "^0.13.2"
   },
   "files": [
-    "dist",
     "index.js",
     "index.d.ts",
     "vrt",
