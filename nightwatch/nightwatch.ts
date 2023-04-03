@@ -1,6 +1,4 @@
 describe('Nightwatchjs.org Demo', function () {
-  this.tags = ['demo'];
-
   before((browser) => browser.navigateTo('https://nightwatchjs.org/'));
 
   it('Demo test nightwatchjs.org', function (browser) {
@@ -15,4 +13,3 @@ describe('Nightwatchjs.org Demo', function () {
 
   after((browser) => browser.end());
 });
-//
