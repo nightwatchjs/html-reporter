@@ -3,7 +3,7 @@ import { join } from 'path';
 
 export const writeNightwatchHTMLReport = (
   destFolder: string,
-  fileName: string,
+  destFileName: string,
   jsonReportObject: string,
   product = 'html'
 ): void => {
@@ -11,7 +11,7 @@ export const writeNightwatchHTMLReport = (
   mkdirSync(destFolder, { recursive: true });
 
   const reportFile = join(__dirname, product, 'index.html');
-  const destinationReportFile = join(destFolder, fileName);
+  const destinationReportFile = join(destFolder, destFileName);
   copyFileSync(reportFile, destinationReportFile);
 
   appendFileSync(
