@@ -24,7 +24,7 @@ const { writeNightwatchHTMLReport } = require('@nightwatch/html-reporter-templat
  * The result object will be available in the "window.nightwatchReport" variable.
  *
  */
-writeNightwatchHTMLReport(<destFolder>, <result object>);
+writeNightwatchHTMLReport(<destFolder>, <destFileName>, <result object>);
 ```
 
 > **Note**
