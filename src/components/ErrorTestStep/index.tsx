@@ -6,7 +6,10 @@ import { ITrace } from '../SpecMetaData/types';
 import { ElapsedTime, FailedIcon, FailedStepWrapper, Text, Wrapper } from './style';
 
 export type TestStepProps = {
+  testStepKey: number;
   time: number;
+  active: boolean;
+  setActiveTestStep: React.Dispatch<React.SetStateAction<number | undefined>>;
   children: React.ReactNode;
   errorName: string;
   shortMessage: string[];
@@ -30,7 +33,10 @@ export type TestStepProps = {
 };
 
 const ErrorTestStep: React.FC<TestStepProps> = ({
+  testStepKey,
   time,
+  active,
+  setActiveTestStep,
   children,
   errorName,
   shortMessage,
@@ -42,7 +48,9 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
 }) => {
   return (
     <Wrapper
-      onClick={() =>
+      tracePresent={active}
+      onClick={() => {
+        setActiveTestStep(testStepKey);
         setTrace(
           snapshotFilePath
             ? {
@@ -52,9 +60,8 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
             : {
                 ...(snapshotUrl && { url: snapshotUrl })
               }
-        )
-      }
-    >
+        );
+      }}>
       <FailedStepWrapper>
         <FailedIcon />
         <Text>{children}</Text>

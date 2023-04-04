@@ -58,12 +58,15 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
               return (
                 <ErrorTestStep
                   key={index}
+                  testStepKey={index}
                   time={test.time}
                   errorName={'NightwatchAssertError'}
                   shortMessage={test.shortMessage ?? ['']}
                   stacktrace={test.stacktrace}
                   screenshot={test.screenshot}
                   traceData={test.domSnapshot ?? {}}
+                  active={index === activeTestStep && !!test.domSnapshot}
+                  setActiveTestStep={setActiveTestStep}
                   setTrace={setTrace}
                   tracePresent={tracePresent}>
                   {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}

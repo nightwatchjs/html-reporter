@@ -1,0 +1,775 @@
+{
+  "environments": {
+    "chrome": {
+      "metadata": {
+        "platformName": "mac os x",
+        "device": "desktop",
+        "browserName": "chrome",
+        "browserVersion": "111.0.5563.146",
+        "executionMode": "local"
+      },
+      "stats": {
+        "passed": 0,
+        "failed": 1,
+        "skipped": 0,
+        "total": 1,
+        "time": 7869
+      },
+      "modules": {
+        "ecosia": {
+          "completedSections": {
+            "__global_beforeEach_hook": {
+              "time": 0,
+              "assertions": [],
+              "commands": [],
+              "passed": 0,
+              "errors": 0,
+              "failed": 0,
+              "skipped": 0,
+              "tests": 0,
+              "status": "pass"
+            },
+            "__before_hook": {
+              "time": 0,
+              "assertions": [],
+              "commands": [
+                {
+                  "name": "navigateTo",
+                  "args": ["https://www.ecosia.org/"],
+                  "startTime": 1680157107491,
+                  "endTime": 1680157109645,
+                  "elapsedTime": 2154,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/navigateTo_Mar-30-2023-114829-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                }
+              ],
+              "passed": 0,
+              "errors": 0,
+              "failed": 0,
+              "skipped": 0,
+              "tests": 0,
+              "status": "pass"
+            },
+            "Demo test ecosia.org": {
+              "time": 0,
+              "assertions": [],
+              "commands": [
+                {
+                  "name": "waitForElementVisible",
+                  "args": ["body"],
+                  "startTime": 1680157109761,
+                  "endTime": 1680157109775,
+                  "elapsedTime": 14,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/waitForElementVisible_Mar-30-2023-114829-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                },
+                {
+                  "name": "assert.titleContains",
+                  "args": ["Ecosia"],
+                  "startTime": 1680157109831,
+                  "endTime": 1680157109836,
+                  "elapsedTime": 5,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/html-reporter/sample/trace.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                },
+                {
+                  "name": "assert.visible",
+                  "args": ["input[type=search]"],
+                  "startTime": 1680157109836,
+                  "endTime": 1680157109854,
+                  "elapsedTime": 18,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/waitForElementVisible_Mar-30-2023-114829-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                },
+                {
+                  "name": "setValue",
+                  "args": ["input[type=search]", "nightwatch"],
+                  "startTime": 1680157109854,
+                  "endTime": 1680157109950,
+                  "elapsedTime": 96,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/setValue_Mar-30-2023-114829-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                },
+                {
+                  "name": "assert.visible",
+                  "args": ["button[type=submit]"],
+                  "startTime": 1680157110002,
+                  "endTime": 1680157110015,
+                  "elapsedTime": 13,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/setValue_Mar-30-2023-114829-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                },
+                {
+                  "name": "click",
+                  "args": ["button[type=submit]"],
+                  "startTime": 1680157110015,
+                  "endTime": 1680157111721,
+                  "elapsedTime": 1706,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/click_Mar-30-2023-114831-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                },
+                {
+                  "name": "assert.textContains",
+                  "args": [".layout__content", "jkdbjcsbndjcsjknkjsnkajn.js"],
+                  "startTime": 1680157111802,
+                  "endTime": 1680157117241,
+                  "elapsedTime": 5439,
+                  "status": "fail",
+                  "result": {
+                    "message": "Testing if element <.layout__content> contains text 'jkdbjcsbndjcsjknkjsnkajn.js' in 5000ms - expected \"contains text 'jkdbjcsbndjcsjknkjsnkajn.js'\" but got: \"does not contain 'jkdbjcsbndjcsjknkjsnkajn.js'\" (5435ms)",
+                    "showDiff": false,
+                    "name": "NightwatchAssertError",
+                    "abortOnFailure": true,
+                    "stack": "Error\n    at Proxy.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/lib/api/index.js:157:30)\n    at DescribeInstance.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js:16:15)\n    at Context.call (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/context.js:478:35)\n    at TestCase.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:784:80)\n    at Runnable.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:937:49)\n    at TestSuite.handleRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:952:33)\n    at /Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:784:21\n    at async DefaultRunner.runTestSuite (/Users/vaibhavsingh/Dev/nightwatch/lib/runner/test-runners/default.js:84:7)",
+                    "beautifiedStack": {
+                      "filePath": "/Users/vaibhavsingh/Dev/nightwatch/lib/api/index.js",
+                      "error_line_number": 157,
+                      "codeSnippet": [
+                        {
+                          "line_number": 155,
+                          "code": "          }"
+                        },
+                        {
+                          "line_number": 156,
+                          "code": ""
+                        },
+                        {
+                          "line_number": 157,
+                          "code": "          return target[name]({negate: false, args});"
+                        },
+                        {
+                          "line_number": 158,
+                          "code": "        };"
+                        },
+                        {
+                          "line_number": 159,
+                          "code": "      }"
+                        }
+                      ]
+                    }
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/click_Mar-30-2023-114831-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  },
+                  "screenshot": "../../screens/ecosia/Demo-test-ecosia.org_FAILED_Mar-30-2023-114837-GMT+0530.png"
+                },
+                {
+                  "name": "saveScreenshot",
+                  "args": [
+                    "/Users/vaibhavsingh/Dev/nightwatch/screens/ecosia/Demo-test-ecosia.org_FAILED_Mar-30-2023-114837-GMT+0530.png",
+                    "function () { [native code] }"
+                  ],
+                  "startTime": 1680157117294,
+                  "endTime": 1680157117627,
+                  "elapsedTime": 333,
+                  "status": "pass",
+                  "result": {
+                    "status": 0
+                  },
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/click_Mar-30-2023-114831-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                }
+              ],
+              "passed": 0,
+              "errors": 0,
+              "failed": 0,
+              "skipped": 0,
+              "tests": 0,
+              "status": "fail"
+            },
+            "__after_hook": {
+              "time": 0,
+              "assertions": [],
+              "commands": [
+                {
+                  "name": "end",
+                  "args": [],
+                  "startTime": 1680157117630,
+                  "endTime": 1680157117687,
+                  "elapsedTime": 57,
+                  "status": "pass",
+                  "domSnapshot": {
+                    "snapshotFilePath": "/Users/vaibhavsingh/Dev/nightwatch/tests_output/snapshots/ecosia/click_Mar-30-2023-114831-GMT+0530.html",
+                    "snapshotUrl": "https://www.ecosia.org"
+                  }
+                }
+              ],
+              "passed": 0,
+              "errors": 0,
+              "failed": 0,
+              "skipped": 0,
+              "tests": 0,
+              "status": "pass"
+            },
+            "__global_afterEach_hook": {
+              "time": 0,
+              "assertions": [],
+              "commands": [],
+              "passed": 0,
+              "errors": 0,
+              "failed": 0,
+              "skipped": 0,
+              "tests": 0,
+              "status": "pass"
+            }
+          },
+          "rawHttpOutput": [
+            [
+              "2023-03-30T06:18:25.541Z",
+              "  Request POST /session  ",
+              "{\n     capabilities: {\n       firstMatch: [ {} ],\n       alwaysMatch: {\n         browserName: 'chrome',\n         'goog:chromeOptions': { w3c: true, args: [] }\n       }\n     }\n  }"
+            ],
+            [
+              "2023-03-30T06:18:27.488Z",
+              "  Response 200 POST /session (1948ms)",
+              "{\n     value: {\n       capabilities: {\n         acceptInsecureCerts: false,\n         browserName: 'chrome',\n         browserVersion: '111.0.5563.146',\n         chrome: {\n           chromedriverVersion: '110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839})',\n           userDataDir: '/var/folders/3j/vnc2ktf17bq7qtb8qstq1fk40000gq/T/.com.google.Chrome.SIG5nv'\n         },\n         'goog:chromeOptions': { debuggerAddress: 'localhost:52722' },\n         networkConnectionEnabled: false,\n         pageLoadStrategy: 'normal',\n         platformName: 'mac os x',\n         proxy: {},\n         setWindowRect: true,\n         strictFileInteractability: false,\n         timeouts: { implicit: 0, pageLoad: 300000, script: 30000 },\n         unhandledPromptBehavior: 'dismiss and notify',\n         'webauthn:extension:credBlob': true,\n         'webauthn:extension:largeBlob': true,\n         'webauthn:virtualAuthenticators': true\n       },\n       sessionId: '36d3b679bbf570a31feb5c7f3bbb0677'\n     }\n  }"
+            ],
+            [
+              "2023-03-30T06:18:27.492Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/url  ",
+              "{ url: 'https://www.ecosia.org/' }"
+            ],
+            [
+              "2023-03-30T06:18:29.644Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/url (2153ms)",
+              "{ value: null }"
+            ],
+            [
+              "2023-03-30T06:18:29.646Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:29.646Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:29.668Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source (16ms)",
+              "{\n     value: '&lt;html lang=&quot;en&quot; data-n-head=&quot;%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D&quot; class=&quot;light&quot;&gt;&lt;head&gt;\\n' +\n       '    &lt;ti...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.670Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url (23ms)",
+              "{ value: 'https://www.ecosia.org/' }"
+            ],
+            [
+              "2023-03-30T06:18:29.762Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: 'body' }"
+            ],
+            [
+              "2023-03-30T06:18:29.768Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (6ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'd42890e6-2179-4c71-9308-77ff2176c97c'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.769Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/execute/sync  ",
+              "{\n     script: '/* isDisplayed */return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.ex... (44044 characters)',\n     args: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'd42890e6-2179-4c71-9308-77ff2176c97c',\n         ELEMENT: 'd42890e6-2179-4c71-9308-77ff2176c97c'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.774Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/execute/sync (5ms)",
+              "{ value: true }"
+            ],
+            [
+              "2023-03-30T06:18:29.775Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:29.776Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:29.787Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source (8ms)",
+              "{\n     value: '&lt;html lang=&quot;en&quot; data-n-head=&quot;%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D&quot; class=&quot;light&quot;&gt;&lt;head&gt;\\n' +\n       '    &lt;ti...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.788Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url (13ms)",
+              "{ value: 'https://www.ecosia.org/' }"
+            ],
+            [
+              "2023-03-30T06:18:29.832Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/title  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:29.835Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/title (3ms)",
+              "{ value: 'Ecosia - the search engine that plants trees' }"
+            ],
+            [
+              "2023-03-30T06:18:29.838Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: 'input[type=search]' }"
+            ],
+            [
+              "2023-03-30T06:18:29.843Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (6ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'b9807654-ce53-4e1f-b52c-eac52c84f34b'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.844Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/execute/sync  ",
+              "{\n     script: '/* isDisplayed */return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.ex... (44044 characters)',\n     args: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'b9807654-ce53-4e1f-b52c-eac52c84f34b',\n         ELEMENT: 'b9807654-ce53-4e1f-b52c-eac52c84f34b'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.852Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/execute/sync (8ms)",
+              "{ value: true }"
+            ],
+            [
+              "2023-03-30T06:18:29.854Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: 'input[type=search]' }"
+            ],
+            [
+              "2023-03-30T06:18:29.858Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (4ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'b9807654-ce53-4e1f-b52c-eac52c84f34b'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.859Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/element/b9807654-ce53-4e1f-b52c-eac52c84f34b/clear  ",
+              "{}"
+            ],
+            [
+              "2023-03-30T06:18:29.872Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/element/b9807654-ce53-4e1f-b52c-eac52c84f34b/clear (13ms)",
+              "{ value: null }"
+            ],
+            [
+              "2023-03-30T06:18:29.873Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/element/b9807654-ce53-4e1f-b52c-eac52c84f34b/value  ",
+              "{\n     text: 'nightwatch',\n     value: [\n       'n', 'i', 'g', 'h',\n       't', 'w', 'a', 't',\n       'c', 'h'\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:29.950Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/element/b9807654-ce53-4e1f-b52c-eac52c84f34b/value (77ms)",
+              "{ value: null }"
+            ],
+            [
+              "2023-03-30T06:18:29.951Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:29.951Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:29.953Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url (3ms)",
+              "{ value: 'https://www.ecosia.org/' }"
+            ],
+            [
+              "2023-03-30T06:18:29.962Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source (7ms)",
+              "{\n     value: '&lt;html lang=&quot;en&quot; data-n-head=&quot;%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D&quot; class=&quot;light&quot;&gt;&lt;head&gt;\\n' +\n       '    &lt;ti...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:30.003Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: 'button[type=submit]' }"
+            ],
+            [
+              "2023-03-30T06:18:30.008Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (5ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': '41534bce-fc34-4df0-ac6a-69c1979e90cf'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:30.009Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/execute/sync  ",
+              "{\n     script: '/* isDisplayed */return (function(){return (function(){var k=this||self;function aa(a){return&quot;string&quot;==typeof a}function ba(a,b){a=a.split(&quot;.&quot;);var c=k;a[0]in c||&quot;undefined&quot;==typeof c.execScript||c.ex... (44044 characters)',\n     args: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': '41534bce-fc34-4df0-ac6a-69c1979e90cf',\n         ELEMENT: '41534bce-fc34-4df0-ac6a-69c1979e90cf'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:30.014Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/execute/sync (5ms)",
+              "{ value: true }"
+            ],
+            [
+              "2023-03-30T06:18:30.015Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: 'button[type=submit]' }"
+            ],
+            [
+              "2023-03-30T06:18:30.019Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (4ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': '41534bce-fc34-4df0-ac6a-69c1979e90cf'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:30.020Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/element/41534bce-fc34-4df0-ac6a-69c1979e90cf/click  ",
+              "{}"
+            ],
+            [
+              "2023-03-30T06:18:31.721Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/element/41534bce-fc34-4df0-ac6a-69c1979e90cf/click (1702ms)",
+              "{ value: null }"
+            ],
+            [
+              "2023-03-30T06:18:31.722Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:31.723Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:31.725Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/url (3ms)",
+              "{ value: 'https://www.ecosia.org/search?method=index&amp;q=nightwatch' }"
+            ],
+            [
+              "2023-03-30T06:18:31.741Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/source (13ms)",
+              "{\n     value: '&lt;html lang=&quot;en&quot; data-n-head=&quot;%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D&quot; class=&quot;light&quot;&gt;&lt;head&gt;\\n' +\n       '    &lt;ti...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:31.804Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:31.810Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (6ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:31.810Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:31.889Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (79ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:32.393Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:32.409Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (16ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:32.409Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:32.501Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (92ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:33.005Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:33.018Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (13ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:33.019Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:33.096Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (77ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:33.600Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:33.605Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (6ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:33.606Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:33.684Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (78ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:34.188Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:34.195Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (7ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:34.195Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:34.277Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (81ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:34.781Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:34.788Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (8ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:34.789Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:34.877Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (89ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:35.382Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:35.391Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (10ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:35.392Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:35.469Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (78ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:35.974Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:35.981Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (8ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:35.981Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:36.056Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (75ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:36.561Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:36.567Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (7ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:36.568Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:36.648Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (80ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:37.151Z",
+              "  Request POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements  ",
+              "{ using: 'css selector', value: '.layout__content' }"
+            ],
+            [
+              "2023-03-30T06:18:37.159Z",
+              "  Response 200 POST /session/36d3b679bbf570a31feb5c7f3bbb0677/elements (7ms)",
+              "{\n     value: [\n       {\n         'element-6066-11e4-a52e-4f735466cecf': 'e467d23b-bfe9-4e04-9625-3ff8c7a51fb5'\n       }\n     ]\n  }"
+            ],
+            [
+              "2023-03-30T06:18:37.159Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:37.237Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/element/e467d23b-bfe9-4e04-9625-3ff8c7a51fb5/text (78ms)",
+              "{\n     value: 'Search\\n' +\n       'https://nightwatchjs.org\\n' +\n       'Nightwatch.js | Node.js powered End-to-End testing framework\\n' +\n       'Nightwa...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:37.296Z",
+              "  Request GET /session/36d3b679bbf570a31feb5c7f3bbb0677/screenshot  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:37.618Z",
+              "  Response 200 GET /session/36d3b679bbf570a31feb5c7f3bbb0677/screenshot (281ms)",
+              "{\n     value: 'iVBORw0KGgoAAAANSUhEUgAACWAAAAWGCAYAAAAL8J6FAAABKWlDQ1BTa2lhAAAokX2QsUvDUBCHP0sXtYuo6OCQsYuaVExb1MFW...',\n     suppressBase64Data: true\n  }"
+            ],
+            [
+              "2023-03-30T06:18:37.632Z",
+              "  Request DELETE /session/36d3b679bbf570a31feb5c7f3bbb0677  ",
+              "''"
+            ],
+            [
+              "2023-03-30T06:18:37.684Z",
+              "  Response 200 DELETE /session/36d3b679bbf570a31feb5c7f3bbb0677 (52ms)",
+              "{ value: null }"
+            ]
+          ],
+          "assertionsCount": 5,
+          "lastError": {
+            "name": "NightwatchAssertError",
+            "message": "Testing if element \u001b[0;33m<.layout__content>\u001b[0m contains text \u001b[0;33m'jkdbjcsbndjcsjknkjsnkajn.js'\u001b[0m in 5000ms - expected \u001b[0;32m\"contains text 'jkdbjcsbndjcsjknkjsnkajn.js'\"\u001b[0m but got: \u001b[0;31m\"does not contain 'jkdbjcsbndjcsjknkjsnkajn.js'\"\u001b[0m \u001b[0;90m(5435ms)\u001b[0m",
+            "showDiff": false,
+            "abortOnFailure": true,
+            "stack": "Error\n    at Proxy.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/lib/api/index.js:157:30)\n    at DescribeInstance.<anonymous> (/Users/vaibhavsingh/Dev/nightwatch/examples/tests/ecosia.js:16:15)\n    at Context.call (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/context.js:478:35)\n    at TestCase.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/testcase.js:58:31)\n    at Runnable.__runFn (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:784:80)\n    at Runnable.run (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/runnable.js:126:21)\n    at TestSuite.executeRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:937:49)\n    at TestSuite.handleRunnable (/Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:952:33)\n    at /Users/vaibhavsingh/Dev/nightwatch/lib/testsuite/index.js:784:21\n    at async DefaultRunner.runTestSuite (/Users/vaibhavsingh/Dev/nightwatch/lib/runner/test-runners/default.js:84:7)"
+          },
+          "skipped": [],
+          "time": "7.869",
+          "timeMs": 7869,
+          "errmessages": [],
+          "testsCount": 1,
+          "skippedCount": 0,
+          "failedCount": 1,
+          "errorsCount": 0,
+          "passedCount": 4,
+          "group": "",
+          "modulePath": "/examples/tests/ecosia.js",
+          "startTimestamp": "Thu, 30 Mar 2023 06:18:25 GMT",
+          "endTimestamp": "Thu, 30 Mar 2023 06:18:37 GMT",
+          "sessionCapabilities": {
+            "acceptInsecureCerts": false,
+            "browserName": "chrome",
+            "browserVersion": "111.0.5563.146",
+            "chrome": {
+              "chromedriverVersion": "110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839})",
+              "userDataDir": "/var/folders/3j/vnc2ktf17bq7qtb8qstq1fk40000gq/T/.com.google.Chrome.SIG5nv"
+            },
+            "goog:chromeOptions": {
+              "debuggerAddress": "localhost:52722"
+            },
+            "networkConnectionEnabled": false,
+            "pageLoadStrategy": "normal",
+            "platformName": "mac os x",
+            "proxy": {},
+            "setWindowRect": true,
+            "strictFileInteractability": false,
+            "timeouts": {
+              "implicit": 0,
+              "pageLoad": 300000,
+              "script": 30000
+            },
+            "unhandledPromptBehavior": "dismiss and notify",
+            "webauthn:extension:credBlob": true,
+            "webauthn:extension:largeBlob": true,
+            "webauthn:virtualAuthenticators": true
+          },
+          "sessionId": "36d3b679bbf570a31feb5c7f3bbb0677",
+          "projectName": "",
+          "buildName": "",
+          "testEnv": "chrome",
+          "isMobile": false,
+          "status": "fail",
+          "seleniumLog": "/Users/vaibhavsingh/Dev/nightwatch/logs/ecosia_chromedriver.log",
+          "tests": 1,
+          "failures": 1,
+          "errors": 0
+        }
+      }
+    }
+  },
+  "stats": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0,
+    "time": 7869
+  },
+  "metadata": {
+    "date": "2023-03-30T06:18:37.703Z"
+  }
+}
