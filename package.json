@@ -1,11 +1,12 @@
 {
   "name": "@nightwatch/html-reporter-template",
   "description": "Nightwatch HTML reporter template",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "commonjs",
   "scripts": {
     "dev:html": "VITE_PRODUCT=html vite",
     "dev:vrt": "VITE_PRODUCT=vrt vite",
+    "build": "npm run build:html && npm run build:vrt && tsc -p tsconfig.node.cjs.json",
     "build:html": "tsc && VITE_PRODUCT=html vite build && tsc -p tsconfig.node.cjs.json",
     "build:vrt": "tsc && VITE_PRODUCT=vrt vite build && tsc -p tsconfig.node.cjs.json",
     "preview": "vite preview",
@@ -45,11 +46,11 @@
     "@radix-ui/react-tooltip": "1.0.5",
     "@types/nightwatch": "^2.3.22",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.31",
+    "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^3.1.0",
     "babel-plugin-styled-components": "^2.0.7",
     "chromedriver": "^111.0.0",
@@ -72,12 +73,11 @@
     "ts-node": "^10.9.1",
     "typedoc": "^0.23.28",
     "typedoc-plugin-markdown": "^3.14.0",
-    "typescript": "^5.0.2",
+    "typescript": "^5.0.3",
     "vite": "^4.2.1",
-    "vite-plugin-singlefile": "^0.13.3"
+    "vite-plugin-singlefile": "^0.13.5"
   },
   "files": [
-    "dist",
     "index.js",
     "index.d.ts",
     "vrt",
