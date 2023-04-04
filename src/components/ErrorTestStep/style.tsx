@@ -1,7 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Close } from '../../icons';
 
-export const Wrapper = styled.article`
+type WrapperProps = {
+  active?: boolean;
+  tracePresent?: boolean;
+};
+
+export const Wrapper = styled.article<WrapperProps>`
   display: flex;
   flex-direction: column;
   background-color: var(--light-color-red-background-10);
@@ -9,7 +14,20 @@ export const Wrapper = styled.article`
   &:hover {
     border-color: transparent;
     box-shadow: inset 0 0 0 1px var(--color-red-60);
+    ${(props) =>
+      props.tracePresent &&
+      css`
+        cursor: pointer;
+      `}
   }
+
+  ${(props) =>
+    props.active &&
+    css`
+      border-color: transparent;
+      box-shadow: inset 0 0 0 1px var(--color-primary-60);
+      background: var(--light-color-red-background-10);
+    `}
 `;
 
 export const FailedStepWrapper = styled.div`

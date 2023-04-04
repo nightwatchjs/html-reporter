@@ -15,6 +15,7 @@ type TestDetailsViewProps = {
 const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, tracePresent }) => {
   const [query, setQuery] = useState<string>('');
   const [trace, setTrace] = useState<{ url?: string; snapshotPath?: string } | undefined>();
+  const [activeTestStep, setActiveTestStep] = useState<number>();
 
   const filteredTestsSteps = filterTestSteps(testStepsData, query);
 
@@ -42,10 +43,13 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
               return (
                 <PassTestStep
                   key={index}
+                  testStepKey={index}
+                  tracePresent={tracePresent}
                   time={test.time}
                   traceData={test.domSnapshot ?? {}}
-                  setTrace={setTrace}
-                >
+                  active={index === activeTestStep && !!test.domSnapshot}
+                  setActiveTestStep={setActiveTestStep}
+                  setTrace={setTrace}>
                   {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
                 </PassTestStep>
               );
@@ -55,15 +59,17 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
               return (
                 <ErrorTestStep
                   key={index}
+                  testStepKey={index}
                   time={test.time}
                   errorName={'NightwatchAssertError'}
                   shortMessage={test.shortMessage ?? ['']}
                   stacktrace={test.stacktrace}
                   screenshot={test.screenshot}
                   traceData={test.domSnapshot ?? {}}
+                  active={index === activeTestStep && !!test.domSnapshot}
+                  setActiveTestStep={setActiveTestStep}
                   setTrace={setTrace}
-                  tracePresent={tracePresent}
-                >
+                  tracePresent={tracePresent}>
                   {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
                 </ErrorTestStep>
               );

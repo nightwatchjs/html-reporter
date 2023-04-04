@@ -44,6 +44,18 @@ export const IFrame = styled.iframe`
   position: absolute;
   left: 0;
   flex: 1;
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    transform: scale(0.28);
+  }
+
+  @media (min-width: 1281px) and (max-width: 1440px) {
+    transform: scale(0.42);
+  }
+
+  @media (min-width: 1441px) {
+    transform: scale(0.7);
+  }
 `;
 
 export const ImageWrapper = styled.div`
