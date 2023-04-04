@@ -3,7 +3,11 @@ import { ITrace } from '../SpecMetaData/types';
 import { ElapsedTime, Wrapper, Text, PassedIcon } from './style';
 
 type TestStepProps = {
+  testStepKey: number;
+  tracePresent: boolean;
   time: number;
+  active: boolean;
+  setActiveTestStep: React.Dispatch<React.SetStateAction<number | undefined>>;
   children: React.ReactNode;
   traceData: ITrace['domSnapshot'];
   setTrace: React.Dispatch<
@@ -18,14 +22,21 @@ type TestStepProps = {
 };
 
 const PassTestStep: React.FC<TestStepProps> = ({
+  testStepKey,
+  active,
+  setActiveTestStep,
   time,
   children,
+  tracePresent,
   traceData: { snapshotUrl, snapshotFilePath },
   setTrace
 }) => {
   return (
     <Wrapper
-      onClick={() =>
+      tracePresent={tracePresent}
+      active={active}
+      onClick={() => {
+        setActiveTestStep(testStepKey);
         setTrace(
           snapshotFilePath
             ? {
@@ -35,9 +46,8 @@ const PassTestStep: React.FC<TestStepProps> = ({
             : {
                 ...(snapshotUrl && { url: snapshotUrl })
               }
-        )
-      }
-    >
+        );
+      }}>
       <PassedIcon />
       <Text>{children}</Text>
       <ElapsedTime>{time < 1000 ? `${time} ms` : `${Math.round(time / 1000)} sec`}</ElapsedTime>
