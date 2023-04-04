@@ -48,7 +48,8 @@ const ErrorTestStep: React.FC<TestStepProps> = ({
 }) => {
   return (
     <Wrapper
-      tracePresent={active}
+      tracePresent={tracePresent}
+      active={active}
       onClick={() => {
         setActiveTestStep(testStepKey);
         setTrace(

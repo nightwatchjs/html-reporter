@@ -4,6 +4,7 @@ import { ElapsedTime, Wrapper, Text, PassedIcon } from './style';
 
 type TestStepProps = {
   testStepKey: number;
+  tracePresent: boolean;
   time: number;
   active: boolean;
   setActiveTestStep: React.Dispatch<React.SetStateAction<number | undefined>>;
@@ -26,12 +27,14 @@ const PassTestStep: React.FC<TestStepProps> = ({
   setActiveTestStep,
   time,
   children,
+  tracePresent,
   traceData: { snapshotUrl, snapshotFilePath },
   setTrace
 }) => {
   return (
     <Wrapper
-      tracePresent={active}
+      tracePresent={tracePresent}
+      active={active}
       onClick={() => {
         setActiveTestStep(testStepKey);
         setTrace(

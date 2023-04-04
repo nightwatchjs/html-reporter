@@ -44,6 +44,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                 <PassTestStep
                   key={index}
                   testStepKey={index}
+                  tracePresent={tracePresent}
                   time={test.time}
                   traceData={test.domSnapshot ?? {}}
                   active={index === activeTestStep && !!test.domSnapshot}

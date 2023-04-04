@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Check } from '../../icons';
 
 type WrapperProps = {
+  active?: boolean;
   tracePresent?: boolean;
 };
 
@@ -15,10 +16,15 @@ export const Wrapper = styled.article<WrapperProps>`
   &:hover {
     border-color: transparent;
     box-shadow: inset 0 0 0 1px var(--color-primary-60);
+    ${(props) =>
+      props.tracePresent &&
+      css`
+        cursor: pointer;
+      `}
   }
 
   ${(props) =>
-    props.tracePresent &&
+    props.active &&
     css`
       border-color: transparent;
       box-shadow: inset 0 0 0 1px var(--color-primary-60);
