@@ -55,11 +55,22 @@ export const DropdownRadioItem = styled(DropdownMenu.RadioItem)`
 
   &:hover {
     background-color: var(--light-primary-background-10);
-    font-weight: var(--font-weight-bold);
   }
 
   &:focus {
     border-color: transparent;
     box-shadow: inset 0 0 0 1px var(--color-primary-60);
+  }
+
+  &:not(:last-child) {
+    border-bottom: var(--border-1) solid var(--color-grey-50);
+  }
+
+  &[data-state='checked'] {
+    background: var(--light-primary-background-10);
+
+    h2 {
+      font-weight: var(--font-weight-bold);
+    }
   }
 `;
