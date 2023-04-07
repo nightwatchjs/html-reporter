@@ -16,7 +16,7 @@ export type MetaDataProps = {
     browserVersion: string;
     operatingSystemName: string;
     tags: string[];
-    time: {
+    time?: {
       hours?: number;
       minutes?: number;
       seconds?: number;
@@ -41,8 +41,7 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
         <ChipWithIcon
           title={browserVersion}
           icon={<Browser name={browserName} />}
-          transformText
-        >{`${browserName} ${majorBrowserVersion ?? ''}`}</ChipWithIcon>
+          transformText>{`${browserName} ${majorBrowserVersion ?? ''}`}</ChipWithIcon>
       )}
       {operatingSystemName && (
         <ChipWithIcon icon={<OperatingSystem name={operatingSystemName} />}>{`${
@@ -54,7 +53,9 @@ const EnvironmentMetadata: React.FC<MetaDataProps> = ({
         tags?.map((label, index) => {
           return label && <Tags key={`${label}-${index}`}>{label}</Tags>;
         })}
-      {!isVRT && <Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />}
+      {!isVRT && time && (
+        <Timer time={time} color="--color-grey-100" fontSize="--font-size-12" gap={4} />
+      )}
       {diff && (
         <Text fontSize={12} lineHight={20} color="grey-100" transformText>
           {diff}% diff
