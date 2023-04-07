@@ -1,5 +1,4 @@
 import { Environments } from '../../transform';
-import { convertMsToTime } from '../../utils';
 
 export const getTestPercentage = (
   total: number,
