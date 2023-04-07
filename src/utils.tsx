@@ -49,7 +49,7 @@ export const convertMsToTime = (
       time: {
         ...(hours !== 0 && { hours }),
         ...(minutes !== 0 && { minutes }),
-        ...(seconds !== 0 && { seconds })
+        seconds
       }
     },
     ...{ paddedTime: `${padTo2Digits(hours)}:${padTo2Digits(minutes)}:${padTo2Digits(seconds)}` }
