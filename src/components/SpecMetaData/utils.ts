@@ -36,8 +36,8 @@ export const getTestsSteps = (data: IEnvironmentData, fileID: string, testID: st
         ...(test.result?.beautifiedStack && { stacktrace: test.result.beautifiedStack }),
         ...(test.result?.message && {
           shortMessage: [
-            test.result.message.split('-')[0],
-            test.result.message.split('-').slice(1).join('-'),
+            test.result.message.split(' - ')[0],
+            test.result.message.split(' - ').slice(1).join(' - '),
           ]
         }),
         ...(test?.screenshot && { screenshot: test.screenshot }),
