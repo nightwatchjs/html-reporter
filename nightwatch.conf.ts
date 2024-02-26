@@ -31,6 +31,8 @@ module.exports = {
   // See https://nightwatchjs.org/guide/concepts/test-globals.html
   globals_path: '',
 
+  disable_output_boxes: true,
+
   vite_dev_server: {
     start_vite: true,
     port: 5173

@@ -1,5 +1,4 @@
 import { Environments } from '../../transform';
-import { convertMsToTime } from '../../utils';
 
 export const getTestPercentage = (
   total: number,
@@ -45,7 +44,6 @@ export const getEnvironmentDropDownData = (environments: Environments) => {
     const { device, browserName, browserVersion, platformName, executionMode } =
       environment[1].metadata;
     const { stats } = environment[1];
-    const { hours, minutes, seconds } = convertMsToTime(stats.time).time;
 
     envDropdownData['name'] = `Environment ${index + 1} (${envName})`;
     envDropdownData['origName'] = envName;
@@ -54,12 +52,7 @@ export const getEnvironmentDropDownData = (environments: Environments) => {
       browserName: browserName,
       browserVersion: browserVersion,
       operatingSystemName: platformName,
-      tags: [executionMode],
-      time: {
-        hours: hours,
-        minutes: minutes,
-        seconds: seconds
-      }
+      tags: [executionMode]
     };
 
     envDropdownData['testResult'] = stats;

@@ -16,7 +16,7 @@ type Props = {
 const Timer: React.FC<Props> = ({ time: { hours, minutes, seconds }, color, fontSize, gap }) => {
   const getTime = (hours?: number, minutes?: number, seconds?: number): string => {
     return `${hours ? `${hours} hr` : ''} ${minutes ? `${minutes} min` : ''} ${
-      seconds ? `${seconds} sec` : ''
+      seconds || seconds === 0 ? `${seconds} sec` : ''
     }`;
   };
 
@@ -28,8 +28,7 @@ const Timer: React.FC<Props> = ({ time: { hours, minutes, seconds }, color, font
       <Time
         dateTime={`PT${hours ?? 0}H${minutes}M${seconds ?? 0}S`}
         color={color}
-        fontSize={fontSize}
-      >
+        fontSize={fontSize}>
         {getTime(hours, minutes, seconds)}
       </Time>
     </Wrapper>
