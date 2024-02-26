@@ -30,3 +30,4 @@ html/
 vrt/
 *.tgz
 tests_output
+.cache
