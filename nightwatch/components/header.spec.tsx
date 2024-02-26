@@ -19,7 +19,6 @@ export const HeaderComponent = () => (
   </>
 );
 
-HeaderComponent.test = async (browser) => {
-  browser.pause(1000);
-  // expect(HeaderComponent).to.be.visible;
+HeaderComponent.test = async (browser, { component }) => {
+  browser.expect(component).to.be.visible;
 };

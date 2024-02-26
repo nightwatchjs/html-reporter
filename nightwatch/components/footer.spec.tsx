@@ -1,7 +1,5 @@
 import Footer from '../../src/components/Footer';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 import GlobalStyles from '../../src/components/GlobalStyles';
-import { GlobalContext } from '../../src/contexts/GlobalContext';
 
 export default {
   title: 'Footer Component',
@@ -15,7 +13,6 @@ export const FooterComponent = () => (
   </>
 );
 
-FooterComponent.test = async (browser) => {
-  browser.pause(1000);
-  // expect(FooterComponent).to.be.visible;
+FooterComponent.test = async (browser, { component }) => {
+  browser.expect(component).to.be.visible;
 };
