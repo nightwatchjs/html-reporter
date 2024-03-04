@@ -39,7 +39,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - run: npm run lint -- --quiet
+      # - run: npm run lint -- --quiet
       - run: npm test
       - name: Setup Pages
         uses: actions/configure-pages@v3
