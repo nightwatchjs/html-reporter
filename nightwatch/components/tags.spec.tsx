@@ -17,4 +17,5 @@ export const TagsComponent = () => (
 
 TagsComponent.test = async (browser, { component }) => {
   browser.expect(component).to.be.visible;
+  browser.expect(component).text.to.equal("Sample Tag");
 };
