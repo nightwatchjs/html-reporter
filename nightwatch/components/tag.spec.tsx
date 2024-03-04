@@ -1,20 +1,20 @@
-import Tag from '../../src/components/Tags';
+import Tags from '../../src/components/Tags';
 import GlobalStyles from '../../src/components/GlobalStyles';
 
 export default {
   title: 'Tag Component',
-  component: Tag
+  component: Tags
 };
 
-export const TagComponent = () => (
+export const TagsComponent = () => (
   <>
       <GlobalStyles />
-      <Tag>
+      <Tags>
         H1 Tag
-      </Tag>
+      </Tags>
   </>
 );
 
-TagComponent.test = async (browser, { component }) => {
+TagsComponent.test = async (browser, { component }) => {
   browser.expect(component).to.be.visible;
 };
