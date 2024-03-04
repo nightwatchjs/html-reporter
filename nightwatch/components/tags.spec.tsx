@@ -10,7 +10,7 @@ export const TagsComponent = () => (
   <>
       <GlobalStyles />
       <Tags>
-        H1 Tag
+        Sample Tag
       </Tags>
   </>
 );
