@@ -19,7 +19,7 @@ export function bundle() {
     name: 'nightwatch-bundle',
     apply: 'serve',
     transformIndexHtml: {
-      transform(html, _ctx) {
+      transform(html) {
         const reportData = readFileSync(sampleReportPath, { encoding: 'utf8' });
         return html + `<script>window.nightwatchReport = ${reportData}</script>`;
       }
