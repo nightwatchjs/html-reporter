@@ -58,7 +58,7 @@ const TestData: React.FC = () => {
               }
             >
               <Text color="grey-90" fontSize={12} lineHight={20}>
-                Expand all
+                {expanded.length === 1 && expanded[0] === '' ?  "Expand all": "Collapse All" }
               </Text>
             </ToggleRoot>
             {!isVRT && (
