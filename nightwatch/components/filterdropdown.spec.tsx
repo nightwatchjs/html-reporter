@@ -47,7 +47,6 @@ browser.elements('css selector', 'div[role="menuitemradio"]', function(result) {
     // Use the web element ID to retrieve the text of the element
     browser.elementIdText(webElementId, function(textResult) {
       const optionText = textResult.value.trim();
-      console.log('Option text:', optionText); // Logging option text for debugging
 
       // Assert that the option text is as expected
       // Note: This assumes the order in expectedOptions matches the order in the dropdown
