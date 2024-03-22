@@ -26,7 +26,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
       const { snapshotFilePath, snapshotUrl } = traceObject;
       setTrace({ url: snapshotUrl, snapshotPath: snapshotFilePath });
     }
-  }, [filterTestSteps]);
+  }, [filteredTestsSteps]);
 
   return (
     <Wrapper>
@@ -50,7 +50,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                   active={index === activeTestStep && !!test.domSnapshot}
                   setActiveTestStep={setActiveTestStep}
                   setTrace={setTrace}>
-                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
+                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args)}')` : ''}`}
                 </PassTestStep>
               );
             }
@@ -70,7 +70,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
                   setActiveTestStep={setActiveTestStep}
                   setTrace={setTrace}
                   tracePresent={tracePresent}>
-                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args!)}')` : ''}`}
+                  {`${test.name}${validTestArgs(test.args) ? `('${joinArgs(test.args)}')` : ''}`}
                 </ErrorTestStep>
               );
             }
