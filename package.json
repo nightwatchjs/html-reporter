@@ -59,7 +59,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "framer-motion": "^11.0.6",
     "fuse.js": "^7.0.0",
-    "nightwatch": "^3.4.1",
+    "nightwatch": "^3.6.1",
     "prettier": "^3.2.5",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
