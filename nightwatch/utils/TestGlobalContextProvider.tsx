@@ -3,7 +3,7 @@ import { GlobalContext } from '../../src/contexts/GlobalContext';
 
 type GlobalContextProps = {
   children: ReactNode;
-  value: any;
+  value: unknown;
 };
 
 export const GlobalContextProvider: React.FC<GlobalContextProps> = ({ children, value }) => {
