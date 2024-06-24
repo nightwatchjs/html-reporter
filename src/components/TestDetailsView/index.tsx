@@ -26,7 +26,7 @@ const TestDetailsView: React.FC<TestDetailsViewProps> = ({ testStepsData, traceP
       const { snapshotFilePath, snapshotUrl } = traceObject;
       setTrace({ url: snapshotUrl, snapshotPath: snapshotFilePath });
     }
-  }, [filterTestSteps]);
+  }, [filteredTestsSteps]);
 
   return (
     <Wrapper>
