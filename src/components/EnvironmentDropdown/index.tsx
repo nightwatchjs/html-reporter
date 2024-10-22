@@ -37,7 +37,7 @@ const EnvironmentDropdown: React.FC = () => {
         setEnvData(data);
       }
     });
-  }, [environmentName]);
+  }, [envDropdownData,environmentName]);
 
   return (
     <DropdownMenu.Root onOpenChange={(open) => setDropdownOpen(open)}>
